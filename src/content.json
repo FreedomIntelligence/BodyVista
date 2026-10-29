@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "language": "zh-CN",
+  "sceneKind": "procedural-teaching",
+  "sceneLabel": "显微结构示意",
+  "topics": [
+    {
+      "key": "alveoli",
+      "title": "肺泡气体交换",
+      "facts": [
+        "氧和二氧化碳沿各自的分压差穿过呼吸膜。",
+        "肺内氧由肺泡进入血液，二氧化碳由血液进入肺泡。",
+        "薄的呼吸膜和大的交换面积有利于气体扩散。"
+      ],
+      "quiz": [
+        {
+          "question": "肺泡气体交换的直接驱动力是什么？",
+          "options": [
+            "气体分压差",
+            "肺泡主动泵送",
+            "血红蛋白的颜色"
+          ],
+          "answerIndex": 0,
+          "explanation": "气体沿分压差，从高分压处向低分压处扩散。"
+        },
+        {
+          "question": "肺内二氧化碳主要向哪个方向扩散？",
+          "options": [
+            "肺泡进入血液",
+            "血液进入肺泡",
+            "肺泡进入胸膜腔"
+          ],
+          "answerIndex": 1,
+          "explanation": "流入肺毛细血管的血液，其二氧化碳分压通常高于肺泡气体。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 气体交换",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-4-gas-exchange"
+        }
+      ]
+    },
+    {
+      "key": "nephron",
+      "title": "肾单位",
+      "facts": [
+        "肾小体由肾小球和肾小囊组成，滤液首先进入肾小囊腔。",
+        "肾小管通过重吸收和分泌改变滤液，回收水和有用溶质。",
+        "正常肾小球滤过屏障阻挡血细胞和大分子蛋白。"
+      ],
+      "quiz": [
+        {
+          "question": "血液滤过发生在哪个结构？",
+          "options": [
+            "输尿管",
+            "膀胱",
+            "肾小球"
+          ],
+          "answerIndex": 2,
+          "explanation": "肾小球毛细血管中的部分血浆成分经过滤过屏障，进入肾小囊腔。"
+        },
+        {
+          "question": "肾小管重吸收主要使物质怎样移动？",
+          "options": [
+            "由管腔返回血液",
+            "由膀胱返回肾脏",
+            "由血细胞进入管腔"
+          ],
+          "answerIndex": 0,
+          "explanation": "重吸收将管腔内的水和有用溶质经间质回收到血液。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 肾的显微解剖",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-4-microscopic-anatomy-of-the-kidney"
+        }
+      ]
+    },
+    {
+      "key": "sarcomere",
+      "title": "肌节收缩",
+      "facts": [
+        "粗、细肌丝相对滑行，使两端 Z 线靠近；肌丝本身长度基本不变。",
+        "钙离子结合肌钙蛋白，使肌动蛋白上的结合位点暴露。",
+        "ATP 结合肌球蛋白头部后，横桥与肌动蛋白分离。"
+      ],
+      "quiz": [
+        {
+          "question": "肌节收缩时，哪项基本不变？",
+          "options": [
+            "两条 Z 线的距离",
+            "粗肌丝的长度",
+            "粗细肌丝的重叠程度"
+          ],
+          "answerIndex": 1,
+          "explanation": "收缩依靠肌丝滑行和重叠增加，而非粗肌丝缩短。"
+        },
+        {
+          "question": "ATP 与肌球蛋白头部结合，直接引起什么？",
+          "options": [
+            "Z 线消失",
+            "肌动蛋白缩短",
+            "横桥分离"
+          ],
+          "answerIndex": 2,
+          "explanation": "ATP 的结合使肌球蛋白从肌动蛋白上脱离，随后继续横桥循环。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 肌纤维收缩与舒张",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        }
+      ]
+    },
+    {
+      "key": "synapse",
+      "title": "神经突触",
+      "facts": [
+        "化学突触中，动作电位到达轴突末梢后，钙离子内流促进递质释放。",
+        "递质跨越突触间隙，与突触后膜上的相应受体结合。",
+        "递质通过再摄取、酶降解等途径被清除，帮助终止信号。"
+      ],
+      "quiz": [
+        {
+          "question": "哪种离子内流直接促进突触小泡释放递质？",
+          "options": [
+            "钙离子",
+            "氯离子",
+            "铁离子"
+          ],
+          "answerIndex": 0,
+          "explanation": "末梢膜的电压门控钙通道开放，钙内流触发小泡融合与递质释放。"
+        },
+        {
+          "question": "递质到达突触后膜后，首先需要结合什么？",
+          "options": [
+            "红细胞",
+            "相应受体",
+            "骨胶原"
+          ],
+          "answerIndex": 1,
+          "explanation": "递质通过结合相应受体影响突触后细胞。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 神经元之间的信息传递",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-5-communication-between-neurons"
+        }
+      ]
+    },
+    {
+      "key": "villi",
+      "title": "肠绒毛",
+      "facts": [
+        "环形皱襞、绒毛和微绒毛共同扩大小肠的吸收面积。",
+        "每根绒毛内有血毛细血管和乳糜管。",
+        "单糖、氨基酸进入血液；多数膳食脂肪通过乳糜管转运。"
+      ],
+      "quiz": [
+        {
+          "question": "小肠上皮细胞的刷状缘由什么构成？",
+          "options": [
+            "纤毛",
+            "红细胞",
+            "微绒毛"
+          ],
+          "answerIndex": 2,
+          "explanation": "微绒毛是上皮细胞顶端的细小突起，密集排列形成刷状缘。"
+        },
+        {
+          "question": "绒毛中，哪种结构参与多数膳食脂肪的转运？",
+          "options": [
+            "乳糜管",
+            "肾小管",
+            "胆囊"
+          ],
+          "answerIndex": 0,
+          "explanation": "乳糜管属于淋巴毛细管，将吸收的脂质经淋巴系统送回血液。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 小肠与大肠",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines"
+        }
+      ]
+    },
+    {
+      "key": "vessel",
+      "title": "血管壁",
+      "facts": [
+        "动脉和静脉的管壁由内膜、中膜和外膜组成。",
+        "中膜的平滑肌收缩或舒张，可以改变血管管径。",
+        "毛细血管壁主要由内皮和基膜构成，适合物质交换。"
+      ],
+      "quiz": [
+        {
+          "question": "血管壁中，哪一层的平滑肌主要调节管径？",
+          "options": [
+            "外膜",
+            "中膜",
+            "管腔"
+          ],
+          "answerIndex": 1,
+          "explanation": "中膜环行平滑肌收缩使管腔变窄，舒张使管腔增宽。"
+        },
+        {
+          "question": "毛细血管适合交换物质的重要结构特点是什么？",
+          "options": [
+            "具有厚骨壁",
+            "完全没有内皮",
+            "管壁薄"
+          ],
+          "answerIndex": 2,
+          "explanation": "薄的内皮层和基膜构成较短的交换距离。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "开放教材《解剖学与生理学》第2版 · 血管的结构与功能",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-1-structure-and-function-of-blood-vessels"
+        }
+      ]
+    }
+  ]
+}

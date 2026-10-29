@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Deutsche Übersetzung von en/structures.json. Kurze Zusammenfassungen für die Lehre."
+  },
+  "crown": {
+    "summary": "Der mit Schmelz bedeckte Teil des Zahns oberhalb der Schmelz-Zement-Grenze.",
+    "function": "Bildet die Arbeitsfläche des Zahns zum Schneiden, Zerreißen oder Zermahlen.",
+    "related": [
+      "enamel",
+      "dentin-coronal",
+      "cej"
+    ]
+  },
+  "root": {
+    "summary": "Der mit Zement bedeckte Teil des Zahns, im Alveolarknochen verankert und über das Desmodont mit ihm verbunden.",
+    "function": "Verankert den Zahn im Kiefer und leitet die Kaukräfte auf den Knochen weiter.",
+    "related": [
+      "cementum",
+      "dentin-radicular",
+      "pdl",
+      "root-canals"
+    ]
+  },
+  "enamel": {
+    "summary": "Die äußere Hülle der Krone und das härteste Gewebe des menschlichen Körpers, überwiegend aus Hydroxylapatitkristallen aufgebaut.",
+    "function": "Bietet eine verschleißfeste Oberfläche zum Kauen und schützt das darunterliegende Dentin.",
+    "clinical": "Schmelz ist zellfrei und kann sich nach einem Verlust nicht regenerieren. Die Demineralisation durch Säuren aus dem Zahnbelag (Plaque) ist das erste Stadium der Karies.",
+    "facts": [
+      {
+        "label": "Zusammensetzung",
+        "value": "Etwa 96 % Mineral (Gewichtsanteil)"
+      },
+      {
+        "label": "Gebildet von",
+        "value": "Ameloblasten (gehen nach dem Zahndurchbruch verloren)"
+      }
+    ],
+    "related": [
+      "dentin-coronal",
+      "cej",
+      "crown"
+    ]
+  },
+  "dentin": {
+    "summary": "Das mineralisierte Gewebe, das den Hauptteil des Zahns bildet, unter dem Schmelz in der Krone und unter dem Zement in der Wurzel.",
+    "function": "Stützt den Schmelz und umschließt die Pulpa. Dentinkanälchen verbinden es mit der Pulpa und machen es empfindlich.",
+    "clinical": "Freiliegendes Dentin kann Überempfindlichkeit verursachen. Dentin wird lebenslang langsam weitergebildet (Sekundärdentin) sowie als Reaktion auf Reize (Tertiärdentin), wodurch sich der Pulparaum allmählich verengt.",
+    "facts": [
+      {
+        "label": "Zusammensetzung",
+        "value": "Etwa 70 % Mineral (Gewichtsanteil)"
+      },
+      {
+        "label": "Gebildet von",
+        "value": "Odontoblasten, die die Pulpa auskleiden"
+      }
+    ],
+    "related": [
+      "enamel",
+      "pulp-chamber",
+      "cementum"
+    ]
+  },
+  "dentin-coronal": {
+    "summary": "Das Dentin der Krone, unter dem Schmelz und rund um die Pulpakammer gelegen.",
+    "function": "Stützt den Schmelz und schützt die Pulpa.",
+    "clinical": "Erreicht eine Karies das koronale Dentin, breitet sie sich entlang der Schmelz-Dentin-Grenze seitlich aus.",
+    "related": [
+      "enamel",
+      "pulp-chamber"
+    ]
+  },
+  "dentin-radicular": {
+    "summary": "Das Dentin der Wurzel, von Zement bedeckt und den oder die Wurzelkanäle umgebend.",
+    "function": "Bildet das Gerüst der Wurzel.",
+    "related": [
+      "cementum",
+      "root-canals"
+    ]
+  },
+  "cementum": {
+    "summary": "Eine dünne Schicht mineralisierten Gewebes, die das Wurzeldentin bedeckt.",
+    "function": "Dient als Ansatz für die Fasern des Desmodonts, die den Zahn in seiner Alveole halten.",
+    "clinical": "Der Zement ist nahe der Schmelz-Zement-Grenze am dünnsten und wird zur Wurzelspitze hin dicker. In Dental Scope ist seine Dicke leicht übertrieben dargestellt, damit er sichtbar ist.",
+    "facts": [
+      {
+        "label": "Zusammensetzung",
+        "value": "Etwa 45–50 % Mineral (Gewichtsanteil)"
+      }
+    ],
+    "related": [
+      "pdl",
+      "dentin-radicular"
+    ]
+  },
+  "pdl": {
+    "summary": "Eine dünne Schicht faserigen Bindegewebes zwischen Wurzelzement und Alveolarknochen (Desmodont, Wurzelhaut).",
+    "function": "Hält den Zahn federnd in seiner Alveole, dämpft Kaukräfte und liefert sensorische (propriozeptive) Rückmeldung.",
+    "clinical": "Seine Breite beträgt typischerweise nur Bruchteile eines Millimeters. Ein verbreiterter Desmodontalspalt im Röntgenbild kann auf ein okklusales Trauma oder eine Erkrankung hinweisen.",
+    "related": [
+      "cementum",
+      "alveolar-bone"
+    ]
+  },
+  "pulp": {
+    "summary": "Das weiche Bindegewebe im Zentrum des Zahns mit Blutgefäßen, Nerven und den Odontoblasten, die Dentin bilden.",
+    "function": "Bildet Dentin, ernährt den Zahn und vermittelt Empfindungen.",
+    "clinical": "Eine Entzündung der Pulpa (Pulpitis) ist eine häufige Ursache von Zahnschmerzen; eine irreversible Pulpitis oder Pulpanekrose wird in der Regel durch Wurzelkanalbehandlung oder Extraktion behandelt.",
+    "related": [
+      "pulp-chamber",
+      "root-canals",
+      "apical-foramen"
+    ]
+  },
+  "pulp-chamber": {
+    "summary": "Der Teil der Pulpahöhle in der Krone und im zervikalen Bereich des Zahns.",
+    "function": "Beherbergt die Kronenpulpa; ihre Ausläufer zu den Höckern bilden die Pulpahörner.",
+    "clinical": "Die Kammer wird mit dem Alter durch Anlagerung von Sekundärdentin kleiner. Von ihrem Boden gehen die Kanaleingänge ab.",
+    "related": [
+      "pulp-horn",
+      "root-canals"
+    ]
+  },
+  "pulp-horn": {
+    "summary": "Ein Ausläufer der Pulpakammer zu einer Höckerspitze oder Schneidekante.",
+    "clinical": "Pulpahörner können bei tiefen Kavitätenpräparationen freigelegt werden, besonders bei jungen Zähnen.",
+    "related": [
+      "pulp-chamber",
+      "enamel"
+    ]
+  },
+  "root-canals": {
+    "summary": "Der Teil der Pulpahöhle, der durch die Wurzel(n) verläuft, von den Kanaleingängen bis zum Foramen apicale.",
+    "function": "Führt die Nerven und Blutgefäße der Pulpa zwischen Zahn und umgebendem Gewebe.",
+    "clinical": "Anzahl und Form der Kanäle variieren stark. Bei der Wurzelkanalbehandlung wird dieser Raum gereinigt, aufbereitet und gefüllt. In Dental Scope folgen die Kanäle jeder modellierten Wurzel in ihrer häufigsten Konfiguration.",
+    "related": [
+      "pulp-chamber",
+      "apical-foramen"
+    ]
+  },
+  "canal": {
+    "summary": "Ein einzelner Wurzelkanal: der mit Pulpagewebe gefüllte Kanal innerhalb einer Wurzel.",
+    "function": "Führt Nerven und Gefäße der Pulpa.",
+    "clinical": "Die hier gezeigte Konfiguration ist die häufigste für diese Wurzel; es gibt viele Varianten.",
+    "related": [
+      "apical-foramen",
+      "pulp-chamber"
+    ]
+  },
+  "apical-foramen": {
+    "summary": "Die Öffnung an oder nahe der Wurzelspitze, durch die Nerven und Gefäße in die Pulpa ein- und austreten.",
+    "clinical": "Das Foramen mündet oft kurz vor oder neben dem anatomischen Apex; Wurzelkanalfüllungen sollen im Kanal nahe davor enden.",
+    "related": [
+      "root-canals",
+      "apex"
+    ]
+  },
+  "apex": {
+    "summary": "Die Spitze der Wurzel.",
+    "clinical": "Eine Infektion, die sich aus dem Kanal ausbreitet, kann eine periapikale Läsion um den Apex verursachen.",
+    "related": [
+      "apical-foramen"
+    ]
+  },
+  "cej": {
+    "summary": "Die Schmelz-Zement-Grenze: die Linie, an der der Schmelz der Krone auf den Zement der Wurzel trifft, auch Zervikallinie genannt.",
+    "clinical": "Ein Bezugspunkt zur Messung von Gingivarezessionen und klinischem Attachmentverlust. Sie wölbt sich an den Approximalflächen zur Krone hin, am deutlichsten an den Frontzähnen.",
+    "related": [
+      "enamel",
+      "cementum"
+    ]
+  },
+  "maxilla": {
+    "summary": "Der paarige Knochen, der den Oberkiefer bildet. Er trägt die oberen Zähne, bildet den größten Teil des harten Gaumens sowie Teile des Orbitabodens und der Nasenhöhle und enthält die Kieferhöhle (Sinus maxillaris).",
+    "function": "Trägt die oberen Zähne und stützt das Mittelgesicht.",
+    "clinical": "Die Wurzeln der oberen Seitenzähne können nahe am Boden der Kieferhöhle liegen.",
+    "related": [
+      "maxillary-alveolar-process",
+      "palatine-bone",
+      "maxillary-nerve-branches",
+      "maxillary-sinus"
+    ]
+  },
+  "maxillary-sinus": {
+    "summary": "Ein lufthaltiger Hohlraum im Körper des Oberkieferknochens, über den Wurzeln der oberen Prämolaren und Molaren. Er mündet in die Nasenhöhle.",
+    "function": "Macht den Schädel leichter und gibt der Stimme Resonanz. Die Schleimhaut entleert sich in die Nase.",
+    "clinical": "Die Wurzeln der oberen Molaren und Prämolaren liegen oft knapp unter dem Kieferhöhlenboden und können in die Höhle hineinragen. Eine Extraktion oder ein Implantat in diesem Bereich kann die Kieferhöhle eröffnen (Mund-Antrum-Verbindung), und eine dentale Infektion kann sich dorthin ausbreiten. Die gezeigte Kieferhöhle ist aus dem Oberkiefer modelliert (keines der Quellmodelle enthält sie); Größe und Boden sind daher Näherungen.",
+    "related": [
+      "maxilla",
+      "maxillary-alveolar-process",
+      "posterior-superior-alveolar-nerve",
+      "infraorbital-nerve"
+    ]
+  },
+  "maxillary-alveolar-process": {
+    "summary": "Der Knochenkamm der Maxilla, der die Zahnfächer (Alveolen) der oberen Zähne enthält.",
+    "function": "Trägt und verankert die Zähne über das Desmodont.",
+    "clinical": "Der Alveolarknochen baut sich unter Belastung um (die Grundlage kieferorthopädischer Zahnbewegung) und bildet sich nach Zahnverlust zurück. In Dental Scope ist er als der Knochen um die Wurzeln markiert.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandible": {
+    "summary": "Der Unterkiefer – der einzige bewegliche Knochen des Schädels. Er besteht aus einem hufeisenförmigen Körper und zwei aufsteigenden Ästen (Rami), die im Processus condylaris und Processus coronoideus enden.",
+    "function": "Trägt die unteren Zähne und bewegt sich in den Kiefergelenken beim Kauen, Sprechen und Schlucken.",
+    "related": [
+      "mandibular-alveolar-process",
+      "tmj",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandible-body": {
+    "summary": "Körper und Äste des Unterkiefers, ohne den zahntragenden Alveolarteil und die Gelenkköpfchen, die getrennt dargestellt sind.",
+    "function": "Dient als Ansatz der Kaumuskulatur und beherbergt den Canalis mandibulae.",
+    "related": [
+      "mandibular-alveolar-process",
+      "inferior-alveolar-nerve",
+      "masseter"
+    ]
+  },
+  "mandibular-alveolar-process": {
+    "summary": "Der obere Teil des Unterkieferkörpers, der die Zahnfächer der unteren Zähne enthält.",
+    "function": "Trägt und verankert die unteren Zähne.",
+    "clinical": "Bildet sich nach Zahnverlust zurück, wodurch die für Implantate verfügbare Knochenhöhe über dem Canalis mandibulae abnehmen kann.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandibular-condyle": {
+    "summary": "Der abgerundete Kopf des Processus condylaris des Unterkiefers, der im Kiefergelenk mit dem Schläfenbein artikuliert.",
+    "function": "Dreht sich und gleitet bei der Mundöffnung nach vorn.",
+    "related": [
+      "articular-disc",
+      "articular-fossa",
+      "lateral-pterygoid"
+    ]
+  },
+  "mandibular-foramen": {
+    "summary": "Die Öffnung an der Innenseite des Unterkieferasts, durch die der N. alveolaris inferior und die begleitenden Gefäße in den Canalis mandibulae eintreten.",
+    "clinical": "Zielregion der Leitungsanästhesie des N. alveolaris inferior. Die Lage ist die Stelle, an der der Nervenverlauf des Atlas die Knochenoberfläche kreuzt.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mental-foramen": {
+    "summary": "Eine Öffnung an der Außenseite des Unterkiefers, meist nahe den Wurzelspitzen der Prämolaren, durch die der N. mentalis und die begleitenden Gefäße austreten.",
+    "clinical": "Seine Lage ist wichtig bei chirurgischen Eingriffen im Prämolarenbereich, bei der Implantation und bei der Mentalisblockade. Die Lage ist die Stelle, an der der Nervenverlauf des Atlas die Knochenoberfläche kreuzt.",
+    "related": [
+      "mental-nerve",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "gingiva": {
+    "summary": "Das Zahnfleisch: der Teil der Mundschleimhaut, der die Alveolarfortsätze bedeckt und die Zahnhälse umschließt.",
+    "function": "Schützt das darunterliegende Parodontalgewebe und bildet eine Abdichtung um jeden Zahn.",
+    "clinical": "Eine Entzündung der Gingiva (Gingivitis) ist reversibel; sie kann zu einer Parodontitis mit Attachment- und Knochenverlust fortschreiten.",
+    "related": [
+      "pdl",
+      "alveolar-bone"
+    ]
+  },
+  "periodontium": {
+    "summary": "Die Gewebe, die die Zähne tragen (Zahnhalteapparat): Gingiva, Desmodont, Wurzelzement und Alveolarknochen.",
+    "related": [
+      "gingiva",
+      "pdl",
+      "cementum"
+    ]
+  },
+  "inferior-alveolar-nerve": {
+    "summary": "Ein Ast des dritten Trigeminusasts, des N. mandibularis (V3). Er tritt durch das Foramen mandibulae ein und verläuft im Canalis mandibulae unterhalb der Wurzeln der unteren Zähne.",
+    "function": "Sensible Versorgung der Unterkieferzähne; gibt den N. mentalis ab und setzt sich als N. incisivus fort.",
+    "clinical": "Wird durch die Leitungsanästhesie am Foramen mandibulae betäubt. Seine Nähe zu den Wurzeln der Weisheitszähne und zu Implantatregionen macht ihn zu einer Schlüsselstruktur, die bei chirurgischen Eingriffen geschont werden muss. Der Verlauf folgt dem Z-Anatomy-Atlas, angepasst an diesen Schädel.",
+    "related": [
+      "mandibular-foramen",
+      "mental-nerve",
+      "inferior-alveolar-artery"
+    ]
+  },
+  "mental-nerve": {
+    "summary": "Der Endast des N. alveolaris inferior, der aus dem Foramen mentale austritt.",
+    "function": "Sensible Versorgung von Unterlippe, Kinn und labialer Gingiva der unteren Frontzähne.",
+    "clinical": "Eine Verletzung kann zu Taubheit von Unterlippe und Kinn führen. Der Verlauf folgt dem Z-Anatomy-Atlas, angepasst an diesen Schädel.",
+    "related": [
+      "mental-foramen",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "incisive-nerve": {
+    "summary": "Die Fortsetzung des N. alveolaris inferior im Knochen, vor dem Foramen mentale.",
+    "function": "Sensible Versorgung des unteren Eckzahns und der unteren Schneidezähne.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "lingual-nerve": {
+    "summary": "Ein Ast des N. mandibularis (V3), der medial des Unterkieferasts nach vorn verläuft, am Weisheitszahn dicht an der lingualen Kortikalis, bis zum Mundboden und zur Zunge.",
+    "function": "Allgemeine sensible Versorgung der vorderen zwei Drittel der Zunge, des Mundbodens und der lingualen Gingiva; führt außerdem Geschmacksfasern aus der Chorda tympani.",
+    "clinical": "Bei der operativen Entfernung unterer Weisheitszähne gefährdet. Der Verlauf folgt dem Z-Anatomy-Atlas, angepasst an diesen Schädel.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandibular-nerve-branches": {
+    "summary": "Die zahnmedizinisch relevanten Äste des dritten Trigeminusasts, des N. mandibularis (V3).",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve"
+    ]
+  },
+  "maxillary-nerve-branches": {
+    "summary": "Äste des zweiten Trigeminusasts, des N. maxillaris (V2), die die oberen Zähne und das umgebende Gewebe versorgen.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "infraorbital-nerve": {
+    "summary": "Die Fortsetzung des N. maxillaris (V2) durch den Orbitaboden, die am Foramen infraorbitale im Gesicht austritt.",
+    "function": "Sensible Versorgung von Unterlid, Nasenflügel und Oberlippe; gibt die vorderen (und, falls vorhanden, mittleren) oberen Alveolaräste ab.",
+    "clinical": "Der Verlauf folgt dem Z-Anatomy-Atlas, angepasst an diesen Schädel.",
+    "related": [
+      "anterior-superior-alveolar-nerve",
+      "middle-superior-alveolar-nerve"
+    ]
+  },
+  "posterior-superior-alveolar-nerve": {
+    "summary": "Äste des N. maxillaris (V2), die nahe dem Tuber maxillae in die Rückseite der Maxilla eintreten.",
+    "function": "Sensible Versorgung der meisten oberen Molaren und ihrer bukkalen Gingiva.",
+    "clinical": "Ziel der Tuberanästhesie. Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "maxillary-nerve-branches"
+    ]
+  },
+  "middle-superior-alveolar-nerve": {
+    "summary": "Ein Ast des N. infraorbitalis, der nur bei einem Teil der Bevölkerung vorkommt.",
+    "function": "Falls vorhanden: sensible Versorgung der oberen Prämolaren und eines Teils des ersten Molaren.",
+    "clinical": "Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "anterior-superior-alveolar-nerve": {
+    "summary": "Äste des N. infraorbitalis, die in der Vorderwand der Maxilla absteigen.",
+    "function": "Sensible Versorgung der oberen Schneidezähne und des oberen Eckzahns.",
+    "clinical": "Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "greater-palatine-nerve": {
+    "summary": "Ein Ast des N. maxillaris (V2) aus der Fossa pterygopalatina. Er zieht mit der A. palatina descendens durch den Canalis palatinus major nach unten und tritt palatinal der oberen Molaren aus dem Foramen palatinum majus aus.",
+    "function": "Sensible Versorgung des harten Gaumens und des palatinalen Zahnfleischs vom Eckzahn nach hinten; am Eckzahn überlappt sein Gebiet mit dem des N. nasopalatinus.",
+    "clinical": "Wird für Eingriffe am palatinalen Zahnfleisch der oberen Prämolaren und Molaren am Foramen palatinum majus anästhesiert. Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "maxillary-nerve",
+      "nasopalatine-nerve",
+      "descending-palatine-artery",
+      "palatine-bone"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      },
+      {
+        "title": "StatPearls: Pterygopalatine Fossa",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK513269/"
+      }
+    ]
+  },
+  "nasopalatine-nerve": {
+    "summary": "Ein Ast des N. maxillaris (V2), der die Fossa pterygopalatina durch das Foramen sphenopalatinum verlässt, auf dem Nasenseptum nach vorn unten zieht und durch den Canalis incisivus direkt hinter den mittleren Schneidezähnen die Mundhöhle erreicht.",
+    "function": "Sensible Versorgung des Nasenseptums sowie der palatinalen Schleimhaut und des Zahnfleischs der sechs oberen Frontzähne. Rechter und linker Nerv vereinigen sich vor ihrem Austritt aus dem Foramen incisivum.",
+    "clinical": "Eine Anästhesie an der Papilla incisiva betäubt das palatinale Gewebe der oberen Frontzähne beidseits. Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "maxillary-nerve",
+      "greater-palatine-nerve",
+      "vomer",
+      "maxilla"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "summary": "Ein Ast der A. maxillaris, der den N. alveolaris inferior durch den Canalis mandibulae begleitet.",
+    "function": "Blutversorgung des Unterkiefers und der unteren Zähne.",
+    "clinical": "Der Verlauf folgt dem Z-Anatomy-Atlas, angepasst an diesen Schädel.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "inferior-alveolar-vein": {
+    "summary": "Die Vene, die A. und N. alveolaris inferior im Canalis mandibulae begleitet.",
+    "function": "Venöser Abfluss aus Unterkiefer und unteren Zähnen.",
+    "clinical": "Der gezeigte Verlauf ist schematisch.",
+    "related": [
+      "inferior-alveolar-artery"
+    ]
+  },
+  "tmj": {
+    "summary": "Die Kiefergelenke verbinden den Unterkiefer mit den Schläfenbeinen. Jedes ist ein echtes (synoviales) Gelenk, in dem das Unterkieferköpfchen mit der Fossa mandibularis und dem Tuberculum articulare artikuliert, getrennt durch einen Discus articularis.",
+    "function": "Erlaubt sowohl Scharnierbewegungen (Rotation) als auch Gleitbewegungen (Translation), sodass der Mund weit geöffnet und der Unterkiefer seitlich bewegt werden kann.",
+    "clinical": "Craniomandibuläre Dysfunktionen (CMD) können Schmerzen, Gelenkknacken und eine eingeschränkte Mundöffnung verursachen.",
+    "related": [
+      "articular-disc",
+      "mandibular-condyle",
+      "lateral-pterygoid"
+    ]
+  },
+  "articular-disc": {
+    "summary": "Eine straffe, faserige Scheibe zwischen Unterkieferköpfchen und Schläfenbein, die jedes Gelenk in eine obere und eine untere Kammer teilt.",
+    "function": "Ermöglicht gleichmäßiges Drehen und Gleiten und verteilt die Last im Gelenk.",
+    "clinical": "Eine Verlagerung des Diskus ist eine häufige Ursache für Kiefergelenkknacken. Der gezeigte Diskus ist schematisch.",
+    "related": [
+      "mandibular-condyle",
+      "articular-fossa"
+    ]
+  },
+  "articular-fossa": {
+    "summary": "Die Vertiefung im Schläfenbein (Fossa mandibularis, Gelenkgrube), die das Unterkieferköpfchen aufnimmt.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "masseter": {
+    "summary": "Ein kräftiger, viereckiger Muskel vom Jochbogen zur Außenfläche von Kieferwinkel und Unterkieferast.",
+    "function": "Hebt den Unterkiefer (schließt den Mund); ein kraftvoller Kaumuskel.",
+    "related": [
+      "temporalis",
+      "medial-pterygoid"
+    ]
+  },
+  "temporalis": {
+    "summary": "Ein fächerförmiger Muskel von der Seitenfläche des Schädels, der am Processus coronoideus des Unterkiefers ansetzt.",
+    "function": "Hebt den Unterkiefer; seine hinteren Fasern ziehen ihn zurück.",
+    "related": [
+      "masseter"
+    ]
+  },
+  "medial-pterygoid": {
+    "summary": "Ein Muskel an der Innenseite des Unterkieferasts, das Gegenstück zum M. masseter.",
+    "function": "Hebt den Unterkiefer und hilft, ihn nach vorn und zur Seite zu bewegen.",
+    "related": [
+      "masseter",
+      "lateral-pterygoid"
+    ]
+  },
+  "lateral-pterygoid": {
+    "summary": "Ein zweiköpfiger Muskel, der vom Gelenkfortsatz und der Gelenkkapsel nach vorn zum Keilbein zieht.",
+    "function": "Schiebt den Unterkiefer nach vorn und hilft, den Mund zu öffnen und den Unterkiefer zur Gegenseite zu bewegen.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "buccinator": {
+    "summary": "Der Wangenmuskel, tief in der seitlichen Wand der Mundhöhle.",
+    "function": "Hält die Wange an den Zähnen und die Nahrung beim Kauen auf den Kauflächen.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "mentalis": {
+    "summary": "Ein kleiner Muskel des Kinns.",
+    "function": "Hebt und stülpt die Unterlippe vor und runzelt die Kinnhaut.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "orbicularis-oris": {
+    "summary": "Der schließmuskelartige Muskel, der den Mund innerhalb der Lippen umgibt.",
+    "function": "Schließt und formt die Lippen beim Sprechen, Essen und bei der Mimik.",
+    "related": [
+      "buccinator",
+      "mentalis"
+    ]
+  },
+  "skull": {
+    "summary": "Umgebende Schädel- und Gesichtsknochen, die zur Orientierung gezeigt werden.",
+    "related": [
+      "maxilla",
+      "mandible"
+    ]
+  },
+  "trigeminal-nerve": {
+    "summary": "Der fünfte Hirnnerv. Vom Ganglion trigeminale aus teilt er sich in N. ophthalmicus (V1), N. maxillaris (V2) und N. mandibularis (V3).",
+    "function": "Der wichtigste sensible Nerv von Gesicht, Zähnen und Mund; sein mandibulärer Anteil versorgt außerdem die Kaumuskeln motorisch.",
+    "related": [
+      "maxillary-nerve",
+      "mandibular-nerve"
+    ]
+  },
+  "maxillary-nerve": {
+    "summary": "Der zweite Trigeminusast (V2). Er verlässt den Schädel durch das Foramen rotundum, zieht durch die Fossa pterygopalatina und setzt sich als N. infraorbitalis fort.",
+    "function": "Sensible Versorgung der Oberkieferzähne, der Gingiva des Oberkiefers, des Gaumens, der Oberlippe und der Wange.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "mandibular-nerve": {
+    "summary": "Der dritte Trigeminusast (V3). Er verlässt den Schädel durch das Foramen ovale und teilt sich in einen vorderen und einen hinteren Stamm.",
+    "function": "Sensible Versorgung der Unterkieferzähne, der Zunge, der Unterlippe und des Kinns; motorische Versorgung der Kaumuskeln.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve",
+      "buccal-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "buccal-nerve": {
+    "summary": "Ein sensibler Ast aus dem vorderen Stamm des N. mandibularis (V3), der über den M. buccinator nach vorn zur Wange zieht.",
+    "function": "Sensible Versorgung der Wange und der bukkalen Gingiva der unteren Molaren.",
+    "clinical": "Wird bei Eingriffen an der bukkalen Gingiva der unteren Molaren gesondert betäubt (Bukkalisanästhesie).",
+    "related": [
+      "mandibular-nerve"
+    ]
+  },
+  "external-carotid-artery": {
+    "summary": "Die Arterie, die den größten Teil von Gesicht und Kiefern versorgt. Sie steigt hinter dem Unterkieferast auf und teilt sich am Ende in A. maxillaris und A. temporalis superficialis.",
+    "function": "Ihre Äste, darunter A. facialis und A. maxillaris, versorgen Zähne, Kiefer, Gesicht und Kopfhaut mit Blut.",
+    "related": [
+      "maxillary-artery",
+      "facial-artery"
+    ]
+  },
+  "maxillary-artery": {
+    "summary": "Ein Endast der A. carotis externa. Sie zieht hinter dem Collum mandibulae durch die Fossa infratemporalis nach vorn in die Fossa pterygopalatina.",
+    "function": "Gibt die A. alveolaris inferior, A. alveolaris superior posterior, A. buccalis und A. palatina descendens ab, die Zähne, Kiefer und Gaumen versorgen.",
+    "related": [
+      "external-carotid-artery",
+      "inferior-alveolar-artery",
+      "posterior-superior-alveolar-artery"
+    ]
+  },
+  "posterior-superior-alveolar-artery": {
+    "summary": "Ein Ast der A. maxillaris, der an der Rückseite des Oberkiefers (Tuber maxillae) absteigt und durch kleine Öffnungen in den Knochen eintritt.",
+    "function": "Blutversorgung der oberen Molaren und Prämolaren, der Kieferhöhle und der bukkalen Gingiva.",
+    "clinical": "Kann bei der Tuberanästhesie und bei Sinuslift-Operationen bluten.",
+    "related": [
+      "maxillary-artery",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "descending-palatine-artery": {
+    "summary": "Ein Ast der A. maxillaris, der durch den Canalis palatinus major absteigt und am harten Gaumen als A. palatina major nach vorn zieht.",
+    "function": "Blutversorgung des harten Gaumens und der palatinalen Gingiva.",
+    "clinical": "Bei der Entnahme von Bindegewebstransplantaten am Gaumen und bei Schnitten am Gaumen zu beachten.",
+    "related": [
+      "maxillary-artery"
+    ]
+  },
+  "buccal-artery": {
+    "summary": "Ein kleiner Ast der A. maxillaris, der mit dem N. buccalis auf den M. buccinator zieht.",
+    "function": "Blutversorgung der Wange und der Wangenschleimhaut.",
+    "related": [
+      "maxillary-artery",
+      "buccal-nerve"
+    ]
+  },
+  "facial-artery": {
+    "summary": "Ein Ast der A. carotis externa, der sich direkt vor dem M. masseter um den Unterrand des Unterkiefers schlingt und über das Gesicht aufsteigt.",
+    "function": "Blutversorgung von Lippen, Wange, Kinn und Nasenflügel.",
+    "clinical": "Ihr Puls ist dort tastbar, wo sie den Unterrand des Unterkiefers kreuzt.",
+    "related": [
+      "external-carotid-artery",
+      "facial-vein"
+    ]
+  },
+  "pterygoid-plexus": {
+    "summary": "Ein Venengeflecht um den M. pterygoideus lateralis in der Fossa infratemporalis. Die Venen der Kiefer und Zähne münden hier, und das Geflecht fließt in die V. maxillaris ab.",
+    "function": "Sammelt Blut aus den Vv. alveolares inferiores, den Kaumuskeln und dem Gaumen.",
+    "clinical": "Kann bei der Tuberanästhesie punktiert werden und ein Hämatom verursachen. Das gezeigte Geflecht ist schematisch.",
+    "related": [
+      "maxillary-vein",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "maxillary-vein": {
+    "summary": "Eine kurze Vene, die Blut aus dem Plexus pterygoideus hinter das Collum mandibulae führt, wo sie sich mit der V. temporalis superficialis zur V. retromandibularis vereinigt.",
+    "function": "Drainiert den Plexus pterygoideus.",
+    "related": [
+      "pterygoid-plexus",
+      "retromandibular-vein"
+    ]
+  },
+  "retromandibular-vein": {
+    "summary": "Die Vene, die hinter dem Unterkieferast in der Ohrspeicheldrüse absteigt und sich in einen vorderen und einen hinteren Ast teilt. Gezeigt wird nur der vordere Ast, der sich mit der V. facialis vereinigt.",
+    "function": "Leitet das Blut der V. maxillaris und der V. temporalis superficialis in die V. facialis und die V. jugularis externa.",
+    "related": [
+      "maxillary-vein",
+      "facial-vein",
+      "internal-jugular-vein"
+    ]
+  },
+  "facial-vein": {
+    "summary": "Die Hauptvene des Gesichts. Sie läuft hinter der A. facialis abwärts, kreuzt den Unterrand des Unterkiefers und vereinigt sich mit dem vorderen Ast der V. retromandibularis zur V. facialis communis.",
+    "function": "Leitet das Blut von Gesicht, Lippen und Kinn in die V. jugularis interna.",
+    "clinical": "Sie steht mit den Venen der Augenhöhle in Verbindung, daher können sich Infektionen von Oberlippe und Nase nach innen ausbreiten.",
+    "related": [
+      "facial-artery",
+      "internal-jugular-vein"
+    ]
+  },
+  "internal-jugular-vein": {
+    "summary": "Die große Vene seitlich am Hals, die Blut aus Gehirn, Gesicht und Hals zum Herzen führt. Nur ihr oberer Abschnitt ist dargestellt.",
+    "function": "Nimmt die V. facialis und damit den größten Teil des venösen Blutes aus Gesicht und Kiefern auf.",
+    "related": [
+      "facial-vein",
+      "external-carotid-artery"
+    ]
+  }
+}

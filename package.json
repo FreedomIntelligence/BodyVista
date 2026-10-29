@@ -1,0 +1,24 @@
+{
+  "name": "bodyvista",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check:translations && npm run check:dental && vite build",
+    "check:translations": "node tools/check-translations.mjs",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.js",
+    "check:dental": "node tools/check-dental.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "three": "^0.186.1",
+    "three-mesh-bvh": "^0.9.15",
+    "zustand": "^5.0.15"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Svensk översättning av en/teeth.json. Typiska läroboksvärden; den individuella anatomin varierar."
+  },
+  "tooth:central-incisor:maxillary": {
+    "summary": "Den mest framträdande tanden i leendet. En enrotad incisiv med en bred, platt labial yta och en rak incisalkant som används för att skära av föda.",
+    "function": "Avbitning (att bita av och skära) av föda; stöder överläppen och bidrar till talet (labiodentala och dentala ljud) och till ansiktets utseende.",
+    "clinical": "Drabbas ofta av tandtrauma på grund av sitt framskjutna läge. Nyligen erupterade incisiver kan ha mameloner (små rundade upphöjningar) på incisalkanten.",
+    "roots": "Oftast en konisk rot",
+    "canals": "Oftast en kanal",
+    "eruption": "Cirka 7–8 år"
+  },
+  "tooth:lateral-incisor:maxillary": {
+    "summary": "En mindre incisiv bredvid den centrala incisiven, med en mer rundad incisal kontur och störst formvariation bland framtänderna.",
+    "function": "Skär av föda; bidrar till leendet och till den främre styrningen.",
+    "clinical": "Vanligt ställe för utvecklingsvariationer, till exempel tappformade laterala incisiver och medfödd avsaknad.",
+    "roots": "Oftast en rot",
+    "canals": "Oftast en kanal",
+    "eruption": "Cirka 8–9 år"
+  },
+  "tooth:canine:maxillary": {
+    "summary": "En lång tand med en enda spets i tandbågens hörn. Överkäkens hörntand har oftast den längsta roten i hela tandsättningen.",
+    "function": "Griper och sliter sönder föda; styr käken vid sidorörelser (hörntandsstyrning); stöder mungipan.",
+    "clinical": "Den långa roten förankrar den väl; den är ofta retinerad, vanligen palatinalt.",
+    "roots": "En lång rot",
+    "canals": "Oftast en kanal",
+    "eruption": "Cirka 11–12 år"
+  },
+  "tooth:first-premolar:maxillary": {
+    "summary": "En premolar med två kuspar (buckal och palatinal). Den har oftast två rötter, vilket skiljer den från de flesta andra premolarer.",
+    "function": "Övergången från att slita sönder till att mala; håller fast och krossar föda.",
+    "clinical": "Extraheras ofta för att skapa plats vid ortodontisk behandling. Två kanaler är det typiska, så båda måste lokaliseras vid endodontisk behandling.",
+    "roots": "Oftast två (buckal och palatinal)",
+    "canals": "Oftast två",
+    "eruption": "Cirka 10–11 år"
+  },
+  "tooth:second-premolar:maxillary": {
+    "summary": "En premolar med två kuspar som liknar den första premolaren, men med mer jämnstora kuspar och oftast en enda rot.",
+    "function": "Krossar och maler föda.",
+    "clinical": "Oftast en kanal, men två kanaler förekommer hos en betydande minoritet.",
+    "roots": "Oftast en",
+    "canals": "En, ibland två",
+    "eruption": "Cirka 10–12 år"
+  },
+  "tooth:first-molar:maxillary": {
+    "summary": "Den största tanden i överkäkens tandbåge, med fyra huvudkuspar och tre rötter: mesiobuckal, distobuckal och palatinal.",
+    "function": "Den viktigaste maltanden; avgörande för det ocklusala förhållandet mellan käkarna.",
+    "clinical": "Den mesiobuckala roten innehåller ofta en andra kanal (MB2), som lätt missas vid rotbehandling. Rötterna ligger nära bihålans (sinus maxillaris) botten.",
+    "roots": "Tre (mesiobuckal, distobuckal, palatinal)",
+    "canals": "Tre eller fyra – en andra mesiobuckal kanal (MB2) finns ofta",
+    "eruption": "Cirka 6–7 år"
+  },
+  "tooth:second-molar:maxillary": {
+    "summary": "En mindre molar bakom den första molaren, med tre rötter som ofta ligger närmare varandra.",
+    "function": "Maler föda.",
+    "clinical": "Rötterna kan vara delvis sammanvuxna; förhållandet till bihålan i överkäken är kliniskt betydelsefullt.",
+    "roots": "Oftast tre, ibland sammanvuxna",
+    "canals": "Oftast tre",
+    "eruption": "Cirka 12–13 år"
+  },
+  "tooth:third-molar:maxillary": {
+    "summary": "Visdomstanden – den sista tanden i tandbågen, med den mest varierande kron- och rotformen.",
+    "function": "Maler föda när den har erupterat och är i funktion.",
+    "clinical": "Ofta retinerad eller delvis erupterad; extraheras ofta. I Dental Scope är den här tanden en härledd approximation (se ursprung).",
+    "roots": "Varierande, ofta sammanvuxna",
+    "canals": "Varierande",
+    "eruption": "Cirka 17–21 år, om den alls erupterar"
+  },
+  "tooth:central-incisor:mandibular": {
+    "summary": "Den minsta tanden i den permanenta tandsättningen: en smal, symmetrisk incisiv med en enda rot som är mesiodistalt tillplattad.",
+    "function": "Skär av föda mot överkäkens incisiver.",
+    "clinical": "Trots att den oftast har en rot finns en andra (lingual) kanal hos en märkbar minoritet.",
+    "roots": "En, mesiodistalt tillplattad",
+    "canals": "Oftast en, ibland två",
+    "eruption": "Cirka 6–7 år"
+  },
+  "tooth:lateral-incisor:mandibular": {
+    "summary": "Något större än underkäkens centrala incisiv, med en krona som är lätt vriden distalt längs tandbågens krökning.",
+    "function": "Skär av föda.",
+    "clinical": "Kan liksom den centrala incisiven ha två kanaler.",
+    "roots": "En",
+    "canals": "Oftast en, ibland två",
+    "eruption": "Cirka 7–8 år"
+  },
+  "tooth:canine:mandibular": {
+    "summary": "Underkäkens hörnstenstand: en lång tand med en enda spets och lång rot, smalare än motsvarande tand i överkäken.",
+    "function": "Griper och sliter sönder föda; styr käken vid sidorörelser.",
+    "clinical": "Har ibland en tvådelad rot.",
+    "roots": "En, ibland tvådelad",
+    "canals": "Oftast en",
+    "eruption": "Cirka 9–10 år"
+  },
+  "tooth:first-premolar:mandibular": {
+    "summary": "En premolar med en stor buckal kusp och en liten lingual kusp, vilket ger den ett hörntandslikt utseende.",
+    "function": "Hjälper hörntanden att slita sönder föda och börjar krossa den.",
+    "clinical": "Oftast en kanal, men kanalanatomin varierar påtagligt.",
+    "roots": "En",
+    "canals": "Oftast en, ibland två",
+    "eruption": "Cirka 10–12 år"
+  },
+  "tooth:second-premolar:mandibular": {
+    "summary": "En premolar med en mer utvecklad lingual del än den första premolaren, ofta med två linguala kuspar.",
+    "function": "Krossar och maler föda.",
+    "clinical": "Foramen mentale ligger ofta nära rotspetsarna på underkäkens premolarer – av betydelse vid kirurgi och bedövning.",
+    "roots": "En",
+    "canals": "Oftast en",
+    "eruption": "Cirka 11–12 år"
+  },
+  "tooth:first-molar:mandibular": {
+    "summary": "Underkäkens största tand: fem kuspar på en bred krona och två väl åtskilda rötter, en mesial och en distal.",
+    "function": "Den viktigaste maltanden i underkäken.",
+    "clinical": "En av de tänder som oftast lagas och rotbehandlas. Den mesiala roten har typiskt två kanaler (mesiobuckal och mesiolingual); den distala roten en, ibland två.",
+    "roots": "Två (mesial och distal)",
+    "canals": "Oftast tre",
+    "eruption": "Cirka 6–7 år"
+  },
+  "tooth:second-molar:mandibular": {
+    "summary": "En molar med fyra kuspar och två rötter som ofta ligger närmare varandra än hos den första molaren.",
+    "function": "Maler föda.",
+    "clinical": "Rötterna kan konvergera eller växa samman; C-formade kanalsystem förekommer i vissa befolkningsgrupper.",
+    "roots": "Två, ibland sammanvuxna",
+    "canals": "Oftast tre",
+    "eruption": "Cirka 11–13 år"
+  },
+  "tooth:third-molar:mandibular": {
+    "summary": "Underkäkens visdomstand, mycket varierande till form och läge.",
+    "function": "Maler föda när den har erupterat och är i funktion.",
+    "clinical": "Ofta retinerad. Rötterna kan ligga nära mandibularkanalen, och n. lingualis löper här nära den linguala kortikalisen. I Dental Scope är den här tanden en härledd approximation (se ursprung).",
+    "roots": "Två, ofta sammanvuxna",
+    "canals": "Varierande",
+    "eruption": "Cirka 17–21 år, om den alls erupterar"
+  }
+}

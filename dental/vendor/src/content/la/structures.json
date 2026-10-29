@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Versio Latina textus en/structures.json. Summaria brevia ad docendum."
+  },
+  "crown": {
+    "summary": "Pars dentis enamelo tecta, supra lineam cervicalem (juncturam cementi et enameli).",
+    "function": "Faciem operantem dentis format ad secandum, lacerandum vel terendum.",
+    "related": [
+      "enamel",
+      "dentin-coronal",
+      "cej"
+    ]
+  },
+  "root": {
+    "summary": "Pars dentis cemento tecta, in osse alveolari infixa et ei per ligamentum periodontale affixa.",
+    "function": "Dentem in maxilla firmat et vires masticationis ad os transmittit.",
+    "related": [
+      "cementum",
+      "dentin-radicular",
+      "pdl",
+      "root-canals"
+    ]
+  },
+  "enamel": {
+    "summary": "Tegmentum externum coronae et textus durissimus corporis humani, maxime ex crystallis hydroxyapatitis constans.",
+    "function": "Faciem attritui resistentem ad mandendum praebet et dentinum subiacens tuetur.",
+    "clinical": "Enamelum cellulis caret neque amissum regeneratur. Demineralisatio acidis placae dentalis prima cariei phasis est.",
+    "facts": [
+      {
+        "label": "Compositio",
+        "value": "Circa 96 % mineralis pondere"
+      },
+      {
+        "label": "Formatur ab",
+        "value": "Ameloblastis (post eruptionem dentis pereunt)"
+      }
+    ],
+    "related": [
+      "dentin-coronal",
+      "cej",
+      "crown"
+    ]
+  },
+  "dentin": {
+    "summary": "Textus mineralisatus qui maiorem partem dentis format, sub enamelo in corona et sub cemento in radice.",
+    "function": "Enamelum sustinet et pulpam includit. Tubuli dentinales eum cum pulpa coniungunt, unde sensibile est.",
+    "clinical": "Dentinum nudatum sensibilitatem movere potest. Dentinum per totam vitam lente formatur (dentinum secundarium) et ob irritationem (dentinum tertiarium), quo spatium pulpae paulatim angustatur.",
+    "facts": [
+      {
+        "label": "Compositio",
+        "value": "Circa 70 % mineralis pondere"
+      },
+      {
+        "label": "Formatur ab",
+        "value": "Odontoblastis pulpam vestientibus"
+      }
+    ],
+    "related": [
+      "enamel",
+      "pulp-chamber",
+      "cementum"
+    ]
+  },
+  "dentin-coronal": {
+    "summary": "Dentinum coronae, sub enamelo et circa cavitatem coronae situm.",
+    "function": "Enamelum sustinet et pulpam tuetur.",
+    "clinical": "Caries, ubi dentinum coronale attigit, secundum juncturam enameli et dentini lateraliter serpit.",
+    "related": [
+      "enamel",
+      "pulp-chamber"
+    ]
+  },
+  "dentin-radicular": {
+    "summary": "Dentinum radicis, cemento tectum et canalem vel canales radicis circumdans.",
+    "function": "Structuram radicis format.",
+    "related": [
+      "cementum",
+      "root-canals"
+    ]
+  },
+  "cementum": {
+    "summary": "Stratum tenue textus mineralisati quod dentinum radicis tegit.",
+    "function": "Fibris ligamenti periodontalis, quae dentem in alveolo tenent, insertionem praebet.",
+    "clinical": "Cementum prope lineam cervicalem tenuissimum est et versus apicem crassius. In Dental Scope crassitudo eius paulo amplificata est, ut conspici possit.",
+    "facts": [
+      {
+        "label": "Compositio",
+        "value": "Circa 45–50 % mineralis pondere"
+      }
+    ],
+    "related": [
+      "pdl",
+      "dentin-radicular"
+    ]
+  },
+  "pdl": {
+    "summary": "Stratum tenue textus connectivi fibrosi inter cementum radicis et os alveolare.",
+    "function": "Dentem in alveolo suspendit, vires masticationis excipit et nuntios sensorios (proprioceptionem) praebet.",
+    "clinical": "Latitudo eius plerumque fractio millimetri est. Spatium ligamenti in radiographiis dilatatum traumatis occlusalis vel morbi signum esse potest.",
+    "related": [
+      "cementum",
+      "alveolar-bone"
+    ]
+  },
+  "pulp": {
+    "summary": "Textus connectivus mollis in medio dente, vasa sanguinea, nervos et odontoblastos dentinum formantes continens.",
+    "function": "Dentinum format, dentem nutrit et sensum transmittit.",
+    "clinical": "Inflammatio pulpae (pulpitis) frequens causa doloris dentium est; pulpitis irreversibilis vel necrosis pulpae plerumque curatione canalium radicis vel extractione curatur.",
+    "related": [
+      "pulp-chamber",
+      "root-canals",
+      "apical-foramen"
+    ]
+  },
+  "pulp-chamber": {
+    "summary": "Pars cavitatis pulpae in corona et in parte cervicali dentis sita.",
+    "function": "Pulpam coronalem continet; prolongationes versus cuspides cornua pulpae formant.",
+    "clinical": "Cavitas aetate, dentino secundario deposito, angustatur. Ostia canalium in fundo eius aperiuntur.",
+    "related": [
+      "pulp-horn",
+      "root-canals"
+    ]
+  },
+  "pulp-horn": {
+    "summary": "Prolongatio cavitatis coronae versus apicem cuspidis vel marginem incisalem.",
+    "clinical": "Cornua pulpae in praeparatione cavitatum profundarum, praesertim in dentibus iuvenibus, periculo nudationis obnoxia sunt.",
+    "related": [
+      "pulp-chamber",
+      "enamel"
+    ]
+  },
+  "root-canals": {
+    "summary": "Pars cavitatis pulpae quae per radicem vel radices ab ostiis canalium usque ad foramen apicis decurrit.",
+    "function": "Nervos et vasa pulpae inter dentem et textus circumiacentes ducit.",
+    "clinical": "Numerus et forma canalium valde variant. Curatio canalium radicis hoc spatium purgat, format et obturat. In Dental Scope canales quamque radicem fictam in dispositione frequentissima sequuntur.",
+    "related": [
+      "pulp-chamber",
+      "apical-foramen"
+    ]
+  },
+  "canal": {
+    "summary": "Unus canalis radicis: meatus textus pulpae intra radicem.",
+    "function": "Nervos et vasa pulpae ducit.",
+    "clinical": "Dispositio hic ostensa in hac radice frequentissima est; multae variationes exstant.",
+    "related": [
+      "apical-foramen",
+      "pulp-chamber"
+    ]
+  },
+  "apical-foramen": {
+    "summary": "Apertura in apice radicis vel prope eum, per quam nervi et vasa pulpam intrant et relinquunt.",
+    "clinical": "Foramen saepe paulo ante apicem anatomicum vel iuxta eum exit; obturatio canalium intra canalem prope id finire studet.",
+    "related": [
+      "root-canals",
+      "apex"
+    ]
+  },
+  "apex": {
+    "summary": "Extremitas radicis.",
+    "clinical": "Infectio e canali egrediens laesionem periapicalem circa apicem formare potest.",
+    "related": [
+      "apical-foramen"
+    ]
+  },
+  "cej": {
+    "summary": "Junctura cementi et enameli: linea ubi enamelum coronae cementum radicis attingit, etiam linea cervicalis appellata.",
+    "clinical": "Punctum ad recessionem gingivae et amissionem insertionis clinicae metiendam. In faciebus proximalibus versus coronam curvatur, maxime in dentibus anterioribus.",
+    "related": [
+      "enamel",
+      "cementum"
+    ]
+  },
+  "maxilla": {
+    "summary": "Os par quod maxillam superiorem format. Dentes superiores continet, maiorem partem palati duri et partes fundi orbitae et cavitatis nasi format, sinumque maxillarem continet.",
+    "function": "Dentitionem superiorem et mediam faciem sustinet.",
+    "clinical": "Radices dentium posteriorum superiorum fundo sinus maxillaris proximae esse possunt.",
+    "related": [
+      "maxillary-alveolar-process",
+      "palatine-bone",
+      "maxillary-nerve-branches",
+      "maxillary-sinus"
+    ]
+  },
+  "maxillary-sinus": {
+    "summary": "Cavum aere plenum in corpore maxillae, supra radices praemolarium et molarium superiorum. In cavitatem nasi aperitur.",
+    "function": "Cranium leviorem reddit et voci resonantiam addit. Tunica mucosa eius in nasum effunditur.",
+    "clinical": "Radices molarium et praemolarium superiorum saepe paulo infra fundum sinus iacent et in eum pervenire possunt. Extractio aut implantatum hac in regione sinum aperire potest (communicatio oroantralis), et infectio dentalis in eum propagari potest. Sinus hic ostensus ex maxilla fictus est (neutrum exemplar fontis eum continet), itaque magnitudo et fundus approximata sunt.",
+    "related": [
+      "maxilla",
+      "maxillary-alveolar-process",
+      "posterior-superior-alveolar-nerve",
+      "infraorbital-nerve"
+    ]
+  },
+  "maxillary-alveolar-process": {
+    "summary": "Crista maxillae quae alveolos dentium superiorum continet.",
+    "function": "Dentes per ligamentum periodontale sustinet et firmat.",
+    "clinical": "Os alveolare ad vires se reformat (fundamentum motus orthodontici) et post amissionem dentium resorbetur. In Dental Scope ut os radices circumdans signatur.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandible": {
+    "summary": "Mandibula: solum os mobile cranii. Constat ex corpore ungulae equinae simili et duobus ramis verticalibus, qui in processus condylarem et coronoideum exeunt.",
+    "function": "Dentes inferiores continet et in articulationibus temporomandibularibus movetur ad mandendum, loquendum et deglutiendum.",
+    "related": [
+      "mandibular-alveolar-process",
+      "tmj",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandible-body": {
+    "summary": "Corpus et rami mandibulae, sine parte alveolari dentes ferente et sine capitibus condylaribus, quae seorsum ostenduntur.",
+    "function": "Musculis masticatoriis insertionem praebet et canalem mandibulae continet.",
+    "related": [
+      "mandibular-alveolar-process",
+      "inferior-alveolar-nerve",
+      "masseter"
+    ]
+  },
+  "mandibular-alveolar-process": {
+    "summary": "Pars superior corporis mandibulae quae alveolos dentium inferiorum continet.",
+    "function": "Dentes inferiores sustinet et firmat.",
+    "clinical": "Post amissionem dentium resorbetur, quo altitudo ossis supra canalem mandibulae implantatis apta minui potest.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandibular-condyle": {
+    "summary": "Caput rotundum processus condylaris mandibulae, quod cum osse temporali in articulatione temporomandibulari articulatur.",
+    "function": "Ore aperiendo rotatur et prorsum labitur.",
+    "related": [
+      "articular-disc",
+      "articular-fossa",
+      "lateral-pterygoid"
+    ]
+  },
+  "mandibular-foramen": {
+    "summary": "Apertura in facie interna rami mandibulae, per quam nervus et vasa alveolaria inferiora canalem mandibulae intrant.",
+    "clinical": "Regio petita in anaesthesia conductiva nervi alveolaris inferioris. Locus est ubi cursus nervi ex atlante superficiem ossis transit.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mental-foramen": {
+    "summary": "Apertura in facie externa mandibulae, plerumque prope apices premolarium, per quam nervus et vasa mentalia exeunt.",
+    "clinical": "Situs eius in chirurgia premolarium, in implantatione et in anaesthesia nervi mentalis magni momenti est. Locus est ubi cursus nervi ex atlante superficiem ossis transit.",
+    "related": [
+      "mental-nerve",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "gingiva": {
+    "summary": "Gingiva: pars tunicae mucosae oris quae processus alveolares tegit et colla dentium circumdat.",
+    "function": "Textus periodontales subiacentes tuetur et circa quemque dentem claustrum format.",
+    "clinical": "Inflammatio gingivae (gingivitis) reversibilis est; in periodontitidem cum amissione insertionis et ossis progredi potest.",
+    "related": [
+      "pdl",
+      "alveolar-bone"
+    ]
+  },
+  "periodontium": {
+    "summary": "Textus qui dentes sustinent: gingiva, ligamentum periodontale, cementum et os alveolare.",
+    "related": [
+      "gingiva",
+      "pdl",
+      "cementum"
+    ]
+  },
+  "inferior-alveolar-nerve": {
+    "summary": "Ramus divisionis mandibularis nervi trigemini (V3). Per foramen mandibulae intrat et per canalem mandibulae sub radicibus dentium inferiorum decurrit.",
+    "function": "Sensum dentibus inferioribus praebet; nervum mentalem emittit et ut nervus incisivus pergit.",
+    "clinical": "Anaesthesia conductiva nervi alveolaris inferioris anaesthetizatur. Propter propinquitatem ad radices tertiorum molarium et ad loca implantatorum structura praecipua est quae in chirurgia vitanda est. Cursus atlantem Z-Anatomy sequitur, huic cranio accommodatum.",
+    "related": [
+      "mandibular-foramen",
+      "mental-nerve",
+      "inferior-alveolar-artery"
+    ]
+  },
+  "mental-nerve": {
+    "summary": "Ramus terminalis nervi alveolaris inferioris, qui e foramine mentali exit.",
+    "function": "Sensum labio inferiori, mento et gingivae labiali dentium anteriorum inferiorum praebet.",
+    "clinical": "Laesio torporem labii inferioris et menti movere potest. Cursus atlantem Z-Anatomy sequitur, huic cranio accommodatum.",
+    "related": [
+      "mental-foramen",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "incisive-nerve": {
+    "summary": "Continuatio nervi alveolaris inferioris intra os, ante foramen mentale.",
+    "function": "Sensum canino et incisivis inferioribus praebet.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "lingual-nerve": {
+    "summary": "Ramus divisionis mandibularis nervi trigemini (V3), qui medialiter a ramo mandibulae prorsum decurrit, prope laminam lingualem ad tertium molarem, usque ad pavimentum oris et linguam.",
+    "function": "Sensum generalem duabus tertiis partibus anterioribus linguae, pavimento oris et gingivae linguali praebet; fibras quoque gustatorias e chorda tympani ducit.",
+    "clinical": "In chirurgia tertiorum molarium inferiorum periclitatur. Cursus atlantem Z-Anatomy sequitur, huic cranio accommodatum.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandibular-nerve-branches": {
+    "summary": "Rami divisionis mandibularis nervi trigemini (V3) ad artem dentariam pertinentes.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve"
+    ]
+  },
+  "maxillary-nerve-branches": {
+    "summary": "Rami divisionis maxillaris nervi trigemini (V2) qui dentes superiores et textus circumiacentes innervant.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "infraorbital-nerve": {
+    "summary": "Continuatio nervi maxillaris (V2) per fundum orbitae, quae per foramen infraorbitale in faciem exit.",
+    "function": "Sensum palpebrae inferiori, lateri nasi et labio superiori praebet; nervos alveolares superiores anteriores (et, si adsunt, medios) emittit.",
+    "clinical": "Cursus atlantem Z-Anatomy sequitur, huic cranio accommodatum.",
+    "related": [
+      "anterior-superior-alveolar-nerve",
+      "middle-superior-alveolar-nerve"
+    ]
+  },
+  "posterior-superior-alveolar-nerve": {
+    "summary": "Ramus nervi maxillaris (V2) qui partem posteriorem maxillae prope tuber intrat.",
+    "function": "Sensum plerisque molaribus superioribus eorumque gingivae buccali praebet.",
+    "clinical": "Scopus anaesthesiae tuberis (nervi alveolaris superioris posterioris). Cursus ostensus schematicus est.",
+    "related": [
+      "maxillary-nerve-branches"
+    ]
+  },
+  "middle-superior-alveolar-nerve": {
+    "summary": "Ramus nervi infraorbitalis, qui in parte tantum hominum adest.",
+    "function": "Si adest, sensum premolaribus superioribus et parti primi molaris praebet.",
+    "clinical": "Cursus ostensus schematicus est.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "anterior-superior-alveolar-nerve": {
+    "summary": "Ramus nervi infraorbitalis qui in pariete anteriore maxillae descendit.",
+    "function": "Sensum incisivis et canino superioribus praebet.",
+    "clinical": "Cursus ostensus schematicus est.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "greater-palatine-nerve": {
+    "summary": "Ramus nervi maxillaris (V2) e fossa pterygopalatina. Per canalem palatinum majorem cum arteria palatina descendente descendit et per foramen palatinum majus palatinaliter molarium superiorum exit.",
+    "function": "Sensum palato duro et gingivae palatinae a canino retrorsum praebet; prope caninum territorium eius cum territorio nervi nasopalatini congruit.",
+    "clinical": "Anaesthesia ad foramen palatinum majus efficitur, cum gingiva palatina premolarium et molarium superiorum tractatur. Cursus ostensus schematicus est.",
+    "related": [
+      "maxillary-nerve",
+      "nasopalatine-nerve",
+      "descending-palatine-artery",
+      "palatine-bone"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      },
+      {
+        "title": "StatPearls: Pterygopalatine Fossa",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK513269/"
+      }
+    ]
+  },
+  "nasopalatine-nerve": {
+    "summary": "Ramus nervi maxillaris (V2) qui fossam pterygopalatinam per foramen sphenopalatinum relinquit, in septo nasi deorsum et antrorsum currit et per canalem incisivum statim post incisivos mediales os intrat.",
+    "function": "Sensum septo nasi et mucosae gingivaeque palatinae sex dentium anteriorum superiorum praebet. Nervi dexter et sinister coniunguntur antequam per foramen incisivum exeunt.",
+    "clinical": "Anaesthesia nasopalatina ad papillam incisivam textum palatinum dentium anteriorum superiorum utrimque obtundit. Cursus ostensus schematicus est.",
+    "related": [
+      "maxillary-nerve",
+      "greater-palatine-nerve",
+      "vomer",
+      "maxilla"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "summary": "Ramus arteriae maxillaris qui nervum alveolarem inferiorem per canalem mandibulae comitatur.",
+    "function": "Sanguinem mandibulae et dentibus inferioribus suppeditat.",
+    "clinical": "Cursus atlantem Z-Anatomy sequitur, huic cranio accommodatum.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "inferior-alveolar-vein": {
+    "summary": "Vena quae arteriam et nervum alveolares inferiores in canali mandibulae comitatur.",
+    "function": "Sanguinem venosum e mandibula et dentibus inferioribus deducit.",
+    "clinical": "Cursus ostensus schematicus est.",
+    "related": [
+      "inferior-alveolar-artery"
+    ]
+  },
+  "tmj": {
+    "summary": "Articulationes temporomandibulares mandibulam cum ossibus temporalibus coniungunt. Quaeque articulatio synovialis est, in qua condylus mandibulae cum fossa mandibulari et tuberculo articulari articulatur, disco articulari interposito.",
+    "function": "Motus et cardinis (rotationem) et lapsus (translationem) sinit, ut os late aperiri et in latera moveri possit.",
+    "clinical": "Morbi temporomandibulares dolorem, crepitum et aperturam limitatam movere possunt.",
+    "related": [
+      "articular-disc",
+      "mandibular-condyle",
+      "lateral-pterygoid"
+    ]
+  },
+  "articular-disc": {
+    "summary": "Discus fibrosus densus inter condylum mandibulae et os temporale, qui quamque articulationem in cavum superius et inferius dividit.",
+    "function": "Rotationem et lapsum lenes sinit et onus per articulationem distribuit.",
+    "clinical": "Dislocatio disci frequens causa crepitus articularis est. Discus ostensus schematicus est.",
+    "related": [
+      "mandibular-condyle",
+      "articular-fossa"
+    ]
+  },
+  "articular-fossa": {
+    "summary": "Depressio ossis temporalis (fossa mandibularis sive glenoidalis) quae condylum mandibulae recipit.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "masseter": {
+    "summary": "Musculus crassus quadrilaterus ab arcu zygomatico ad faciem externam anguli et rami mandibulae.",
+    "function": "Mandibulam elevat (os claudit); musculus masticatorius validus.",
+    "related": [
+      "temporalis",
+      "medial-pterygoid"
+    ]
+  },
+  "temporalis": {
+    "summary": "Musculus flabelliformis a latere cranii, qui in processu coronoideo mandibulae inseritur.",
+    "function": "Mandibulam elevat; fibrae posteriores eam retrahunt.",
+    "related": [
+      "masseter"
+    ]
+  },
+  "medial-pterygoid": {
+    "summary": "Musculus in facie interna rami mandibulae, quasi imago speculi musculi masseteris.",
+    "function": "Mandibulam elevat et eam prorsum et in latus movere adiuvat.",
+    "related": [
+      "masseter",
+      "lateral-pterygoid"
+    ]
+  },
+  "lateral-pterygoid": {
+    "summary": "Musculus duorum capitum, qui a condylo et capsula articulari prorsum ad os sphenoidale tendit.",
+    "function": "Mandibulam protrudit et os aperire atque in latus oppositum movere adiuvat.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "buccinator": {
+    "summary": "Musculus buccae, in profundo parietis lateralis cavitatis oris.",
+    "function": "Buccam ad dentes premit et cibum in faciebus occlusalibus inter mandendum tenet.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "mentalis": {
+    "summary": "Musculus parvus menti.",
+    "function": "Labium inferius elevat et protrudit cutemque menti corrugat.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "orbicularis-oris": {
+    "summary": "Musculus sphinctero similis, qui os intra labia circumdat.",
+    "function": "Labia claudit et fingit ad loquendum, edendum et exprimendum.",
+    "related": [
+      "buccinator",
+      "mentalis"
+    ]
+  },
+  "skull": {
+    "summary": "Ossa cranii et faciei circumiacentia, contextus causa ostensa.",
+    "related": [
+      "maxilla",
+      "mandible"
+    ]
+  },
+  "trigeminal-nerve": {
+    "summary": "Nervus cranialis quintus. A ganglio trigeminali in nervos ophthalmicum (V1), maxillarem (V2) et mandibularem (V3) dividitur.",
+    "function": "Nervus sensorius praecipuus faciei, dentium et oris; pars eius mandibularis etiam musculos masticatorios movet.",
+    "related": [
+      "maxillary-nerve",
+      "mandibular-nerve"
+    ]
+  },
+  "maxillary-nerve": {
+    "summary": "Divisio secunda nervi trigemini (V2). Per foramen rotundum e cranio exit, fossam pterygopalatinam transit et ut nervus infraorbitalis pergit.",
+    "function": "Sensum dentibus superioribus, gingivae maxillari, palato, labio superiori et buccae praebet.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "mandibular-nerve": {
+    "summary": "Divisio tertia nervi trigemini (V3). Per foramen ovale e cranio exit et in truncum anteriorem et posteriorem dividitur.",
+    "function": "Sensum dentibus inferioribus, linguae, labio inferiori et mento praebet; musculos masticatorios motorie innervat.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve",
+      "buccal-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "buccal-nerve": {
+    "summary": "Ramus sensorius trunci anterioris nervi mandibularis (V3), qui super musculum buccinatorem prorsum ad buccam decurrit.",
+    "function": "Sensum buccae et gingivae buccali molarium inferiorum praebet.",
+    "clinical": "Seorsum anaesthetizatur (anaesthesia nervi buccalis) in operationibus in gingiva buccali molarium inferiorum.",
+    "related": [
+      "mandibular-nerve"
+    ]
+  },
+  "external-carotid-artery": {
+    "summary": "Arteria quae maiorem partem faciei et maxillarum sanguine alit. Post ramum mandibulae ascendit et in arterias maxillarem et temporalem superficialem divisa desinit.",
+    "function": "Rami eius, inter quos arteriae facialis et maxillaris, sanguinem ad dentes, maxillas, faciem et pericranium ferunt.",
+    "related": [
+      "maxillary-artery",
+      "facial-artery"
+    ]
+  },
+  "maxillary-artery": {
+    "summary": "Ramus terminalis arteriae carotidis externae. Post collum mandibulae per fossam infratemporalem prorsum in fossam pterygopalatinam decurrit.",
+    "function": "Arterias alveolarem inferiorem, alveolarem superiorem posteriorem, buccalem et palatinam descendentem emittit, quae dentes, maxillas et palatum alunt.",
+    "related": [
+      "external-carotid-artery",
+      "inferior-alveolar-artery",
+      "posterior-superior-alveolar-artery"
+    ]
+  },
+  "posterior-superior-alveolar-artery": {
+    "summary": "Ramus arteriae maxillaris qui in facie posteriore maxillae (tubere) descendit et per foramina parva in eam intrat.",
+    "function": "Sanguinem molaribus et premolaribus superioribus, sinui maxillari et gingivae buccali suppeditat.",
+    "clinical": "In anaesthesia tuberis et in elevatione sinus sanguinare potest.",
+    "related": [
+      "maxillary-artery",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "descending-palatine-artery": {
+    "summary": "Ramus arteriae maxillaris qui per canalem palatinum maiorem descendit et in palato duro prorsum ut arteria palatina maior pergit.",
+    "function": "Sanguinem palato duro et gingivae palatinali suppeditat.",
+    "clinical": "Respicienda est cum transplantata textus mollis e palato sumuntur et cum incisiones palatinales fiunt.",
+    "related": [
+      "maxillary-artery"
+    ]
+  },
+  "buccal-artery": {
+    "summary": "Ramus parvus arteriae maxillaris qui cum nervo buccali in musculum buccinatorem tendit.",
+    "function": "Sanguinem buccae et tunicae mucosae buccae suppeditat.",
+    "related": [
+      "maxillary-artery",
+      "buccal-nerve"
+    ]
+  },
+  "facial-artery": {
+    "summary": "Ramus arteriae carotidis externae qui marginem inferiorem mandibulae paulo ante musculum masseterem circumflectit et per faciem ascendit.",
+    "function": "Sanguinem labiis, buccae, mento et lateri nasi suppeditat.",
+    "clinical": "Pulsus eius tangi potest ubi marginem inferiorem mandibulae transit.",
+    "related": [
+      "external-carotid-artery",
+      "facial-vein"
+    ]
+  },
+  "pterygoid-plexus": {
+    "summary": "Rete venarum circa musculum pterygoideum lateralem in fossa infratemporali. Venae maxillarum et dentium in id effunduntur, ipsum in venam maxillarem.",
+    "function": "Sanguinem e venis alveolaribus inferioribus, musculis masticatoriis et palato colligit.",
+    "clinical": "In anaesthesia tuberis pungi potest et haematoma movere. Rete ostensum schematicum est.",
+    "related": [
+      "maxillary-vein",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "maxillary-vein": {
+    "summary": "Vena brevis quae sanguinem e plexu pterygoideo retro post collum mandibulae ducit, ubi cum vena temporali superficiali venam retromandibularem format.",
+    "function": "Plexum pterygoideum exhaurit.",
+    "related": [
+      "pterygoid-plexus",
+      "retromandibular-vein"
+    ]
+  },
+  "retromandibular-vein": {
+    "summary": "Vena quae post ramum mandibulae intra glandulam parotideam descendit et in ramum anteriorem et posteriorem dividitur. Solus ramus anterior, qui cum vena faciali coniungitur, ostenditur.",
+    "function": "Sanguinem venarum maxillaris et temporalis superficialis in venas facialem et jugularem externam ducit.",
+    "related": [
+      "maxillary-vein",
+      "facial-vein",
+      "internal-jugular-vein"
+    ]
+  },
+  "facial-vein": {
+    "summary": "Vena praecipua faciei. Post arteriam facialem descendit, marginem inferiorem mandibulae transit et cum ramo anteriore venae retromandibularis venam facialem communem format.",
+    "function": "Sanguinem faciei, labiorum et menti in venam jugularem internam ducit.",
+    "clinical": "Cum venis orbitae communicat, itaque infectiones labii superioris et nasi introrsum serpere possunt.",
+    "related": [
+      "facial-artery",
+      "internal-jugular-vein"
+    ]
+  },
+  "internal-jugular-vein": {
+    "summary": "Vena magna in latere colli, quae sanguinem a cerebro, facie et collo ad cor ducit. Pars tantum superior ostenditur.",
+    "function": "Venam facialem et per eam maximam partem sanguinis venosi faciei et maxillarum recipit.",
+    "related": [
+      "facial-vein",
+      "external-carotid-artery"
+    ]
+  }
+}

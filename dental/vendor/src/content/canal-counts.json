@@ -1,0 +1,198 @@
+{
+  "sources": {
+    "monsarrat2016": {
+      "citation": "Monsarrat et al. (2016), Table 2",
+      "url": "https://doi.org/10.1371/journal.pone.0165329",
+      "population": "toulouse",
+      "method": "cbct",
+      "definition": "observed",
+      "year": 2016
+    },
+    "alqudah2023": {
+      "citation": "Al-Qudah et al. (2023), Table 2",
+      "url": "https://doi.org/10.1038/s41598-023-34134-7",
+      "population": "jordan",
+      "method": "clearing",
+      "definition": "maximum",
+      "year": 2023
+    }
+  },
+  "entries": {
+    "tooth:canine:mandibular": {
+      "source": "monsarrat2016",
+      "n": 202,
+      "counts": [
+        191,
+        11,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:canine:maxillary": {
+      "source": "monsarrat2016",
+      "n": 188,
+      "counts": [
+        186,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:central-incisor:mandibular": {
+      "source": "monsarrat2016",
+      "n": 192,
+      "counts": [
+        167,
+        25,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:central-incisor:maxillary": {
+      "source": "monsarrat2016",
+      "n": 192,
+      "counts": [
+        190,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:first-molar:mandibular": {
+      "source": "monsarrat2016",
+      "n": 130,
+      "counts": [
+        0,
+        2,
+        93,
+        35,
+        0
+      ]
+    },
+    "tooth:first-molar:maxillary": {
+      "source": "monsarrat2016",
+      "n": 149,
+      "counts": [
+        0,
+        1,
+        68,
+        78,
+        2
+      ]
+    },
+    "tooth:first-premolar:mandibular": {
+      "source": "monsarrat2016",
+      "n": 187,
+      "counts": [
+        163,
+        24,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:first-premolar:maxillary": {
+      "source": "monsarrat2016",
+      "n": 165,
+      "counts": [
+        23,
+        133,
+        9,
+        0,
+        0
+      ]
+    },
+    "tooth:lateral-incisor:mandibular": {
+      "source": "monsarrat2016",
+      "n": 199,
+      "counts": [
+        172,
+        27,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:lateral-incisor:maxillary": {
+      "source": "monsarrat2016",
+      "n": 191,
+      "counts": [
+        189,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:second-molar:mandibular": {
+      "source": "monsarrat2016",
+      "n": 156,
+      "counts": [
+        2,
+        4,
+        141,
+        8,
+        1
+      ]
+    },
+    "tooth:second-molar:maxillary": {
+      "source": "monsarrat2016",
+      "n": 167,
+      "counts": [
+        2,
+        0,
+        116,
+        48,
+        1
+      ]
+    },
+    "tooth:second-premolar:mandibular": {
+      "source": "monsarrat2016",
+      "n": 159,
+      "counts": [
+        153,
+        6,
+        0,
+        0,
+        0
+      ]
+    },
+    "tooth:second-premolar:maxillary": {
+      "source": "monsarrat2016",
+      "n": 147,
+      "counts": [
+        98,
+        46,
+        3,
+        0,
+        0
+      ]
+    },
+    "tooth:third-molar:mandibular": {
+      "source": "alqudah2023",
+      "n": 639,
+      "counts": [
+        7,
+        188,
+        356,
+        87,
+        1
+      ]
+    },
+    "tooth:third-molar:maxillary": {
+      "source": "alqudah2023",
+      "n": 592,
+      "counts": [
+        35,
+        68,
+        310,
+        167,
+        12
+      ]
+    }
+  }
+}

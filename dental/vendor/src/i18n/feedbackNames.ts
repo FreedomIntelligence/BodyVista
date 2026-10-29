@@ -1,0 +1,22 @@
+type Tr = { sv: string; de: string; es: string; la: string };
+export const FEEDBACK_NAMES: Record<string, Tr> = {
+  'infraorbital-foramen': { sv: 'Foramen infraorbitale', de: 'Foramen infraorbitale', es: 'Agujero infraorbitario', la: 'Foramen infraorbitale' },
+  'ophthalmic-nerve': { sv: 'Nervus ophthalmicus (V1)', de: 'Nervus ophthalmicus (V1)', es: 'Nervio oftálmico (V1)', la: 'Nervus ophthalmicus (V1)' },
+  'facial-nerve': { sv: 'Nervus facialis (VII)', de: 'Nervus facialis (VII)', es: 'Nervio facial (VII)', la: 'Nervus facialis (VII)' },
+  'glossopharyngeal-nerve': { sv: 'Nervus glossopharyngeus (IX)', de: 'Nervus glossopharyngeus (IX)', es: 'Nervio glosofaríngeo (IX)', la: 'Nervus glossopharyngeus (IX)' },
+  'vagus-nerve': { sv: 'Nervus vagus (X)', de: 'Nervus vagus (X)', es: 'Nervio vago (X)', la: 'Nervus vagus (X)' },
+  'hypoglossal-nerve': { sv: 'Nervus hypoglossus (XII)', de: 'Nervus hypoglossus (XII)', es: 'Nervio hipogloso (XII)', la: 'Nervus hypoglossus (XII)' },
+  'facial-temporal-branch': { sv: 'N. facialis, temporal grengrupp', de: 'N. facialis, temporale Äste', es: 'Ramas temporales del facial', la: 'Rami temporales nervi facialis' },
+  'facial-zygomatic-branch': { sv: 'N. facialis, zygomatisk grengrupp', de: 'N. facialis, zygomatische Äste', es: 'Ramas cigomáticas del facial', la: 'Rami zygomatici nervi facialis' },
+  'facial-buccal-branch': { sv: 'N. facialis, buckal grengrupp', de: 'N. facialis, bukkale Äste', es: 'Ramas bucales del facial', la: 'Rami buccales nervi facialis' },
+  'facial-marginal-mandibular-branch': { sv: 'N. facialis, marginal mandibulär grengrupp', de: 'N. facialis, marginale mandibuläre Äste', es: 'Ramas marginales mandibulares del facial', la: 'Ramus marginalis mandibularis nervi facialis' },
+  'facial-cervical-branch': { sv: 'N. facialis, cervikal grengrupp', de: 'N. facialis, zervikale Äste', es: 'Ramas cervicales del facial', la: 'Ramus colli nervi facialis' },
+  'mandibular-canal': { sv: 'Canalis mandibulae', de: 'Canalis mandibulae', es: 'Conducto mandibular', la: 'Canalis mandibulae' },
+  'superior-orbital-fissure': { sv: 'Fissura orbitalis superior', de: 'Fissura orbitalis superior', es: 'Fisura orbitaria superior', la: 'Fissura orbitalis superior' },
+  'foramen-rotundum': { sv: 'Foramen rotundum', de: 'Foramen rotundum', es: 'Agujero redondo', la: 'Foramen rotundum' },
+  'foramen-ovale': { sv: 'Foramen ovale', de: 'Foramen ovale', es: 'Agujero oval', la: 'Foramen ovale' },
+  'stylomastoid-foramen': { sv: 'Foramen stylomastoideum', de: 'Foramen stylomastoideum', es: 'Agujero estilomastoideo', la: 'Foramen stylomastoideum' },
+  'jugular-foramen': { sv: 'Foramen jugulare', de: 'Foramen jugulare', es: 'Agujero yugular', la: 'Foramen jugulare' },
+  'hypoglossal-canal': { sv: 'Canalis nervi hypoglossi', de: 'Canalis nervi hypoglossi', es: 'Conducto hipogloso', la: 'Canalis nervi hypoglossi' },
+  'articular-eminence': { sv: 'Eminentia articularis', de: 'Eminentia articularis', es: 'Eminencia articular', la: 'Eminentia articularis' },
+};

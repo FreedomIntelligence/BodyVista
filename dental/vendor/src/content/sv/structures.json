@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Svensk översättning av en/structures.json. Korta sammanfattningar för utbildning."
+  },
+  "crown": {
+    "summary": "Den del av tanden som är täckt av emalj, ovanför emalj-cementgränsen.",
+    "function": "Utgör tandens arbetsyta för att skära, slita sönder eller mala.",
+    "related": [
+      "enamel",
+      "dentin-coronal",
+      "cej"
+    ]
+  },
+  "root": {
+    "summary": "Den del av tanden som är täckt av rotcement, förankrad i alveolarbenet och fäst vid det via parodontalligamentet.",
+    "function": "Förankrar tanden i käken och överför tuggkrafterna till benet.",
+    "related": [
+      "cementum",
+      "dentin-radicular",
+      "pdl",
+      "root-canals"
+    ]
+  },
+  "enamel": {
+    "summary": "Kronans yttre hölje och den hårdaste vävnaden i människokroppen, huvudsakligen uppbyggd av hydroxiapatitkristaller.",
+    "function": "Ger en slitstark yta för tuggning och skyddar det underliggande dentinet.",
+    "clinical": "Emaljen saknar celler och kan inte nybildas när den väl har gått förlorad. Demineralisering av syror från dentalt plack är det första stadiet av karies.",
+    "facts": [
+      {
+        "label": "Sammansättning",
+        "value": "Cirka 96 % mineral (viktprocent)"
+      },
+      {
+        "label": "Bildas av",
+        "value": "Ameloblaster (försvinner när tanden har erupterat)"
+      }
+    ],
+    "related": [
+      "dentin-coronal",
+      "cej",
+      "crown"
+    ]
+  },
+  "dentin": {
+    "summary": "Den mineraliserade vävnad som utgör huvuddelen av tanden, under emaljen i kronan och under rotcementet i roten.",
+    "function": "Stöder emaljen och omsluter pulpan. Dentinkanaler förbinder det med pulpan, vilket gör det känsligt.",
+    "clinical": "Blottat dentin kan ge ilningar. Dentin fortsätter att bildas långsamt under hela livet (sekundärdentin) och som svar på retning (tertiärdentin), vilket gradvis gör pulparummet trängre.",
+    "facts": [
+      {
+        "label": "Sammansättning",
+        "value": "Cirka 70 % mineral (viktprocent)"
+      },
+      {
+        "label": "Bildas av",
+        "value": "Odontoblaster som klär pulpans yta"
+      }
+    ],
+    "related": [
+      "enamel",
+      "pulp-chamber",
+      "cementum"
+    ]
+  },
+  "dentin-coronal": {
+    "summary": "Kronans dentin, som ligger under emaljen och runt pulpakammaren.",
+    "function": "Stöder emaljen och skyddar pulpan.",
+    "clinical": "När karies når kronans dentin sprider den sig i sidled längs emalj-dentingränsen.",
+    "related": [
+      "enamel",
+      "pulp-chamber"
+    ]
+  },
+  "dentin-radicular": {
+    "summary": "Rotens dentin, täckt av rotcement och omgivande rotkanalen eller rotkanalerna.",
+    "function": "Bygger upp roten.",
+    "related": [
+      "cementum",
+      "root-canals"
+    ]
+  },
+  "cementum": {
+    "summary": "Ett tunt lager mineraliserad vävnad som täcker rotdentinet.",
+    "function": "Ger fäste åt de fibrer i parodontalligamentet som håller tanden i sin alveol.",
+    "clinical": "Rotcementet är tunnast nära emalj-cementgränsen och tjockare mot rotspetsen. I Dental Scope är tjockleken något överdriven så att lagret syns.",
+    "facts": [
+      {
+        "label": "Sammansättning",
+        "value": "Cirka 45–50 % mineral (viktprocent)"
+      }
+    ],
+    "related": [
+      "pdl",
+      "dentin-radicular"
+    ]
+  },
+  "pdl": {
+    "summary": "Ett tunt lager fibrös bindväv mellan rotcementet och alveolarbenet.",
+    "function": "Håller upp tanden i alveolen, dämpar tuggkrafterna och ger sensorisk (proprioceptiv) återkoppling.",
+    "clinical": "Bredden är vanligen en bråkdel av en millimeter. En vidgad parodontalspalt på röntgen kan tyda på ocklusalt trauma eller sjukdom.",
+    "related": [
+      "cementum",
+      "alveolar-bone"
+    ]
+  },
+  "pulp": {
+    "summary": "Den mjuka bindväven i tandens mitt, med blodkärl, nerver och de odontoblaster som bildar dentin.",
+    "function": "Bildar dentin, försörjer tanden med näring och förmedlar känsel.",
+    "clinical": "Inflammation i pulpan (pulpit) är en vanlig orsak till tandvärk; irreversibel pulpit eller pulpanekros behandlas vanligen med rotbehandling eller extraktion.",
+    "related": [
+      "pulp-chamber",
+      "root-canals",
+      "apical-foramen"
+    ]
+  },
+  "pulp-chamber": {
+    "summary": "Den del av pulparummet som ligger i kronan och i tandens cervikala del.",
+    "function": "Rymmer kronpulpan; utskotten mot kusparna bildar pulpahornen.",
+    "clinical": "Kammaren krymper med åldern när sekundärdentin avsätts. Kanalöppningarna utgår från dess botten.",
+    "related": [
+      "pulp-horn",
+      "root-canals"
+    ]
+  },
+  "pulp-horn": {
+    "summary": "Ett utskott av pulpakammaren mot en kuspspets eller incisalkant.",
+    "clinical": "Pulpahornen riskerar att blottas vid djup kavitetspreparation, särskilt i unga tänder.",
+    "related": [
+      "pulp-chamber",
+      "enamel"
+    ]
+  },
+  "root-canals": {
+    "summary": "Den del av pulparummet som löper genom roten eller rötterna, från kanalöppningarna till foramen apicale.",
+    "function": "Leder pulpans nerver och blodkärl mellan tanden och de omgivande vävnaderna.",
+    "clinical": "Kanalernas antal och form varierar mycket. Vid rotbehandling rensas, formas och fylls detta utrymme. I Dental Scope följer kanalerna varje modellerad rot i sin vanligaste konfiguration.",
+    "related": [
+      "pulp-chamber",
+      "apical-foramen"
+    ]
+  },
+  "canal": {
+    "summary": "En enskild rotkanal: kanalen med pulpavävnad inuti en rot.",
+    "function": "Leder pulpans nerver och kärl.",
+    "clinical": "Konfigurationen som visas här är den vanligaste för den här roten; många varianter förekommer.",
+    "related": [
+      "apical-foramen",
+      "pulp-chamber"
+    ]
+  },
+  "apical-foramen": {
+    "summary": "Öppningen vid eller nära rotspetsen där nerver och kärl går in i och ut ur pulpan.",
+    "clinical": "Foramen mynnar ofta strax före eller bredvid den anatomiska apex; en rotfyllning ska sluta inne i kanalen nära foramen.",
+    "related": [
+      "root-canals",
+      "apex"
+    ]
+  },
+  "apex": {
+    "summary": "Rotens spets.",
+    "clinical": "En infektion som sprider sig ut ur kanalen kan ge en periapikal lesion runt apex.",
+    "related": [
+      "apical-foramen"
+    ]
+  },
+  "cej": {
+    "summary": "Emalj-cementgränsen: linjen där kronans emalj möter rotens cement, även kallad cervikallinjen.",
+    "clinical": "En referenspunkt vid mätning av gingival retraktion och klinisk fästeförlust. Den buktar mot kronan på de approximala ytorna, tydligast på framtänderna.",
+    "related": [
+      "enamel",
+      "cementum"
+    ]
+  },
+  "maxilla": {
+    "summary": "Det parade ben som bildar överkäken. Det bär överkäkens tänder, bildar större delen av hårda gommen och delar av orbitabotten och näshålan, och innehåller bihålan i överkäken (sinus maxillaris).",
+    "function": "Stöder överkäkens tänder och mellanansiktet.",
+    "clinical": "Rötterna på överkäkens bakre tänder kan ligga nära bihålans botten.",
+    "related": [
+      "maxillary-alveolar-process",
+      "palatine-bone",
+      "maxillary-nerve-branches",
+      "maxillary-sinus"
+    ]
+  },
+  "maxillary-sinus": {
+    "summary": "Ett luftfyllt hålrum i överkäksbenets kropp, ovanför rötterna på överkäkens premolarer och molarer. Det mynnar i näshålan.",
+    "function": "Gör skallen lättare och ger rösten resonans. Slemhinnan dräneras till näsan.",
+    "clinical": "Rötterna på överkäkens molarer och premolarer ligger ofta strax under bihålans botten och kan nå upp i den. En extraktion eller ett implantat i området kan öppna in till bihålan i överkäken (en oroantral kommunikation), och en tandinfektion kan sprida sig dit. Bihålan i överkäken som visas här är modellerad utifrån överkäken (ingen av källmodellerna innehåller den), så storlek och botten är ungefärliga.",
+    "related": [
+      "maxilla",
+      "maxillary-alveolar-process",
+      "posterior-superior-alveolar-nerve",
+      "infraorbital-nerve"
+    ]
+  },
+  "maxillary-alveolar-process": {
+    "summary": "Den benkam på maxillan som innehåller överkäkständernas alveoler (tandfack).",
+    "function": "Stöder och förankrar tänderna via parodontalligamentet.",
+    "clinical": "Alveolarbenet omformas som svar på krafter (grunden för ortodontisk tandförflyttning) och resorberas efter tandförlust. I Dental Scope markeras det som benet runt rötterna.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandible": {
+    "summary": "Underkäken – skallens enda rörliga ben. Den består av en hästskoformad kropp och två uppåtriktade grenar (rami) som slutar i processus condylaris och processus coronoideus.",
+    "function": "Bär underkäkens tänder och rör sig i käklederna vid tuggning, tal och sväljning.",
+    "related": [
+      "mandibular-alveolar-process",
+      "tmj",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandible-body": {
+    "summary": "Underkäkens kropp och grenar, utom den tandbärande alveolara delen och ledhuvudena, som visas separat.",
+    "function": "Ger fäste åt tuggmusklerna och rymmer mandibularkanalen.",
+    "related": [
+      "mandibular-alveolar-process",
+      "inferior-alveolar-nerve",
+      "masseter"
+    ]
+  },
+  "mandibular-alveolar-process": {
+    "summary": "Den övre delen av underkäkskroppen, som innehåller underkäkständernas alveoler.",
+    "function": "Stöder och förankrar underkäkens tänder.",
+    "clinical": "Resorberas efter tandförlust, vilket kan minska den benhöjd ovanför mandibularkanalen som finns tillgänglig för implantat.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandibular-condyle": {
+    "summary": "Det rundade huvudet på underkäkens processus condylaris, som ledar mot tinningbenet i käkleden.",
+    "function": "Roterar och glider framåt när munnen öppnas.",
+    "related": [
+      "articular-disc",
+      "articular-fossa",
+      "lateral-pterygoid"
+    ]
+  },
+  "mandibular-foramen": {
+    "summary": "Öppningen på insidan av underkäkens ramus där n. alveolaris inferior och kärlen går in i mandibularkanalen.",
+    "clinical": "Målområdet för mandibularblockad (bedövning av n. alveolaris inferior). Läget är där atlasens nervförlopp passerar benytan.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mental-foramen": {
+    "summary": "En öppning på underkäkens utsida, vanligen nära premolarernas rotspetsar, där n. mentalis och kärlen kommer ut.",
+    "clinical": "Läget är viktigt vid kirurgi i premolarområdet, implantatinstallation och mentalisblockad. Läget är där atlasens nervförlopp passerar benytan.",
+    "related": [
+      "mental-nerve",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "gingiva": {
+    "summary": "Tandköttet: den del av munslemhinnan som täcker alveolarutskotten och omger tändernas halsar.",
+    "function": "Skyddar de underliggande parodontala vävnaderna och bildar en tätning runt varje tand.",
+    "clinical": "Inflammation i gingivan (gingivit) är reversibel; den kan utvecklas till parodontit med förlust av fäste och ben.",
+    "related": [
+      "pdl",
+      "alveolar-bone"
+    ]
+  },
+  "periodontium": {
+    "summary": "De vävnader som stöder tänderna: gingiva, parodontalligament, rotcement och alveolarben.",
+    "related": [
+      "gingiva",
+      "pdl",
+      "cementum"
+    ]
+  },
+  "inferior-alveolar-nerve": {
+    "summary": "En gren av trigeminusnervens mandibulara gren (V3). Den går in genom foramen mandibulae och löper i mandibularkanalen under underkäkständernas rötter.",
+    "function": "Känsel till underkäkens tänder; avger n. mentalis och fortsätter som n. incisivus.",
+    "clinical": "Bedövas med mandibularblockad. Närheten till tredje molarernas rötter och till implantatområden gör den till en nyckelstruktur att undvika vid kirurgi. Förloppet följer Z-Anatomy-atlasen, anpassat till den här skallen.",
+    "related": [
+      "mandibular-foramen",
+      "mental-nerve",
+      "inferior-alveolar-artery"
+    ]
+  },
+  "mental-nerve": {
+    "summary": "Den terminala gren av n. alveolaris inferior som kommer ut genom foramen mentale.",
+    "function": "Känsel till underläppen, hakan och den labiala gingivan vid underkäkens framtänder.",
+    "clinical": "En skada kan ge domningar i underläppen och hakan. Förloppet följer Z-Anatomy-atlasen, anpassat till den här skallen.",
+    "related": [
+      "mental-foramen",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "incisive-nerve": {
+    "summary": "Fortsättningen av n. alveolaris inferior inne i benet, framför foramen mentale.",
+    "function": "Känsel till underkäkens hörntand och incisiver.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "lingual-nerve": {
+    "summary": "En gren av trigeminusnervens mandibulara gren (V3) som löper framåt medialt om ramus, nära den linguala kortikalisen vid tredje molaren, till munbotten och tungan.",
+    "function": "Allmän känsel till tungans främre två tredjedelar, munbotten och den linguala gingivan; den leder även smakfibrer från chorda tympani.",
+    "clinical": "Riskerar att skadas vid kirurgi av underkäkens tredje molarer. Förloppet följer Z-Anatomy-atlasen, anpassat till den här skallen.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandibular-nerve-branches": {
+    "summary": "Grenar av trigeminusnervens mandibulara gren (V3) som är relevanta inom tandvården.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve"
+    ]
+  },
+  "maxillary-nerve-branches": {
+    "summary": "Grenar av trigeminusnervens maxillara gren (V2) som försörjer överkäkens tänder och omgivande vävnader.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "infraorbital-nerve": {
+    "summary": "Fortsättningen av n. maxillaris (V2) genom orbitabotten, som når ansiktet genom foramen infraorbitale.",
+    "function": "Känsel till nedre ögonlocket, näsans sida och överläppen; avger de främre (och, när de finns, mellersta) övre alveolarnerverna.",
+    "clinical": "Förloppet följer Z-Anatomy-atlasen, anpassat till den här skallen.",
+    "related": [
+      "anterior-superior-alveolar-nerve",
+      "middle-superior-alveolar-nerve"
+    ]
+  },
+  "posterior-superior-alveolar-nerve": {
+    "summary": "Grenar av n. maxillaris (V2) som går in i maxillans baksida nära tuber maxillae.",
+    "function": "Känsel till de flesta av överkäkens molarer och deras buckala gingiva.",
+    "clinical": "Målet för tuberblockad (bakre övre alveolarblockad). Förloppet som visas är schematiskt.",
+    "related": [
+      "maxillary-nerve-branches"
+    ]
+  },
+  "middle-superior-alveolar-nerve": {
+    "summary": "En gren av n. infraorbitalis som bara finns hos en del av befolkningen.",
+    "function": "När den finns: känsel till överkäkens premolarer och en del av den första molaren.",
+    "clinical": "Förloppet som visas är schematiskt.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "anterior-superior-alveolar-nerve": {
+    "summary": "Grenar av n. infraorbitalis som löper nedåt i maxillans främre vägg.",
+    "function": "Känsel till överkäkens incisiver och hörntand.",
+    "clinical": "Förloppet som visas är schematiskt.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "greater-palatine-nerve": {
+    "summary": "En gren av n. maxillaris (V2) från fossa pterygopalatina. Den löper ned genom canalis palatinus major tillsammans med a. palatina descendens och kommer ut genom foramen palatinum majus, palatinalt om överkäkens molarer.",
+    "function": "Känsel till hårda gommen och gomsidans tandkött från hörntanden och bakåt; vid hörntanden överlappar området med n. nasopalatinus.",
+    "clinical": "Bedövas med en blockad vid foramen palatinum majus vid behandling av gomsidans tandkött vid överkäkens premolarer och molarer. Förloppet som visas är schematiskt.",
+    "related": [
+      "maxillary-nerve",
+      "nasopalatine-nerve",
+      "descending-palatine-artery",
+      "palatine-bone"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      },
+      {
+        "title": "StatPearls: Pterygopalatine Fossa",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK513269/"
+      }
+    ]
+  },
+  "nasopalatine-nerve": {
+    "summary": "En gren av n. maxillaris (V2) som lämnar fossa pterygopalatina genom foramen sphenopalatinum, löper nedåt och framåt på nässkiljeväggen och når munnen genom canalis incisivus, strax bakom de centrala incisiverna.",
+    "function": "Känsel till nässkiljeväggen och till gomslemhinnan och tandköttet på gomsidan av de sex främre överkäkständerna. Höger och vänster nerv förenas innan de kommer ut genom foramen incisivum.",
+    "clinical": "En nasopalatinusblockad vid papilla incisiva bedövar gomsidans vävnad vid överkäkens framtänder på båda sidor. Förloppet som visas är schematiskt.",
+    "related": [
+      "maxillary-nerve",
+      "greater-palatine-nerve",
+      "vomer",
+      "maxilla"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "summary": "En gren av a. maxillaris som följer n. alveolaris inferior genom mandibularkanalen.",
+    "function": "Blodförsörjning till underkäken och underkäkens tänder.",
+    "clinical": "Förloppet följer Z-Anatomy-atlasen, anpassat till den här skallen.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "inferior-alveolar-vein": {
+    "summary": "Venen som följer a. alveolaris inferior och nerven i mandibularkanalen.",
+    "function": "Venöst avflöde från underkäken och underkäkens tänder.",
+    "clinical": "Förloppet som visas är schematiskt.",
+    "related": [
+      "inferior-alveolar-artery"
+    ]
+  },
+  "tmj": {
+    "summary": "Käklederna förbinder underkäken med tinningbenen. Var och en är en synovialled där underkäkens ledhuvud ledar mot fossa mandibularis och tuberculum articulare, åtskilda av en ledskiva (discus articularis).",
+    "function": "Tillåter både gångjärnsrörelse (rotation) och glidrörelse (translation), så att käken kan gapa stort och röra sig åt sidorna.",
+    "clinical": "Temporomandibulär dysfunktion (TMD) kan ge smärta, knäppningar och nedsatt gapförmåga.",
+    "related": [
+      "articular-disc",
+      "mandibular-condyle",
+      "lateral-pterygoid"
+    ]
+  },
+  "articular-disc": {
+    "summary": "En tät fibrös skiva mellan underkäkens ledhuvud och tinningbenet som delar varje led i ett övre och ett nedre ledrum.",
+    "function": "Möjliggör mjuk rotation och glidning och fördelar belastningen över leden.",
+    "clinical": "Diskförskjutning är en vanlig orsak till knäppningar i käkleden. Disken som visas är schematisk.",
+    "related": [
+      "mandibular-condyle",
+      "articular-fossa"
+    ]
+  },
+  "articular-fossa": {
+    "summary": "Fördjupningen i tinningbenet (fossa mandibularis, ledgropen) som tar emot underkäkens ledhuvud.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "masseter": {
+    "summary": "En tjock, fyrsidig muskel från arcus zygomaticus till utsidan av underkäkens vinkel och ramus.",
+    "function": "Höjer underkäken (stänger käken); en kraftfull tuggmuskel.",
+    "related": [
+      "temporalis",
+      "medial-pterygoid"
+    ]
+  },
+  "temporalis": {
+    "summary": "En solfjäderformad muskel från skallens sida som fäster på underkäkens processus coronoideus.",
+    "function": "Höjer underkäken; de bakre fibrerna drar den bakåt.",
+    "related": [
+      "masseter"
+    ]
+  },
+  "medial-pterygoid": {
+    "summary": "En muskel på insidan av underkäkens ramus, en spegelbild av m. masseter.",
+    "function": "Höjer underkäken och hjälper till att föra den framåt och åt sidan.",
+    "related": [
+      "masseter",
+      "lateral-pterygoid"
+    ]
+  },
+  "lateral-pterygoid": {
+    "summary": "En tvåhövdad muskel som löper framåt från ledhuvudet och ledkapseln till kilbenet.",
+    "function": "För underkäken framåt och hjälper till att öppna käken och föra den åt motsatt sida.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "buccinator": {
+    "summary": "Kindens muskel, djupt i munhålans sidovägg.",
+    "function": "Håller kinden mot tänderna och håller kvar födan på tuggytorna under tuggningen.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "mentalis": {
+    "summary": "En liten muskel i hakan.",
+    "function": "Lyfter och skjuter fram underläppen och rynkar huden på hakan.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "orbicularis-oris": {
+    "summary": "Den slutmuskelliknande muskel som omger munnen inne i läpparna.",
+    "function": "Sluter och formar läpparna vid tal, ätande och mimik.",
+    "related": [
+      "buccinator",
+      "mentalis"
+    ]
+  },
+  "skull": {
+    "summary": "Omgivande skall- och ansiktsben som visas för sammanhangets skull.",
+    "related": [
+      "maxilla",
+      "mandible"
+    ]
+  },
+  "trigeminal-nerve": {
+    "summary": "Den femte kranialnerven. Från ganglion trigeminale delar den sig i n. ophthalmicus (V1), n. maxillaris (V2) och n. mandibularis (V3).",
+    "function": "Ansiktets, tändernas och munnens viktigaste känselnerv; den mandibulara delen styr också tuggmusklerna.",
+    "related": [
+      "maxillary-nerve",
+      "mandibular-nerve"
+    ]
+  },
+  "maxillary-nerve": {
+    "summary": "Trigeminusnervens andra gren (V2). Den lämnar skallen genom foramen rotundum, passerar fossa pterygopalatina och fortsätter som n. infraorbitalis.",
+    "function": "Känsel till överkäkens tänder, överkäkens gingiva, gommen, överläppen och kinden.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "mandibular-nerve": {
+    "summary": "Trigeminusnervens tredje gren (V3). Den lämnar skallen genom foramen ovale och delar sig i en främre och en bakre stam.",
+    "function": "Känsel till underkäkens tänder, tungan, underläppen och hakan; motorisk försörjning av tuggmusklerna.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve",
+      "buccal-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "buccal-nerve": {
+    "summary": "En känselgren från n. mandibularis (V3) främre stam som löper framåt över m. buccinator till kinden.",
+    "function": "Känsel till kinden och den buckala gingivan vid underkäkens molarer.",
+    "clinical": "Bedövas separat (buckal blockad) vid ingrepp i den buckala gingivan vid underkäkens molarer.",
+    "related": [
+      "mandibular-nerve"
+    ]
+  },
+  "external-carotid-artery": {
+    "summary": "Artären som försörjer större delen av ansiktet och käkarna. Den stiger bakom underkäkens ramus och slutar med att dela sig i a. maxillaris och a. temporalis superficialis.",
+    "function": "Dess grenar, bland annat a. facialis och a. maxillaris, för blod till tänderna, käkarna, ansiktet och skalpen.",
+    "related": [
+      "maxillary-artery",
+      "facial-artery"
+    ]
+  },
+  "maxillary-artery": {
+    "summary": "En av a. carotis externas slutgrenar. Den löper framåt bakom underkäkens collum genom fossa infratemporalis in i fossa pterygopalatina.",
+    "function": "Avger a. alveolaris inferior, a. alveolaris superior posterior, a. buccalis och a. palatina descendens, som försörjer tänderna, käkarna och gommen.",
+    "related": [
+      "external-carotid-artery",
+      "inferior-alveolar-artery",
+      "posterior-superior-alveolar-artery"
+    ]
+  },
+  "posterior-superior-alveolar-artery": {
+    "summary": "En gren av a. maxillaris som går ned på överkäkens baksida (tuber maxillae) och in i benet genom små hål.",
+    "function": "Blodförsörjning till överkäkens molarer och premolarer, sinus maxillaris och den buckala gingivan.",
+    "clinical": "Kan blöda vid tuberblockad och vid sinuslyft.",
+    "related": [
+      "maxillary-artery",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "descending-palatine-artery": {
+    "summary": "En gren av a. maxillaris som går ned genom canalis palatinus major och fortsätter framåt på hårda gommen som a. palatina major.",
+    "function": "Blodförsörjning till hårda gommen och den palatinala gingivan.",
+    "clinical": "Viktig att ta hänsyn till vid bindvävstransplantat från gommen och vid snitt i gommen.",
+    "related": [
+      "maxillary-artery"
+    ]
+  },
+  "buccal-artery": {
+    "summary": "En liten gren av a. maxillaris som följer n. buccalis ut på m. buccinator.",
+    "function": "Blodförsörjning till kinden och kindslemhinnan.",
+    "related": [
+      "maxillary-artery",
+      "buccal-nerve"
+    ]
+  },
+  "facial-artery": {
+    "summary": "En gren av a. carotis externa som böjer sig över underkäkens nedre kant strax framför m. masseter och löper upp över ansiktet.",
+    "function": "Blodförsörjning till läpparna, kinden, hakan och näsans sida.",
+    "clinical": "Pulsen kan kännas där den korsar underkäkens nedre kant.",
+    "related": [
+      "external-carotid-artery",
+      "facial-vein"
+    ]
+  },
+  "pterygoid-plexus": {
+    "summary": "Ett nätverk av vener runt m. pterygoideus lateralis i fossa infratemporalis. Käkarnas och tändernas vener dräneras hit, och plexus dräneras till v. maxillaris.",
+    "function": "Samlar blod från vv. alveolares inferiores, tuggmusklerna och gommen.",
+    "clinical": "Kan punkteras vid tuberblockad och ge ett hematom. Nätverket som visas är schematiskt.",
+    "related": [
+      "maxillary-vein",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "maxillary-vein": {
+    "summary": "En kort ven som för blod från plexus pterygoideus bakåt bakom underkäkens collum, där den förenas med v. temporalis superficialis till v. retromandibularis.",
+    "function": "Dränerar plexus pterygoideus.",
+    "related": [
+      "pterygoid-plexus",
+      "retromandibular-vein"
+    ]
+  },
+  "retromandibular-vein": {
+    "summary": "Venen som löper ned bakom underkäkens ramus, inne i öronspottkörteln, och delar sig i en främre och en bakre gren. Bara den främre grenen, som förenas med v. facialis, visas.",
+    "function": "För blod från v. maxillaris och v. temporalis superficialis vidare till v. facialis och v. jugularis externa.",
+    "related": [
+      "maxillary-vein",
+      "facial-vein",
+      "internal-jugular-vein"
+    ]
+  },
+  "facial-vein": {
+    "summary": "Ansiktets huvudven. Den löper ned bakom a. facialis, korsar underkäkens nedre kant och förenas med v. retromandibularis främre gren till v. facialis communis.",
+    "function": "Dränerar ansiktet, läpparna och hakan till v. jugularis interna.",
+    "clinical": "Den har förbindelser med ögonhålans vener, så infektioner i överläppen och näsan kan spridas inåt.",
+    "related": [
+      "facial-artery",
+      "internal-jugular-vein"
+    ]
+  },
+  "internal-jugular-vein": {
+    "summary": "Den stora venen på halsens sida som för blod från hjärnan, ansiktet och halsen ned mot hjärtat. Endast den övre delen visas.",
+    "function": "Tar emot v. facialis och därmed det mesta av det venösa blodet från ansiktet och käkarna.",
+    "related": [
+      "facial-vein",
+      "external-carotid-artery"
+    ]
+  }
+}

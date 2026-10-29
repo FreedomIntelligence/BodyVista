@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Typical textbook values. Individual anatomy varies. Pending review against the verification sources listed in docs/content.md."
+  },
+  "tooth:central-incisor:maxillary": {
+    "summary": "The most prominent tooth of the smile. A single-rooted incisor with a broad, flat labial surface and a straight incisal edge used for cutting food.",
+    "function": "Incising (biting and cutting) food; supports the upper lip, contributes to speech (labiodental and dental sounds) and to facial appearance.",
+    "clinical": "Frequently involved in dental trauma because of its forward position. Newly erupted incisors may show mamelons (small rounded bumps) on the incisal edge.",
+    "roots": "Usually one conical root",
+    "canals": "Usually one canal",
+    "eruption": "About 7–8 years",
+    "anatomy": "The crown is the longest in the mouth and wider mesiodistally than labiolingually. Seen from the labial side, the mesioincisal angle is almost a right angle while the distoincisal angle is more rounded, which helps tell a right central from a left one. The labial surface is smooth and gently convex, sometimes marked by two shallow developmental depressions. On the lingual side, a shovel-like lingual fossa is framed by the mesial and distal marginal ridges and closed cervically by a rounded cingulum. The cementoenamel junction curves toward the incisal edge on the proximal surfaces, more so on the mesial. The single root is cone-shaped, roughly triangular to oval in cross-section, and tapers evenly to a blunt apex; the pulp chamber follows the crown outline and ends incisally in pulp horns that are most prominent in young teeth."
+  },
+  "tooth:lateral-incisor:maxillary": {
+    "summary": "A smaller incisor beside the central incisor, with a more rounded incisal outline and the greatest variation in form of the anterior teeth.",
+    "function": "Cutting food; contributes to the smile and to anterior guidance.",
+    "clinical": "Common site of developmental variation, including peg-shaped laterals and congenital absence.",
+    "roots": "Usually one root",
+    "canals": "Usually one canal",
+    "eruption": "About 8–9 years",
+    "anatomy": "The crown resembles a smaller central incisor: narrower, shorter and more rounded at both incisal angles, especially the distal one, which gives the incisal edge a curved outline. The lingual fossa is deeper and the marginal ridges and cingulum are more pronounced, and a lingual pit often lies where the fossa meets the cingulum. In some teeth a palatogingival (palatoradicular) groove runs from the cingulum down onto the root. The root is long in relation to the crown, slightly flattened mesiodistally, and often curves distally in its apical third. Of all permanent teeth, the maxillary lateral incisor varies most in form, from a full-sized incisor to a small peg-shaped crown, and it is also one of the teeth most often missing congenitally."
+  },
+  "tooth:canine:maxillary": {
+    "summary": "A long, single-cusped tooth at the corner of the arch. The maxillary canine usually has the longest root in the dentition.",
+    "function": "Grasping and tearing food; guides the jaw in lateral movements (canine guidance); supports the corner of the lip.",
+    "clinical": "Its long root anchors it well; it is a common site of impaction, usually palatally.",
+    "roots": "One long root",
+    "canals": "Usually one canal",
+    "eruption": "About 11–12 years",
+    "anatomy": "This is usually the longest tooth in the mouth. The crown has a single pointed cusp; its mesial cusp ridge is shorter than the distal cusp ridge, so the cusp tip lies slightly mesial to the centre and the labial outline looks pentagonal. A vertical labial ridge runs from the cusp tip toward the cervical line, and on the lingual side a lingual ridge divides the surface into shallow mesial and distal fossae above a large cingulum. The root is thick labiolingually and very long, often about one and a half times the crown length, and the bony ridge it raises over the maxilla (the canine eminence) supports the corner of the mouth. Because it erupts late and has a long path to travel, the developing canine is monitored in children when it cannot be felt in the buccal sulcus."
+  },
+  "tooth:first-premolar:maxillary": {
+    "summary": "A two-cusped (buccal and palatal) premolar. It usually has two roots, which distinguishes it from most other premolars.",
+    "function": "Transitions from tearing to grinding; holds and crushes food.",
+    "clinical": "Frequently extracted for orthodontic space. Two canals are typical, so both must be located in endodontic treatment.",
+    "roots": "Usually two (buccal and palatal)",
+    "canals": "Usually two",
+    "eruption": "About 10–11 years",
+    "anatomy": "The crown has a buccal cusp and a slightly shorter palatal cusp, and seen from the occlusal side its outline is hexagonal. Unusually, the buccal cusp tip sits a little distal to centre, because its mesial cusp ridge is the longer one. A developmental depression on the mesial surface of the crown continues onto the root, and a groove often crosses the mesial marginal ridge; both make this surface harder to restore and clean. The central groove is long and runs mesiodistally between the two cusps. Most teeth have two roots, one buccal and one palatal, which may separate in the middle or apical third; single-rooted and occasional three-rooted forms also occur. Each root usually has its own canal, and the thin, curved roots call for care during extraction and root canal treatment."
+  },
+  "tooth:second-premolar:maxillary": {
+    "summary": "A two-cusped premolar similar to the first premolar, with cusps closer in size and usually a single root.",
+    "function": "Crushing and grinding food.",
+    "clinical": "Usually one canal, but two canals occur in a substantial minority.",
+    "roots": "Usually one",
+    "canals": "One, sometimes two",
+    "eruption": "About 10–12 years",
+    "anatomy": "The crown is smaller and more rounded than that of the first premolar, and its two cusps, buccal and palatal, are nearly equal in height. The buccal cusp is less pointed and centred over the root, and the mesial crown concavity typical of the first premolar is usually absent. The central groove is shorter, and more supplemental grooves give the occlusal surface a wrinkled look. There is normally a single root, broad buccopalatally and flattened on its mesial and distal sides, often with shallow longitudinal grooves. Inside it, a single canal is most common, but two canals, which may join before the apex, are found in a large share of teeth. Because the crowns of the two maxillary premolars look alike, the relative cusp heights and the mesial concavity are the usual clues for telling them apart."
+  },
+  "tooth:first-molar:maxillary": {
+    "summary": "The largest tooth of the maxillary arch, with four major cusps and three roots: mesiobuccal, distobuccal and palatal.",
+    "function": "Primary grinding tooth; a key determinant of the occlusal relationship between the jaws.",
+    "clinical": "The mesiobuccal root frequently contains a second canal (MB2), which is easily missed in root canal treatment. Its roots lie close to the floor of the maxillary sinus.",
+    "roots": "Three (mesiobuccal, distobuccal, palatal)",
+    "canals": "Three or four — a second mesiobuccal canal (MB2) is frequently present",
+    "eruption": "About 6–7 years",
+    "anatomy": "Seen from the occlusal side, the crown is rhomboid and wider buccopalatally than mesiodistally. Of its four main cusps, the mesiopalatal is the largest, followed by the mesiobuccal, distobuccal and the small distopalatal cusp. A prominent oblique ridge joins the mesiopalatal and distobuccal cusps and separates the central fossa from the distal fossa. Many teeth carry an extra cusp or tubercle on the palatal surface of the mesiopalatal cusp, the cusp of Carabelli. The three roots spread widely from a common root trunk: the palatal root is the longest, the mesiobuccal root is broad and usually curves distally, and the distobuccal root is the smallest. This tripod of roots gives the tooth strong anchorage, and the furcation between them is a key landmark in periodontal assessment."
+  },
+  "tooth:second-molar:maxillary": {
+    "summary": "A smaller molar behind the first molar, with three roots that are often closer together.",
+    "function": "Grinding food.",
+    "clinical": "Roots may be partly fused; relationship to the maxillary sinus is clinically relevant.",
+    "roots": "Usually three, sometimes fused",
+    "canals": "Usually three",
+    "eruption": "About 12–13 years",
+    "anatomy": "The crown is smaller than that of the first molar and more varied. The distopalatal cusp is reduced and in many teeth absent, which gives a heart-shaped, three-cusped occlusal outline; when present, the four-cusp form resembles a smaller first molar. The oblique ridge is less prominent, and the cusp of Carabelli is rare. The three roots, mesiobuccal, distobuccal and palatal, are shorter, less divergent and more inclined toward the distal than those of the first molar, and two or all three are sometimes fused. The palatal canal is usually the widest, and a second mesiobuccal canal is found less often than in the first molar. Like the first molar, its root apices often lie close to the floor of the maxillary sinus, which matters in extraction and implant planning."
+  },
+  "tooth:third-molar:maxillary": {
+    "summary": "The wisdom tooth — the last tooth of the arch, with the most variable crown and root form.",
+    "function": "Grinding when erupted in function.",
+    "clinical": "Often impacted or partially erupted; frequently extracted. In Dental Scope this tooth is a derived approximation (see provenance).",
+    "roots": "Variable, often fused",
+    "canals": "Variable",
+    "eruption": "About 17–21 years, if at all",
+    "anatomy": "The crown is the smallest and least predictable of the maxillary molars. The most common form has three cusps in a heart-shaped outline, with a poorly developed or missing distopalatal cusp and an occlusal surface full of supplemental grooves. The crown is short cervico-occlusally and tapers toward the palatal side. The roots are short and usually fused into a single conical mass that curves distally, although separate roots also occur. The crown begins to calcify in late childhood and eruption, when it happens, is in the late teens or early twenties. Third molars are the teeth most often missing congenitally, and maxillary third molars that do form may stay impacted high in the tuberosity, often tilted distally or buccally."
+  },
+  "tooth:central-incisor:mandibular": {
+    "summary": "The smallest tooth of the permanent dentition: a narrow, symmetrical incisor with a single root that is flattened mesiodistally.",
+    "function": "Cutting food against the maxillary incisors.",
+    "clinical": "Although usually single-rooted, a second (lingual) canal is present in a notable minority.",
+    "roots": "One, flattened mesiodistally",
+    "canals": "Usually one, sometimes two",
+    "eruption": "About 6–7 years",
+    "anatomy": "The crown is narrow mesiodistally and almost perfectly symmetrical, with sharp, nearly right-angled incisal corners and a straight incisal edge that lies slightly lingual to the long axis of the root. The labial surface is flat to slightly convex; the lingual surface is smooth, with a shallow lingual fossa and faint marginal ridges above a small cingulum. Right and left central incisors are very hard to tell apart. The root is long and ribbon-like: narrow mesiodistally but wide labiolingually, often with shallow depressions on its mesial and distal surfaces. These depressions show why a single root may still carry two canals, one labial and one lingual, which usually rejoin near the apex. The thin alveolar bone over the labial surface is easily lost in periodontal disease."
+  },
+  "tooth:lateral-incisor:mandibular": {
+    "summary": "Slightly larger than the mandibular central incisor, with a crown that is slightly twisted distally on the arch curve.",
+    "function": "Cutting food.",
+    "clinical": "Like the central incisor, may contain two canals.",
+    "roots": "One",
+    "canals": "Usually one, sometimes two",
+    "eruption": "About 7–8 years",
+    "anatomy": "The crown is a little wider and longer than that of the central incisor and no longer symmetrical: the distoincisal angle is more rounded than the mesioincisal angle. Seen from the incisal side, the incisal edge is slightly twisted distolingually, following the curve of the dental arch, and the cingulum lies a little distal to the centre of the root. These features help separate lateral from central incisors and right from left. The lingual fossa and marginal ridges are slightly more developed than on the central incisor. The root resembles the central incisor's, flattened mesiodistally and broad labiolingually with proximal depressions, but is usually somewhat longer. Two canals, labial and lingual, occur in a notable share of teeth and are easy to miss in root canal treatment."
+  },
+  "tooth:canine:mandibular": {
+    "summary": "The mandibular cornerstone tooth: a long single-cusped tooth with a long root, narrower than its maxillary counterpart.",
+    "function": "Grasping and tearing food; lateral guidance.",
+    "clinical": "Occasionally has a bifurcated root.",
+    "roots": "One, occasionally bifurcated",
+    "canals": "Usually one",
+    "eruption": "About 9–10 years",
+    "anatomy": "The crown is long and narrower mesiodistally than the maxillary canine's. Its mesial outline runs almost in a straight line with the mesial surface of the root, and the cusp tip sits close to the centre or slightly mesial, with a short mesial and a longer distal cusp ridge. The cusp is less sharp than the maxillary canine's and often worn flat. The lingual surface is smoother, with a lower, smaller cingulum and less pronounced ridges. The root is long, wide labiolingually and grooved on its proximal sides; in a small proportion of teeth it divides into labial and lingual roots near the apex, each with its own canal. The mandibular canine's long root and strong bone support explain why it is often among the last teeth retained in older adults."
+  },
+  "tooth:first-premolar:mandibular": {
+    "summary": "A premolar with a large buccal cusp and a small lingual cusp, giving it a canine-like appearance.",
+    "function": "Assists the canine in tearing and begins crushing.",
+    "clinical": "Usually one canal, but canal anatomy is notably variable.",
+    "roots": "One",
+    "canals": "Usually one, sometimes two",
+    "eruption": "About 10–12 years",
+    "anatomy": "The crown looks transitional between a canine and a premolar. The buccal cusp is large and pointed and dominates the occlusal outline, while the lingual cusp is small, often little more than a raised cingulum, and does not take part in chewing. The crown tilts lingually over the root, and a transverse ridge runs from the buccal to the lingual cusp, separating small mesial and distal fossae, each ending in a pit. A mesiolingual groove often separates the mesial marginal ridge from the lingual cusp. The single root is conical and tapers to a pointed apex. Its canal usually stays single but can divide into two in the middle or apical third, one of the more frequent surprises in endodontics. The mental foramen typically opens near the apices of the mandibular premolars."
+  },
+  "tooth:second-premolar:mandibular": {
+    "summary": "A premolar with a better-developed lingual portion than the first premolar, often with two lingual cusps.",
+    "function": "Crushing and grinding food.",
+    "clinical": "The mental foramen commonly lies near the apices of the mandibular premolars — relevant to surgery and anaesthesia.",
+    "roots": "One",
+    "canals": "Usually one",
+    "eruption": "About 11–12 years",
+    "anatomy": "The crown occurs in two main forms. The more common three-cusp form has one buccal and two lingual cusps, the mesiolingual larger than the distolingual, with a Y-shaped groove pattern on the occlusal surface. The two-cusp form has a single lingual cusp and an H- or U-shaped groove pattern. Either way the lingual part of the crown is much better developed than in the first premolar, and the crown looks more square from the occlusal side, with cusps closer in height. The single root is larger and longer than the first premolar's and usually carries one canal. Congenital absence of this tooth is among the most common in the permanent dentition, often discovered when a primary second molar is retained. Its apex is a common landmark for locating the mental foramen on radiographs."
+  },
+  "tooth:first-molar:mandibular": {
+    "summary": "The largest mandibular tooth: five cusps on a broad crown and two well-separated roots, mesial and distal.",
+    "function": "Primary grinding tooth of the lower arch.",
+    "clinical": "Among the teeth most often restored and treated endodontically. The mesial root typically carries two canals (mesiobuccal and mesiolingual); the distal root one, sometimes two.",
+    "roots": "Two (mesial and distal)",
+    "canals": "Usually three",
+    "eruption": "About 6–7 years",
+    "anatomy": "The crown is wider mesiodistally than buccolingually and has five cusps: three on the buccal side (mesiobuccal, distobuccal and distal) and two on the lingual side (mesiolingual and distolingual), which are slightly higher. The mesiobuccal and distobuccal grooves separate the buccal cusps, and a lingual groove runs between the lingual cusps. Two roots, mesial and distal, spring from a short root trunk and are well separated, which makes the furcation accessible to both disease and cleaning. The mesial root is broad buccolingually and curves distally, typically holding two canals; the distal root is straighter and holds one wide canal or, less often, two. In some populations a third, distolingual root (radix entomolaris) is common. As the first permanent tooth to erupt, it is often mistaken for a primary tooth by parents."
+  },
+  "tooth:second-molar:mandibular": {
+    "summary": "A four-cusped molar with two roots that are often closer together than those of the first molar.",
+    "function": "Grinding food.",
+    "clinical": "Roots may converge or fuse; C-shaped canal configurations occur in some populations.",
+    "roots": "Two, sometimes fused",
+    "canals": "Usually three",
+    "eruption": "About 11–13 years",
+    "anatomy": "The crown is smaller and more rectangular than that of the first molar and usually has four cusps of nearly equal size: mesiobuccal, distobuccal, mesiolingual and distolingual. A buccal and a lingual groove cross the central groove at right angles, forming a characteristic cross-shaped (plus-sign) pattern that distinguishes it from the first molar. There is no distal cusp, and the crown is often slightly shorter. The two roots, mesial and distal, are closer together, more parallel and more inclined toward the distal than those of the first molar, and they sometimes fuse. When fused, the canals may form a C-shaped configuration, especially common in East Asian populations, which complicates cleaning and filling. The tooth erupts around age 12, which is why it is sometimes called the twelve-year molar."
+  },
+  "tooth:third-molar:mandibular": {
+    "summary": "The mandibular wisdom tooth, highly variable in form and position.",
+    "function": "Grinding when erupted in function.",
+    "clinical": "Frequently impacted. Its roots may lie close to the inferior alveolar canal, and the lingual nerve runs close to the lingual plate here. In Dental Scope this tooth is a derived approximation (see provenance).",
+    "roots": "Two, often fused",
+    "canals": "Variable",
+    "eruption": "About 17–21 years, if at all",
+    "anatomy": "The crown varies more than any other mandibular tooth. It may resemble a first molar with five cusps or a second molar with four, and the occlusal surface is often crowded with supplemental grooves. The roots are usually shorter than those of the other molars, frequently fused and curved toward the distal. The position in the jaw matters as much as the form: when there is too little space behind the second molar, the tooth may stay impacted, most often tilted mesially, but also vertically, horizontally or distally. Its roots can lie very close to or even around the inferior alveolar canal, and the lingual nerve may run just beneath the thin lingual plate beside it. That is why careful radiographic assessment comes before surgical removal."
+  }
+}

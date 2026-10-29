@@ -1,0 +1,754 @@
+{
+  "关节相关软骨或纤维软骨结构有助于分散负荷，并适应相邻结构间的接触。": [
+    "Articular cartilage and fibrocartilaginous structures help distribute loads and accommodate contact between adjacent structures.",
+    "関節に関わる軟骨や線維軟骨は荷重を分散し、隣接する構造間の接触に適応します。"
+  ],
+  "关节盘、半月板、关节唇和椎间盘形态不同，应结合名称与所在关节分别辨认。": [
+    "Articular discs, menisci, labra and intervertebral discs have different shapes; identify each by its name and associated joint.",
+    "関節円板、半月、関節唇、椎間円板は形が異なります。名称と所属する関節を合わせて識別してください。"
+  ],
+  "韧带主要由致密结缔组织构成，连接并稳定相邻骨或关节结构。": [
+    "Ligaments consist mainly of dense connective tissue and connect and stabilize adjacent bones or joint structures.",
+    "靱帯は主に密性結合組織からなり、隣接する骨や関節構造をつないで安定させます。"
+  ],
+  "韧带的走向与其限制运动的方向有关，可结合关节两端的位置观察。": [
+    "A ligament's orientation relates to the movements it restrains; examine it in relation to both ends of the joint.",
+    "靱帯の走行は制限する運動方向と関係します。関節の両側の位置と合わせて観察してください。"
+  ],
+  "关节囊包围滑膜关节，参与维持关节的整体性。": [
+    "The articular capsule surrounds a synovial joint and helps maintain its integrity.",
+    "関節包は滑膜関節を包み、関節全体のまとまりを保ちます。"
+  ],
+  "外层纤维结构提供支持，内层滑膜与关节液的形成有关。": [
+    "The outer fibrous layer provides support, while the inner synovial membrane contributes to synovial fluid production.",
+    "外側の線維層は支持を担い、内側の滑膜は関節液の産生に関わります。"
+  ],
+  "喉的软骨构成支持框架，并与发声和气道保护相关。": [
+    "The laryngeal cartilages form a supporting framework involved in phonation and airway protection.",
+    "喉頭軟骨は支持の枠組みを形成し、発声や気道の保護に関わります。"
+  ],
+  "可比较甲状软骨的板状外形、环状软骨的环形支持以及成对小软骨的位置。": [
+    "Compare the plate-like thyroid cartilage, the ring-shaped support of the cricoid cartilage and the positions of the paired smaller cartilages.",
+    "甲状軟骨の板状の形、輪状軟骨の輪状の支持構造、対をなす小さな軟骨の位置を比較してください。"
+  ],
+  "骨组织承担支持、保护和运动杠杆等作用，也参与矿物质储存。": [
+    "Bone tissue provides support, protection and levers for movement, and also stores minerals.",
+    "骨組織は支持、保護、運動のてことして働き、ミネラルの貯蔵にも関わります。"
+  ],
+  "紧密骨与松质骨共同构成骨的内部组织；此图主要显示图谱提供的外形。": [
+    "Compact and spongy bone together form the internal organization of bone; this view mainly shows the external shape supplied by the atlas.",
+    "骨の内部は緻密骨と海綿骨で構成されます。この図では主に図譜に収録された外形を表示しています。"
+  ],
+  "纤维膜连接或覆盖相应结构，为支持和肌肉附着提供基础。": [
+    "Fibrous membranes connect or cover structures, providing a basis for support and muscle attachment.",
+    "線維性の膜は構造を連結または被覆し、支持や筋の付着の基盤となります。"
+  ],
+  "观察其薄片形态与邻近骨的空间关系。": [
+    "Observe the thin sheet-like shape and its spatial relationship to neighboring bones.",
+    "薄い板状の形と、隣接する骨との位置関係を観察してください。"
+  ],
+  "锤骨、砧骨和镫骨位于中耳，构成相互连接的听小骨链。": [
+    "The malleus, incus and stapes lie in the middle ear and form an interconnected ossicular chain.",
+    "ツチ骨、キヌタ骨、アブミ骨は中耳にあり、連結した耳小骨連鎖を形成します。"
+  ],
+  "它们将鼓膜的机械振动传向内耳。": [
+    "They transmit mechanical vibrations from the tympanic membrane to the inner ear.",
+    "鼓膜の機械的振動を内耳へ伝えます。"
+  ],
+  "髌下脂肪垫位于膝关节前方、髌韧带后方的区域。": [
+    "The infrapatellar fat pad lies at the front of the knee, behind the patellar ligament.",
+    "膝蓋下脂肪体は膝関節の前方、膝蓋靱帯の後方にあります。"
+  ],
+  "它属于脂肪组织，随关节活动适应局部形态，并起到填充和缓冲作用。": [
+    "This adipose tissue adapts to local shape during joint movement and provides filling and cushioning.",
+    "脂肪組織からなり、関節運動に伴う局所の形状変化に適応し、隙間の充填と緩衝を担います。"
+  ],
+  "牙参与对食物的机械性处理。": [
+    "Teeth participate in the mechanical processing of food.",
+    "歯は食物の機械的な処理に関わります。"
+  ],
+  "切牙适于切割，尖牙有助于撕裂，前磨牙和磨牙用于压碎及研磨。": [
+    "Incisors cut, canines help tear, and premolars and molars crush and grind food.",
+    "切歯は切断、犬歯は引き裂き、小臼歯と大臼歯は粉砕やすりつぶしに適しています。"
+  ],
+  "骨骼肌收缩产生牵拉，常经肌腱作用于骨，形成运动或保持姿势。": [
+    "Skeletal muscle contraction generates a pull, often transmitted through tendons to bones, producing movement or maintaining posture.",
+    "骨格筋の収縮は牽引力を生み、多くは腱を介して骨に作用し、運動や姿勢の維持を行います。"
+  ],
+  "比较肌腹、肌腱及跨越的关节，有助于理解它与其他肌肉的协同关系。": [
+    "Comparing the muscle belly, tendon and joints crossed helps explain how the muscle works with other muscles.",
+    "筋腹、腱、またぐ関節を比較すると、他の筋との協調関係を理解しやすくなります。"
+  ],
+  "这些结缔组织结构包裹、连接或固定肌肉及肌腱。": [
+    "These connective tissue structures surround, connect or anchor muscles and tendons.",
+    "これらの結合組織は筋や腱を包み、つなぎ、または固定します。"
+  ],
+  "肌腱与腱膜传递肌肉牵拉；筋膜和支持带则为结构间的相对运动提供组织框架。": [
+    "Tendons and aponeuroses transmit muscular pull; fasciae and retinacula provide a tissue framework for relative movement between structures.",
+    "腱と腱膜は筋の牽引力を伝え、筋膜と支帯は構造間の相対的な運動を支える組織の枠組みとなります。"
+  ],
+  "肛门外括约肌由骨骼肌构成，围绕肛管下部。": [
+    "The external anal sphincter consists of skeletal muscle and surrounds the lower anal canal.",
+    "外肛門括約筋は骨格筋からなり、肛門管の下部を囲みます。"
+  ],
+  "它参与排便的随意控制，并与其他盆底结构协同工作。": [
+    "It contributes to voluntary control of defecation and works with other pelvic floor structures.",
+    "排便の随意的な制御に関わり、骨盤底の他の構造と協調します。"
+  ],
+  "动脉将血液送离心脏，并通过分支供应组织。": [
+    "Arteries carry blood away from the heart and supply tissues through their branches.",
+    "動脈は心臓から血液を送り出し、分枝を通じて組織へ供給します。"
+  ],
+  "动脉壁的弹性和肌性成分与血压、血流调节有关；可追踪本分支与较大血管的相接位置。": [
+    "Elastic and muscular components of arterial walls contribute to blood pressure and flow regulation; trace where this branch joins larger vessels.",
+    "動脈壁の弾性成分と筋性成分は血圧や血流の調節に関わります。この枝と太い血管との接続部をたどってください。"
+  ],
+  "源图谱没有提供足够明确的结构名称，保留该几何部件供对照。": [
+    "The source atlas does not provide a sufficiently specific structure name; this geometric component is retained for comparison.",
+    "元の図譜に十分明確な構造名がないため、比較用にこの形状データを残しています。"
+  ],
+  "该项不附加特定器官的功能断言，可通过同系统的已命名结构辅助定位。": [
+    "No organ-specific functional claims are assigned to this item. Named structures in the same system can help locate it.",
+    "この項目には特定の臓器機能の説明を付していません。同じ系統の名称がある構造を手がかりに位置を確認できます。"
+  ],
+  "静脉系统将血液引向心脏，壁结构和压力特征与动脉不同。": [
+    "The venous system directs blood toward the heart; its wall structure and pressure characteristics differ from those of arteries.",
+    "静脈系は血液を心臓へ導き、その壁構造や圧の特徴は動脈と異なります。"
+  ],
+  "不同区域的静脉汇合成较大的回流通路，可结合整体模型辨认其走行。": [
+    "Veins from different regions merge into larger return pathways; use the whole model to identify their courses.",
+    "各部位の静脈は合流して太い還流路となります。全体モデルと合わせて走行を確認してください。"
+  ],
+  "心脏的腔室、瓣膜、肌壁及支持结构共同保证泵血。": [
+    "The cardiac chambers, valves, muscular walls and supporting structures work together to pump blood.",
+    "心腔、弁、筋壁、支持構造が協働して血液を拍出します。"
+  ],
+  "可结合左右心房、心室和大血管的位置理解体循环与肺循环的连接。": [
+    "Use the positions of the right and left atria, ventricles and great vessels to understand the connection between systemic and pulmonary circulation.",
+    "左右の心房・心室と大血管の位置から、体循環と肺循環のつながりを理解できます。"
+  ],
+  "左心房接收肺静脉回流的血液。": [
+    "The left atrium receives blood returning through the pulmonary veins.",
+    "左心房は肺静脈から戻る血液を受け入れます。"
+  ],
+  "血液通过左房室口和二尖瓣进入左心室。": [
+    "Blood enters the left ventricle through the left atrioventricular opening and mitral valve.",
+    "血液は左房室口と僧帽弁を通って左心室へ入ります。"
+  ],
+  "左心室收缩时将血液经主动脉瓣泵入主动脉，推动体循环。": [
+    "Left ventricular contraction pumps blood through the aortic valve into the aorta, driving systemic circulation.",
+    "左心室の収縮は血液を大動脈弁から大動脈へ送り、体循環を駆動します。"
+  ],
+  "其肌壁较厚，与向全身泵血的负荷相适应。": [
+    "Its relatively thick muscular wall is adapted to the workload of pumping blood throughout the body.",
+    "厚い筋壁は全身へ血液を送る負荷に適応しています。"
+  ],
+  "右心房接收上腔静脉、下腔静脉和心脏自身静脉回流。": [
+    "The right atrium receives venous return from the superior vena cava, inferior vena cava and the heart itself.",
+    "右心房は上大静脈、下大静脈、心臓自身の静脈からの還流を受け入れます。"
+  ],
+  "血液经右房室口和三尖瓣进入右心室。": [
+    "Blood enters the right ventricle through the right atrioventricular opening and tricuspid valve.",
+    "血液は右房室口と三尖弁を通って右心室へ入ります。"
+  ],
+  "右心室将血液经肺动脉瓣泵入肺动脉干。": [
+    "The right ventricle pumps blood through the pulmonary valve into the pulmonary trunk.",
+    "右心室は肺動脈弁を介して肺動脈幹へ血液を送ります。"
+  ],
+  "血液随后流向肺部，参与肺循环。": [
+    "Blood then flows to the lungs as part of pulmonary circulation.",
+    "血液はその後肺へ流れ、肺循環を構成します。"
+  ],
+  "脑和脊髓的不同区域承担信息处理、协调和传导功能。": [
+    "Different regions of the brain and spinal cord perform information processing, coordination and transmission.",
+    "脳と脊髄の各領域は、情報の処理、協調、伝導を担います。"
+  ],
+  "脑表面的沟回提供形态分区线索，深部结构则需结合剖切和单独查看辨认。": [
+    "Surface sulci and gyri help distinguish brain regions; identify deeper structures using sections and isolated views.",
+    "脳表の溝と回は形態的な区分の手がかりとなります。深部構造は断面や単独表示と合わせて識別してください。"
+  ],
+  "神经由多条神经纤维及其支持组织构成，传递感觉、运动或自主神经信息。": [
+    "Nerves consist of numerous nerve fibers and supporting tissues and carry sensory, motor or autonomic information.",
+    "神経は多数の神経線維と支持組織からなり、感覚・運動・自律神経の情報を伝えます。"
+  ],
+  "神经丛是神经纤维交织和重新分配的区域，可沿分支观察其分布。": [
+    "A nerve plexus is an area where nerve fibers intertwine and redistribute; follow its branches to explore their distribution.",
+    "神経叢は神経線維が交錯し再分配される領域です。分枝をたどって分布を観察してください。"
+  ],
+  "神经核是中枢神经系统内神经元胞体相对集中的区域。": [
+    "A nucleus is a region of the central nervous system with a relatively concentrated group of neuronal cell bodies.",
+    "神経核は中枢神経系で神経細胞体が比較的集中している領域です。"
+  ],
+  "不同神经核通过纤维联系组成回路；这里提供该结构类别的基础知识。": [
+    "Different nuclei form circuits through fiber connections; this entry provides basic knowledge about this class of structure.",
+    "異なる神経核は線維連絡によって回路を形成します。ここではこの種類の構造の基礎知識を示しています。"
+  ],
+  "中枢内的神经纤维束连接不同区域，参与信息传导。": [
+    "Nerve fiber tracts within the central nervous system connect different regions and transmit information.",
+    "中枢神経系内の神経線維束は異なる領域を結び、情報伝達に関わります。"
+  ],
+  "白质中包含大量有髓纤维；纤维束名称常反映联系部位或走行方向。": [
+    "White matter contains many myelinated fibers; tract names often reflect the connected regions or direction of travel.",
+    "白質には多数の有髄線維が含まれます。線維束の名称は接続する部位や走行方向を反映することがよくあります。"
+  ],
+  "脉络丛位于脑室内，由血管和专门的上皮结构等组成。": [
+    "The choroid plexus lies within the ventricles and contains blood vessels and specialized epithelium.",
+    "脈絡叢は脳室内にあり、血管と特殊な上皮などから構成されます。"
+  ],
+  "它参与脑脊液的形成，应与眼内的脉络膜区分。": [
+    "It contributes to cerebrospinal fluid production and should be distinguished from the choroid of the eye.",
+    "脳脊髄液の産生に関わります。眼の脈絡膜とは区別してください。"
+  ],
+  "耳蜗位于内耳，呈螺旋形。": [
+    "The cochlea lies in the inner ear and has a spiral shape.",
+    "蝸牛は内耳にあり、らせん状の形をしています。"
+  ],
+  "声音引发内耳液体和膜结构运动，通过毛细胞转化为听觉信号。": [
+    "Sound moves inner-ear fluid and membranes; hair cells convert these movements into auditory signals.",
+    "音により内耳の液体や膜が動き、有毛細胞がその運動を聴覚信号に変換します。"
+  ],
+  "神经节通常是周围神经系统中神经元胞体聚集的部位。": [
+    "A ganglion is usually a collection of neuronal cell bodies in the peripheral nervous system.",
+    "神経節は通常、末梢神経系で神経細胞体が集まる部位です。"
+  ],
+  "它与神经纤维联系紧密，可结合相连神经或交感干观察。": [
+    "It is closely associated with nerve fibers; examine it together with connected nerves or the sympathetic trunk.",
+    "神経線維と密接に関係します。つながる神経や交感神経幹と合わせて観察してください。"
+  ],
+  "扁桃体是咽部的淋巴组织聚集。": [
+    "Tonsils are aggregations of lymphoid tissue in the pharynx.",
+    "扁桃は咽頭に集まるリンパ組織です。"
+  ],
+  "它位于空气和食物进入体内的通路附近，参与局部免疫防御。": [
+    "They lie near the entry pathways for air and food and contribute to local immune defense.",
+    "空気や食物が体内へ入る通路の近くにあり、局所の免疫防御に関わります。"
+  ],
+  "肺段支气管由肺叶支气管分出，向相应的支气管肺段输送空气。": [
+    "Segmental bronchi branch from lobar bronchi and carry air to the corresponding bronchopulmonary segments.",
+    "区域気管支は葉気管支から分かれ、対応する肺区域へ空気を送ります。"
+  ],
+  "名称中的尖、前、后、内侧或外侧描述肺段方位；可沿分支向近端追踪到肺叶支气管。": [
+    "Apical, anterior, posterior, medial and lateral in the names describe segment orientation; trace branches proximally to the lobar bronchi.",
+    "名称の肺尖・前・後・内側・外側は肺区域の方向を表します。枝を近位へたどると葉気管支に至ります。"
+  ],
+  "鼻旁窦是与鼻腔相通的含气腔隙，内部覆有黏膜。": [
+    "Paranasal sinuses are air-filled, mucosa-lined spaces communicating with the nasal cavity.",
+    "副鼻腔は鼻腔に通じる含気腔で、内面は粘膜に覆われています。"
+  ],
+  "模型显示的是图谱中的腔隙边界，可结合位置辨认额窦、蝶窦和筛窦小房。": [
+    "The model shows the cavity boundaries supplied by the atlas; use their positions to identify the frontal and sphenoidal sinuses and ethmoidal cells.",
+    "モデルは図譜の腔の境界を示します。位置を手がかりに前頭洞、蝶形骨洞、篩骨蜂巣を識別してください。"
+  ],
+  "会厌位于喉入口附近，含弹性软骨。": [
+    "The epiglottis lies near the laryngeal inlet and contains elastic cartilage.",
+    "喉頭蓋は喉頭入口の近くにあり、弾性軟骨を含みます。"
+  ],
+  "吞咽时它参与保护气道，减少食物进入喉内的机会。": [
+    "During swallowing it helps protect the airway and reduces entry of food into the larynx.",
+    "嚥下時に気道を保護し、食物が喉頭へ入るのを減らします。"
+  ],
+  "肺由肺叶组成，肺叶中又包含多个支气管肺段。": [
+    "The lungs consist of lobes, each containing multiple bronchopulmonary segments.",
+    "肺は肺葉からなり、各肺葉には複数の肺区域が含まれます。"
+  ],
+  "气体交换发生在更微细的肺泡与毛细血管界面；本图谱主要呈现大体结构。": [
+    "Gas exchange occurs at the finer alveolar-capillary interface; this atlas mainly depicts gross anatomy.",
+    "ガス交換はより微細な肺胞と毛細血管の境界で起こります。この図譜は主に肉眼解剖の構造を示します。"
+  ],
+  "支气管承接气管内的空气，并通过逐级分支将空气分配到肺内。": [
+    "The bronchi receive air from the trachea and distribute it through successive branches within the lungs.",
+    "気管支は気管から空気を受け取り、段階的な分枝によって肺内へ分配します。"
+  ],
+  "支气管壁有支持结构和黏膜，可在整体视图中观察其与肺叶分支的关系。": [
+    "Bronchial walls contain supporting structures and mucosa; the overall view shows their relationship to lobar branches.",
+    "気管支壁には支持構造と粘膜があります。全体像から肺葉へ向かう枝との関係を観察できます。"
+  ],
+  "喉咽位于喉的后方，是咽的下部。": [
+    "The laryngopharynx lies behind the larynx and forms the lower part of the pharynx.",
+    "喉頭咽頭は喉頭の後方にあり、咽頭の下部をなします。"
+  ],
+  "吞咽时食物经此进入食管，空气通向前方的喉。": [
+    "During swallowing, food passes through it into the esophagus, while air passes toward the larynx in front.",
+    "嚥下時、食物はここを通って食道へ進み、空気は前方の喉頭へ向かいます。"
+  ],
+  "肺叶支气管由主支气管分出，分别通向肺叶。": [
+    "Lobar bronchi arise from the main bronchi and lead to individual lung lobes.",
+    "葉気管支は主気管支から分かれ、それぞれの肺葉へ向かいます。"
+  ],
+  "它继续分为肺段支气管；右肺有上、中、下叶，左肺有上、下叶。": [
+    "They divide further into segmental bronchi; the right lung has upper, middle and lower lobes, and the left has upper and lower lobes.",
+    "さらに区域気管支へ分かれます。右肺には上葉・中葉・下葉、左肺には上葉・下葉があります。"
+  ],
+  "鼻腔黏膜覆盖鼻腔内表面。": [
+    "The nasal mucosa covers the inner surface of the nasal cavity.",
+    "鼻粘膜は鼻腔の内面を覆います。"
+  ],
+  "其血供、黏液与纤毛共同参与吸入空气的温暖、湿润与清洁。": [
+    "Its blood supply, mucus and cilia together warm, humidify and clean inhaled air.",
+    "血流、粘液、線毛が協働し、吸い込んだ空気を温め、加湿し、清浄化します。"
+  ],
+  "鼻咽位于鼻腔后方，是咽的上部。": [
+    "The nasopharynx lies behind the nasal cavity and forms the upper pharynx.",
+    "鼻咽頭は鼻腔の後方にあり、咽頭の上部をなします。"
+  ],
+  "它主要参与空气通行，与口咽和喉咽在位置和功能上有所区别。": [
+    "It mainly conducts air and differs in location and function from the oropharynx and laryngopharynx.",
+    "主に空気の通路であり、位置と機能は口腔咽頭や喉頭咽頭と異なります。"
+  ],
+  "口咽位于口腔后方。": [
+    "The oropharynx lies behind the oral cavity.",
+    "口腔咽頭は口腔の後方にあります。"
+  ],
+  "它是空气和食物都可经过的区域，向下与喉咽相续。": [
+    "Both air and food pass through this region, which continues inferiorly into the laryngopharynx.",
+    "空気と食物の両方が通る領域で、下方で喉頭咽頭に続きます。"
+  ],
+  "胸膜分为贴近肺表面的脏层和衬于胸壁等处的壁层。": [
+    "The pleura has a visceral layer closely covering the lung surface and a parietal layer lining the chest wall and adjacent surfaces.",
+    "胸膜は肺表面を覆う臓側胸膜と、胸壁などの内面を覆う壁側胸膜に分かれます。"
+  ],
+  "两层之间的少量液体有助于减少呼吸时的摩擦。": [
+    "A small amount of fluid between the layers reduces friction during breathing.",
+    "両層の間にある少量の液体が、呼吸時の摩擦を減らします。"
+  ],
+  "软腭位于硬腭后方，腭垂由其后缘垂下。": [
+    "The soft palate lies behind the hard palate, and the uvula hangs from its posterior edge.",
+    "軟口蓋は硬口蓋の後方にあり、その後縁から口蓋垂が垂れ下がります。"
+  ],
+  "吞咽时软腭抬高，帮助分隔鼻咽，减少食物进入鼻腔。": [
+    "During swallowing the soft palate elevates to help separate the nasopharynx and limit food entry into the nasal cavity.",
+    "嚥下時に軟口蓋が挙上して鼻咽頭を隔て、食物が鼻腔へ入るのを抑えます。"
+  ],
+  "气管位于喉下方，在胸内分为左右主支气管。": [
+    "The trachea lies below the larynx and divides into the right and left main bronchi within the thorax.",
+    "気管は喉頭の下にあり、胸部で左右の主気管支に分かれます。"
+  ],
+  "气管软骨环帮助维持管腔，黏液和纤毛参与清除吸入颗粒。": [
+    "Tracheal cartilage rings maintain the lumen, while mucus and cilia help remove inhaled particles.",
+    "気管軟骨輪は内腔を保ち、粘液と線毛は吸い込まれた粒子の除去に関わります。"
+  ],
+  "主要唾液腺通过导管将唾液送入口腔。": [
+    "The major salivary glands deliver saliva into the oral cavity through ducts.",
+    "大唾液腺は導管を通じて口腔へ唾液を送ります。"
+  ],
+  "唾液润滑食团，并参与口腔清洁与部分食物成分的初步消化。": [
+    "Saliva lubricates the food bolus, helps clean the mouth and begins digestion of some food components.",
+    "唾液は食塊を潤滑し、口腔を清潔に保ち、一部の食物成分の初期消化にも関わります。"
+  ],
+  "胰管将胰的外分泌液引向十二指肠。": [
+    "Pancreatic ducts direct exocrine pancreatic secretions toward the duodenum.",
+    "膵管は膵臓の外分泌液を十二指腸へ導きます。"
+  ],
+  "胰液中的消化酶参与营养物质分解，碳酸氢盐帮助中和胃酸。": [
+    "Digestive enzymes in pancreatic juice break down nutrients, while bicarbonate helps neutralize gastric acid.",
+    "膵液の消化酵素は栄養素を分解し、重炭酸イオンは胃酸の中和を助けます。"
+  ],
+  "肝产生胆汁，并参与营养物质代谢、储存和多种血浆蛋白的合成。": [
+    "The liver produces bile and participates in nutrient metabolism, storage and synthesis of many plasma proteins.",
+    "肝臓は胆汁を産生し、栄養素の代謝・貯蔵や多くの血漿タンパク質の合成に関わります。"
+  ],
+  "图谱中的分区用于辨认肝内区域；整器官位置可结合胃、胆囊和膈下区域观察。": [
+    "Atlas subdivisions help identify regions within the liver; locate the whole organ relative to the stomach, gallbladder and subdiaphragmatic region.",
+    "図譜の区分は肝内の領域を識別するためのものです。臓器全体の位置は胃、胆嚢、横隔膜下の領域と合わせて観察してください。"
+  ],
+  "结肠属于大肠，参与水和电解质的吸收及粪便形成。": [
+    "The colon is part of the large intestine and absorbs water and electrolytes while contributing to feces formation.",
+    "結腸は大腸の一部で、水や電解質の吸収と便の形成に関わります。"
+  ],
+  "升、横、降和乙状结肠的名称反映其走行；系膜则连接、支持相应肠段。": [
+    "The names ascending, transverse, descending and sigmoid describe the course of the colon; mesenteries connect and support the corresponding segments.",
+    "上行・横行・下行・S 状という名称は結腸の走行を示します。腸間膜は対応する腸管をつなぎ、支持します。"
+  ],
+  "胆道将胆汁引向小肠，连接肝胆系统与消化管。": [
+    "The biliary tract directs bile to the small intestine, connecting the hepatobiliary system with the digestive tract.",
+    "胆道は胆汁を小腸へ導き、肝胆道系と消化管をつなぎます。"
+  ],
+  "胆汁有助于脂肪乳化，为后续消化吸收创造条件。": [
+    "Bile helps emulsify fats, facilitating their subsequent digestion and absorption.",
+    "胆汁は脂肪の乳化を助け、その後の消化・吸収を容易にします。"
+  ],
+  "十二指肠是小肠起始段，接收胃排出的食糜。": [
+    "The duodenum is the first part of the small intestine and receives chyme from the stomach.",
+    "十二指腸は小腸の最初の部分で、胃から排出された粥状の内容物を受け入れます。"
+  ],
+  "胰液和胆汁在此参与消化，肠内容物随后继续进入空肠。": [
+    "Pancreatic juice and bile contribute to digestion here; intestinal contents then continue into the jejunum.",
+    "ここで膵液と胆汁が消化に関わり、内容物はその後空腸へ進みます。"
+  ],
+  "结肠带是结肠外纵行肌层形成的带状结构。": [
+    "The taeniae coli are bands formed by the outer longitudinal muscle layer of the colon.",
+    "結腸ひもは結腸外側の縦走筋層が形成する帯状の構造です。"
+  ],
+  "图谱用独立带、网膜带和系膜带等名称区分其所在位置。": [
+    "The atlas distinguishes their positions with names such as free, omental and mesocolic taenia.",
+    "図譜では自由ひも、大網ひも、間膜ひもなどの名称で位置を区別します。"
+  ],
+  "胆囊位于肝的下方，储存并浓缩胆汁。": [
+    "The gallbladder lies beneath the liver and stores and concentrates bile.",
+    "胆嚢は肝臓の下面にあり、胆汁を貯蔵・濃縮します。"
+  ],
+  "进食后胆汁经胆道进入十二指肠，帮助脂肪消化。": [
+    "After a meal, bile enters the duodenum through the biliary tract and helps digest fats.",
+    "食後、胆汁は胆道を通って十二指腸へ入り、脂肪の消化を助けます。"
+  ],
+  "牙龈围绕牙颈部并覆盖部分牙槽区域。": [
+    "The gingiva surrounds tooth necks and covers part of the alveolar region.",
+    "歯肉は歯頸部を囲み、歯槽部の一部を覆います。"
+  ],
+  "它与其他牙周组织共同支持和保护牙。": [
+    "Together with other periodontal tissues, it supports and protects the teeth.",
+    "他の歯周組織とともに歯を支持し保護します。"
+  ],
+  "网膜是与腹腔消化器官相连的腹膜皱襞。": [
+    "The omenta are peritoneal folds associated with abdominal digestive organs.",
+    "大網・小網は腹腔の消化器官に連なる腹膜のひだです。"
+  ],
+  "大网膜垂覆于部分腹腔脏器前方；小网膜连接肝与胃、十二指肠的相应部位。": [
+    "The greater omentum hangs in front of some abdominal organs; the lesser omentum connects the liver with parts of the stomach and duodenum.",
+    "大網は腹腔内臓器の一部の前面に垂れ、小網は肝臓と胃・十二指腸の該当部位をつなぎます。"
+  ],
+  "空肠位于十二指肠之后，是小肠的重要组成部分。": [
+    "The jejunum follows the duodenum and is an important part of the small intestine.",
+    "空腸は十二指腸に続く、小腸の重要な部分です。"
+  ],
+  "其黏膜结构增加吸收表面积，参与营养物质吸收。": [
+    "Its mucosal architecture increases the absorptive surface area and contributes to nutrient absorption.",
+    "粘膜の構造が吸収面積を増やし、栄養素の吸収に関わります。"
+  ],
+  "阑尾与盲肠相连，壁内含淋巴组织。": [
+    "The appendix connects to the cecum and contains lymphoid tissue in its wall.",
+    "虫垂は盲腸につながり、その壁にはリンパ組織が含まれます。"
+  ],
+  "阑尾系膜支持阑尾并容纳相关血管等结构。": [
+    "The mesoappendix supports the appendix and contains its associated vessels and other structures.",
+    "虫垂間膜は虫垂を支持し、関連する血管などを含みます。"
+  ],
+  "胃黏膜是胃壁面向胃腔的内层，含胃腺。": [
+    "The gastric mucosa is the inner layer of the stomach wall facing the lumen and contains gastric glands.",
+    "胃粘膜は胃の内腔に面する最内層で、胃腺を含みます。"
+  ],
+  "其分泌参与消化，黏液等屏障成分也有助于保护胃壁。": [
+    "Its secretions aid digestion, while mucus and other barrier components protect the stomach wall.",
+    "分泌物は消化に関わり、粘液などの防御成分は胃壁の保護にも役立ちます。"
+  ],
+  "食管连接咽与胃，经过胸部并穿过膈。": [
+    "The esophagus connects the pharynx and stomach, passing through the thorax and diaphragm.",
+    "食道は咽頭と胃をつなぎ、胸部を通過して横隔膜を貫きます。"
+  ],
+  "管壁的蠕动将吞咽的食团向胃推进。": [
+    "Peristalsis of its wall propels the swallowed food bolus toward the stomach.",
+    "食道壁の蠕動が、飲み込んだ食塊を胃へ運びます。"
+  ],
+  "胰兼有外分泌与内分泌功能；胰液参与消化，胰岛细胞分泌激素。": [
+    "The pancreas has both exocrine and endocrine functions: pancreatic juice aids digestion, and islet cells secrete hormones.",
+    "膵臓は外分泌と内分泌の両方を担います。膵液は消化に関わり、膵島細胞はホルモンを分泌します。"
+  ],
+  "胰岛素和胰高血糖素共同参与血糖调节。": [
+    "Insulin and glucagon both contribute to blood glucose regulation.",
+    "インスリンとグルカゴンはともに血糖調節に関わります。"
+  ],
+  "胃上接食管，下通十二指肠，是储存和混合食物的肌性器官。": [
+    "The stomach is a muscular organ that stores and mixes food, connecting the esophagus above to the duodenum below.",
+    "胃は食物を貯蔵し混和する筋性の臓器で、上方は食道、下方は十二指腸につながります。"
+  ],
+  "胃液参与蛋白质消化，胃的运动把内容物逐步送入小肠。": [
+    "Gastric juice contributes to protein digestion, and gastric movements gradually deliver contents into the small intestine.",
+    "胃液はタンパク質の消化に関わり、胃の運動は内容物を少しずつ小腸へ送ります。"
+  ],
+  "舌是口腔内的肌性器官，协助搅拌食物、形成和推送食团。": [
+    "The tongue is a muscular organ in the mouth that mixes food and helps form and propel the food bolus.",
+    "舌は口腔内の筋性器官で、食物を混ぜ、食塊を形成して送り込むのを助けます。"
+  ],
+  "舌也参与味觉和言语发音。": [
+    "The tongue also contributes to taste and speech articulation.",
+    "舌は味覚や言語の構音にも関わります。"
+  ],
+  "肾位于腹后壁，是形成尿液的重要器官。": [
+    "The kidneys lie against the posterior abdominal wall and are major organs of urine formation.",
+    "腎臓は腹部後壁に位置し、尿を形成する重要な臓器です。"
+  ],
+  "肾通过滤过及后续重吸收、分泌调节水、电解质和代谢产物排出。": [
+    "Filtration followed by reabsorption and secretion regulates the excretion of water, electrolytes and metabolic products.",
+    "濾過とそれに続く再吸収・分泌によって、水、電解質、代謝産物の排泄を調節します。"
+  ],
+  "肾盂位于肾门附近，与肾盏和输尿管相接。": [
+    "The renal pelvis lies near the renal hilum and connects the calyces to the ureter.",
+    "腎盂は腎門の近くにあり、腎杯と尿管をつなぎます。"
+  ],
+  "它汇集尿液并将尿液引向输尿管。": [
+    "It collects urine and directs it into the ureter.",
+    "尿を集め、尿管へ導きます。"
+  ],
+  "输尿管连接肾盂与膀胱。": [
+    "The ureter connects the renal pelvis with the urinary bladder.",
+    "尿管は腎盂と膀胱をつなぎます。"
+  ],
+  "其平滑肌蠕动有助于将尿液持续送入膀胱。": [
+    "Smooth muscle peristalsis helps move urine continuously into the bladder.",
+    "平滑筋の蠕動によって尿が継続的に膀胱へ送られます。"
+  ],
+  "尿道连接膀胱与体表，是尿液排出的通路。": [
+    "The urethra connects the bladder to the body surface and provides the exit route for urine.",
+    "尿道は膀胱と体表をつなぎ、尿の排出路となります。"
+  ],
+  "在本男性图谱中，尿道与生殖系统的部分通路具有共同关系。": [
+    "In this male atlas, the urethra shares part of its pathway with the reproductive system.",
+    "この男性の図譜では、尿道は生殖系の経路の一部と共通しています。"
+  ],
+  "膀胱是可扩张的肌性储尿器官，位于盆腔。": [
+    "The urinary bladder is a distensible muscular organ in the pelvis that stores urine.",
+    "膀胱は骨盤内にある、拡張可能な筋性の蓄尿器官です。"
+  ],
+  "储尿和排尿依赖膀胱壁与尿道相关括约机制的协调。": [
+    "Urine storage and voiding depend on coordination between the bladder wall and urethral sphincter mechanisms.",
+    "蓄尿と排尿は、膀胱壁と尿道の括約機構の協調に依存します。"
+  ],
+  "淋巴结位于淋巴引流通路上，淋巴流经其中接受过滤。": [
+    "Lymph nodes lie along lymphatic drainage routes and filter the lymph passing through them.",
+    "リンパ節はリンパの排出路に沿って存在し、流れ込むリンパを濾過します。"
+  ],
+  "其淋巴细胞等免疫细胞参与识别抗原和启动免疫反应；名称常描述所在区域或邻近血管。": [
+    "Lymphocytes and other immune cells recognize antigens and initiate immune responses; node names often describe their region or nearby vessels.",
+    "リンパ球などの免疫細胞が抗原を認識し、免疫応答を開始します。名称は部位や近くの血管を表すことがよくあります。"
+  ],
+  "胸腺位于胸骨后方的前上纵隔区域。": [
+    "The thymus lies behind the sternum in the anterosuperior mediastinal region.",
+    "胸腺は胸骨の後方、前上部の縦隔にあります。"
+  ],
+  "它是Ｔ淋巴细胞发育和选择的重要场所，年龄增长后其组织构成会改变。": [
+    "It is a major site of T-lymphocyte development and selection, and its tissue composition changes with age.",
+    "T リンパ球の発達と選択に重要な場所で、加齢に伴って組織構成が変化します。"
+  ],
+  "脾位于左上腹，是与血循环密切相关的淋巴器官。": [
+    "The spleen lies in the left upper abdomen and is a lymphoid organ closely associated with blood circulation.",
+    "脾臓は左上腹部にあり、血液循環と密接に関わるリンパ器官です。"
+  ],
+  "它参与血液过滤、衰老血细胞清除及针对血源性抗原的免疫反应。": [
+    "It filters blood, removes aged blood cells and mounts immune responses to blood-borne antigens.",
+    "血液の濾過、古くなった血球の除去、血液中の抗原に対する免疫応答に関わります。"
+  ],
+  "腺垂体是垂体的腺性部分，受下丘脑释放和抑制信号调节。": [
+    "The adenohypophysis is the glandular part of the pituitary, regulated by hypothalamic releasing and inhibiting signals.",
+    "腺性下垂体は下垂体の腺性部分で、視床下部の放出・抑制シグナルによって調節されます。"
+  ],
+  "它分泌多种激素，参与生长、生殖及其他内分泌腺的调控。": [
+    "It secretes multiple hormones involved in growth, reproduction and regulation of other endocrine glands.",
+    "成長、生殖、他の内分泌腺の調節に関わる複数のホルモンを分泌します。"
+  ],
+  "甲状旁腺通常位于甲状腺后方，分泌甲状旁腺激素。": [
+    "The parathyroid glands usually lie behind the thyroid and secrete parathyroid hormone.",
+    "副甲状腺は通常、甲状腺の後方にあり、副甲状腺ホルモンを分泌します。"
+  ],
+  "其重要作用是调节血钙，涉及骨、肾及通过维生素Ｄ影响肠道吸收。": [
+    "They regulate blood calcium through effects on bone and kidney and, via vitamin D, intestinal absorption.",
+    "骨と腎臓への作用、およびビタミン D を介した腸管吸収への作用により、血中カルシウムを調節します。"
+  ],
+  "神经垂体与下丘脑之间有神经纤维联系。": [
+    "The neurohypophysis is connected to the hypothalamus by nerve fibers.",
+    "神経性下垂体は神経線維によって視床下部につながっています。"
+  ],
+  "它储存并释放在下丘脑合成的抗利尿激素和催产素。": [
+    "It stores and releases antidiuretic hormone and oxytocin synthesized in the hypothalamus.",
+    "視床下部で合成された抗利尿ホルモンとオキシトシンを貯蔵・放出します。"
+  ],
+  "松果体是位于脑内的内分泌结构。": [
+    "The pineal gland is an endocrine structure within the brain.",
+    "松果体は脳内にある内分泌構造です。"
+  ],
+  "其褪黑素分泌与昼夜节律有关。": [
+    "Its melatonin secretion is associated with circadian rhythms.",
+    "メラトニンの分泌は概日リズムに関わります。"
+  ],
+  "肾上腺位于肾上方，可分为皮质与髓质。": [
+    "The adrenal glands lie above the kidneys and consist of cortex and medulla.",
+    "副腎は腎臓の上方にあり、皮質と髄質に分かれます。"
+  ],
+  "皮质和髓质分泌不同类别的激素，参与应激、代谢及水盐平衡。": [
+    "The cortex and medulla secrete different classes of hormones involved in stress, metabolism, and fluid and electrolyte balance.",
+    "皮質と髄質は異なる種類のホルモンを分泌し、ストレス応答、代謝、水・電解質バランスに関わります。"
+  ],
+  "睾丸内的曲细精管参与精子生成。": [
+    "The seminiferous tubules within the testes participate in sperm production.",
+    "精巣内の曲精細管は精子の産生に関わります。"
+  ],
+  "睾丸间质细胞分泌睾酮等雄激素，因而它也属于内分泌器官。": [
+    "Testicular interstitial cells secrete androgens such as testosterone, so the testis is also an endocrine organ.",
+    "精巣の間質細胞はテストステロンなどのアンドロゲンを分泌するため、精巣は内分泌器官でもあります。"
+  ],
+  "甲状腺位于颈前部，左右叶之间由峡部连接。": [
+    "The thyroid lies in the anterior neck, with right and left lobes connected by an isthmus.",
+    "甲状腺は頸部前面にあり、左右の葉は峡部でつながっています。"
+  ],
+  "甲状腺激素参与调节代谢，并对生长发育十分重要。": [
+    "Thyroid hormones regulate metabolism and are important for growth and development.",
+    "甲状腺ホルモンは代謝の調節に関わり、成長や発達にも重要です。"
+  ],
+  "阴茎海绵体是阴茎的勃起组织，通常成对分布。": [
+    "The corpora cavernosa are the erectile tissues of the penis and are usually paired.",
+    "陰茎海綿体は陰茎の勃起組織で、通常は対をなします。"
+  ],
+  "血管腔隙充盈使其参与阴茎勃起。": [
+    "Filling of their vascular spaces contributes to penile erection.",
+    "血管腔が充満することで陰茎の勃起に関わります。"
+  ],
+  "尿道海绵体围绕尿道的一部分，前端扩大形成阴茎头。": [
+    "The corpus spongiosum surrounds part of the urethra and expands distally to form the glans penis.",
+    "尿道海綿体は尿道の一部を囲み、遠位端が広がって亀頭を形成します。"
+  ],
+  "可与成对的阴茎海绵体比较其位置和形态。": [
+    "Compare its position and shape with the paired corpora cavernosa.",
+    "対をなす陰茎海綿体と位置や形を比較してください。"
+  ],
+  "输精管从附睾延续，向盆腔内走行。": [
+    "The ductus deferens continues from the epididymis and courses into the pelvis.",
+    "精管は精巣上体から続き、骨盤内へ走行します。"
+  ],
+  "其管壁肌层参与精子输送，可沿整体模型观察其与精囊、射精管的连接方向。": [
+    "Its muscular wall transports sperm; use the whole model to observe its connections toward the seminal vesicle and ejaculatory duct.",
+    "管壁の筋層が精子の輸送に関わります。全体モデルで精嚢や射精管へ向かう接続方向を観察してください。"
+  ],
+  "射精管与输精管末端及精囊排出通路相连。": [
+    "The ejaculatory duct connects with the terminal ductus deferens and the drainage pathway of the seminal vesicle.",
+    "射精管は精管の終末部と精嚢の排出路につながります。"
+  ],
+  "它穿过前列腺并开口于尿道的相应部位。": [
+    "It passes through the prostate and opens into the corresponding portion of the urethra.",
+    "前立腺を通り、尿道の該当する部分に開口します。"
+  ],
+  "附睾紧邻睾丸，内部管道高度盘曲。": [
+    "The epididymis lies immediately adjacent to the testis and contains a highly coiled duct.",
+    "精巣上体は精巣に隣接し、内部には高度に迂曲した管があります。"
+  ],
+  "它参与精子的成熟和储存，并与输精管相接。": [
+    "It supports sperm maturation and storage and connects to the ductus deferens.",
+    "精子の成熟と貯蔵に関わり、精管につながります。"
+  ],
+  "前列腺位于膀胱下方，包绕尿道起始段的一部分。": [
+    "The prostate lies below the bladder and surrounds part of the proximal urethra.",
+    "前立腺は膀胱の下にあり、尿道の起始部の一部を囲みます。"
+  ],
+  "前列腺液构成精液的一部分，整体视图可用于观察其与射精管的关系。": [
+    "Prostatic fluid contributes to semen; the whole view shows the gland's relationship to the ejaculatory ducts.",
+    "前立腺液は精液の一部を構成します。全体像で射精管との関係を観察できます。"
+  ],
+  "精囊位于膀胱后方附近，是男性附属生殖腺。": [
+    "The seminal vesicles lie near the posterior bladder and are male accessory reproductive glands.",
+    "精嚢は膀胱の後方付近にある男性の付属生殖腺です。"
+  ],
+  "它的分泌物为精液提供重要成分。": [
+    "Their secretions provide important components of semen.",
+    "分泌物は精液の重要な成分となります。"
+  ],
+  "泪小管、泪囊和鼻泪管共同构成泪液排出通路。": [
+    "The lacrimal canaliculi, lacrimal sac and nasolacrimal duct together form the tear drainage pathway.",
+    "涙小管、涙嚢、鼻涙管が一緒に涙液の排出路を構成します。"
+  ],
+  "可从眼内侧区域向下追踪这些结构，理解眼表与鼻腔的联系。": [
+    "Trace these structures downward from the medial eye to understand the connection between the ocular surface and nasal cavity.",
+    "眼の内側から下方へこれらをたどり、眼表面と鼻腔のつながりを確認してください。"
+  ],
+  "眼内不同腔隙容纳房水或玻璃体等介质。": [
+    "Different spaces within the eye contain media such as aqueous humor or vitreous body.",
+    "眼内の各腔には房水や硝子体などが含まれます。"
+  ],
+  "这些结构与眼球形态和光线通过有关；图谱中的腔隙边界并非独立的实体器官。": [
+    "These structures relate to eye shape and light transmission; the cavity boundaries in the atlas are not separate solid organs.",
+    "これらは眼球の形や光の通過に関わります。図譜の腔の境界は、独立した実質性の器官ではありません。"
+  ],
+  "咽鼓管连接中耳与鼻咽。": [
+    "The auditory tube connects the middle ear to the nasopharynx.",
+    "耳管は中耳と鼻咽頭をつなぎます。"
+  ],
+  "它有助于平衡鼓膜两侧的气压。": [
+    "It helps equalize air pressure on both sides of the tympanic membrane.",
+    "鼓膜の両側の気圧を等しくするのを助けます。"
+  ],
+  "角膜是眼前部的透明结构，参与光线折射。": [
+    "The cornea is a transparent structure at the front of the eye that refracts light.",
+    "角膜は眼前部の透明な構造で、光の屈折に関わります。"
+  ],
+  "与晶状体等结构共同形成眼的光学系统。": [
+    "Together with the lens and other structures, it forms the optical system of the eye.",
+    "水晶体などの構造とともに眼の光学系を形成します。"
+  ],
+  "虹膜围成瞳孔，位于角膜与晶状体之间。": [
+    "The iris surrounds the pupil and lies between the cornea and lens.",
+    "虹彩は瞳孔を囲み、角膜と水晶体の間にあります。"
+  ],
+  "虹膜肌调节瞳孔大小，从而改变进入眼内的光量。": [
+    "Iris muscles regulate pupil size and thereby alter the amount of light entering the eye.",
+    "虹彩の筋が瞳孔径を調節し、眼に入る光量を変えます。"
+  ],
+  "泪腺是眼的附属腺体，参与泪液形成。": [
+    "The lacrimal gland is an accessory gland of the eye that contributes to tear production.",
+    "涙腺は眼の付属腺で、涙液の形成に関わります。"
+  ],
+  "泪液有助于保持眼表湿润，并可经泪道排向鼻腔。": [
+    "Tears keep the ocular surface moist and drain through the lacrimal pathways toward the nasal cavity.",
+    "涙液は眼表面を湿潤に保ち、涙道を通って鼻腔へ排出されます。"
+  ],
+  "晶状体位于虹膜之后，为透明的双凸结构。": [
+    "The lens is a transparent biconvex structure behind the iris.",
+    "水晶体は虹彩の後方にある透明な両凸レンズ状の構造です。"
+  ],
+  "其形状改变参与调节，使不同距离物体的像聚焦于视网膜。": [
+    "Changes in its shape provide accommodation, focusing images of objects at different distances on the retina.",
+    "形状の変化が調節に関わり、異なる距離の物体の像を網膜に結びます。"
+  ],
+  "视网膜位于眼球壁的内层，含感光细胞和神经回路。": [
+    "The retina forms the inner layer of the eye wall and contains photoreceptors and neural circuits.",
+    "網膜は眼球壁の内層で、視細胞や神経回路を含みます。"
+  ],
+  "它将光刺激转化为神经信号，随后通过视觉通路传向脑。": [
+    "It converts light stimuli into neural signals that travel through the visual pathways to the brain.",
+    "光刺激を神経信号へ変換し、視覚路を介して脳へ伝えます。"
+  ],
+  "巩膜构成眼球壁较坚韧的外层部分。": [
+    "The sclera forms the tough outer part of the eye wall.",
+    "強膜は眼球壁の丈夫な外層部分を構成します。"
+  ],
+  "它帮助维持眼球形态，并为眼外肌提供附着位置。": [
+    "It maintains the shape of the eyeball and provides attachment sites for extraocular muscles.",
+    "眼球の形を保ち、外眼筋の付着部となります。"
+  ],
+  "眼球悬韧带属于眼眶内支持眼球的结缔组织结构。": [
+    "The suspensory ligament of the eyeball is a connective tissue structure supporting the globe within the orbit.",
+    "眼球支持靱帯は、眼窩内で眼球を支える結合組織です。"
+  ],
+  "它与晶状体悬韧带是不同结构，观察时应结合所在位置辨别。": [
+    "It is distinct from the suspensory fibers of the lens; distinguish them by their locations.",
+    "水晶体を支える毛様小帯とは別の構造です。位置を合わせて区別してください。"
+  ],
+  "鼓膜位于外耳道与中耳之间。": [
+    "The tympanic membrane lies between the external acoustic meatus and middle ear.",
+    "鼓膜は外耳道と中耳の間にあります。"
+  ],
+  "声波引起鼓膜振动，振动通过听小骨传递。": [
+    "Sound waves vibrate the tympanic membrane, and the vibrations are transmitted through the auditory ossicles.",
+    "音波が鼓膜を振動させ、その振動が耳小骨を介して伝わります。"
+  ],
+  "前庭属于内耳的平衡感觉区域。": [
+    "The vestibule is part of the balance-sensing region of the inner ear.",
+    "前庭は内耳の平衡感覚に関わる領域です。"
+  ],
+  "其中相关感受结构参与感知头部位置和直线加速度。": [
+    "Its sensory structures detect head position and linear acceleration.",
+    "前庭の感覚構造は頭の位置や直線加速度の検出に関わります。"
+  ],
+  "晶状体悬韧带连接晶状体与睫状体区域。": [
+    "The zonular fibers connect the lens to the ciliary body region.",
+    "毛様小帯は水晶体を毛様体の領域につなぎます。"
+  ],
+  "其张力变化与晶状体形状改变有关，参与视近和视远时的调节。": [
+    "Changes in their tension are associated with changes in lens shape and contribute to accommodation for near and distant vision.",
+    "張力の変化は水晶体の形状変化と関係し、近方視と遠方視の調節に関わります。"
+  ],
+  "皮肤由表皮和真皮等层次构成，下方与皮下组织相邻。": [
+    "The skin consists of layers including epidermis and dermis, adjacent to subcutaneous tissue beneath.",
+    "皮膚は表皮や真皮などの層からなり、その下には皮下組織があります。"
+  ],
+  "它提供屏障、感觉与体温调节功能；本模型只呈现外表面。": [
+    "It provides barrier, sensory and thermoregulatory functions; this model shows only the external surface.",
+    "皮膚はバリア、感覚、体温調節の機能を持ちます。このモデルは外表面のみを示しています。"
+  ]
+}

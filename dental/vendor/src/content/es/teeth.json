@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Traducción al español de en/teeth.json. Valores típicos de los libros de texto; la anatomía individual varía."
+  },
+  "tooth:central-incisor:maxillary": {
+    "summary": "El diente más visible de la sonrisa. Un incisivo unirradicular con una superficie vestibular ancha y plana y un borde incisal recto que sirve para cortar los alimentos.",
+    "function": "Incisión (morder y cortar) de los alimentos; sostiene el labio superior y contribuye al habla (sonidos labiodentales y dentales) y a la estética facial.",
+    "clinical": "Se afecta con frecuencia en los traumatismos dentales por su posición adelantada. Los incisivos recién erupcionados pueden mostrar mamelones (pequeñas prominencias redondeadas) en el borde incisal.",
+    "roots": "Normalmente una raíz cónica",
+    "canals": "Normalmente un conducto",
+    "eruption": "Hacia los 7–8 años"
+  },
+  "tooth:lateral-incisor:maxillary": {
+    "summary": "Un incisivo más pequeño junto al incisivo central, con un contorno incisal más redondeado y la mayor variabilidad de forma de los dientes anteriores.",
+    "function": "Cortar los alimentos; contribuye a la sonrisa y a la guía anterior.",
+    "clinical": "Localización frecuente de variaciones del desarrollo, como los laterales conoides y la agenesia.",
+    "roots": "Normalmente una raíz",
+    "canals": "Normalmente un conducto",
+    "eruption": "Hacia los 8–9 años"
+  },
+  "tooth:canine:maxillary": {
+    "summary": "Un diente largo, de una sola cúspide, situado en la esquina de la arcada. El canino superior suele tener la raíz más larga de toda la dentición.",
+    "function": "Sujetar y desgarrar los alimentos; guía la mandíbula en los movimientos laterales (guía canina); sostiene la comisura del labio.",
+    "clinical": "Su raíz larga le da un buen anclaje; es una localización frecuente de inclusión, generalmente por palatino.",
+    "roots": "Una raíz larga",
+    "canals": "Normalmente un conducto",
+    "eruption": "Hacia los 11–12 años"
+  },
+  "tooth:first-premolar:maxillary": {
+    "summary": "Un premolar de dos cúspides (vestibular y palatina). Suele tener dos raíces, lo que lo distingue de la mayoría de los demás premolares.",
+    "function": "Transición entre desgarrar y triturar; sujeta y aplasta los alimentos.",
+    "clinical": "Se extrae con frecuencia para ganar espacio en ortodoncia. Lo típico son dos conductos, por lo que en el tratamiento endodóntico hay que localizar ambos.",
+    "roots": "Normalmente dos (vestibular y palatina)",
+    "canals": "Normalmente dos",
+    "eruption": "Hacia los 10–11 años"
+  },
+  "tooth:second-premolar:maxillary": {
+    "summary": "Un premolar de dos cúspides parecido al primer premolar, con cúspides de tamaño más parecido y normalmente una sola raíz.",
+    "function": "Aplastar y triturar los alimentos.",
+    "clinical": "Normalmente un conducto, aunque una minoría considerable presenta dos.",
+    "roots": "Normalmente una",
+    "canals": "Uno, a veces dos",
+    "eruption": "Hacia los 10–12 años"
+  },
+  "tooth:first-molar:maxillary": {
+    "summary": "El diente más grande de la arcada superior, con cuatro cúspides principales y tres raíces: mesiovestibular, distovestibular y palatina.",
+    "function": "Principal diente de trituración; determina en gran medida la relación oclusal entre los maxilares.",
+    "clinical": "La raíz mesiovestibular contiene con frecuencia un segundo conducto (MV2), que se pasa por alto con facilidad en el tratamiento de conductos. Sus raíces están muy próximas al suelo del seno maxilar.",
+    "roots": "Tres (mesiovestibular, distovestibular y palatina)",
+    "canals": "Tres o cuatro: es frecuente un segundo conducto mesiovestibular (MV2)",
+    "eruption": "Hacia los 6–7 años"
+  },
+  "tooth:second-molar:maxillary": {
+    "summary": "Un molar más pequeño por detrás del primer molar, con tres raíces que suelen estar más juntas.",
+    "function": "Triturar los alimentos.",
+    "clinical": "Las raíces pueden estar parcialmente fusionadas; su relación con el seno maxilar tiene importancia clínica.",
+    "roots": "Normalmente tres, a veces fusionadas",
+    "canals": "Normalmente tres",
+    "eruption": "Hacia los 12–13 años"
+  },
+  "tooth:third-molar:maxillary": {
+    "summary": "La muela del juicio: el último diente de la arcada, con la forma de corona y de raíz más variable.",
+    "function": "Trituración, cuando erupciona y entra en función.",
+    "clinical": "A menudo está incluido o parcialmente erupcionado; se extrae con frecuencia. En Dental Scope este diente es una aproximación derivada (véase la procedencia).",
+    "roots": "Variables, a menudo fusionadas",
+    "canals": "Variables",
+    "eruption": "Hacia los 17–21 años, si llega a erupcionar"
+  },
+  "tooth:central-incisor:mandibular": {
+    "summary": "El diente más pequeño de la dentición permanente: un incisivo estrecho y simétrico con una sola raíz aplanada en sentido mesiodistal.",
+    "function": "Cortar los alimentos contra los incisivos superiores.",
+    "clinical": "Aunque suele ser unirradicular, una minoría notable presenta un segundo conducto (lingual).",
+    "roots": "Una, aplanada en sentido mesiodistal",
+    "canals": "Normalmente uno, a veces dos",
+    "eruption": "Hacia los 6–7 años"
+  },
+  "tooth:lateral-incisor:mandibular": {
+    "summary": "Algo mayor que el incisivo central inferior, con una corona ligeramente girada hacia distal siguiendo la curva de la arcada.",
+    "function": "Cortar los alimentos.",
+    "clinical": "Al igual que el incisivo central, puede tener dos conductos.",
+    "roots": "Una",
+    "canals": "Normalmente uno, a veces dos",
+    "eruption": "Hacia los 7–8 años"
+  },
+  "tooth:canine:mandibular": {
+    "summary": "La piedra angular de la arcada inferior: un diente largo de una sola cúspide con una raíz larga, más estrecho que el canino superior.",
+    "function": "Sujetar y desgarrar los alimentos; guía lateral.",
+    "clinical": "En ocasiones presenta una raíz bifurcada.",
+    "roots": "Una, en ocasiones bifurcada",
+    "canals": "Normalmente uno",
+    "eruption": "Hacia los 9–10 años"
+  },
+  "tooth:first-premolar:mandibular": {
+    "summary": "Un premolar con una cúspide vestibular grande y una cúspide lingual pequeña, lo que le da un aspecto parecido al de un canino.",
+    "function": "Ayuda al canino a desgarrar y empieza a aplastar los alimentos.",
+    "clinical": "Normalmente un conducto, pero la anatomía de los conductos es notablemente variable.",
+    "roots": "Una",
+    "canals": "Normalmente uno, a veces dos",
+    "eruption": "Hacia los 10–12 años"
+  },
+  "tooth:second-premolar:mandibular": {
+    "summary": "Un premolar con una porción lingual más desarrollada que la del primer premolar, a menudo con dos cúspides linguales.",
+    "function": "Aplastar y triturar los alimentos.",
+    "clinical": "El agujero mentoniano suele situarse cerca de los ápices de los premolares inferiores, algo importante en cirugía y anestesia.",
+    "roots": "Una",
+    "canals": "Normalmente uno",
+    "eruption": "Hacia los 11–12 años"
+  },
+  "tooth:first-molar:mandibular": {
+    "summary": "El diente más grande de la mandíbula: cinco cúspides sobre una corona ancha y dos raíces bien separadas, mesial y distal.",
+    "function": "Principal diente de trituración de la arcada inferior.",
+    "clinical": "Uno de los dientes que más se restauran y se tratan endodónticamente. La raíz mesial suele tener dos conductos (mesiovestibular y mesiolingual); la distal, uno, a veces dos.",
+    "roots": "Dos (mesial y distal)",
+    "canals": "Normalmente tres",
+    "eruption": "Hacia los 6–7 años"
+  },
+  "tooth:second-molar:mandibular": {
+    "summary": "Un molar de cuatro cúspides con dos raíces que suelen estar más juntas que las del primer molar.",
+    "function": "Triturar los alimentos.",
+    "clinical": "Las raíces pueden converger o fusionarse; en algunas poblaciones aparecen conductos en forma de C.",
+    "roots": "Dos, a veces fusionadas",
+    "canals": "Normalmente tres",
+    "eruption": "Hacia los 11–13 años"
+  },
+  "tooth:third-molar:mandibular": {
+    "summary": "La muela del juicio inferior, muy variable en forma y posición.",
+    "function": "Trituración, cuando erupciona y entra en función.",
+    "clinical": "Con frecuencia está incluida. Sus raíces pueden estar muy próximas al conducto dentario inferior, y el nervio lingual discurre aquí junto a la cortical lingual. En Dental Scope este diente es una aproximación derivada (véase la procedencia).",
+    "roots": "Dos, a menudo fusionadas",
+    "canals": "Variables",
+    "eruption": "Hacia los 17–21 años, si llega a erupcionar"
+  }
+}

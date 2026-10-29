@@ -1,0 +1,502 @@
+{
+  "语言": [
+    "Language",
+    "言語"
+  ],
+  "中文": [
+    "Chinese",
+    "中国語"
+  ],
+  "英语": [
+    "English",
+    "英語"
+  ],
+  "日语": [
+    "Japanese",
+    "日本語"
+  ],
+  "名称未设置": [
+    "Unnamed structure",
+    "名称未設定の構造"
+  ],
+  "人体解剖": [
+    "Human anatomy",
+    "人体解剖"
+  ],
+  "动态解剖": [
+    "Anatomy in motion",
+    "動く人体解剖"
+  ],
+  "探索人体结构": [
+    "Explore the human body",
+    "人体の構造を探索"
+  ],
+  "在探索中学习": [
+    "Learn by exploring",
+    "探索しながら学ぶ"
+  ],
+  "视图文件格式不正确或与当前图谱不匹配。": [
+    "The view file is invalid or incompatible with this atlas.",
+    "ビューファイルの形式が不正か、この図譜に対応していません。"
+  ],
+  "请重试；如仍失败，请重新加载页面。": [
+    "Please try again. If the problem persists, reload the page.",
+    "もう一度お試しください。解決しない場合はページを再読み込みしてください。"
+  ],
+  "输入结构名称…": [
+    "Search structure names…",
+    "構造名で検索…"
+  ],
+  "搜索结构名称，点击结果添加并定位结构。": [
+    "Search for a structure and select a result to display and focus it.",
+    "構造名で検索し、結果を選んで表示・フォーカスします。"
+  ],
+  "图中是哪一个结构？": [
+    "Which structure is shown?",
+    "図の構造はどれですか？"
+  ],
+  "你的解剖收藏": [
+    "Your anatomy collection",
+    "あなたの解剖コレクション"
+  ],
+  "学习模式": [
+    "Learning modes",
+    "学習モード"
+  ],
+  "显微": [
+    "Microscopy",
+    "顕微鏡"
+  ],
+  "模型工具": [
+    "Model tools",
+    "モデルツール"
+  ],
+  "选择": [
+    "Select",
+    "選択"
+  ],
+  "搜索结构": [
+    "Search structures",
+    "構造を検索"
+  ],
+  "浏览视图库": [
+    "Browse views",
+    "ビュー一覧"
+  ],
+  "更多": [
+    "More",
+    "その他"
+  ],
+  "Atlas": [
+    "Atlas",
+    "Atlas"
+  ],
+  "搜索": [
+    "Search",
+    "検索"
+  ],
+  "视图导航": [
+    "View navigation",
+    "ビュー操作"
+  ],
+  "拖动旋转视图": [
+    "Drag to orbit",
+    "ドラッグで回転"
+  ],
+  "拖动缩放视图": [
+    "Drag to zoom",
+    "ドラッグでズーム"
+  ],
+  "拖动平移视图": [
+    "Drag to pan",
+    "ドラッグで平行移動"
+  ],
+  "定位所选或适合画面": [
+    "Frame selection or fit scene",
+    "選択対象または全体を表示"
+  ],
+  "更多视图操作": [
+    "More view controls",
+    "その他のビュー操作"
+  ],
+  "透视": [
+    "Perspective",
+    "透視"
+  ],
+  "正交": [
+    "Orthographic",
+    "平行投影"
+  ],
+  "切换为透视视图": [
+    "Switch to perspective",
+    "透視投影に切り替え"
+  ],
+  "切换为正交视图": [
+    "Switch to orthographic",
+    "平行投影に切り替え"
+  ],
+  "上方": [
+    "Top view",
+    "上面"
+  ],
+  "下方": [
+    "Bottom view",
+    "下面"
+  ],
+  "上": [
+    "Top",
+    "上"
+  ],
+  "下": [
+    "Bottom",
+    "下"
+  ],
+  "缩放：点击或拖动": [
+    "Zoom: click or drag",
+    "ズーム：クリックまたはドラッグ"
+  ],
+  "平移：点击或拖动": [
+    "Pan: click or drag",
+    "平行移動：クリックまたはドラッグ"
+  ],
+  "向上平移": [
+    "Pan up",
+    "上へ移動"
+  ],
+  "向下平移": [
+    "Pan down",
+    "下へ移動"
+  ],
+  "向左平移": [
+    "Pan left",
+    "左へ移動"
+  ],
+  "向右平移": [
+    "Pan right",
+    "右へ移動"
+  ],
+  "视图工具": [
+    "View controls",
+    "ビュー操作"
+  ],
+  "缩放": [
+    "Zoom",
+    "ズーム"
+  ],
+  "平移": [
+    "Pan",
+    "移動"
+  ],
+  "网格": [
+    "Grid",
+    "グリッド"
+  ],
+  "显示或隐藏网格": [
+    "Show or hide grid",
+    "グリッドの表示切り替え"
+  ],
+  "重置场景": [
+    "Reset scene",
+    "シーンをリセット"
+  ],
+  "查找与浏览": [
+    "Find & Browse",
+    "検索・閲覧"
+  ],
+  "结构": [
+    "Structures",
+    "構造"
+  ],
+  "视图": [
+    "Views",
+    "ビュー"
+  ],
+  "展开动态面板": [
+    "Expand animation panel",
+    "アニメーションパネルを開く"
+  ],
+  "收起动态面板": [
+    "Collapse animation panel",
+    "アニメーションパネルを折りたたむ"
+  ],
+  "动态交互": [
+    "Interactive Motion",
+    "動きの操作"
+  ],
+  "微观探索": [
+    "Microscopic Exploration",
+    "ミクロ探索"
+  ],
+  "浏览": [
+    "Browse",
+    "閲覧"
+  ],
+  "剖切方向": [
+    "Section plane",
+    "切断面"
+  ],
+  "恢复默认视角": [
+    "Reset view",
+    "視点をリセット"
+  ],
+  "截图": [
+    "Screenshot",
+    "スクリーンショット"
+  ],
+  "画图与测量": [
+    "Drawing and measurement",
+    "描画と計測"
+  ],
+  "画笔": [
+    "Pen",
+    "ペン"
+  ],
+  "画笔粗细": [
+    "Brush width",
+    "ペンの太さ"
+  ],
+  "橡皮擦": [
+    "Eraser",
+    "消しゴム"
+  ],
+  "擦除整条笔画": [
+    "Erase entire stroke",
+    "ストローク全体を消去"
+  ],
+  "3 px": [
+    "3 px",
+    "3 px"
+  ],
+  "取消标签": [
+    "Remove label",
+    "ラベルを削除"
+  ],
+  "悬停显示结构标签": [
+    "Show labels on hover",
+    "ホバー時に構造名を表示"
+  ],
+  "加载中...": [
+    "Loading...",
+    "読み込み中..."
+  ],
+  "退出全屏": [
+    "Exit fullscreen",
+    "全画面表示を終了"
+  ],
+  "GitHub": [
+    "GitHub",
+    "GitHub"
+  ],
+  "反馈 Bug": [
+    "Report a bug",
+    "不具合を報告"
+  ],
+  "i": [
+    "i",
+    "i"
+  ],
+  "再挑战一次": [
+    "Try again",
+    "もう一度挑戦"
+  ],
+  "选择其他挑战": [
+    "Choose another challenge",
+    "別のチャレンジを選択"
+  ],
+  "观察模型，辨认人体结构": [
+    "Identify anatomical structures from models",
+    "モデルを観察して人体の構造を識別"
+  ],
+  "理解微观结构与功能": [
+    "Explore microscopic structures and functions",
+    "微細な構造と機能を理解"
+  ],
+  "在人体中找到指定结构": [
+    "Find the specified structure in the body",
+    "人体で指定された構造を探す"
+  ],
+  "导航菜单": [
+    "Navigation menu",
+    "ナビゲーションメニュー"
+  ],
+  "问 ChatGPT": [
+    "Ask ChatGPT",
+    "ChatGPTに質問"
+  ],
+  "问 DeepSeek": [
+    "Ask DeepSeek",
+    "DeepSeekに質問"
+  ],
+  "BodyVista": [
+    "BodyVista",
+    "BodyVista"
+  ],
+  "Body": [
+    "Body",
+    "Body"
+  ],
+  "Vista": [
+    "Vista",
+    "Vista"
+  ],
+  "展开详情": [
+    "Expand details",
+    "詳細を展開"
+  ],
+  "收起详情": [
+    "Collapse details",
+    "詳細を折りたたむ"
+  ],
+  "概述": [
+    "Overview",
+    "概要"
+  ],
+  "所在区域": [
+    "Body region",
+    "身体の部位"
+  ],
+  "知识要点": [
+    "Key facts",
+    "学習の要点"
+  ],
+  "相关结构": [
+    "Related structures",
+    "関連する構造"
+  ],
+  "同区域同系统": [
+    "Same region and system",
+    "同じ部位・器官系"
+  ],
+  "参考资料": [
+    "References",
+    "参考資料"
+  ],
+  "以下为该类别的基础知识。": [
+    "The following describes this category in general.",
+    "以下はこの分類に関する基礎知識です。"
+  ],
+  "🇨🇳 中文": [
+    "🇨🇳 Chinese",
+    "🇨🇳 中国語"
+  ],
+  "🇺🇸 英语": [
+    "🇺🇸 English",
+    "🇺🇸 英語"
+  ],
+  "🇯🇵 日语": [
+    "🇯🇵 Japanese",
+    "🇯🇵 日本語"
+  ],
+  "展开结构知识": [
+    "Expand structure details",
+    "構造の詳細を開く"
+  ],
+  "收起结构知识": [
+    "Collapse structure details",
+    "構造の詳細を折りたたむ"
+  ],
+  "牙体结构": [
+    "Tooth structure",
+    "歯の構造"
+  ],
+  "支持组织": [
+    "Supporting tissues",
+    "支持組織"
+  ],
+  "牙釉质覆盖牙冠表面，保护内部的牙本质。": [
+    "Enamel covers the crown and protects the dentin beneath it.",
+    "エナメル質は歯冠の表面を覆い、内部の象牙質を保護します。"
+  ],
+  "牙骨质覆盖牙根表面，为牙周韧带提供附着。": [
+    "Cementum covers the root surface and provides attachment for the periodontal ligament.",
+    "セメント質は歯根の表面を覆い、歯根膜が付着する部分となります。"
+  ],
+  "牙龈围绕牙颈部，覆盖牙槽突表面。": [
+    "The gingiva surrounds the tooth neck and covers the alveolar processes.",
+    "歯肉は歯頸部を取り囲み、歯槽突起の表面を覆います。"
+  ],
+  "牙周韧带连接牙根表面与牙槽骨，将牙齿固定在牙槽内。": [
+    "The periodontal ligament connects the root surface to alveolar bone and anchors the tooth in its socket.",
+    "歯根膜は歯根表面と歯槽骨をつなぎ、歯を歯槽内に固定します。"
+  ],
+  "牙槽骨形成容纳牙根的牙槽，与牙周韧带共同支持牙齿。": [
+    "Alveolar bone forms the sockets around the roots and supports the teeth together with the periodontal ligament.",
+    "歯槽骨は歯根を収める歯槽を形成し、歯根膜とともに歯を支えます。"
+  ],
+  "FDI 牙位编号：第一位表示上下颌及左右侧，第二位表示从中线向后的牙位；左右以本人为准。": [
+    "FDI tooth notation: the first digit identifies the jaw and side; the second counts teeth from the midline toward the back. Left and right refer to the person’s own sides.",
+    "FDI歯式：1桁目は上下顎と左右、2桁目は正中から奥に向かう歯の位置を表します。左右は本人を基準とします。"
+  ],
+  "相邻牙": [
+    "Adjacent tooth",
+    "隣接歯"
+  ],
+  "对侧同名牙": [
+    "Opposite-side counterpart",
+    "反対側の同名歯"
+  ],
+  "对应颌骨": [
+    "Supporting jawbone",
+    "対応する顎骨"
+  ],
+  "相邻牙、对侧同名牙与对应颌骨": [
+    "Adjacent teeth, opposite-side counterpart and supporting jawbone",
+    "隣接歯・反対側の同名歯・対応する顎骨"
+  ],
+  "牙釉质": [
+    "Enamel",
+    "エナメル質"
+  ],
+  "牙骨质": [
+    "Cementum",
+    "セメント質"
+  ],
+  "牙龈": [
+    "Gingiva",
+    "歯肉"
+  ],
+  "牙周韧带": [
+    "Periodontal ligament",
+    "歯根膜"
+  ],
+  "牙槽骨": [
+    "Alveolar bone",
+    "歯槽骨"
+  ],
+  "放大倍数": [
+    "Magnification",
+    "拡大倍率"
+  ],
+  "1x": [
+    "1x",
+    "1x"
+  ],
+  "© 2026 FreedomAI": [
+    "© 2026 FreedomAI",
+    "© 2026 FreedomAI"
+  ],
+  "访问量": [
+    "Visitors",
+    "アクセス数"
+  ],
+  "BodyVista 是一个免费的三维人体交互学习网站，提供 2,900 个解剖结构、12 个人体系统、140 项动态演示入口和 6 个微观主题。你可以旋转、缩放、剖切人体，探索结构与功能，并通过解剖挑战检验学习成果。支持中文、英文、日文，电脑和手机均可使用。": [
+    "BodyVista is a free, interactive 3D anatomy learning website with 2,900 anatomical structures, 12 body systems, 140 dynamic demonstration entries, and 6 microscopic topics. Rotate, zoom, and section the body, explore how structure relates to function, and check your understanding with anatomy challenges. Available in Chinese, English, and Japanese on desktop and mobile.",
+    "BodyVista は、2,900 の解剖学的構造、12 の人体システム、140 の動的デモ項目、6 つの微細構造テーマを備えた無料の 3D 人体学習サイトです。人体を回転・拡大・縮小したり、断面を観察したりして、構造と機能の関係を学び、解剖学クイズで理解度を確認できます。中国語・英語・日本語に対応し、パソコンでもスマートフォンでも利用できます。"
+  ],
+  "欢迎访问 https://freedomintelligence.github.io/bodyvista/ 体验": [
+    "Visit https://freedomintelligence.github.io/bodyvista/ and try it out!",
+    "https://freedomintelligence.github.io/bodyvista/ にアクセスして、ぜひ体験してみてください。"
+  ],
+  "分享": [
+    "Share",
+    "共有"
+  ],
+  "分享文案已复制": [
+    "Share text copied",
+    "紹介文をコピーしました"
+  ],
+  "复制失败，请检查浏览器剪贴板权限后重试": [
+    "Copy failed. Check your browser clipboard permissions and try again.",
+    "コピーできませんでした。ブラウザーのクリップボード権限を確認して、もう一度お試しください。"
+  ]
+}

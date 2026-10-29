@@ -1,0 +1,558 @@
+{
+  "Cardiovascular System": [
+    {
+      "id": "heartbeat",
+      "label": "心脏搏动"
+    },
+    {
+      "id": "valve-cycle",
+      "label": "心脏瓣膜开闭时序"
+    },
+    {
+      "id": "pulmonary-circulation",
+      "label": "肺循环路径"
+    },
+    {
+      "id": "systemic-circulation",
+      "label": "体循环主要通路"
+    },
+    {
+      "id": "cardiac-living",
+      "label": "心脏、瓣膜与血流联动"
+    },
+    {
+      "id": "ventricular-twist",
+      "label": "心室扭转与舒张回弹"
+    },
+    {
+      "id": "arterial-pulse",
+      "label": "动脉脉搏波传播"
+    },
+    {
+      "id": "venous-return",
+      "label": "静脉回流与呼吸性变化"
+    },
+    {
+      "id": "cardiorespiratory-rhythm",
+      "label": "心搏与呼吸位移联动"
+    },
+    {
+      "id": "coronary-perfusion",
+      "label": "心肌收缩与冠脉舒张期灌注"
+    },
+    {
+      "id": "ventricular-filling",
+      "label": "心室早期充盈与心房助推"
+    },
+    {
+      "id": "aortic-recoil",
+      "label": "主动脉扩张与弹性回缩"
+    }
+  ],
+  "Digestive System": [
+    {
+      "id": "epiglottis",
+      "label": "吞咽时的会厌倾转"
+    },
+    {
+      "id": "esophageal-wave",
+      "label": "食管蠕动"
+    },
+    {
+      "id": "stomach-mixing",
+      "label": "胃壁节律收缩"
+    },
+    {
+      "id": "digestive-route",
+      "label": "消化道推进顺序"
+    },
+    {
+      "id": "bile-route",
+      "label": "胆汁进入肠道的通路"
+    },
+    {
+      "id": "saliva-route",
+      "label": "唾液腺与导管"
+    },
+    {
+      "id": "stomach-wave",
+      "label": "胃壁推进波与搅拌"
+    },
+    {
+      "id": "intestine-segmentation",
+      "label": "小肠分节运动"
+    },
+    {
+      "id": "intestine-peristalsis",
+      "label": "小肠局部蠕动"
+    },
+    {
+      "id": "colon-haustral",
+      "label": "结肠袋交替收缩"
+    },
+    {
+      "id": "gallbladder-emptying",
+      "label": "胆囊缓慢收缩与恢复"
+    },
+    {
+      "id": "swallow-coupled",
+      "label": "舌、咽、会厌与食管联动"
+    },
+    {
+      "id": "digestion-coupled",
+      "label": "胃肠节律联动"
+    },
+    {
+      "id": "laryngeal-elevation",
+      "label": "吞咽时喉部抬升与会厌联动"
+    },
+    {
+      "id": "tongue-propulsion",
+      "label": "舌体推进与舌根接续"
+    },
+    {
+      "id": "salivary-flow",
+      "label": "唾液沿导管进入口腔"
+    },
+    {
+      "id": "bile-release",
+      "label": "胆囊收缩与胆汁输送"
+    },
+    {
+      "id": "pancreatic-flow",
+      "label": "胰液沿胰管输送"
+    },
+    {
+      "id": "colon-mass-movement",
+      "label": "结肠顺序推进"
+    },
+    {
+      "id": "liver-respiratory-motion",
+      "label": "肝脏随呼吸下降与回升"
+    }
+  ],
+  "Endocrine System": [
+    {
+      "id": "thyroid-axis",
+      "label": "垂体与甲状腺反馈"
+    },
+    {
+      "id": "endocrine-tour",
+      "label": "主要内分泌腺巡览"
+    },
+    {
+      "id": "endocrine-signals",
+      "label": "内分泌信号释放"
+    },
+    {
+      "id": "thyroid-feedback-pulse",
+      "label": "垂体与甲状腺信号往返"
+    },
+    {
+      "id": "adrenal-axis",
+      "label": "垂体与肾上腺调节"
+    }
+  ],
+  "Integumentary System": [
+    {
+      "id": "surface-breathing",
+      "label": "体表胸腹呼吸起伏"
+    },
+    {
+      "id": "abdominal-breathing",
+      "label": "腹式呼吸的体表起伏"
+    }
+  ],
+  "Lymphatic System": [
+    {
+      "id": "lymph-regions",
+      "label": "淋巴结区域巡览"
+    },
+    {
+      "id": "immune-organs",
+      "label": "免疫相关器官对照"
+    },
+    {
+      "id": "immune-surveillance",
+      "label": "淋巴结内细胞巡行"
+    },
+    {
+      "id": "splenic-surveillance",
+      "label": "脾内免疫细胞活动"
+    },
+    {
+      "id": "tonsil-surveillance",
+      "label": "扁桃体局部免疫活动"
+    }
+  ],
+  "Male Reproductive System": [
+    {
+      "id": "sperm-route",
+      "label": "精子运输相关结构"
+    },
+    {
+      "id": "male-glands",
+      "label": "男性附属腺位置"
+    },
+    {
+      "id": "deferens-wave",
+      "label": "输精管平滑肌推进波"
+    },
+    {
+      "id": "male-transport-coupled",
+      "label": "输精管与射精管接续推进"
+    }
+  ],
+  "Muscular System": [
+    {
+      "id": "elbow-muscles",
+      "label": "肱二头肌与肱三头肌"
+    },
+    {
+      "id": "thigh-muscles",
+      "label": "股前与股后肌群"
+    },
+    {
+      "id": "ankle-muscles",
+      "label": "小腿前后肌群"
+    },
+    {
+      "id": "diaphragm",
+      "label": "膈肌吸气运动"
+    },
+    {
+      "id": "respiratory-muscles",
+      "label": "膈肌、肋间肌与腹壁联动"
+    },
+    {
+      "id": "muscle-belly",
+      "label": "肌腹收缩与肌腱端固定"
+    },
+    {
+      "id": "blink-muscles",
+      "label": "眨眼相关肌群交替活动"
+    },
+    {
+      "id": "chewing-muscles",
+      "label": "咀嚼肌节律收缩"
+    },
+    {
+      "id": "elbow-antagonists",
+      "label": "屈肘与伸肘肌群连续交替"
+    },
+    {
+      "id": "finger-antagonists",
+      "label": "屈指与伸指肌群"
+    },
+    {
+      "id": "ankle-antagonists",
+      "label": "背屈与跖屈肌腹活动"
+    },
+    {
+      "id": "knee-antagonists",
+      "label": "伸膝与屈膝肌腹活动"
+    },
+    {
+      "id": "laryngeal-muscles",
+      "label": "喉部开闭肌群配合"
+    },
+    {
+      "id": "gaze-muscles",
+      "label": "双眼水平注视肌群配合"
+    },
+    {
+      "id": "smile-muscles",
+      "label": "微笑时的颧肌收缩"
+    },
+    {
+      "id": "lip-pursing",
+      "label": "口轮匝肌收缩"
+    }
+  ],
+  "Nervous System": [
+    {
+      "id": "upper-limb-nerve",
+      "label": "上肢神经分布顺序"
+    },
+    {
+      "id": "spinal-horns",
+      "label": "脊髓前后角功能对照"
+    },
+    {
+      "id": "neural-impulses",
+      "label": "神经信号沿纤维传播"
+    },
+    {
+      "id": "spinal-reflex",
+      "label": "脊髓反射：感觉传入与运动传出"
+    },
+    {
+      "id": "visual-pathway",
+      "label": "视觉信号向中枢传递"
+    },
+    {
+      "id": "descending-motor",
+      "label": "下行运动信号"
+    }
+  ],
+  "Respiratory System": [
+    {
+      "id": "breathing",
+      "label": "肺的吸气与呼气"
+    },
+    {
+      "id": "airway-route",
+      "label": "空气进入肺的路径"
+    },
+    {
+      "id": "epiglottis",
+      "label": "吞咽时的会厌倾转"
+    },
+    {
+      "id": "breathing-coupled",
+      "label": "肺叶、支气管与气流联动"
+    },
+    {
+      "id": "deep-breath",
+      "label": "深吸气与缓慢呼气"
+    },
+    {
+      "id": "sigh",
+      "label": "叹息样呼吸节律"
+    },
+    {
+      "id": "swallow-coupled",
+      "label": "舌、咽、会厌与食管联动"
+    },
+    {
+      "id": "cough-cycle",
+      "label": "咳嗽：吸气、蓄压与快速呼气"
+    },
+    {
+      "id": "phonation-breath",
+      "label": "发声时的呼气与喉软骨联动"
+    },
+    {
+      "id": "laryngeal-elevation",
+      "label": "吞咽时喉部抬升与会厌联动"
+    },
+    {
+      "id": "airway-clearance",
+      "label": "气道黏液向咽部运输"
+    },
+    {
+      "id": "arytenoid-breath",
+      "label": "杓状软骨开合"
+    }
+  ],
+  "Sensory System": [
+    {
+      "id": "eye-horizontal",
+      "label": "双眼左右注视"
+    },
+    {
+      "id": "eye-vertical",
+      "label": "双眼上下转动"
+    },
+    {
+      "id": "lens-accommodation",
+      "label": "晶状体调节"
+    },
+    {
+      "id": "pupil-reflex",
+      "label": "瞳孔缩小与恢复"
+    },
+    {
+      "id": "hearing-vibration",
+      "label": "鼓膜与听小骨振动"
+    },
+    {
+      "id": "tear-route",
+      "label": "泪液引流路径"
+    },
+    {
+      "id": "near-response",
+      "label": "近反应：会聚、调节与缩瞳"
+    },
+    {
+      "id": "eye-saccades",
+      "label": "双眼快速扫视与停留"
+    },
+    {
+      "id": "eye-pursuit",
+      "label": "双眼平滑追踪"
+    },
+    {
+      "id": "eardrum-wave",
+      "label": "鼓膜振型与听骨链传递"
+    },
+    {
+      "id": "tear-drainage",
+      "label": "泪液引流方向"
+    },
+    {
+      "id": "pupil-light-adaptation",
+      "label": "瞳孔快速缩小与缓慢恢复"
+    },
+    {
+      "id": "reading-saccades",
+      "label": "阅读时的扫视与回扫"
+    },
+    {
+      "id": "auditory-tube-opening",
+      "label": "吞咽时咽鼓管开放"
+    }
+  ],
+  "Skeletal and Joint System": [
+    {
+      "id": "shoulder-flexion",
+      "label": "肩关节前屈"
+    },
+    {
+      "id": "shoulder-abduction",
+      "label": "肩关节外展"
+    },
+    {
+      "id": "elbow-flexion",
+      "label": "肘关节屈伸"
+    },
+    {
+      "id": "wrist-flexion",
+      "label": "腕关节掌屈"
+    },
+    {
+      "id": "hip-flexion",
+      "label": "髋关节前屈"
+    },
+    {
+      "id": "hip-abduction",
+      "label": "髋关节外展"
+    },
+    {
+      "id": "knee-flexion",
+      "label": "膝关节屈伸"
+    },
+    {
+      "id": "ankle-dorsiflexion",
+      "label": "踝关节背屈"
+    },
+    {
+      "id": "head-nod",
+      "label": "头部点头"
+    },
+    {
+      "id": "head-turn",
+      "label": "头部左右转动"
+    },
+    {
+      "id": "jaw-opening",
+      "label": "下颌张口与闭口"
+    },
+    {
+      "id": "forearm-rotation",
+      "label": "前臂旋前与旋后"
+    },
+    {
+      "id": "wrist-deviation",
+      "label": "腕关节桡偏与尺偏"
+    },
+    {
+      "id": "shoulder-circle",
+      "label": "肩关节平滑环转"
+    },
+    {
+      "id": "ankle-plantarflexion",
+      "label": "踝关节跖屈与回位"
+    },
+    {
+      "id": "hip-circle",
+      "label": "髋关节小幅环转"
+    },
+    {
+      "id": "gait-cycle",
+      "label": "步行摆腿与对侧摆臂"
+    },
+    {
+      "id": "fingers-grasp",
+      "label": "手指分节屈曲"
+    },
+    {
+      "id": "toes-curl",
+      "label": "足趾分节屈曲"
+    },
+    {
+      "id": "rib-breathing",
+      "label": "呼吸时肋骨与胸骨运动"
+    },
+    {
+      "id": "jaw-chewing",
+      "label": "下颌旋转、前移与咀嚼"
+    },
+    {
+      "id": "arytenoid-breath",
+      "label": "杓状软骨开合"
+    },
+    {
+      "id": "squat-chain",
+      "label": "髋膝踝协同屈伸"
+    },
+    {
+      "id": "cycling-chain",
+      "label": "骑行样髋膝交替运动"
+    },
+    {
+      "id": "hip-internal-rotation",
+      "label": "髋关节内旋"
+    },
+    {
+      "id": "hip-external-rotation",
+      "label": "髋关节外旋"
+    },
+    {
+      "id": "foot-inversion-eversion",
+      "label": "足部内翻与外翻"
+    },
+    {
+      "id": "reach-chain",
+      "label": "伸手：肩肘腕连续配合"
+    },
+    {
+      "id": "wrist-circle",
+      "label": "腕关节环转"
+    }
+  ],
+  "Urinary System": [
+    {
+      "id": "ureter-wave",
+      "label": "输尿管蠕动"
+    },
+    {
+      "id": "bladder-cycle",
+      "label": "膀胱充盈与排空"
+    },
+    {
+      "id": "urine-route",
+      "label": "尿液排出通路"
+    },
+    {
+      "id": "ureter-alternate",
+      "label": "左右输尿管交错蠕动"
+    },
+    {
+      "id": "urine-coupled",
+      "label": "输尿管推进与膀胱充盈"
+    },
+    {
+      "id": "micturition",
+      "label": "膀胱壁收缩与排尿通路"
+    },
+    {
+      "id": "renal-breathing",
+      "label": "肾脏随呼吸移动"
+    },
+    {
+      "id": "pelvis-ureter-wave",
+      "label": "肾盂与输尿管接续收缩"
+    }
+  ]
+}

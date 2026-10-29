@@ -1,0 +1,2158 @@
+{
+  "操作未完成：": [
+    "Action could not be completed: ",
+    "操作を完了できませんでした："
+  ],
+  "未知系统": [
+    "Unknown system",
+    "不明な系統"
+  ],
+  "加载超时": [
+    "Loading timed out",
+    "読み込みがタイムアウトしました"
+  ],
+  "找不到": [
+    "Could not find ",
+    "見つかりません："
+  ],
+  "结构细节载入超时": [
+    "Structure detail loading timed out",
+    "構造の詳細の読み込みがタイムアウトしました"
+  ],
+  "结构细节为空": [
+    "Structure detail is empty",
+    "構造の詳細が空です"
+  ],
+  "结构细节文件不可用": [
+    "Structure detail file is unavailable",
+    "構造の詳細ファイルを利用できません"
+  ],
+  "正在载入": [
+    "Loading ",
+    "読み込み中："
+  ],
+  "个结构": [
+    " structures",
+    " 件の構造"
+  ],
+  "已选": [
+    "Selected ",
+    "選択済み："
+  ],
+  "所属系统：": [
+    "System: ",
+    "系統："
+  ],
+  "延伸阅读 ↗": [
+    "Further reading ↗",
+    "参考資料 ↗"
+  ],
+  "· 观察笔记": [
+    " · Observation notes",
+    "・観察ノート"
+  ],
+  "减少": [
+    "Decrease",
+    "減らす"
+  ],
+  "增加": [
+    "Increase",
+    "増やす"
+  ],
+  "个匹配结构": [
+    " matching structures",
+    " 件の一致する構造"
+  ],
+  "已添加": [
+    "Added ",
+    "追加済み："
+  ],
+  "此动态所需的结构不完整：": [
+    "Required structures are missing for this animation: ",
+    "このアニメーションに必要な構造が不足しています："
+  ],
+  "依次点击模型上的两个位置。": [
+    "Click two positions on the model in sequence.",
+    "モデル上の2か所を順にクリックしてください。"
+  ],
+  "% 全身高度": [
+    "% of body height",
+    "%（全身高に対する割合）"
+  ],
+  "第": [
+    "Question ",
+    "第 "
+  ],
+  "题 · 已答对": [
+    " · Correct answers: ",
+    " 問・正解数："
+  ],
+  "题": [
+    " questions",
+    " 問"
+  ],
+  "找到：": [
+    "Find: ",
+    "探す："
+  ],
+  "正确答案：": [
+    "Correct answer: ",
+    "正解："
+  ],
+  "。所属系统：": [
+    ". System: ",
+    "。系統："
+  ],
+  "答对": [
+    "Correct: ",
+    "正解："
+  ],
+  "这是": [
+    "This is ",
+    "これは"
+  ],
+  "，继续寻找": [
+    ". Keep looking for ",
+    "です。引き続き探してください："
+  ],
+  "找到了：": [
+    "Found: ",
+    "発見："
+  ],
+  "解剖视图": [
+    "Anatomy view",
+    "解剖ビュー"
+  ],
+  "视图已保存到“我的库”": [
+    "View saved to My Library",
+    "ビューを「マイライブラリ」に保存しました"
+  ],
+  "BodyVista-场景.png": [
+    "BodyVista-scene.png",
+    "BodyVista-シーン.png"
+  ],
+  "模型加载失败：": [
+    "Model loading failed: ",
+    "モデルの読み込みに失敗しました："
+  ],
+  "骨": [
+    "Bone",
+    "骨"
+  ],
+  "听小骨": [
+    "Auditory ossicles",
+    "耳小骨"
+  ],
+  "牙": [
+    "Teeth",
+    "歯"
+  ],
+  "筛选": [
+    "Filter",
+    "絞り込み"
+  ],
+  "肺泡腔": [
+    "Alveolar air space",
+    "肺胞腔"
+  ],
+  "肺泡周围毛细血管": [
+    "Perialveolar capillaries",
+    "肺胞周囲の毛細血管"
+  ],
+  "细支气管": [
+    "Bronchiole",
+    "細気管支"
+  ],
+  "肾小囊": [
+    "Glomerular capsule",
+    "糸球体嚢（ボーマン嚢）"
+  ],
+  "肾单位袢": [
+    "Nephron loop",
+    "ヘンレ係蹄"
+  ],
+  "集合管": [
+    "Collecting duct",
+    "集合管"
+  ],
+  "Z 线": [
+    "Z line",
+    "Z線"
+  ],
+  "细肌丝（肌动蛋白）": [
+    "Thin filaments (actin)",
+    "細いフィラメント（アクチン）"
+  ],
+  "粗肌丝（肌球蛋白）": [
+    "Thick filaments (myosin)",
+    "太いフィラメント（ミオシン）"
+  ],
+  "突触前末梢": [
+    "Presynaptic terminal",
+    "シナプス前終末"
+  ],
+  "突触间隙": [
+    "Synaptic cleft",
+    "シナプス間隙"
+  ],
+  "突触后膜": [
+    "Postsynaptic membrane",
+    "シナプス後膜"
+  ],
+  "递质囊泡": [
+    "Neurotransmitter vesicles",
+    "神経伝達物質を含む小胞"
+  ],
+  "小肠绒毛": [
+    "Intestinal villus",
+    "小腸絨毛"
+  ],
+  "毛细血管网": [
+    "Capillary network",
+    "毛細血管網"
+  ],
+  "中央乳糜管": [
+    "Central lacteal",
+    "中心乳び管"
+  ],
+  "黏膜下方": [
+    "Beneath the mucosa",
+    "粘膜の下方"
+  ],
+  "内膜": [
+    "Tunica intima",
+    "内膜"
+  ],
+  "双凹圆盘形红细胞": [
+    "Biconcave red blood cell",
+    "両凹円盤状の赤血球"
+  ],
+  "运动形变示意": [
+    "Schematic motion and deformation",
+    "運動と変形の模式図"
+  ],
+  "生理过程": [
+    "Physiological process",
+    "生理学的過程"
+  ],
+  "过程讲解": [
+    "Process explanation",
+    "過程の解説"
+  ],
+  "过程高亮示意": [
+    "Process shown by highlighting",
+    "ハイライトによる過程の表示"
+  ],
+  "心房先收缩，随后心室收缩，再进入舒张充盈。": [
+    "The atria contract first, followed by the ventricles, then relaxation and filling.",
+    "心房が先に収縮し、続いて心室が収縮した後、弛緩して充満する段階に入ります。"
+  ],
+  "心房收缩 · 心室充盈": [
+    "Atrial contraction · Ventricular filling",
+    "心房収縮・心室充満"
+  ],
+  "心室收缩 · 射血阶段": [
+    "Ventricular contraction · Ejection",
+    "心室収縮・駆出期"
+  ],
+  "全心舒张 · 再次充盈": [
+    "Whole-heart relaxation · Refilling",
+    "心臓全体の弛緩・再充満"
+  ],
+  "观察心房与心室的先后变化。": [
+    "Observe the sequence of changes in the atria and ventricles.",
+    "心房と心室の変化の順序を観察します。"
+  ],
+  "房室瓣开放阶段": [
+    "Atrioventricular valves open",
+    "房室弁の開放期"
+  ],
+  "心室充盈时，房室瓣开放。": [
+    "The atrioventricular valves open during ventricular filling.",
+    "心室が充満するとき、房室弁が開きます。"
+  ],
+  "半月瓣开放阶段": [
+    "Semilunar valves open",
+    "半月弁の開放期"
+  ],
+  "心室射血时，半月瓣开放。": [
+    "The semilunar valves open during ventricular ejection.",
+    "心室から血液が駆出されるとき、半月弁が開きます。"
+  ],
+  "瓣膜随心动周期开放与关闭，两侧压力差推动血液单向流动。": [
+    "Valves open and close with the cardiac cycle. Pressure differences across them drive blood in one direction.",
+    "弁は心周期に合わせて開閉し、両側の圧力差によって血液が一方向に流れます。"
+  ],
+  "右心室": [
+    "Right ventricle",
+    "右心室"
+  ],
+  "肺静脉": [
+    "Pulmonary veins",
+    "肺静脈"
+  ],
+  "气体交换发生于肺毛细血管，血液随后经肺静脉回流。": [
+    "Gas exchange occurs in the pulmonary capillaries; blood then returns through the pulmonary veins.",
+    "肺毛細血管でガス交換が行われ、その後、血液は肺静脈を通って戻ります。"
+  ],
+  "左心房": [
+    "Left atrium",
+    "左心房"
+  ],
+  "沿右心室、肺动脉、肺静脉和左心房，观察肺循环的路径。": [
+    "Trace the pulmonary circulation through the right ventricle, pulmonary arteries, pulmonary veins and left atrium.",
+    "右心室、肺動脈、肺静脈、左心房をたどり、肺循環の経路を観察します。"
+  ],
+  "左心室": [
+    "Left ventricle",
+    "左心室"
+  ],
+  "主动脉": [
+    "Aorta",
+    "大動脈"
+  ],
+  "腔静脉": [
+    "Venae cavae",
+    "大静脈"
+  ],
+  "静脉血汇入腔静脉，回到右心房。": [
+    "Venous blood enters the venae cavae and returns to the right atrium.",
+    "静脈血は大静脈に集まり、右心房へ戻ります。"
+  ],
+  "右心房": [
+    "Right atrium",
+    "右心房"
+  ],
+  "从左心室射出的血液经主动脉进入体循环，回流最终汇入腔静脉和右心房。展示主要通路的先后关系。": [
+    "Blood ejected from the left ventricle enters the systemic circulation through the aorta, ultimately returning through the venae cavae to the right atrium. The demonstration shows the sequence of the main pathways.",
+    "左心室から駆出された血液は大動脈を通って体循環に入り、最終的に大静脈を経て右心房へ戻ります。主な経路の順序を示しています。"
+  ],
+  "吸气时胸腔扩大，肺随之扩张；呼气时肺回缩。两侧肺叶按同一侧的共同支点变化，便于观察体积变化。": [
+    "During inhalation, the thoracic cavity enlarges and the lungs expand; during exhalation, the lungs recoil. The lobes on each side move around a shared pivot to make volume changes easier to observe.",
+    "吸気時には胸腔が広がり、肺も膨張します。呼気時には肺が収縮します。同じ側の肺葉は共通の支点に基づいて動き、容積の変化を観察しやすくしています。"
+  ],
+  "吸气 · 肺容积增加": [
+    "Inhalation · Lung volume increases",
+    "吸気・肺容積の増加"
+  ],
+  "呼气 · 肺逐渐回缩": [
+    "Exhalation · Gradual lung recoil",
+    "呼気・肺の緩やかな収縮"
+  ],
+  "观察吸气与呼气时的肺部轮廓。": [
+    "Observe the lung contours during inhalation and exhalation.",
+    "吸気と呼気に伴う肺の輪郭を観察します。"
+  ],
+  "鼻腔与咽": [
+    "Nasal cavity and pharynx",
+    "鼻腔と咽頭"
+  ],
+  "气管": [
+    "Trachea",
+    "気管"
+  ],
+  "主支气管": [
+    "Main bronchi",
+    "主気管支"
+  ],
+  "肺叶及肺段支气管": [
+    "Lobar and segmental bronchi",
+    "葉気管支と区域気管支"
+  ],
+  "肺叶": [
+    "Lung lobes",
+    "肺葉"
+  ],
+  "沿气道观察空气进入肺部的路径。": [
+    "Follow the airway to observe how air enters the lungs.",
+    "気道に沿って、空気が肺に入る経路を観察します。"
+  ],
+  "吞咽时，会厌倾转，配合喉部活动保护气道入口。": [
+    "During swallowing, the epiglottis tilts and works with laryngeal movement to protect the airway entrance.",
+    "嚥下時には喉頭蓋が傾き、喉頭の動きと協調して気道の入口を保護します。"
+  ],
+  "会厌向后倾转": [
+    "Epiglottis tilts backward",
+    "喉頭蓋が後方へ傾く"
+  ],
+  "会厌回到起始位": [
+    "Epiglottis returns to its starting position",
+    "喉頭蓋が開始位置に戻る"
+  ],
+  "观察会厌与喉入口的位置变化。": [
+    "Observe changes in the position of the epiglottis relative to the laryngeal inlet.",
+    "喉頭蓋と喉頭入口の位置関係の変化を観察します。"
+  ],
+  "收缩波沿食管向下推进，将食团送向胃。": [
+    "A contraction wave travels down the esophagus, moving the food bolus toward the stomach.",
+    "収縮波が食道を下方へ伝わり、食塊を胃へ送ります。"
+  ],
+  "收缩波向胃侧推进": [
+    "Contraction wave advances toward the stomach",
+    "収縮波が胃に向かって進む"
+  ],
+  "观察局部管径变窄的位置随时间下移。": [
+    "Observe how the locally narrowed region moves downward over time.",
+    "局所的に管径が狭くなる位置が、時間とともに下方へ移動する様子を観察します。"
+  ],
+  "胃壁节律性收缩，帮助混合食物并逐步排空。": [
+    "Rhythmic contractions of the stomach wall help mix food and gradually empty the stomach.",
+    "胃壁の律動的な収縮により、食物が混ぜ合わされ、徐々に排出されます。"
+  ],
+  "胃壁收缩": [
+    "Stomach wall contracts",
+    "胃壁の収縮"
+  ],
+  "胃壁舒张": [
+    "Stomach wall relaxes",
+    "胃壁の弛緩"
+  ],
+  "观察整体轮廓随节律变化。": [
+    "Observe the rhythmic changes in the overall contour.",
+    "全体の輪郭がリズムに合わせて変化する様子を観察します。"
+  ],
+  "口腔起点": [
+    "Starting point: oral cavity",
+    "出発点：口腔"
+  ],
+  "食管": [
+    "Esophagus",
+    "食道"
+  ],
+  "胃": [
+    "Stomach",
+    "胃"
+  ],
+  "十二指肠": [
+    "Duodenum",
+    "十二指腸"
+  ],
+  "空肠": [
+    "Jejunum",
+    "空腸"
+  ],
+  "接下来观察结肠的形态与位置。": [
+    "Next, observe the shape and position of the colon.",
+    "続いて、結腸の形と位置を観察します。"
+  ],
+  "结肠": [
+    "Colon",
+    "結腸"
+  ],
+  "沿消化道依次观察各段结构及其连接关系。": [
+    "Follow the digestive tract to observe its successive segments and their connections.",
+    "消化管に沿って、各部位とそのつながりを順に観察します。"
+  ],
+  "肝": [
+    "Liver",
+    "肝臓"
+  ],
+  "肝脏分泌胆汁，胆囊储存和浓缩胆汁。": [
+    "The liver secretes bile; the gallbladder stores and concentrates it.",
+    "肝臓が胆汁を分泌し、胆嚢が貯蔵・濃縮します。"
+  ],
+  "胆管": [
+    "Bile duct",
+    "胆管"
+  ],
+  "胆汁由肝产生，可在胆囊储存，经胆道进入十二指肠。这里用结构高亮区分产生、储存和输送的环节。": [
+    "Bile is produced in the liver, may be stored in the gallbladder, and enters the duodenum through the biliary tract. Highlighting distinguishes production, storage and transport.",
+    "胆汁は肝臓で作られ、胆嚢に貯蔵され、胆道を通って十二指腸に入ります。構造のハイライトで、産生・貯蔵・輸送の各段階を区別します。"
+  ],
+  "腮腺": [
+    "Parotid gland",
+    "耳下腺"
+  ],
+  "腮腺管": [
+    "Parotid duct",
+    "耳下腺管"
+  ],
+  "下颌下腺": [
+    "Submandibular gland",
+    "顎下腺"
+  ],
+  "下颌下腺管": [
+    "Submandibular duct",
+    "顎下腺管"
+  ],
+  "分别观察腮腺和下颌下腺，沿各自导管认识唾液的分泌通路。": [
+    "Observe the parotid and submandibular glands separately, following their ducts to learn the pathways of salivary secretion.",
+    "耳下腺と顎下腺をそれぞれ観察し、各導管をたどって唾液の分泌経路を確認します。"
+  ],
+  "输尿管壁产生收缩波，将尿液从肾盂推向膀胱。": [
+    "Contraction waves in the ureteral wall propel urine from the renal pelvis toward the bladder.",
+    "尿管壁の収縮波が、腎盂から膀胱へ尿を押し進めます。"
+  ],
+  "收缩波由上向下推进": [
+    "Contraction wave advances downward",
+    "収縮波が上方から下方へ進む"
+  ],
+  "左右输尿管同时演示，便于对照。": [
+    "Both ureters are demonstrated together for comparison.",
+    "比較しやすいように、左右の尿管を同時に表示します。"
+  ],
+  "膀胱储尿时逐渐充盈，排尿后回缩。": [
+    "The bladder gradually fills while storing urine and shrinks after urination.",
+    "膀胱は蓄尿時に徐々に膨らみ、排尿後に縮みます。"
+  ],
+  "储尿 · 膀胱逐渐充盈": [
+    "Storage · Bladder gradually fills",
+    "蓄尿・膀胱が徐々に充満する"
+  ],
+  "排空 · 膀胱容积减小": [
+    "Emptying · Bladder volume decreases",
+    "排出・膀胱容積の減少"
+  ],
+  "可拖动进度停在任意阶段。": [
+    "Drag the progress control to pause at any stage.",
+    "進行スライダーをドラッグして、任意の段階で止められます。"
+  ],
+  "肾": [
+    "Kidney",
+    "腎臓"
+  ],
+  "肾盂": [
+    "Renal pelvis",
+    "腎盂"
+  ],
+  "尿道": [
+    "Urethra",
+    "尿道"
+  ],
+  "依次认识肾、肾盂、输尿管、膀胱和尿道，观察尿液形成后的运输通路。": [
+    "Identify the kidney, renal pelvis, ureter, bladder and urethra in sequence to observe the transport pathway after urine is formed.",
+    "腎臓、腎盂、尿管、膀胱、尿道を順に確認し、尿が作られた後の輸送経路を観察します。"
+  ],
+  "关节运动": [
+    "Joint movement",
+    "関節運動"
+  ],
+  "观察关节两侧骨骼的联动。": [
+    "Observe the coordinated motion of the bones on both sides of the joint.",
+    "関節の両側にある骨の連動を観察します。"
+  ],
+  "运动幅度最大处": [
+    "Maximum range of demonstrated motion",
+    "実演する運動の最大位置"
+  ],
+  "向演示方向运动": [
+    "Moving in the demonstrated direction",
+    "実演方向への運動"
+  ],
+  "逐渐回到起始姿态": [
+    "Gradually returning to the starting posture",
+    "開始姿勢へ徐々に戻る"
+  ],
+  "拖动进度、切换左右侧，可以对照远端骨链与近端支点。": [
+    "Drag the progress control or switch sides to compare the distal bone chain with the proximal pivot.",
+    "進行スライダーをドラッグしたり左右を切り替えたりして、遠位の骨の連なりと近位の支点を比較できます。"
+  ],
+  "上臂向前抬起，前臂和手随上臂一起移动。": [
+    "The upper arm lifts forward, carrying the forearm and hand with it.",
+    "上腕を前方に挙げると、前腕と手も上腕と一緒に動きます。"
+  ],
+  "上肢向身体两侧抬起，观察肩关节的外展方向。": [
+    "The upper limb lifts to the side of the body, showing shoulder abduction.",
+    "上肢を体の側方に挙げ、肩関節の外転方向を観察します。"
+  ],
+  "前臂绕肘部向前屈曲，肱骨保持原位。": [
+    "The forearm flexes forward around the elbow while the humerus stays in place.",
+    "上腕骨の位置を保ったまま、前腕が肘を中心に前方へ屈曲します。"
+  ],
+  "手部向掌侧屈曲，前臂骨保持原位。": [
+    "The hand flexes toward the palm while the forearm bones remain in place.",
+    "前腕の骨の位置を保ったまま、手が手掌側へ屈曲します。"
+  ],
+  "大腿向前抬起，小腿和足随之移动。": [
+    "The thigh lifts forward, carrying the lower leg and foot with it.",
+    "大腿を前方に挙げると、下腿と足も一緒に動きます。"
+  ],
+  "下肢向身体外侧展开，观察髋部作为近端支点。": [
+    "The lower limb moves outward from the body, with the hip acting as the proximal pivot.",
+    "下肢を体の外側へ開き、股関節が近位の支点となる様子を観察します。"
+  ],
+  "观察小腿向后屈曲，再逐渐伸直。": [
+    "Observe the lower leg bending backward and then gradually straightening.",
+    "下腿が後方へ曲がり、その後徐々に伸びる様子を観察します。"
+  ],
+  "足尖向小腿前侧抬起，认识踝关节背屈方向。": [
+    "The toes lift toward the front of the lower leg, illustrating ankle dorsiflexion.",
+    "つま先を下腿の前面へ近づけ、足関節の背屈方向を確認します。"
+  ],
+  "头部围绕上颈部轻度前屈与回位，认识点头方向。": [
+    "The head flexes slightly forward around the upper neck and returns, illustrating nodding.",
+    "頭部が上位頸部を中心に軽く前屈して元に戻り、うなずく方向を確認できます。"
+  ],
+  "头部围绕上颈部左右转动，认识旋转方向。": [
+    "The head turns left and right around the upper neck, illustrating rotation.",
+    "頭部が上位頸部を中心に左右へ回り、回旋方向を確認できます。"
+  ],
+  "观察头部朝向的变化。": [
+    "Observe the changing direction of the head.",
+    "頭部の向きの変化を観察します。"
+  ],
+  "观察下颌骨与下牙列在张口、闭口时的转动。": [
+    "Observe the rotation of the mandible and lower teeth during mouth opening and closing.",
+    "開口・閉口時の下顎骨と下顎歯列の回転を観察します。"
+  ],
+  "逐渐张口": [
+    "Gradually opening the mouth",
+    "徐々に口を開く"
+  ],
+  "逐渐闭口": [
+    "Gradually closing the mouth",
+    "徐々に口を閉じる"
+  ],
+  "肌肉活动": [
+    "Muscle activity",
+    "筋活動"
+  ],
+  "观察肌腹交替缩短与舒张。": [
+    "Observe alternating shortening and relaxation of the muscle bellies.",
+    "筋腹が交互に短縮・弛緩する様子を観察します。"
+  ],
+  "观察前一组肌肉": [
+    "Observe the first muscle group",
+    "最初の筋群を観察"
+  ],
+  "观察拮抗肌群": [
+    "Observe the antagonistic muscles",
+    "拮抗筋群を観察"
+  ],
+  "肌腹缩短时，横径略增。": [
+    "As the muscle belly shortens, its width increases slightly.",
+    "筋腹が短縮すると、横径がわずかに増えます。"
+  ],
+  "肱二头肌参与屈肘，肱三头肌参与伸肘。": [
+    "The biceps brachii contributes to elbow flexion; the triceps brachii contributes to extension.",
+    "上腕二頭筋は肘の屈曲に、上腕三頭筋は肘の伸展に関与します。"
+  ],
+  "股四头肌主要参与伸膝，股后肌群参与屈膝等动作。": [
+    "The quadriceps primarily extends the knee; the posterior thigh muscles contribute to knee flexion and other movements.",
+    "大腿四頭筋は主に膝の伸展に、大腿後面の筋群は膝の屈曲などに関与します。"
+  ],
+  "胫骨前肌参与背屈，腓肠肌与比目鱼肌参与跖屈。": [
+    "The tibialis anterior contributes to dorsiflexion; the gastrocnemius and soleus contribute to plantar flexion.",
+    "前脛骨筋は背屈に、腓腹筋とヒラメ筋は底屈に関与します。"
+  ],
+  "膈肌收缩时穹隆下降，增加胸腔容积；舒张时逐渐回升。": [
+    "When the diaphragm contracts, its dome descends and increases thoracic volume; during relaxation, it gradually rises.",
+    "横隔膜が収縮するとドームが下降して胸腔容積が増え、弛緩すると徐々に上昇します。"
+  ],
+  "吸气末 · 膈穹隆处于低位": [
+    "End of inhalation · Diaphragmatic dome is low",
+    "吸気終末・横隔膜ドームが低位にある"
+  ],
+  "吸气 · 膈穹隆下降": [
+    "Inhalation · Diaphragmatic dome descends",
+    "吸気・横隔膜ドームの下降"
+  ],
+  "呼气 · 膈穹隆回升": [
+    "Exhalation · Diaphragmatic dome rises",
+    "呼気・横隔膜ドームの上昇"
+  ],
+  "观察穹隆高度的节律变化。": [
+    "Observe rhythmic changes in dome height.",
+    "ドームの高さの律動的な変化を観察します。"
+  ],
+  "双眼协同转动，改变注视方向。": [
+    "Both eyes rotate together to change the direction of gaze.",
+    "両眼が協調して回転し、視線の方向を変えます。"
+  ],
+  "可暂停比较双眼朝向。": [
+    "Pause to compare the directions of both eyes.",
+    "一時停止して両眼の向きを比較できます。"
+  ],
+  "看近物时晶状体变凸，屈光能力增加；看远物时相对变平。": [
+    "For near vision, the lens becomes more convex and its refractive power increases; for distant vision, it becomes relatively flatter.",
+    "近くを見るときは水晶体が厚くなって屈折力が増し、遠くを見るときは比較的平らになります。"
+  ],
+  "近距离调节 · 晶状体变凸": [
+    "Near accommodation · Lens becomes more convex",
+    "近見調節・水晶体が厚くなる"
+  ],
+  "回到远距离状态": [
+    "Returning to distant vision",
+    "遠見状態に戻る"
+  ],
+  "可先开启外层半透明，再放大查看晶状体。": [
+    "Make the outer layer translucent, then zoom in to inspect the lens.",
+    "外層を半透明にしてから拡大すると、水晶体を観察しやすくなります。"
+  ],
+  "虹膜内缘向瞳孔中心靠近，使瞳孔变小。主要改变内缘，示意瞳孔口径变化。": [
+    "The inner edge of the iris moves toward the pupil center, narrowing the pupil. The demonstration mainly changes the inner edge to show the change in pupil diameter.",
+    "虹彩の内縁が瞳孔の中心に近づき、瞳孔が小さくなります。主に内縁を変化させ、瞳孔径の変化を示します。"
+  ],
+  "虹膜内缘靠近 · 瞳孔缩小": [
+    "Iris inner edge moves inward · Pupil constricts",
+    "虹彩内縁が内側へ移動・縮瞳"
+  ],
+  "瞳孔逐渐恢复": [
+    "Pupil gradually returns",
+    "瞳孔が徐々に元に戻る"
+  ],
+  "通过虹膜开口观察口径变化。": [
+    "Observe diameter changes at the iris opening.",
+    "虹彩の開口部を通して、瞳孔径の変化を観察します。"
+  ],
+  "声振动经鼓膜和听小骨传向内耳，慢动作便于观察各部分的配合。": [
+    "Sound vibrations pass through the tympanic membrane and auditory ossicles to the inner ear. Slow motion makes their coordination easier to see.",
+    "音の振動は鼓膜と耳小骨を通って内耳へ伝わります。スローモーションで各部の協調を観察しやすくしています。"
+  ],
+  "缓慢展示一个振动周期": [
+    "One vibration cycle shown slowly",
+    "1周期の振動をゆっくり表示"
+  ],
+  "观察鼓膜与听小骨的协同振动。": [
+    "Observe coordinated vibration of the tympanic membrane and auditory ossicles.",
+    "鼓膜と耳小骨の協調した振動を観察します。"
+  ],
+  "泪腺": [
+    "Lacrimal gland",
+    "涙腺"
+  ],
+  "泪小管": [
+    "Lacrimal canaliculi",
+    "涙小管"
+  ],
+  "泪囊": [
+    "Lacrimal sac",
+    "涙嚢"
+  ],
+  "鼻泪管": [
+    "Nasolacrimal duct",
+    "鼻涙管"
+  ],
+  "泪腺分泌泪液润滑眼表，再经内眦附近的引流结构进入鼻泪管。": [
+    "The lacrimal gland secretes tears to lubricate the eye surface. Tears then pass through drainage structures near the medial canthus into the nasolacrimal duct.",
+    "涙腺が涙液を分泌して眼表面を潤し、涙液は内眼角付近の排出構造を経て鼻涙管に入ります。"
+  ],
+  "脊髓": [
+    "Spinal cord",
+    "脊髄"
+  ],
+  "臂丛根与干": [
+    "Brachial plexus roots and trunks",
+    "腕神経叢の根と神経幹"
+  ],
+  "主要外周神经": [
+    "Major peripheral nerves",
+    "主な末梢神経"
+  ],
+  "从脊髓、臂丛到上肢主要神经，观察神经的分布关系。": [
+    "Follow the spinal cord, brachial plexus and major upper-limb nerves to observe their distribution.",
+    "脊髄から腕神経叢、上肢の主要神経へとたどり、神経の分布関係を観察します。"
+  ],
+  "后角": [
+    "Posterior horn",
+    "後角"
+  ],
+  "后角参与处理传入的感觉信息。": [
+    "The posterior horn helps process incoming sensory information.",
+    "後角は、入力される感覚情報の処理に関与します。"
+  ],
+  "前角": [
+    "Anterior horn",
+    "前角"
+  ],
+  "前角含有支配骨骼肌的躯体运动神经元。": [
+    "The anterior horn contains somatic motor neurons that innervate skeletal muscles.",
+    "前角には、骨格筋を支配する体性運動ニューロンがあります。"
+  ],
+  "对照脊髓后角与前角，认识感觉处理和躯体运动相关区域。": [
+    "Compare the posterior and anterior horns of the spinal cord to identify regions involved in sensory processing and somatic movement.",
+    "脊髄の後角と前角を比較し、感覚処理と体性運動に関わる領域を確認します。"
+  ],
+  "腹股沟区": [
+    "Inguinal region",
+    "鼠径部"
+  ],
+  "腹部与腰部": [
+    "Abdominal and lumbar regions",
+    "腹部と腰部"
+  ],
+  "腋窝区": [
+    "Axillary region",
+    "腋窩部"
+  ],
+  "分别观察颈部、腋窝、腹部及腹股沟的淋巴结分布。": [
+    "Observe lymph node distribution in the neck, axillae, abdomen and groin.",
+    "頸部、腋窩、腹部、鼠径部にあるリンパ節の分布をそれぞれ観察します。"
+  ],
+  "胸腺": [
+    "Thymus",
+    "胸腺"
+  ],
+  "脾": [
+    "Spleen",
+    "脾臓"
+  ],
+  "扁桃体": [
+    "Tonsils",
+    "扁桃"
+  ],
+  "轮流观察胸腺、脾和扁桃体的解剖位置，比较免疫相关器官在不同部位的分布。": [
+    "Observe the anatomical locations of the thymus, spleen and tonsils in turn, comparing the distribution of immune organs in different regions.",
+    "胸腺、脾臓、扁桃の解剖学的位置を順に観察し、免疫に関わる器官が各部位にどのように分布するかを比較します。"
+  ],
+  "腺垂体": [
+    "Anterior pituitary",
+    "腺下垂体"
+  ],
+  "腺垂体分泌促甲状腺激素。": [
+    "The anterior pituitary secretes thyroid-stimulating hormone.",
+    "腺下垂体は甲状腺刺激ホルモンを分泌します。"
+  ],
+  "甲状腺": [
+    "Thyroid gland",
+    "甲状腺"
+  ],
+  "甲状腺释放甲状腺激素。": [
+    "The thyroid gland releases thyroid hormones.",
+    "甲状腺は甲状腺ホルモンを放出します。"
+  ],
+  "反馈至垂体": [
+    "Feedback to the pituitary",
+    "下垂体へのフィードバック"
+  ],
+  "甲状腺激素参与负反馈调节。": [
+    "Thyroid hormones participate in negative feedback regulation.",
+    "甲状腺ホルモンは負のフィードバック調節に関与します。"
+  ],
+  "观察垂体与甲状腺之间的调节和反馈关系。": [
+    "Observe regulation and feedback between the pituitary and thyroid glands.",
+    "下垂体と甲状腺の間の調節・フィードバック関係を観察します。"
+  ],
+  "垂体": [
+    "Pituitary gland",
+    "下垂体"
+  ],
+  "甲状腺与甲状旁腺": [
+    "Thyroid and parathyroid glands",
+    "甲状腺と副甲状腺"
+  ],
+  "肾上腺": [
+    "Adrenal glands",
+    "副腎"
+  ],
+  "胰": [
+    "Pancreas",
+    "膵臓"
+  ],
+  "睾丸": [
+    "Testis",
+    "精巣"
+  ],
+  "逐区观察主要内分泌腺，认识它们在身体中的位置。": [
+    "Observe the major endocrine glands region by region to learn their positions in the body.",
+    "主な内分泌腺を部位ごとに観察し、体内での位置を確認します。"
+  ],
+  "附睾": [
+    "Epididymis",
+    "精巣上体"
+  ],
+  "输精管": [
+    "Ductus deferens",
+    "精管"
+  ],
+  "射精管": [
+    "Ejaculatory duct",
+    "射精管"
+  ],
+  "沿睾丸、附睾、输精管和射精管，观察运输相关结构。": [
+    "Follow the testis, epididymis, ductus deferens and ejaculatory duct to observe the transport structures.",
+    "精巣、精巣上体、精管、射精管をたどり、輸送に関わる構造を観察します。"
+  ],
+  "精囊": [
+    "Seminal vesicle",
+    "精嚢"
+  ],
+  "前列腺": [
+    "Prostate",
+    "前立腺"
+  ],
+  "对照精囊与前列腺，观察它们与运输通路的位置关系。": [
+    "Compare the seminal vesicles and prostate and their spatial relationship to the transport pathways.",
+    "精嚢と前立腺を比較し、輸送経路との位置関係を観察します。"
+  ],
+  "▶ 动态演示": [
+    "▶ Animation",
+    "▶ アニメーション"
+  ],
+  "选择一种动态，点击播放。": [
+    "Choose an animation and press Play.",
+    "アニメーションを選び、再生を押してください。"
+  ],
+  "当前模型暂无可用的器官动态演示，可在结构知识中继续查看部件。": [
+    "No organ animations are available for this model. You can continue exploring parts in Structure Knowledge.",
+    "このモデルでは器官のアニメーションを利用できません。「構造の知識」で各部位を引き続き確認できます。"
+  ],
+  "（已隐藏）": [
+    "(hidden)",
+    "（非表示）"
+  ],
+  "等": [
+    " and others: ",
+    " など："
+  ],
+  "连续形变与联动": [
+    "Continuous deformation and coordination",
+    "連続的な変形と連動"
+  ],
+  "心房收缩 · 心室继续充盈": [
+    "Atria contract · Ventricles continue filling",
+    "心房収縮・心室の充満が続く"
+  ],
+  "心室扭转收缩 · 瓣膜协同射血": [
+    "Ventricles contract with a twist · Valves coordinate ejection",
+    "心室のねじれを伴う収縮・弁と協調した駆出"
+  ],
+  "心肌舒张 · 弹性回位": [
+    "Myocardium relaxes · Elastic return",
+    "心筋の弛緩・弾性による復元"
+  ],
+  "心肌与瓣膜协调活动，血液沿通路流动。": [
+    "The myocardium and valves work together as blood flows along its pathways.",
+    "心筋と弁が協調して動き、血液が経路に沿って流れます。"
+  ],
+  "心房先收缩，心室随后缩短并轻度扭转；瓣膜随充盈与射血阶段开合，舒张时回位。": [
+    "The atria contract first, then the ventricles shorten with a slight twist. The valves open and close during filling and ejection, and return during relaxation.",
+    "心房が先に収縮し、その後、心室が短縮しながら軽くねじれます。弁は充満期と駆出期に合わせて開閉し、弛緩時に元に戻ります。"
+  ],
+  "房室瓣充盈阶段": [
+    "Filling through the atrioventricular valves",
+    "房室弁を通る充満期"
+  ],
+  "心室射血阶段": [
+    "Ventricular ejection phase",
+    "心室の駆出期"
+  ],
+  "通过瓣叶自由缘的弯曲观察两个阶段。": [
+    "Observe the two phases through bending of the free leaflet edges.",
+    "弁尖の自由縁の曲がり方から、2つの段階を観察します。"
+  ],
+  "瓣叶形变示意": [
+    "Schematic valve leaflet deformation",
+    "弁尖の変形の模式図"
+  ],
+  "已有瓣叶随心动周期弯曲，模拟开放与关闭的相对变化；附着环保持稳定。": [
+    "The existing valve leaflets bend with the cardiac cycle to simulate relative opening and closing; their attachment rings remain stable.",
+    "既存の弁尖を心周期に合わせて曲げ、開閉の相対的な変化を模擬します。付着する弁輪は安定したままです。"
+  ],
+  "器官联动": [
+    "Coordinated organ movement",
+    "器官の連動"
+  ],
+  "观察心肌收缩、瓣膜开合与血流方向的联动。": [
+    "Observe coordination between myocardial contraction, valve opening and closing, and blood flow direction.",
+    "心筋の収縮、弁の開閉、血流方向の連動を観察します。"
+  ],
+  "沿心室长轴观察扭转收缩，再观察舒张时的回弹。": [
+    "View twisting contraction along the ventricular long axis, then observe recoil during relaxation.",
+    "心室の長軸に沿ってねじれを伴う収縮を観察し、続いて弛緩時の復元を確認します。"
+  ],
+  "扭转与缩短": [
+    "Twisting and shortening",
+    "ねじれと短縮"
+  ],
+  "舒张与回弹": [
+    "Relaxation and recoil",
+    "弛緩と復元"
+  ],
+  "心室各高度的旋转角不同。": [
+    "The rotation angle differs along the height of the ventricles.",
+    "心室の高さによって回転角が異なります。"
+  ],
+  "观察脉搏引起的管壁扩张，沿动脉逐段传播。": [
+    "Observe pulse-driven wall expansion propagating along the artery.",
+    "脈拍による血管壁の拡張が、動脈に沿って順に伝わる様子を観察します。"
+  ],
+  "管壁局部扩张随脉搏传播": [
+    "Local wall expansion propagates with the pulse",
+    "脈拍に伴う局所的な血管壁の拡張"
+  ],
+  "观察相邻位置先后膨起。": [
+    "Observe neighboring regions expanding in succession.",
+    "隣接する部位が順に膨らむ様子を観察します。"
+  ],
+  "观察静脉血回流的方向，以及管壁随呼吸产生的轻度起伏。": [
+    "Observe the direction of venous return and slight respiratory movement of the vessel wall.",
+    "静脈還流の方向と、呼吸に伴う血管壁のわずかな動きを観察します。"
+  ],
+  "回流持续 · 管壁轻度起伏": [
+    "Venous return continues · Slight wall movement",
+    "還流の継続・血管壁のわずかな動き"
+  ],
+  "可关闭粒子，只观察管壁。": [
+    "Turn off particles to observe only the vessel wall.",
+    "粒子をオフにすると、血管壁だけを観察できます。"
+  ],
+  "吸气 · 肺底和胸廓方向扩张": [
+    "Inhalation · Expansion toward the lung bases and chest wall",
+    "吸気・肺底部と胸郭方向への拡張"
+  ],
+  "呼气 · 肺组织缓慢回缩": [
+    "Exhalation · Lung tissue slowly recoils",
+    "呼気・肺組織がゆっくり収縮する"
+  ],
+  "肺叶和同侧支气管使用相同位移场，保持空间联系。": [
+    "Lung lobes and bronchi on the same side share a displacement field to preserve their spatial relationship.",
+    "同じ側の肺葉と気管支に同一の変位場を適用し、位置関係を保ちます。"
+  ],
+  "肺底的扩张比肺尖明显；肺叶和同侧支气管随同一个连续位移场移动。吸气较快，呼气缓慢回位。": [
+    "Expansion is greater at the lung bases than at the apices. Lung lobes and bronchi on the same side move within a shared continuous displacement field. Inhalation is faster, followed by a slower return during exhalation.",
+    "肺尖より肺底部の拡張が大きくなります。同じ側の肺葉と気管支は共通の連続した変位場に沿って動きます。吸気は比較的速く、呼気ではゆっくり元に戻ります。"
+  ],
+  "观察吸气与呼气时，肺叶、支气管和气流的协同变化。": [
+    "Observe coordinated changes in the lung lobes, bronchi and airflow during inhalation and exhalation.",
+    "吸気と呼気に伴う肺葉、気管支、気流の協調した変化を観察します。"
+  ],
+  "延长呼吸周期并增大肺底形变，便于比较吸气末与呼气末的外形。": [
+    "The breathing cycle is lengthened and deformation at the lung bases increased to compare the shapes at the ends of inhalation and exhalation.",
+    "呼吸周期を長くし、肺底部の変形を大きくして、吸気終末と呼気終末の形を比較しやすくしています。"
+  ],
+  "用一次较深吸气和较长呼气展示不同呼吸节律下的外形变化。": [
+    "A deeper inhalation and longer exhalation illustrate shape changes with a different breathing rhythm.",
+    "より深い吸気と長い呼気により、呼吸リズムの違いによる形の変化を示します。"
+  ],
+  "局部收缩沿胃壁移动，同时叠加轻微扭动，展示混合与推进的形态概念。": [
+    "Local contractions travel along the stomach wall with a slight twisting motion, illustrating the shape changes involved in mixing and propulsion.",
+    "局所的な収縮が胃壁に沿って移動し、わずかなねじれを加えることで、混合と推進に関わる形の変化を示します。"
+  ],
+  "局部收缩波沿胃壁推进": [
+    "Local contraction wave advances along the stomach wall",
+    "局所的な収縮波が胃壁に沿って進む"
+  ],
+  "观察收缩位置随时间移动。": [
+    "Observe how the contraction site moves over time.",
+    "収縮する位置が時間とともに移動する様子を観察します。"
+  ],
+  "肠壁不同位置交替收缩，帮助混合并推进肠内容物。": [
+    "Different regions of the intestinal wall contract alternately to mix and propel intestinal contents.",
+    "腸壁の異なる部位が交互に収縮し、腸内容物の混合と推進を助けます。"
+  ],
+  "相邻肠段交替收缩": [
+    "Adjacent intestinal segments contract alternately",
+    "隣接する腸管区間が交互に収縮する"
+  ],
+  "局部收缩逐渐推进": [
+    "Local contraction gradually advances",
+    "局所的な収縮が徐々に進む"
+  ],
+  "形变用于观察肠壁运动。": [
+    "Deformation illustrates intestinal wall movement.",
+    "変形によって腸壁の運動を示します。"
+  ],
+  "在已有结肠外形上叠加分段收缩和舒张，帮助观察缓慢的混合运动。": [
+    "Segmental contraction and relaxation are applied to the existing colon shape to illustrate slow mixing movements.",
+    "既存の結腸の形に分節的な収縮と弛緩を加え、緩やかな混合運動を観察できるようにしています。"
+  ],
+  "结肠不同位置交替收缩": [
+    "Different regions of the colon contract alternately",
+    "結腸の異なる部位が交互に収縮する"
+  ],
+  "拖动进度观察袋状外形变化。": [
+    "Drag the progress control to observe changes in the pouch-like contours.",
+    "進行スライダーをドラッグして、袋状の輪郭の変化を観察します。"
+  ],
+  "胆囊壁缓慢收缩，示意储存胆汁排出时的外形变化；周期经过压缩以便观察。": [
+    "The gallbladder wall slowly contracts to illustrate shape changes as stored bile is expelled. The cycle is shortened for observation.",
+    "胆嚢壁がゆっくり収縮し、貯蔵した胆汁を排出するときの形の変化を示します。観察しやすいように周期を短縮しています。"
+  ],
+  "胆囊壁缓慢收缩": [
+    "Gallbladder wall slowly contracts",
+    "胆嚢壁がゆっくり収縮する"
+  ],
+  "回到起始外形": [
+    "Returning to the starting shape",
+    "開始時の形に戻る"
+  ],
+  "观察胆囊壁的收缩与回位。": [
+    "Observe contraction and return of the gallbladder wall.",
+    "胆嚢壁の収縮と復元を観察します。"
+  ],
+  "依次观察舌体活动、软腭抬升、咽部收缩、会厌倾转和食管蠕动。": [
+    "Observe tongue movement, soft palate elevation, pharyngeal contraction, epiglottic tilting and esophageal peristalsis in sequence.",
+    "舌の動き、軟口蓋の挙上、咽頭の収縮、喉頭蓋の傾斜、食道の蠕動を順に観察します。"
+  ],
+  "口腔准备与软腭抬升": [
+    "Oral preparation and soft palate elevation",
+    "口腔内の準備と軟口蓋の挙上"
+  ],
+  "咽部推进与喉入口保护": [
+    "Pharyngeal propulsion and protection of the laryngeal inlet",
+    "咽頭での推進と喉頭入口の保護"
+  ],
+  "食管收缩波下传": [
+    "Esophageal contraction wave descends",
+    "食道の収縮波が下降する"
+  ],
+  "各部件按先后关系联动。": [
+    "The components move together in sequence.",
+    "各部位が順序に沿って連動します。"
+  ],
+  "胃壁推进波与肠道分节运动同时播放，各段节律略有错开，展示持续的消化道活动。": [
+    "Gastric propulsion waves and intestinal segmentation play together with slightly offset rhythms, illustrating ongoing digestive tract activity.",
+    "胃壁の推進波と腸の分節運動を同時に表示し、各部位のリズムを少しずらすことで、消化管の持続的な活動を示します。"
+  ],
+  "胃壁推进 · 肠道交替收缩": [
+    "Gastric propulsion · Alternating intestinal contractions",
+    "胃壁の推進・腸管の交互収縮"
+  ],
+  "可分别选择单个器官的演示进行观察。": [
+    "Select individual organ demonstrations for separate observation.",
+    "各器官のアニメーションを選ぶと、個別に観察できます。"
+  ],
+  "左右输尿管的收缩波以不同相位向膀胱方向推进，避免两侧机械地完全同步。": [
+    "Contraction waves in the left and right ureters move toward the bladder at different phases, avoiding artificially perfect synchronization.",
+    "左右の尿管の収縮波は異なる位相で膀胱へ進み、両側が機械的に完全同期しないようにしています。"
+  ],
+  "左右收缩波交错向下推进": [
+    "Left and right contraction waves descend out of phase",
+    "左右の収縮波が時期をずらして下降する"
+  ],
+  "每一侧都从独立的原始形态计算形变。": [
+    "Deformation on each side is calculated from its own original shape.",
+    "左右それぞれの元の形から、独立して変形を計算します。"
+  ],
+  "输尿管局部收缩与膀胱缓慢充盈同时显示；粒子表示尿液向膀胱的输送方向，周期经过压缩。": [
+    "Local ureteral contractions and slow bladder filling are shown together. Particles indicate urine transport toward the bladder; the cycle is shortened.",
+    "尿管の局所的な収縮と膀胱の緩やかな充満を同時に示します。粒子は尿が膀胱へ運ばれる方向を表し、周期は短縮しています。"
+  ],
+  "输尿管推进 · 膀胱逐渐充盈": [
+    "Ureteral propulsion · Bladder gradually fills",
+    "尿管による推進・膀胱が徐々に充満する"
+  ],
+  "输送继续 · 膀胱回到起始外形": [
+    "Transport continues · Bladder returns to its starting shape",
+    "輸送の継続・膀胱が開始時の形に戻る"
+  ],
+  "输尿管和膀胱使用不同节律。": [
+    "The ureters and bladder use different rhythms.",
+    "尿管と膀胱は異なるリズムで動きます。"
+  ],
+  "观察膀胱壁收缩，以及尿液沿尿道排出的方向。": [
+    "Observe contraction of the bladder wall and urine flow out through the urethra.",
+    "膀胱壁の収縮と、尿が尿道を通って排出される方向を観察します。"
+  ],
+  "膀胱壁缓慢收缩": [
+    "Bladder wall slowly contracts",
+    "膀胱壁がゆっくり収縮する"
+  ],
+  "沿尿道观察尿液排出的方向。": [
+    "Follow the urethra to observe the direction of urine outflow.",
+    "尿道に沿って、尿が排出される方向を観察します。"
+  ],
+  "吸气 · 膈肌中央下降": [
+    "Inhalation · Center of the diaphragm descends",
+    "吸気・横隔膜中央部の下降"
+  ],
+  "中央穹隆的位移大于周边附着处。": [
+    "The central dome moves more than the peripheral attachments.",
+    "中央のドームは、周辺の付着部より大きく動きます。"
+  ],
+  "膈肌中央穹隆下降并变平，周缘移动较小；呼气时平滑回升。": [
+    "The central diaphragmatic dome descends and flattens while its edges move less; it rises smoothly during exhalation.",
+    "横隔膜中央のドームが下降して平らになる一方、周辺部の動きは小さくなります。呼気時には滑らかに上昇します。"
+  ],
+  "膈穹隆下降时，肋间肌和腹壁随呼吸出现轻度外形变化。保留各组织的附着端，突出中央活动。": [
+    "As the diaphragmatic dome descends, the intercostal muscles and abdominal wall change shape slightly with breathing. Tissue attachment ends are preserved to emphasize central movement.",
+    "横隔膜ドームの下降に伴い、肋間筋と腹壁も呼吸に合わせてわずかに変形します。各組織の付着端を保ち、中央部の動きを強調します。"
+  ],
+  "吸气 · 膈肌下降、胸腹壁活动": [
+    "Inhalation · Diaphragm descends and chest and abdominal walls move",
+    "吸気・横隔膜下降と胸腹壁の運動"
+  ],
+  "呼气 · 胸腹壁回位": [
+    "Exhalation · Chest and abdominal walls return",
+    "呼気・胸腹壁が元に戻る"
+  ],
+  "不同肌群随同一呼吸周期联动。": [
+    "Different muscle groups coordinate within the same breathing cycle.",
+    "異なる筋群が、同じ呼吸周期に合わせて連動します。"
+  ],
+  "肌腹中央缩短并增粗，靠近两端的形变逐渐减小，避免整块肌肉像刚体一样缩放。": [
+    "The center of the muscle belly shortens and thickens, with deformation tapering toward both ends, avoiding uniform scaling of the entire muscle like a rigid object.",
+    "筋腹の中央が短縮して太くなり、両端に近づくほど変形が小さくなります。筋全体が剛体のように一様に拡大・縮小することを避けています。"
+  ],
+  "肌腹收缩、中央增粗": [
+    "Muscle belly contracts and thickens centrally",
+    "筋腹の収縮と中央部の肥厚"
+  ],
+  "肌腹逐渐放松": [
+    "Muscle belly gradually relaxes",
+    "筋腹が徐々に弛緩する"
+  ],
+  "两端的位移被平滑抑制。": [
+    "Displacement is smoothly reduced at both ends.",
+    "両端の変位は滑らかに抑えられます。"
+  ],
+  "观察眼轮匝肌与上睑提肌在眨眼过程中的交替活动。": [
+    "Observe alternating activity of the orbicularis oculi and levator palpebrae superioris during blinking.",
+    "瞬目時の眼輪筋と上眼瞼挙筋の交互の活動を観察します。"
+  ],
+  "快速闭合阶段 · 较慢恢复阶段": [
+    "Rapid closing phase · Slower recovery phase",
+    "速い閉眼期・緩やかな回復期"
+  ],
+  "对照闭眼与睁眼时的肌群变化。": [
+    "Compare muscle changes during eye closure and opening.",
+    "閉眼時と開眼時の筋群の変化を比較します。"
+  ],
+  "咬肌和颞肌随咀嚼节律收缩和放松，左右侧相位略有错开。": [
+    "The masseter and temporalis contract and relax with the chewing rhythm, with slightly different timing on the left and right.",
+    "咬筋と側頭筋が咀嚼のリズムに合わせて収縮・弛緩し、左右ではタイミングがわずかにずれます。"
+  ],
+  "咀嚼肌收缩": [
+    "Chewing muscles contract",
+    "咀嚼筋の収縮"
+  ],
+  "咀嚼肌舒张": [
+    "Chewing muscles relax",
+    "咀嚼筋の弛緩"
+  ],
+  "肌腹中央活动比附着端明显。": [
+    "The center of the muscle belly moves more than its attachments.",
+    "筋腹中央の動きは付着端より大きくなります。"
+  ],
+  "观察桡骨与手部围绕前臂长轴转动，完成旋前与回位。": [
+    "Observe the radius and hand rotating around the long axis of the forearm during pronation and return.",
+    "橈骨と手が前腕の長軸を中心に回転し、回内して元に戻る様子を観察します。"
+  ],
+  "桡骨与手部旋转": [
+    "Radius and hand rotate",
+    "橈骨と手の回転"
+  ],
+  "回到起始位": [
+    "Returning to the starting position",
+    "開始位置に戻る"
+  ],
+  "比较固定的尺骨和移动的桡骨。": [
+    "Compare the stationary ulna with the moving radius.",
+    "固定された尺骨と、動く橈骨を比較します。"
+  ],
+  "手部围绕腕部向桡侧和尺侧轻度摆动，前臂保持原位。": [
+    "The hand moves slightly toward the radial and ulnar sides around the wrist while the forearm stays in place.",
+    "前腕の位置を保ったまま、手が手関節を中心に橈側・尺側へ軽く動きます。"
+  ],
+  "手部左右偏移": [
+    "Hand deviates from side to side",
+    "手の左右への偏位"
+  ],
+  "前臂位置保持稳定。": [
+    "The forearm remains stable.",
+    "前腕の位置は安定したままです。"
+  ],
+  "将小幅前屈与外展平滑组合，远端前臂和手随上臂一起移动。": [
+    "Small forward flexion and abduction movements blend smoothly, with the distal forearm and hand following the upper arm.",
+    "小さな前方への屈曲と外転を滑らかに組み合わせ、遠位の前腕と手が上腕に伴って動きます。"
+  ],
+  "连续前屈与外展组合": [
+    "Continuous combination of forward flexion and abduction",
+    "前方への屈曲と外転の連続的な組み合わせ"
+  ],
+  "保持同侧上肢作为相连骨链。": [
+    "The upper limb on each side remains a connected bone chain.",
+    "同じ側の上肢を、つながった骨の連なりとして保ちます。"
+  ],
+  "足部绕踝向下伸展，观察跖屈方向。": [
+    "The foot points downward around the ankle to illustrate plantar flexion.",
+    "足関節を中心に足を下方へ伸ばし、底屈方向を観察します。"
+  ],
+  "足尖向下伸展并回位": [
+    "Toes point downward and return",
+    "つま先を下へ伸ばして戻す"
+  ],
+  "将小幅屈伸与外展组合成连续运动，保持大腿、小腿与足相连。": [
+    "Small flexion, extension and abduction movements combine continuously while the thigh, lower leg and foot stay connected.",
+    "小さな屈伸と外転を連続的に組み合わせ、大腿、下腿、足のつながりを保ちます。"
+  ],
+  "大腿带动小腿与足连续环转": [
+    "The thigh carries the lower leg and foot through continuous circumduction",
+    "大腿が下腿と足を伴って連続的に分回し運動をする"
+  ],
+  "髋、膝、踝协同运动，对侧上肢轻度摆动，呈现步态节律。": [
+    "The hip, knee and ankle move together while the opposite upper limb swings slightly, demonstrating the rhythm of gait.",
+    "股関節、膝関節、足関節が協調して動き、反対側の上肢が軽く振れることで、歩行のリズムを示します。"
+  ],
+  "左右腿交替 · 对侧上肢随动": [
+    "Legs alternate · Opposite upper limb follows",
+    "左右の脚が交互に動く・反対側の上肢が連動"
+  ],
+  "髋部变换传递给膝和踝，避免小腿脱离大腿。": [
+    "Hip movement is passed to the knee and ankle so the lower leg stays connected to the thigh.",
+    "股関節の動きを膝と足関節に伝え、下腿が大腿から離れないようにします。"
+  ],
+  "近节、中节和远节依次屈曲，远端骨节继承近端姿态，展示抓握或屈趾的骨链关系。": [
+    "The proximal, middle and distal phalanges flex in sequence. Distal segments inherit proximal postures, illustrating the bone chain in grasping or toe flexion.",
+    "基節、中節、末節が順に屈曲します。遠位の骨節は近位の姿勢を引き継ぎ、把持や足趾の屈曲における骨の連動を示します。"
+  ],
+  "各节逐渐屈曲": [
+    "Segments gradually flex",
+    "各骨節が徐々に屈曲する"
+  ],
+  "各节平滑伸展": [
+    "Segments extend smoothly",
+    "各骨節が滑らかに伸展する"
+  ],
+  "远端随近端一起移动。": [
+    "Distal segments move with proximal segments.",
+    "遠位部は近位部と一緒に動きます。"
+  ],
+  "肋骨围绕后端轻度抬升和外展，胸骨随之向前上方移动，展示胸廓扩张方向。": [
+    "The ribs lift and abduct slightly around their posterior ends while the sternum moves forward and upward, showing the direction of thoracic expansion.",
+    "肋骨が後端を中心に軽く挙上・外転し、胸骨が前上方へ動くことで、胸郭の拡張方向を示します。"
+  ],
+  "吸气 · 胸廓抬升与扩张": [
+    "Inhalation · Thorax elevates and expands",
+    "吸気・胸郭の挙上と拡張"
+  ],
+  "呼气 · 胸廓回位": [
+    "Exhalation · Thorax returns",
+    "呼気・胸郭が元に戻る"
+  ],
+  "肋骨运动范围经过缩小以避免明显穿插。": [
+    "Rib movement is reduced to avoid obvious intersections.",
+    "明らかな構造の重なりを避けるため、肋骨の運動範囲を小さくしています。"
+  ],
+  "在张口旋转之外叠加轻度前移和侧向偏移，形成平滑咀嚼轨迹。": [
+    "Slight forward and lateral shifts are added to mouth-opening rotation to create a smooth chewing trajectory.",
+    "開口時の回転に軽い前方移動と側方偏位を加え、滑らかな咀嚼軌道を作ります。"
+  ],
+  "张口并轻度前移": [
+    "Mouth opens with a slight forward shift",
+    "開口と軽い前方移動"
+  ],
+  "闭口并回位": [
+    "Mouth closes and returns",
+    "閉口して元に戻る"
+  ],
+  "双眼向内会聚，晶状体变凸，瞳孔同时缩小；随后平滑回到看远状态。": [
+    "Both eyes converge, the lenses become more convex and the pupils constrict, then all smoothly return to distant vision.",
+    "両眼が輻輳し、水晶体が厚くなり、瞳孔が縮小します。その後、滑らかに遠見状態へ戻ります。"
+  ],
+  "看近 · 会聚、晶状体变凸、瞳孔缩小": [
+    "Near vision · Convergence, lens thickening and pupil constriction",
+    "近見・輻輳、水晶体の肥厚、縮瞳"
+  ],
+  "看远 · 三项变化逐渐恢复": [
+    "Distant vision · All three changes gradually reverse",
+    "遠見・3つの変化が徐々に戻る"
+  ],
+  "双眼围绕各自眼球中心转动。": [
+    "Each eye rotates around its own center.",
+    "両眼はそれぞれの眼球中心を軸に回転します。"
+  ],
+  "双眼快速切换注视方向，并在目标方向短暂停留，区别于匀速来回转动。": [
+    "Both eyes rapidly shift gaze and briefly hold at each target, rather than rotating back and forth at a constant speed.",
+    "両眼が素早く視線を切り替え、目標方向で短く停止します。等速で往復する回転とは異なる動きです。"
+  ],
+  "快速转向 · 短暂停留": [
+    "Rapid shift · Brief fixation",
+    "素早い視線移動・短い注視"
+  ],
+  "眼球各组织绕同一个中心转动。": [
+    "All tissues of each eye rotate around the same center.",
+    "各眼球の組織は共通の中心を軸に回転します。"
+  ],
+  "双眼沿缓慢的水平与垂直组合轨迹追踪，保持各眼球内部结构同步。": [
+    "Both eyes track a slow combined horizontal and vertical path, keeping each eye's internal structures synchronized.",
+    "両眼が水平・垂直方向を組み合わせた緩やかな軌道を追い、各眼球内部の構造は同期して動きます。"
+  ],
+  "双眼连续追踪移动目标": [
+    "Both eyes continuously track a moving target",
+    "両眼で動く対象を連続して追う"
+  ],
+  "水平和垂直运动平滑组合。": [
+    "Horizontal and vertical movements blend smoothly.",
+    "水平・垂直方向の動きを滑らかに組み合わせます。"
+  ],
+  "鼓膜中央振幅较大、周缘较小，听小骨随之轻微运动。振动经过大幅降速与放大以便观察。": [
+    "The tympanic membrane vibrates more at its center than at its edges, with slight accompanying movement of the ossicles. Vibration is greatly slowed and amplified for observation.",
+    "鼓膜は周辺より中央の振幅が大きく、耳小骨もそれに伴ってわずかに動きます。観察しやすいように、振動を大幅に減速・拡大しています。"
+  ],
+  "鼓膜中央振动 · 听骨链跟随": [
+    "Tympanic membrane center vibrates · Ossicular chain follows",
+    "鼓膜中央の振動・耳小骨連鎖の追従"
+  ],
+  "鼓膜周缘的位移被抑制。": [
+    "Displacement at the tympanic membrane edge is suppressed.",
+    "鼓膜周辺部の変位を抑えています。"
+  ],
+  "流向粒子示意": [
+    "Particles indicating flow direction",
+    "粒子による流れの方向の表示"
+  ],
+  "沿泪小管和鼻泪管，观察泪液的引流方向。": [
+    "Follow the lacrimal canaliculi and nasolacrimal duct to observe tear drainage.",
+    "涙小管と鼻涙管に沿って、涙液の排出方向を観察します。"
+  ],
+  "沿泪道观察引流方向": [
+    "Follow the lacrimal passages to observe drainage direction",
+    "涙道に沿って排出方向を観察"
+  ],
+  "依次观察各段泪道。": [
+    "Observe each segment of the lacrimal passages in sequence.",
+    "涙道の各部位を順に観察します。"
+  ],
+  "信号传播示意": [
+    "Schematic signal propagation",
+    "信号伝播の模式図"
+  ],
+  "发光粒子沿现有神经走行传播，表示信号传递的概念；神经本身保持原始形态。": [
+    "Glowing particles travel along the existing nerve paths to represent signal transmission; the nerves themselves retain their original shape.",
+    "発光する粒子が既存の神経の走行に沿って進み、信号伝達の概念を示します。神経自体の形は変わりません。"
+  ],
+  "信号沿神经走行传播": [
+    "Signals propagate along the nerves",
+    "神経の走行に沿った信号の伝播"
+  ],
+  "慢动作观察信号沿神经走行传播。": [
+    "Observe signal propagation along the nerves in slow motion.",
+    "神経の走行に沿った信号の伝播をスローモーションで観察します。"
+  ],
+  "观察输精管平滑肌的推进性收缩，局部管径随收缩波依次改变。": [
+    "Observe propulsive smooth-muscle contractions in the ductus deferens, with local diameter changes following the contraction wave.",
+    "精管平滑筋の推進性収縮を観察します。収縮波に沿って、局所的な管径が順に変化します。"
+  ],
+  "输精管壁局部收缩向前推进": [
+    "Local contraction advances along the ductus deferens wall",
+    "精管壁の局所的な収縮が前進する"
+  ],
+  "沿管壁观察收缩波。": [
+    "Follow the contraction wave along the duct wall.",
+    "管壁に沿って収縮波を観察します。"
+  ],
+  "信号粒子示意": [
+    "Particles representing signals",
+    "信号を表す粒子"
+  ],
+  "通过腺体周围的粒子，观察激素信号的释放。": [
+    "Particles around the glands illustrate the release of hormonal signals.",
+    "腺の周囲の粒子を通して、ホルモン信号の放出を観察します。"
+  ],
+  "腺体释放信号 · 结构保持稳定": [
+    "Glands release signals · Structures remain stable",
+    "腺からの信号放出・構造は安定したまま"
+  ],
+  "观察信号从腺体附近向外扩散。": [
+    "Observe signals spreading outward from near the glands.",
+    "腺の近くから外側へ信号が広がる様子を観察します。"
+  ],
+  "细胞活动粒子示意": [
+    "Particles representing cell activity",
+    "細胞活動を表す粒子"
+  ],
+  "通过局部移动的粒子，观察淋巴结内的免疫细胞巡行。": [
+    "Locally moving particles illustrate immune-cell patrol within lymph nodes.",
+    "局所的に動く粒子を通して、リンパ節内を巡回する免疫細胞を観察します。"
+  ],
+  "局部巡行 · 淋巴结外形保持稳定": [
+    "Local patrol · Lymph node shape remains stable",
+    "局所的な巡回・リンパ節の形は安定したまま"
+  ],
+  "观察各组细胞的局部活动。": [
+    "Observe the local activity of each cell group.",
+    "各細胞群の局所的な活動を観察します。"
+  ],
+  "皮肤": [
+    "Skin",
+    "皮膚"
+  ],
+  "在体表胸腹区域加入平滑的小幅呼吸起伏，四肢和头部保持稳定。使用身体比例定位胸腹范围。": [
+    "Small, smooth respiratory movements are applied to the chest and abdominal surface, while the head and limbs remain stable. Body proportions define the chest and abdominal regions.",
+    "体表の胸腹部に、滑らかで小さな呼吸運動を加えます。頭部と四肢は安定したままです。身体の比率を用いて胸腹部の範囲を定めます。"
+  ],
+  "吸气 · 胸腹轮廓轻度扩张": [
+    "Inhalation · Chest and abdominal contours expand slightly",
+    "吸気・胸腹部の輪郭がわずかに広がる"
+  ],
+  "呼气 · 体表轮廓回位": [
+    "Exhalation · Body surface contour returns",
+    "呼気・体表の輪郭が元に戻る"
+  ],
+  "只改变胸腹区域的外轮廓。": [
+    "Only the outer contour of the chest and abdomen changes.",
+    "胸腹部の外側の輪郭だけを変化させます。"
+  ],
+  "五次心搏叠加一次缓慢呼吸位移，观察快慢两种节律同时发生。": [
+    "Five heartbeats are combined with one slow respiratory displacement to observe fast and slow rhythms occurring together.",
+    "5回の心拍に1回のゆっくりした呼吸性変位を重ね、速いリズムと遅いリズムが同時に生じる様子を観察します。"
+  ],
+  "心肌快速搏动 · 心脏随呼吸缓慢移动": [
+    "Rapid myocardial beating · Slow respiratory movement of the heart",
+    "心筋の速い拍動・呼吸に伴う心臓の緩やかな移動"
+  ],
+  "心房、心室、瓣叶和冠脉共同参与。": [
+    "The atria, ventricles, valve leaflets and coronary arteries all participate.",
+    "心房、心室、弁尖、冠動脈が一緒に動きます。"
+  ],
+  "心室舒张时冠状动脉灌注更明显，冠脉随心肌一起活动。": [
+    "Coronary perfusion is more pronounced during ventricular relaxation, and the coronary arteries move with the myocardium.",
+    "心室の弛緩時には冠動脈の灌流がより目立ち、冠動脈は心筋と一緒に動きます。"
+  ],
+  "心室收缩": [
+    "Ventricular contraction",
+    "心室の収縮"
+  ],
+  "心室舒张 · 冠脉灌注增强": [
+    "Ventricular relaxation · Increased coronary perfusion",
+    "心室の弛緩・冠動脈灌流の増加"
+  ],
+  "沿冠状动脉观察心肌的供血。": [
+    "Follow the coronary arteries to observe the myocardial blood supply.",
+    "冠動脈に沿って、心筋への血液供給を観察します。"
+  ],
+  "心室先舒张充盈，随后心房收缩补充充盈，最后恢复起始形态。": [
+    "The ventricles first relax and fill, then atrial contraction adds further filling, before the heart returns to its starting shape.",
+    "心室がまず弛緩して充満し、続いて心房の収縮が充満を補った後、開始時の形に戻ります。"
+  ],
+  "舒张早期 · 心室充盈": [
+    "Early diastole · Ventricular filling",
+    "拡張早期・心室の充満"
+  ],
+  "心房收缩 · 补充充盈": [
+    "Atrial contraction · Additional filling",
+    "心房収縮・充満の補充"
+  ],
+  "回到起始状态": [
+    "Returning to the starting state",
+    "開始時の状態に戻る"
+  ],
+  "比较心房与心室的先后变化。": [
+    "Compare the sequence of changes in the atria and ventricles.",
+    "心房と心室の変化の順序を比較します。"
+  ],
+  "射血期主动脉扩张，随后缓慢回缩，维持舒张期的血液流动。": [
+    "The aorta expands during ejection, then slowly recoils to sustain blood flow during diastole.",
+    "駆出期に大動脈が拡張し、その後ゆっくり弾性収縮することで、拡張期の血流を維持します。"
+  ],
+  "射血 · 管壁扩张": [
+    "Ejection · Vessel wall expands",
+    "駆出・血管壁の拡張"
+  ],
+  "弹性回缩 · 血流继续": [
+    "Elastic recoil · Blood flow continues",
+    "弾性収縮・血流の継続"
+  ],
+  "观察快速扩张与较慢回弹。": [
+    "Observe rapid expansion followed by slower recoil.",
+    "速い拡張と、その後の緩やかな復元を観察します。"
+  ],
+  "吸气 · 心脏持续泵血": [
+    "Inhalation · Heart continues pumping",
+    "吸気・心臓のポンプ作用が続く"
+  ],
+  "呼气 · 循环持续进行": [
+    "Exhalation · Circulation continues",
+    "呼気・循環が続く"
+  ],
+  "肺循环连接心脏与肺；体循环连接心脏与全身。": [
+    "Pulmonary circulation connects the heart and lungs; systemic circulation connects the heart and the rest of the body.",
+    "肺循環は心臓と肺を結び、体循環は心臓と全身を結びます。"
+  ],
+  "低氧血经右心进入肺，富氧血由肺返回左心，再沿主动脉流向全身；静脉回流汇入右心。": [
+    "Oxygen-poor blood passes through the right heart to the lungs. Oxygen-rich blood returns to the left heart and travels through the aorta to the body; venous blood returns to the right heart.",
+    "酸素の少ない血液は右心を経て肺へ向かいます。酸素に富む血液は肺から左心へ戻り、大動脈を通って全身へ流れます。静脈血は右心へ戻ります。"
+  ],
+  "一次呼吸中连续呈现五次心搏，联动观察肺叶起伏、心腔收缩、瓣膜开闭和血液循环。": [
+    "Five heartbeats play continuously within one breath, linking changes in the lung lobes, heart chamber contractions, valve movements and blood circulation.",
+    "1回の呼吸の間に5回の心拍を連続表示し、肺葉の動き、心腔の収縮、弁の開閉、血液循環を連動させて観察します。"
+  ],
+  "右心泵血": [
+    "Right heart pumps blood",
+    "右心のポンプ作用"
+  ],
+  "右心将低氧血泵入肺动脉。": [
+    "The right heart pumps oxygen-poor blood into the pulmonary arteries.",
+    "右心が酸素の少ない血液を肺動脈へ送り出します。"
+  ],
+  "肺动脉入肺": [
+    "Pulmonary arteries carry blood to the lungs",
+    "肺動脈から肺へ"
+  ],
+  "血液从右心流向肺部。": [
+    "Blood flows from the right heart to the lungs.",
+    "血液が右心から肺へ流れます。"
+  ],
+  "肺部交换与回流": [
+    "Pulmonary exchange and return",
+    "肺でのガス交換と還流"
+  ],
+  "在肺部获得氧后，血液经肺静脉返回左心。": [
+    "After gaining oxygen in the lungs, blood returns to the left heart through the pulmonary veins.",
+    "肺で酸素を受け取った血液は、肺静脈を通って左心へ戻ります。"
+  ],
+  "左心射血": [
+    "Left heart ejects blood",
+    "左心からの駆出"
+  ],
+  "左心将富氧血泵入主动脉。": [
+    "The left heart pumps oxygen-rich blood into the aorta.",
+    "左心が酸素に富む血液を大動脈へ送り出します。"
+  ],
+  "体动脉分配": [
+    "Systemic arterial distribution",
+    "体動脈による分配"
+  ],
+  "富氧血沿动脉分配至头颈、躯干和四肢。": [
+    "Oxygen-rich blood travels through arteries to the head, neck, trunk and limbs.",
+    "酸素に富む血液が、動脈を通って頭頸部、体幹、四肢へ分配されます。"
+  ],
+  "静脉汇入右心": [
+    "Veins return blood to the right heart",
+    "静脈から右心への還流"
+  ],
+  "组织利用氧后，血液沿静脉回到右心。": [
+    "After tissues use oxygen, blood returns to the right heart through veins.",
+    "組織が酸素を利用した後、血液は静脈を通って右心へ戻ります。"
+  ],
+  "在全身空间中依次观察右心、肺、左心与四肢血管。点击循环节点可暂停并比较每一段通路。": [
+    "Observe the right heart, lungs, left heart and limb vessels in sequence within the whole body. Click a circulation node to pause and compare each part of the pathway.",
+    "全身の中で右心、肺、左心、四肢の血管を順に観察します。循環の各ノードをクリックすると一時停止し、経路の各部分を比較できます。"
+  ],
+  "更快的心搏配合更深、更频繁的呼吸，对照静息时心肺与循环的协同变化。": [
+    "Faster heartbeats combine with deeper, more frequent breaths to compare coordinated cardiopulmonary and circulatory changes with those at rest.",
+    "速い心拍と、より深く頻繁な呼吸を組み合わせ、安静時と比較して心肺と循環の協調した変化を観察します。"
+  ],
+  "先观察心房兴奋与收缩，再观察心室兴奋、射血和舒张。亮度的先后变化对应兴奋传播次序。": [
+    "Observe atrial excitation and contraction first, then ventricular excitation, ejection and relaxation. Sequential brightness changes correspond to the order of excitation spread.",
+    "まず心房の興奮と収縮を観察し、続いて心室の興奮、駆出、弛緩を確認します。明るさの変化の順序は、興奮の伝播順序に対応します。"
+  ],
+  "心房先兴奋并收缩": [
+    "Atria excite and contract first",
+    "心房が先に興奮・収縮する"
+  ],
+  "心室随后兴奋并射血": [
+    "Ventricles then excite and eject blood",
+    "続いて心室が興奮し、血液を駆出する"
+  ],
+  "心肌舒张与充盈": [
+    "Myocardial relaxation and filling",
+    "心筋の弛緩と充満"
+  ],
+  "兴奋的先后次序与泵血过程相互配合。": [
+    "The sequence of excitation coordinates with pumping.",
+    "興奮の順序とポンプ作用が協調します。"
+  ],
+  "先深吸气，再短暂停留，随后快速呼气，肺部平滑回到起始轮廓。": [
+    "A deep inhalation is followed by a brief hold and rapid exhalation, with the lungs smoothly returning to their starting contours.",
+    "深く吸気した後、短く息を止め、続いて素早く呼気します。肺は滑らかに開始時の輪郭へ戻ります。"
+  ],
+  "深吸气": [
+    "Deep inhalation",
+    "深い吸気"
+  ],
+  "短暂蓄压": [
+    "Brief pressure buildup",
+    "短い圧の蓄積"
+  ],
+  "快速呼气": [
+    "Rapid exhalation",
+    "速い呼気"
+  ],
+  "呼气后恢复": [
+    "Recovery after exhalation",
+    "呼気後の回復"
+  ],
+  "比较吸气与呼气的时间差。": [
+    "Compare the durations of inhalation and exhalation.",
+    "吸気と呼気の時間の違いを比較します。"
+  ],
+  "吸气后缓慢呼气，杓状软骨轻度内转；观察呼气与喉部位置的配合。": [
+    "Inhalation is followed by slow exhalation with slight inward rotation of the arytenoid cartilages. Observe coordination between exhalation and laryngeal position.",
+    "吸気の後にゆっくり呼気し、披裂軟骨が軽く内旋します。呼気と喉頭の位置の協調を観察します。"
+  ],
+  "吸气准备": [
+    "Preparatory inhalation",
+    "準備の吸気"
+  ],
+  "缓慢呼气 · 喉部配合": [
+    "Slow exhalation · Laryngeal coordination",
+    "ゆっくりした呼気・喉頭の協調"
+  ],
+  "可单独隐藏肺叶，观察杓状软骨。": [
+    "Hide the lung lobes separately to observe the arytenoid cartilages.",
+    "肺葉を個別に非表示にして、披裂軟骨を観察できます。"
+  ],
+  "喉部向前上方抬升，会厌同时倾转，随后各部件协调复位。": [
+    "The larynx moves forward and upward as the epiglottis tilts, then the components return together.",
+    "喉頭が前上方へ挙上し、同時に喉頭蓋が傾きます。その後、各部位が協調して元に戻ります。"
+  ],
+  "喉部抬升 · 会厌倾转": [
+    "Larynx elevates · Epiglottis tilts",
+    "喉頭の挙上・喉頭蓋の傾斜"
+  ],
+  "喉部与会厌回位": [
+    "Larynx and epiglottis return",
+    "喉頭と喉頭蓋が元に戻る"
+  ],
+  "喉软骨共享位移，保持相对位置。": [
+    "Laryngeal cartilages share displacement to preserve their relative positions.",
+    "喉頭軟骨に共通の変位を与え、相対的な位置を保ちます。"
+  ],
+  "沿气管与主支气管观察黏液向咽部的运输方向。": [
+    "Follow the trachea and main bronchi to observe mucus transport toward the pharynx.",
+    "気管と主気管支に沿って、粘液が咽頭へ運ばれる方向を観察します。"
+  ],
+  "向咽部缓慢运输": [
+    "Slow transport toward the pharynx",
+    "咽頭へ向かう緩やかな輸送"
+  ],
+  "气道表面的纤毛共同推动黏液。": [
+    "Cilia on the airway surface work together to move mucus.",
+    "気道表面の線毛が協調して粘液を運びます。"
+  ],
+  "运输过程": [
+    "Transport process",
+    "輸送過程"
+  ],
+  "左右杓状软骨围绕各自支点小幅转动，观察喉部开合的骨架动作。": [
+    "The left and right arytenoid cartilages rotate slightly around their own pivots, showing the skeletal movements of laryngeal opening and closing.",
+    "左右の披裂軟骨がそれぞれの支点を中心に小さく回転し、喉頭の開閉を支える骨格の動きを示します。"
+  ],
+  "左右软骨内转": [
+    "Both cartilages rotate inward",
+    "左右の軟骨が内旋する"
+  ],
+  "逐渐回位": [
+    "Gradual return",
+    "徐々に元に戻る"
+  ],
+  "两侧以相反方向协调转动。": [
+    "Both sides rotate in opposite directions in coordination.",
+    "両側が反対方向へ協調して回転します。"
+  ],
+  "舌面从前向后依次抬起，把口腔中的食团向咽部推进。": [
+    "The tongue surface rises sequentially from front to back, propelling the food bolus toward the pharynx.",
+    "舌の表面が前方から後方へ順に持ち上がり、口腔内の食塊を咽頭へ送ります。"
+  ],
+  "舌前部抬起 · 推进到舌根": [
+    "Anterior tongue rises · Propulsion toward the tongue root",
+    "舌前部の挙上・舌根への推進"
+  ],
+  "观察波形从前向后移动。": [
+    "Observe the wave moving from front to back.",
+    "波が前方から後方へ移動する様子を観察します。"
+  ],
+  "唾液从腺体经导管流向口腔，参与润滑食物和消化准备。": [
+    "Saliva flows from the glands through ducts to the oral cavity, helping lubricate food and prepare for digestion.",
+    "唾液は腺から導管を通って口腔へ流れ、食物の潤滑と消化の準備に関与します。"
+  ],
+  "腺体分泌 · 导管输送": [
+    "Gland secretion · Duct transport",
+    "腺の分泌・導管による輸送"
+  ],
+  "对照左右腮腺管和下颌下腺管。": [
+    "Compare the left and right parotid and submandibular ducts.",
+    "左右の耳下腺管と顎下腺管を比較します。"
+  ],
+  "胆囊缓慢收缩，胆汁沿胆管进入十二指肠。": [
+    "The gallbladder slowly contracts, and bile flows through the bile duct into the duodenum.",
+    "胆嚢がゆっくり収縮し、胆汁が胆管を通って十二指腸に入ります。"
+  ],
+  "胆囊收缩 · 胆汁流出": [
+    "Gallbladder contraction · Bile outflow",
+    "胆嚢の収縮・胆汁の流出"
+  ],
+  "胆囊轮廓回位": [
+    "Gallbladder contour returns",
+    "胆嚢の輪郭が元に戻る"
+  ],
+  "观察胆囊和胆管的配合。": [
+    "Observe coordination between the gallbladder and bile duct.",
+    "胆嚢と胆管の協調を観察します。"
+  ],
+  "胰液经胰管输送到十二指肠，参与食物的化学性消化。": [
+    "Pancreatic juice travels through the pancreatic ducts to the duodenum, contributing to chemical digestion.",
+    "膵液は膵管を通って十二指腸へ運ばれ、食物の化学的消化に関与します。"
+  ],
+  "胰管输送 · 汇入十二指肠": [
+    "Pancreatic duct transport · Entry into the duodenum",
+    "膵管による輸送・十二指腸への流入"
+  ],
+  "观察主胰管与副胰管。": [
+    "Observe the main and accessory pancreatic ducts.",
+    "主膵管と副膵管を観察します。"
+  ],
+  "升结肠、横结肠、降结肠和乙状结肠依次出现推进性收缩。": [
+    "Propulsive contractions occur in sequence in the ascending, transverse, descending and sigmoid colon.",
+    "上行結腸、横行結腸、下行結腸、S状結腸に、順に推進性の収縮が生じます。"
+  ],
+  "推进波沿各结肠段接续": [
+    "Propulsion waves continue through successive colon segments",
+    "推進波が結腸の各部を順に伝わる"
+  ],
+  "各段按通路先后进入收缩阶段。": [
+    "Each segment contracts in pathway order.",
+    "各部位が経路の順序に沿って収縮期に入ります。"
+  ],
+  "吸气时膈肌下降，肝脏随之向下移动；呼气时回升。": [
+    "During inhalation, the diaphragm descends and the liver moves downward with it; both rise during exhalation.",
+    "吸気時には横隔膜が下降し、肝臓もそれに伴って下がります。呼気時には上昇します。"
+  ],
+  "吸气 · 肝脏下降": [
+    "Inhalation · Liver descends",
+    "吸気・肝臓の下降"
+  ],
+  "呼气 · 肝脏回升": [
+    "Exhalation · Liver rises",
+    "呼気・肝臓の上昇"
+  ],
+  "肝脏和各分段保持整体关系。": [
+    "The liver and its segments remain a unified structure.",
+    "肝臓と各区域の一体的な関係を保ちます。"
+  ],
+  "肾脏和肾盂随呼吸轻度下降，输尿管上端跟随，下端保持稳定。": [
+    "The kidneys and renal pelves descend slightly with breathing. The upper ureters follow, while the lower ends remain stable.",
+    "腎臓と腎盂が呼吸に伴って軽く下降します。尿管上端はそれに追従し、下端は安定したままです。"
+  ],
+  "吸气 · 肾与肾盂下降": [
+    "Inhalation · Kidneys and renal pelves descend",
+    "吸気・腎臓と腎盂の下降"
+  ],
+  "呼气 · 上尿路回位": [
+    "Exhalation · Upper urinary tract returns",
+    "呼気・上部尿路が元に戻る"
+  ],
+  "输尿管由上向下平滑过渡到固定端。": [
+    "Ureteral movement tapers smoothly from the upper region to the fixed lower end.",
+    "尿管の動きは上方から下方の固定端に向かって滑らかに小さくなります。"
+  ],
+  "收缩先在肾盂出现，再沿输尿管向膀胱方向推进。": [
+    "Contraction begins in the renal pelvis, then travels down the ureter toward the bladder.",
+    "収縮はまず腎盂で生じ、その後、尿管に沿って膀胱へ進みます。"
+  ],
+  "肾盂收缩": [
+    "Renal pelvis contracts",
+    "腎盂の収縮"
+  ],
+  "收缩波向膀胱下传": [
+    "Contraction wave descends toward the bladder",
+    "収縮波が膀胱へ下降する"
+  ],
+  "观察上尿路的接续运动。": [
+    "Observe successive movements of the upper urinary tract.",
+    "上部尿路の連続する動きを観察します。"
+  ],
+  "第一组肌群收缩": [
+    "First muscle group contracts",
+    "最初の筋群の収縮"
+  ],
+  "拮抗肌群接续活动": [
+    "Antagonistic muscles follow",
+    "拮抗筋群が続いて活動する"
+  ],
+  "肌腹形变逐渐减小到附着端。": [
+    "Muscle belly deformation tapers toward the attachments.",
+    "筋腹の変形は付着端に向かって徐々に小さくなります。"
+  ],
+  "肱二头肌和肱三头肌以错开的收缩时序展示屈伸配合。": [
+    "The biceps and triceps brachii contract at different times to demonstrate coordinated flexion and extension.",
+    "上腕二頭筋と上腕三頭筋の収縮時期をずらし、屈曲と伸展の協調を示します。"
+  ],
+  "屈指肌与伸指肌交替活动，观察前臂肌腹的形态变化。": [
+    "Finger flexors and extensors alternate; observe changes in the forearm muscle bellies.",
+    "指の屈筋と伸筋が交互に活動します。前腕の筋腹の形の変化を観察します。"
+  ],
+  "小腿前侧与后侧肌群交替收缩。": [
+    "Anterior and posterior lower-leg muscles contract alternately.",
+    "下腿前面と後面の筋群が交互に収縮します。"
+  ],
+  "股前和股后肌群以不同相位收缩。": [
+    "Anterior and posterior thigh muscles contract at different phases.",
+    "大腿前面と後面の筋群が異なる位相で収縮します。"
+  ],
+  "后环杓肌与侧环杓肌、杓横肌交替活动，参与声门开合。": [
+    "The posterior cricoarytenoid alternates with the lateral cricoarytenoid and transverse arytenoid muscles in opening and closing the glottis.",
+    "後輪状披裂筋が外側輪状披裂筋・横披裂筋と交互に活動し、声門の開閉に関与します。"
+  ],
+  "一侧内直肌与对侧外直肌一起活动，双眼向同一方向注视。": [
+    "The medial rectus on one side and the lateral rectus on the other work together so both eyes look in the same direction.",
+    "一側の内側直筋と反対側の外側直筋が一緒に活動し、両眼が同じ方向を向きます。"
+  ],
+  "颧大肌与颧小肌收缩，参与提起口角和上唇。": [
+    "The zygomaticus major and minor contract to help elevate the mouth corner and upper lip.",
+    "大頬骨筋と小頬骨筋が収縮し、口角と上唇の挙上に関与します。"
+  ],
+  "口轮匝肌节律收缩，观察口周肌群的形态。": [
+    "The orbicularis oris contracts rhythmically, allowing observation of the shape of the muscles around the mouth.",
+    "口輪筋が律動的に収縮し、口の周囲の筋群の形を観察できます。"
+  ],
+  "颊肌参与口腔推进": [
+    "Buccinator contributes to oral propulsion",
+    "口腔内の推進に関与する頬筋"
+  ],
+  "颊肌收缩，帮助把食物保持在牙列之间。": [
+    "The buccinator contracts to help keep food between the teeth.",
+    "頬筋が収縮し、食物を歯列の間に保つのを助けます。"
+  ],
+  "肌腹收缩": [
+    "Muscle belly contracts",
+    "筋腹の収縮"
+  ],
+  "平滑放松": [
+    "Smooth relaxation",
+    "滑らかな弛緩"
+  ],
+  "髋部前屈、膝部屈曲和踝部背屈同步进行，远端继承近端动作。": [
+    "Hip flexion, knee flexion and ankle dorsiflexion occur together, with distal segments inheriting proximal movement.",
+    "股関節の屈曲、膝関節の屈曲、足関節の背屈が同時に起こり、遠位部が近位部の動きを引き継ぎます。"
+  ],
+  "髋膝屈曲 · 踝背屈": [
+    "Hip and knee flexion · Ankle dorsiflexion",
+    "股関節・膝関節の屈曲・足関節の背屈"
+  ],
+  "三关节协同伸展": [
+    "Coordinated extension of three joints",
+    "3関節の協調した伸展"
+  ],
+  "逐级传递骨链姿态。": [
+    "Bone-chain postures are passed from one segment to the next.",
+    "骨の連なりに沿って姿勢を順に伝えます。"
+  ],
+  "双侧髋、膝、踝交替屈伸，表现连续的循环动作。": [
+    "The hips, knees and ankles flex and extend alternately on both sides, showing a continuous cyclic movement.",
+    "左右の股関節、膝関節、足関節が交互に屈伸し、連続した周期運動を示します。"
+  ],
+  "双侧交替屈伸": [
+    "Alternating flexion and extension on both sides",
+    "左右交互の屈伸"
+  ],
+  "比较髋、膝、踝的相位关系。": [
+    "Compare the phase relationships of the hips, knees and ankles.",
+    "股関節、膝関節、足関節の位相関係を比較します。"
+  ],
+  "下肢围绕髋部和股骨长轴旋转，小腿与足一起跟随。": [
+    "The lower limb rotates around the hip and femoral long axis, with the lower leg and foot following together.",
+    "下肢が股関節と大腿骨長軸を中心に回旋し、下腿と足も一緒に動きます。"
+  ],
+  "比较髌骨和足尖的朝向。": [
+    "Compare the directions of the patella and toes.",
+    "膝蓋骨とつま先の向きを比較します。"
+  ],
+  "足部围绕后足区域轻度内翻与外翻，比较足底朝向。": [
+    "The foot inverts and everts slightly around the hindfoot; compare the direction of the sole.",
+    "後足部を中心に足が軽く内反・外反します。足底の向きを比較します。"
+  ],
+  "足底向内转": [
+    "Sole turns inward",
+    "足底が内側を向く"
+  ],
+  "足底向外转": [
+    "Sole turns outward",
+    "足底が外側を向く"
+  ],
+  "距骨保持为后足参照。": [
+    "The talus remains a hindfoot reference.",
+    "距骨を後足部の基準として保ちます。"
+  ],
+  "肩部先抬起，肘部接续屈伸，腕部轻度调整，最后一起回位。": [
+    "The shoulder lifts first, followed by elbow flexion and extension and slight wrist adjustment; all then return together.",
+    "まず肩を挙げ、続いて肘を屈伸し、手関節を軽く調整した後、全体が一緒に元に戻ります。"
+  ],
+  "抬臂 · 肘腕接续": [
+    "Arm lifts · Elbow and wrist follow",
+    "腕の挙上・肘と手関節が続く"
+  ],
+  "上肢平滑回位": [
+    "Upper limb returns smoothly",
+    "上肢が滑らかに元に戻る"
+  ],
+  "观察肩、肘、腕的连续骨链。": [
+    "Observe the continuous bone chain of the shoulder, elbow and wrist.",
+    "肩、肘、手関節の連続した骨の連なりを観察します。"
+  ],
+  "掌屈背伸与桡尺偏平滑组合，手部保持整体运动。": [
+    "Palmar flexion, dorsiflexion, and radial and ulnar deviation blend smoothly while the hand moves as a whole.",
+    "掌屈・背屈と橈屈・尺屈を滑らかに組み合わせ、手全体が一体となって動きます。"
+  ],
+  "屈伸与侧偏组合": [
+    "Combined flexion, extension and side deviation",
+    "屈伸と側方偏位の組み合わせ"
+  ],
+  "前臂保持稳定。": [
+    "The forearm stays stable.",
+    "前腕は安定したままです。"
+  ],
+  "光照变化后，瞳孔较快缩小，再逐渐恢复，观察不同阶段的速度。": [
+    "Following a change in light, the pupil constricts relatively quickly and then gradually recovers; compare the speeds of the different phases.",
+    "光の変化の後、瞳孔は比較的速く縮小し、その後徐々に回復します。各段階の速度の違いを観察します。"
+  ],
+  "快速缩瞳": [
+    "Rapid pupil constriction",
+    "速い縮瞳"
+  ],
+  "瞳孔缓慢恢复": [
+    "Slow pupil recovery",
+    "瞳孔の緩やかな回復"
+  ],
+  "虹膜外周保持稳定。": [
+    "The outer iris remains stable.",
+    "虹彩の外周は安定したままです。"
+  ],
+  "双眼在一行内多次短暂停留，然后快速回扫到起始方向。": [
+    "Both eyes make several brief fixations along a line, then rapidly sweep back to the starting direction.",
+    "両眼が1行の中で何度か短く注視し、その後、開始方向へ素早く戻ります。"
+  ],
+  "短扫视 · 注视停留": [
+    "Short saccades · Fixation pauses",
+    "短いサッカード・注視の停止"
+  ],
+  "回扫": [
+    "Return sweep",
+    "戻りのサッカード"
+  ],
+  "两眼保持同步转动。": [
+    "Both eyes rotate synchronously.",
+    "両眼は同期して回転します。"
+  ],
+  "咽鼓管短暂开放，帮助平衡鼓室与外界气压，随后回到静息形态。": [
+    "The auditory tubes briefly open to help equalize pressure between the middle ear and the outside, then return to their resting shape.",
+    "耳管が短時間開き、鼓室と外界の気圧を等しくするのを助けた後、安静時の形に戻ります。"
+  ],
+  "短暂开放": [
+    "Brief opening",
+    "一時的な開放"
+  ],
+  "恢复静息形态": [
+    "Returning to resting shape",
+    "安静時の形に戻る"
+  ],
+  "观察左右咽鼓管。": [
+    "Observe the left and right auditory tubes.",
+    "左右の耳管を観察します。"
+  ],
+  "信号传播": [
+    "Signal propagation",
+    "信号の伝播"
+  ],
+  "后根传入": [
+    "Input through the posterior root",
+    "後根からの入力"
+  ],
+  "后角处理": [
+    "Processing in the posterior horn",
+    "後角での処理"
+  ],
+  "前角与前根传出": [
+    "Output through the anterior horn and anterior root",
+    "前角と前根を介した出力"
+  ],
+  "感觉信息进入脊髓，经过局部处理，再由运动通路传出。": [
+    "Sensory information enters the spinal cord, is processed locally and then exits through motor pathways.",
+    "感覚情報が脊髄に入り、局所で処理された後、運動経路を通って出力されます。"
+  ],
+  "视神经": [
+    "Optic nerve",
+    "視神経"
+  ],
+  "视交叉": [
+    "Optic chiasm",
+    "視交叉"
+  ],
+  "视束": [
+    "Optic tract",
+    "視索"
+  ],
+  "沿视神经、视交叉和视束观察视觉信号的传递顺序。": [
+    "Follow the optic nerve, optic chiasm and optic tract to observe the sequence of visual signal transmission.",
+    "視神経、視交叉、視索をたどり、視覚信号が伝わる順序を観察します。"
+  ],
+  "皮质脊髓束下行": [
+    "Descending corticospinal tract",
+    "皮質脊髄路の下行"
+  ],
+  "脊髓前角": [
+    "Spinal anterior horn",
+    "脊髄前角"
+  ],
+  "前根传出": [
+    "Output through the anterior root",
+    "前根からの出力"
+  ],
+  "运动信号沿下行通路到达脊髓，并由前根传出。": [
+    "Motor signals reach the spinal cord through descending pathways and exit through the anterior roots.",
+    "運動信号は下行路を通って脊髄に達し、前根から出力されます。"
+  ],
+  "垂体信号释放": [
+    "Pituitary signal release",
+    "下垂体からの信号放出"
+  ],
+  "甲状腺响应": [
+    "Thyroid response",
+    "甲状腺の応答"
+  ],
+  "反馈调节": [
+    "Feedback regulation",
+    "フィードバック調節"
+  ],
+  "垂体信号促进甲状腺活动，甲状腺激素参与反馈调节。": [
+    "Pituitary signals stimulate thyroid activity, and thyroid hormones participate in feedback regulation.",
+    "下垂体の信号が甲状腺の活動を促し、甲状腺ホルモンがフィードバック調節に関与します。"
+  ],
+  "腺垂体释放信号": [
+    "Anterior pituitary releases signals",
+    "腺下垂体からの信号放出"
+  ],
+  "肾上腺响应": [
+    "Adrenal response",
+    "副腎の応答"
+  ],
+  "观察垂体、肾上腺及反馈调节的先后关系。": [
+    "Observe the sequence of pituitary signaling, adrenal response and feedback regulation.",
+    "下垂体、副腎、フィードバック調節の順序関係を観察します。"
+  ],
+  "脾参与血液过滤及免疫监视，细胞在局部持续活动。": [
+    "The spleen contributes to blood filtration and immune surveillance, with continuous local cell activity.",
+    "脾臓は血液のろ過と免疫監視に関与し、局所では細胞が持続的に活動しています。"
+  ],
+  "扁桃体位于口咽部，参与识别进入的抗原。": [
+    "The tonsils are located in the oropharynx and help recognize incoming antigens.",
+    "扁桃は口腔咽頭部にあり、侵入する抗原の認識に関与します。"
+  ],
+  "局部免疫细胞活动": [
+    "Local immune-cell activity",
+    "局所の免疫細胞活動"
+  ],
+  "细胞活动": [
+    "Cell activity",
+    "細胞の活動"
+  ],
+  "输精管的收缩波先行，精囊活动与射精管输送随后接续。": [
+    "Contraction waves in the ductus deferens occur first, followed by seminal vesicle activity and transport through the ejaculatory duct.",
+    "精管の収縮波が先行し、続いて精嚢の活動と射精管による輸送が起こります。"
+  ],
+  "输精管推进": [
+    "Ductus deferens propulsion",
+    "精管による推進"
+  ],
+  "精囊与射精管接续": [
+    "Seminal vesicles and ejaculatory ducts follow",
+    "精嚢と射精管が続いて活動する"
+  ],
+  "各段以不同相位参与运输。": [
+    "Each segment contributes to transport at a different phase.",
+    "各部位が異なる位相で輸送に関与します。"
+  ],
+  "吸气时腹部向前轻度隆起，呼气时回落，胸部的变化较小。": [
+    "The abdomen bulges slightly forward during inhalation and falls back during exhalation, with smaller changes in the chest.",
+    "吸気時に腹部が前方へ軽く膨らみ、呼気時に戻ります。胸部の変化は比較的小さくなります。"
+  ],
+  "吸气 · 腹壁隆起": [
+    "Inhalation · Abdominal wall rises",
+    "吸気・腹壁の膨隆"
+  ],
+  "呼气 · 腹壁回落": [
+    "Exhalation · Abdominal wall falls back",
+    "呼気・腹壁が元に戻る"
+  ],
+  "头部和四肢保持稳定。": [
+    "The head and limbs remain stable.",
+    "頭部と四肢は安定したままです。"
+  ],
+  "静脉": [
+    "Veins",
+    "静脈"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Deutsche Übersetzung von en/teeth.json. Typische Lehrbuchwerte; die individuelle Anatomie variiert."
+  },
+  "tooth:central-incisor:maxillary": {
+    "summary": "Der auffälligste Zahn beim Lächeln. Ein einwurzeliger Schneidezahn mit breiter, flacher Labialfläche und gerader Schneidekante zum Abbeißen der Nahrung.",
+    "function": "Abbeißen und Zerschneiden der Nahrung; stützt die Oberlippe, trägt zur Aussprache (labiodentale und dentale Laute) und zum Erscheinungsbild des Gesichts bei.",
+    "clinical": "Wegen seiner exponierten Lage häufig von Zahnunfällen betroffen. Frisch durchgebrochene Schneidezähne können Mamelons (kleine abgerundete Höcker) an der Schneidekante zeigen.",
+    "roots": "Meist eine konische Wurzel",
+    "canals": "Meist ein Kanal",
+    "eruption": "Etwa 7–8 Jahre"
+  },
+  "tooth:lateral-incisor:maxillary": {
+    "summary": "Ein kleinerer Schneidezahn neben dem mittleren Schneidezahn, mit stärker abgerundeter Schneidekante und der größten Formvariabilität unter den Frontzähnen.",
+    "function": "Zerschneiden der Nahrung; trägt zum Lächeln und zur Frontzahnführung bei.",
+    "clinical": "Häufiger Ort von Entwicklungsvarianten, etwa Zapfenzähnen und angeborener Nichtanlage.",
+    "roots": "Meist eine Wurzel",
+    "canals": "Meist ein Kanal",
+    "eruption": "Etwa 8–9 Jahre"
+  },
+  "tooth:canine:maxillary": {
+    "summary": "Ein langer, einhöckeriger Zahn an der Ecke des Zahnbogens. Der obere Eckzahn hat meist die längste Wurzel des Gebisses.",
+    "function": "Festhalten und Zerreißen der Nahrung; führt den Unterkiefer bei Seitwärtsbewegungen (Eckzahnführung); stützt den Mundwinkel.",
+    "clinical": "Seine lange Wurzel verankert ihn gut; er ist häufig retiniert, meist palatinal.",
+    "roots": "Eine lange Wurzel",
+    "canals": "Meist ein Kanal",
+    "eruption": "Etwa 11–12 Jahre"
+  },
+  "tooth:first-premolar:maxillary": {
+    "summary": "Ein zweihöckeriger Prämolar (bukkal und palatinal). Er hat meist zwei Wurzeln, was ihn von den meisten anderen Prämolaren unterscheidet.",
+    "function": "Übergang vom Zerreißen zum Zermahlen; hält und zerquetscht die Nahrung.",
+    "clinical": "Wird häufig zur Platzbeschaffung in der Kieferorthopädie extrahiert. Zwei Kanäle sind typisch, daher müssen bei einer Wurzelkanalbehandlung beide aufgefunden werden.",
+    "roots": "Meist zwei (bukkal und palatinal)",
+    "canals": "Meist zwei",
+    "eruption": "Etwa 10–11 Jahre"
+  },
+  "tooth:second-premolar:maxillary": {
+    "summary": "Ein zweihöckeriger Prämolar ähnlich dem ersten Prämolaren, mit annähernd gleich großen Höckern und meist nur einer Wurzel.",
+    "function": "Zerquetschen und Zermahlen der Nahrung.",
+    "clinical": "Meist ein Kanal, bei einer beträchtlichen Minderheit jedoch zwei.",
+    "roots": "Meist eine",
+    "canals": "Einer, manchmal zwei",
+    "eruption": "Etwa 10–12 Jahre"
+  },
+  "tooth:first-molar:maxillary": {
+    "summary": "Der größte Zahn des Oberkiefers, mit vier Haupthöckern und drei Wurzeln: mesiobukkal, distobukkal und palatinal.",
+    "function": "Wichtigster Mahlzahn; bestimmt maßgeblich die Okklusionsbeziehung zwischen den Kiefern.",
+    "clinical": "Die mesiobukkale Wurzel enthält häufig einen zweiten Kanal (MB2), der bei der Wurzelkanalbehandlung leicht übersehen wird. Die Wurzeln liegen nahe am Boden der Kieferhöhle.",
+    "roots": "Drei (mesiobukkal, distobukkal, palatinal)",
+    "canals": "Drei oder vier – ein zweiter mesiobukkaler Kanal (MB2) ist häufig vorhanden",
+    "eruption": "Etwa 6–7 Jahre"
+  },
+  "tooth:second-molar:maxillary": {
+    "summary": "Ein kleinerer Molar hinter dem ersten Molaren, dessen drei Wurzeln oft enger beieinander stehen.",
+    "function": "Zermahlen der Nahrung.",
+    "clinical": "Die Wurzeln können teilweise verschmolzen sein; die Lagebeziehung zur Kieferhöhle ist klinisch bedeutsam.",
+    "roots": "Meist drei, manchmal verschmolzen",
+    "canals": "Meist drei",
+    "eruption": "Etwa 12–13 Jahre"
+  },
+  "tooth:third-molar:maxillary": {
+    "summary": "Der Weisheitszahn – der letzte Zahn des Zahnbogens, mit der variabelsten Kronen- und Wurzelform.",
+    "function": "Zermahlen der Nahrung, wenn er durchgebrochen und in Funktion ist.",
+    "clinical": "Oft retiniert oder teilretiniert; wird häufig entfernt. In Dental Scope ist dieser Zahn eine abgeleitete Näherung (siehe Herkunft).",
+    "roots": "Variabel, oft verschmolzen",
+    "canals": "Variabel",
+    "eruption": "Etwa 17–21 Jahre, falls überhaupt"
+  },
+  "tooth:central-incisor:mandibular": {
+    "summary": "Der kleinste Zahn des bleibenden Gebisses: ein schmaler, symmetrischer Schneidezahn mit einer einzigen, mesiodistal abgeflachten Wurzel.",
+    "function": "Zerschneiden der Nahrung gegen die oberen Schneidezähne.",
+    "clinical": "Obwohl meist einwurzelig, ist bei einer nennenswerten Minderheit ein zweiter (lingualer) Kanal vorhanden.",
+    "roots": "Eine, mesiodistal abgeflacht",
+    "canals": "Meist einer, manchmal zwei",
+    "eruption": "Etwa 6–7 Jahre"
+  },
+  "tooth:lateral-incisor:mandibular": {
+    "summary": "Etwas größer als der mittlere untere Schneidezahn, mit einer Krone, die entlang der Zahnbogenkrümmung leicht nach distal gedreht ist.",
+    "function": "Zerschneiden der Nahrung.",
+    "clinical": "Kann wie der mittlere Schneidezahn zwei Kanäle enthalten.",
+    "roots": "Eine",
+    "canals": "Meist einer, manchmal zwei",
+    "eruption": "Etwa 7–8 Jahre"
+  },
+  "tooth:canine:mandibular": {
+    "summary": "Der Eckpfeiler des Unterkiefers: ein langer, einhöckeriger Zahn mit langer Wurzel, schmaler als sein Gegenstück im Oberkiefer.",
+    "function": "Festhalten und Zerreißen der Nahrung; Führung bei Seitwärtsbewegungen.",
+    "clinical": "Hat gelegentlich eine gespaltene Wurzel.",
+    "roots": "Eine, gelegentlich gespalten",
+    "canals": "Meist einer",
+    "eruption": "Etwa 9–10 Jahre"
+  },
+  "tooth:first-premolar:mandibular": {
+    "summary": "Ein Prämolar mit großem bukkalem und kleinem lingualem Höcker, was ihm ein eckzahnähnliches Aussehen verleiht.",
+    "function": "Unterstützt den Eckzahn beim Zerreißen und beginnt mit dem Zerquetschen.",
+    "clinical": "Meist ein Kanal, die Kanalanatomie ist jedoch deutlich variabel.",
+    "roots": "Eine",
+    "canals": "Meist einer, manchmal zwei",
+    "eruption": "Etwa 10–12 Jahre"
+  },
+  "tooth:second-premolar:mandibular": {
+    "summary": "Ein Prämolar mit stärker ausgebildetem lingualem Anteil als der erste Prämolar, oft mit zwei lingualen Höckern.",
+    "function": "Zerquetschen und Zermahlen der Nahrung.",
+    "clinical": "Das Foramen mentale liegt häufig nahe den Wurzelspitzen der unteren Prämolaren – wichtig für Chirurgie und Anästhesie.",
+    "roots": "Eine",
+    "canals": "Meist einer",
+    "eruption": "Etwa 11–12 Jahre"
+  },
+  "tooth:first-molar:mandibular": {
+    "summary": "Der größte Zahn des Unterkiefers: fünf Höcker auf einer breiten Krone und zwei deutlich getrennte Wurzeln, mesial und distal.",
+    "function": "Wichtigster Mahlzahn des Unterkiefers.",
+    "clinical": "Gehört zu den am häufigsten restaurierten und wurzelkanalbehandelten Zähnen. Die mesiale Wurzel hat typischerweise zwei Kanäle (mesiobukkal und mesiolingual), die distale einen, manchmal zwei.",
+    "roots": "Zwei (mesial und distal)",
+    "canals": "Meist drei",
+    "eruption": "Etwa 6–7 Jahre"
+  },
+  "tooth:second-molar:mandibular": {
+    "summary": "Ein vierhöckeriger Molar mit zwei Wurzeln, die oft enger beieinander stehen als beim ersten Molaren.",
+    "function": "Zermahlen der Nahrung.",
+    "clinical": "Die Wurzeln können konvergieren oder verschmelzen; C-förmige Kanalsysteme kommen in manchen Bevölkerungsgruppen vor.",
+    "roots": "Zwei, manchmal verschmolzen",
+    "canals": "Meist drei",
+    "eruption": "Etwa 11–13 Jahre"
+  },
+  "tooth:third-molar:mandibular": {
+    "summary": "Der untere Weisheitszahn, in Form und Lage sehr variabel.",
+    "function": "Zermahlen der Nahrung, wenn er durchgebrochen und in Funktion ist.",
+    "clinical": "Häufig retiniert. Seine Wurzeln können nahe am Canalis mandibulae liegen, und der N. lingualis verläuft hier dicht an der lingualen Kortikalis. In Dental Scope ist dieser Zahn eine abgeleitete Näherung (siehe Herkunft).",
+    "roots": "Zwei, oft verschmolzen",
+    "canals": "Variabel",
+    "eruption": "Etwa 17–21 Jahre, falls überhaupt"
+  }
+}

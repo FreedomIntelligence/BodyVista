@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Versio Latina textus en/teeth.json. Valores typici librorum; anatomia singulorum hominum variat."
+  },
+  "tooth:central-incisor:maxillary": {
+    "summary": "Dens in risu maxime conspicuus: incisivus una radice praeditus, facie labiali lata et plana margineque incisali recta ad cibum secandum.",
+    "function": "Cibum mordet et secat; labium superius sustinet, ad loquelam (sonos labiodentales et dentales) et ad faciei speciem confert.",
+    "clinical": "Propter situm prominentem saepe in traumatibus dentium laeditur. Incisivi nuper erupti in margine incisali mamelones (tubercula parva rotunda) ostendere possunt.",
+    "roots": "Plerumque una radix conica",
+    "canals": "Plerumque unus canalis",
+    "eruption": "Circa annum 7–8"
+  },
+  "tooth:lateral-incisor:maxillary": {
+    "summary": "Incisivus minor iuxta incisivum medialem, ambitu incisali rotundiore et maxima formae varietate inter dentes anteriores.",
+    "function": "Cibum secat; ad risum et ad ductum anteriorem confert.",
+    "clinical": "Saepe variationes evolutionis ostendit, velut dentem lateralem conoideum aut agenesiam.",
+    "roots": "Plerumque una radix",
+    "canals": "Plerumque unus canalis",
+    "eruption": "Circa annum 8–9"
+  },
+  "tooth:canine:maxillary": {
+    "summary": "Dens longus unius cuspidis in angulo arcus. Caninus maxillaris plerumque longissimam radicem totius dentitionis habet.",
+    "function": "Cibum prehendit et lacerat; mandibulam in motibus lateralibus ducit (ductus caninus); angulum labii sustinet.",
+    "clinical": "Radice longa bene firmatur; saepe retinetur (dens impactus), plerumque palatinaliter.",
+    "roots": "Una radix longa",
+    "canals": "Plerumque unus canalis",
+    "eruption": "Circa annum 11–12"
+  },
+  "tooth:first-premolar:maxillary": {
+    "summary": "Premolaris duarum cuspidum (buccalis et palatinalis). Plerumque duas radices habet, quo a plerisque ceteris premolaribus distinguitur.",
+    "function": "Transitus a lacerando ad terendum; cibum tenet et comminuit.",
+    "clinical": "Saepe causa spatii orthodontici extrahitur. Duo canales typici sunt, itaque in curatione endodontica ambo inveniendi sunt.",
+    "roots": "Plerumque duae (buccalis et palatinalis)",
+    "canals": "Plerumque duo",
+    "eruption": "Circa annum 10–11"
+  },
+  "tooth:second-premolar:maxillary": {
+    "summary": "Premolaris duarum cuspidum primo premolari similis, cuspidibus magnitudine aequalioribus et plerumque una radice.",
+    "function": "Cibum comminuit et terit.",
+    "clinical": "Plerumque unus canalis, sed haud exigua pars duos habet.",
+    "roots": "Plerumque una",
+    "canals": "Unus, interdum duo",
+    "eruption": "Circa annum 10–12"
+  },
+  "tooth:first-molar:maxillary": {
+    "summary": "Dens maximus arcus maxillaris, quattuor cuspidibus principalibus et tribus radicibus: mesiobuccali, distobuccali et palatinali.",
+    "function": "Dens terendi praecipuus; relationem occlusalem inter maxillas magna ex parte determinat.",
+    "clinical": "Radix mesiobuccalis saepe secundum canalem (MB2) continet, qui in curatione canalium facile praetermittitur. Radices fundo sinus maxillaris proximae sunt.",
+    "roots": "Tres (mesiobuccalis, distobuccalis, palatinalis)",
+    "canals": "Tres vel quattuor: secundus canalis mesiobuccalis (MB2) saepe adest",
+    "eruption": "Circa annum 6–7"
+  },
+  "tooth:second-molar:maxillary": {
+    "summary": "Molaris minor post primum molarem, tribus radicibus saepe propius iunctis.",
+    "function": "Cibum terit.",
+    "clinical": "Radices partim coalescere possunt; relatio ad sinum maxillarem clinice magni momenti est.",
+    "roots": "Plerumque tres, interdum coalitae",
+    "canals": "Plerumque tres",
+    "eruption": "Circa annum 12–13"
+  },
+  "tooth:third-molar:maxillary": {
+    "summary": "Dens serotinus (sapientiae): ultimus dens arcus, forma coronae et radicum maxime varia.",
+    "function": "Terit, si eruptus est et functioni servit.",
+    "clinical": "Saepe retentus aut ex parte eruptus; saepe extrahitur. In Dental Scope hic dens approximatio derivata est (vide originem).",
+    "roots": "Variae, saepe coalitae",
+    "canals": "Varii",
+    "eruption": "Circa annum 17–21, si omnino erumpit"
+  },
+  "tooth:central-incisor:mandibular": {
+    "summary": "Dens minimus dentitionis permanentis: incisivus angustus et symmetricus, una radice mesiodistaliter compressa.",
+    "function": "Cibum contra incisivos maxillares secat.",
+    "clinical": "Quamquam plerumque unam radicem habet, in notabili parte secundus canalis (lingualis) adest.",
+    "roots": "Una, mesiodistaliter compressa",
+    "canals": "Plerumque unus, interdum duo",
+    "eruption": "Circa annum 6–7"
+  },
+  "tooth:lateral-incisor:mandibular": {
+    "summary": "Paulo maior quam incisivus medialis mandibularis, corona in curvatura arcus leviter distaliter torta.",
+    "function": "Cibum secat.",
+    "clinical": "Sicut incisivus medialis duos canales habere potest.",
+    "roots": "Una",
+    "canals": "Plerumque unus, interdum duo",
+    "eruption": "Circa annum 7–8"
+  },
+  "tooth:canine:mandibular": {
+    "summary": "Lapis angularis arcus mandibularis: dens longus unius cuspidis radice longa, angustior quam caninus maxillaris.",
+    "function": "Cibum prehendit et lacerat; ductus lateralis.",
+    "clinical": "Interdum radicem bifurcatam habet.",
+    "roots": "Una, interdum bifurcata",
+    "canals": "Plerumque unus",
+    "eruption": "Circa annum 9–10"
+  },
+  "tooth:first-premolar:mandibular": {
+    "summary": "Premolaris cuspide buccali magna et cuspide linguali parva, unde canino similis videtur.",
+    "function": "Caninum in lacerando adiuvat et cibum comminuere incipit.",
+    "clinical": "Plerumque unus canalis, sed anatomia canalium insigniter variat.",
+    "roots": "Una",
+    "canals": "Plerumque unus, interdum duo",
+    "eruption": "Circa annum 10–12"
+  },
+  "tooth:second-premolar:mandibular": {
+    "summary": "Premolaris parte linguali magis evoluta quam primus premolaris, saepe duabus cuspidibus lingualibus.",
+    "function": "Cibum comminuit et terit.",
+    "clinical": "Foramen mentale plerumque prope apices premolarium mandibularium iacet, quod ad chirurgiam et anaesthesiam pertinet.",
+    "roots": "Una",
+    "canals": "Plerumque unus",
+    "eruption": "Circa annum 11–12"
+  },
+  "tooth:first-molar:mandibular": {
+    "summary": "Dens maximus mandibulae: quinque cuspides in corona lata et duae radices bene separatae, mesialis et distalis.",
+    "function": "Dens terendi praecipuus arcus inferioris.",
+    "clinical": "Inter dentes saepissime restitutos et endodontice curatos. Radix mesialis plerumque duos canales (mesiobuccalem et mesiolingualem) habet, distalis unum, interdum duos.",
+    "roots": "Duae (mesialis et distalis)",
+    "canals": "Plerumque tres",
+    "eruption": "Circa annum 6–7"
+  },
+  "tooth:second-molar:mandibular": {
+    "summary": "Molaris quattuor cuspidum duabus radicibus, quae saepe propius iunctae sunt quam in primo molari.",
+    "function": "Cibum terit.",
+    "clinical": "Radices convergere aut coalescere possunt; in quibusdam populis canales formae C inveniuntur.",
+    "roots": "Duae, interdum coalitae",
+    "canals": "Plerumque tres",
+    "eruption": "Circa annum 11–13"
+  },
+  "tooth:third-molar:mandibular": {
+    "summary": "Dens serotinus mandibularis, forma situque valde varius.",
+    "function": "Terit, si eruptus est et functioni servit.",
+    "clinical": "Saepe retentus. Radices canali mandibulae proximae esse possunt, et nervus lingualis hic iuxta laminam lingualem decurrit. In Dental Scope hic dens approximatio derivata est (vide originem).",
+    "roots": "Duae, saepe coalitae",
+    "canals": "Varii",
+    "eruption": "Circa annum 17–21, si omnino erumpit"
+  }
+}

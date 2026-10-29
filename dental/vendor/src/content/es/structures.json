@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Traducción al español de en/structures.json. Resúmenes breves con fines educativos."
+  },
+  "crown": {
+    "summary": "La parte del diente cubierta de esmalte, por encima de la unión amelocementaria.",
+    "function": "Forma la superficie de trabajo del diente para cortar, desgarrar o triturar.",
+    "related": [
+      "enamel",
+      "dentin-coronal",
+      "cej"
+    ]
+  },
+  "root": {
+    "summary": "La parte del diente cubierta de cemento, alojada en el hueso alveolar y unida a él por el ligamento periodontal.",
+    "function": "Ancla el diente en el maxilar y transmite las fuerzas de la masticación al hueso.",
+    "related": [
+      "cementum",
+      "dentin-radicular",
+      "pdl",
+      "root-canals"
+    ]
+  },
+  "enamel": {
+    "summary": "La cubierta externa de la corona y el tejido más duro del cuerpo humano, formado sobre todo por cristales de hidroxiapatita.",
+    "function": "Ofrece una superficie resistente al desgaste para masticar y protege la dentina subyacente.",
+    "clinical": "El esmalte es acelular y no se regenera una vez perdido. La desmineralización por los ácidos de la placa bacteriana es la primera fase de la caries.",
+    "facts": [
+      {
+        "label": "Composición",
+        "value": "Alrededor de un 96 % de mineral en peso"
+      },
+      {
+        "label": "Formado por",
+        "value": "Ameloblastos (desaparecen tras la erupción del diente)"
+      }
+    ],
+    "related": [
+      "dentin-coronal",
+      "cej",
+      "crown"
+    ]
+  },
+  "dentin": {
+    "summary": "El tejido mineralizado que forma la mayor parte del diente, bajo el esmalte en la corona y bajo el cemento en la raíz.",
+    "function": "Sostiene el esmalte y rodea la pulpa. Los túbulos dentinarios la comunican con la pulpa, por lo que es sensible.",
+    "clinical": "La dentina expuesta puede causar sensibilidad. La dentina sigue formándose lentamente durante toda la vida (dentina secundaria) y en respuesta a irritaciones (dentina terciaria), lo que estrecha poco a poco el espacio pulpar.",
+    "facts": [
+      {
+        "label": "Composición",
+        "value": "Alrededor de un 70 % de mineral en peso"
+      },
+      {
+        "label": "Formada por",
+        "value": "Odontoblastos que revisten la pulpa"
+      }
+    ],
+    "related": [
+      "enamel",
+      "pulp-chamber",
+      "cementum"
+    ]
+  },
+  "dentin-coronal": {
+    "summary": "La dentina de la corona, situada bajo el esmalte y alrededor de la cámara pulpar.",
+    "function": "Sostiene el esmalte y protege la pulpa.",
+    "clinical": "Cuando la caries alcanza la dentina coronal se extiende lateralmente a lo largo de la unión amelodentinaria.",
+    "related": [
+      "enamel",
+      "pulp-chamber"
+    ]
+  },
+  "dentin-radicular": {
+    "summary": "La dentina de la raíz, cubierta de cemento y rodeando el conducto o los conductos radiculares.",
+    "function": "Forma la estructura de la raíz.",
+    "related": [
+      "cementum",
+      "root-canals"
+    ]
+  },
+  "cementum": {
+    "summary": "Una capa delgada de tejido mineralizado que cubre la dentina de la raíz.",
+    "function": "Ofrece inserción a las fibras del ligamento periodontal que sujetan el diente en su alvéolo.",
+    "clinical": "El cemento es más delgado cerca de la unión amelocementaria y más grueso hacia el ápice. En Dental Scope su grosor está ligeramente exagerado para que se vea.",
+    "facts": [
+      {
+        "label": "Composición",
+        "value": "Alrededor de un 45–50 % de mineral en peso"
+      }
+    ],
+    "related": [
+      "pdl",
+      "dentin-radicular"
+    ]
+  },
+  "pdl": {
+    "summary": "Una capa delgada de tejido conjuntivo fibroso entre el cemento de la raíz y el hueso alveolar.",
+    "function": "Suspende el diente en su alvéolo, amortigua las fuerzas de la masticación y aporta información sensitiva (propiocepción).",
+    "clinical": "Su anchura suele ser una fracción de milímetro. Un ensanchamiento del espacio periodontal en las radiografías puede indicar trauma oclusal o enfermedad.",
+    "related": [
+      "cementum",
+      "alveolar-bone"
+    ]
+  },
+  "pulp": {
+    "summary": "El tejido conjuntivo blando del centro del diente, con vasos sanguíneos, nervios y los odontoblastos que forman la dentina.",
+    "function": "Forma dentina, nutre el diente y transmite la sensibilidad.",
+    "clinical": "La inflamación de la pulpa (pulpitis) es una causa frecuente de dolor de muelas; la pulpitis irreversible o la necrosis pulpar se tratan normalmente con endodoncia o extracción.",
+    "related": [
+      "pulp-chamber",
+      "root-canals",
+      "apical-foramen"
+    ]
+  },
+  "pulp-chamber": {
+    "summary": "La parte de la cavidad pulpar situada en la corona y en la zona cervical del diente.",
+    "function": "Aloja la pulpa coronal; sus prolongaciones hacia las cúspides forman los cuernos pulpares.",
+    "clinical": "La cámara se reduce con la edad al depositarse dentina secundaria. Las entradas de los conductos se abren en su suelo.",
+    "related": [
+      "pulp-horn",
+      "root-canals"
+    ]
+  },
+  "pulp-horn": {
+    "summary": "Una prolongación de la cámara pulpar hacia la punta de una cúspide o el borde incisal.",
+    "clinical": "Los cuernos pulpares corren riesgo de exposición al preparar cavidades profundas, sobre todo en dientes jóvenes.",
+    "related": [
+      "pulp-chamber",
+      "enamel"
+    ]
+  },
+  "root-canals": {
+    "summary": "La parte de la cavidad pulpar que recorre la raíz o las raíces, desde las entradas de los conductos hasta el foramen apical.",
+    "function": "Lleva los nervios y los vasos de la pulpa entre el diente y los tejidos que lo rodean.",
+    "clinical": "El número y la forma de los conductos varían mucho. El tratamiento de conductos limpia, conforma y obtura este espacio. En Dental Scope los conductos siguen cada raíz modelada en su configuración más frecuente.",
+    "related": [
+      "pulp-chamber",
+      "apical-foramen"
+    ]
+  },
+  "canal": {
+    "summary": "Un único conducto radicular: el canal de tejido pulpar dentro de una raíz.",
+    "function": "Lleva los nervios y los vasos de la pulpa.",
+    "clinical": "La configuración mostrada es la más frecuente para esta raíz; existen muchas variantes.",
+    "related": [
+      "apical-foramen",
+      "pulp-chamber"
+    ]
+  },
+  "apical-foramen": {
+    "summary": "La abertura en el ápice radicular, o cerca de él, por la que entran y salen de la pulpa los nervios y los vasos.",
+    "clinical": "El foramen suele abrirse algo antes del ápice anatómico o a un lado de él; la obturación de conductos procura terminar dentro del conducto, cerca de él.",
+    "related": [
+      "root-canals",
+      "apex"
+    ]
+  },
+  "apex": {
+    "summary": "La punta de la raíz.",
+    "clinical": "Una infección que sale del conducto puede formar una lesión periapical alrededor del ápice.",
+    "related": [
+      "apical-foramen"
+    ]
+  },
+  "cej": {
+    "summary": "La unión amelocementaria: la línea donde el esmalte de la corona se encuentra con el cemento de la raíz, también llamada línea cervical.",
+    "clinical": "Punto de referencia para medir la recesión gingival y la pérdida de inserción clínica. Se curva hacia la corona en las caras proximales, sobre todo en los dientes anteriores.",
+    "related": [
+      "enamel",
+      "cementum"
+    ]
+  },
+  "maxilla": {
+    "summary": "El hueso par que forma el maxilar superior. Aloja los dientes superiores, forma la mayor parte del paladar duro y parte del suelo de la órbita y de la cavidad nasal, y contiene el seno maxilar.",
+    "function": "Sostiene la dentición superior y el tercio medio de la cara.",
+    "clinical": "Las raíces de los dientes posteriores superiores pueden estar muy cerca del suelo del seno maxilar.",
+    "related": [
+      "maxillary-alveolar-process",
+      "palatine-bone",
+      "maxillary-nerve-branches",
+      "maxillary-sinus"
+    ]
+  },
+  "maxillary-sinus": {
+    "summary": "Una cavidad llena de aire en el cuerpo del maxilar, por encima de las raíces de los premolares y molares superiores. Se abre a la cavidad nasal.",
+    "function": "Aligera el cráneo y da resonancia a la voz. Su mucosa drena hacia la nariz.",
+    "clinical": "Las raíces de los molares y premolares superiores suelen quedar justo debajo de su suelo y pueden llegar a introducirse en él. Una extracción o un implante en esta zona puede abrir el seno (comunicación orosinusal), y una infección dental puede extenderse hacia él. El seno que se muestra está modelado a partir del maxilar (ninguno de los modelos de origen lo incluye), por lo que su tamaño y su suelo son aproximados.",
+    "related": [
+      "maxilla",
+      "maxillary-alveolar-process",
+      "posterior-superior-alveolar-nerve",
+      "infraorbital-nerve"
+    ]
+  },
+  "maxillary-alveolar-process": {
+    "summary": "La cresta del maxilar que contiene los alvéolos de los dientes superiores.",
+    "function": "Sostiene y ancla los dientes mediante el ligamento periodontal.",
+    "clinical": "El hueso alveolar se remodela en respuesta a las fuerzas (base del movimiento ortodóncico) y se reabsorbe tras la pérdida de los dientes. En Dental Scope se marca como el hueso que rodea las raíces.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandible": {
+    "summary": "La mandíbula: el único hueso móvil del cráneo. Consta de un cuerpo en forma de herradura y dos ramas verticales que terminan en las apófisis condilar y coronoides.",
+    "function": "Aloja los dientes inferiores y se mueve en las articulaciones temporomandibulares para masticar, hablar y tragar.",
+    "related": [
+      "mandibular-alveolar-process",
+      "tmj",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandible-body": {
+    "summary": "El cuerpo y las ramas de la mandíbula, sin la porción alveolar que lleva los dientes ni las cabezas condilares, que se muestran por separado.",
+    "function": "Ofrece inserción a los músculos de la masticación y aloja el conducto mandibular.",
+    "related": [
+      "mandibular-alveolar-process",
+      "inferior-alveolar-nerve",
+      "masseter"
+    ]
+  },
+  "mandibular-alveolar-process": {
+    "summary": "La parte superior del cuerpo mandibular que contiene los alvéolos de los dientes inferiores.",
+    "function": "Sostiene y ancla los dientes inferiores.",
+    "clinical": "Se reabsorbe tras la pérdida de los dientes, lo que puede reducir la altura de hueso disponible por encima del conducto mandibular para los implantes.",
+    "related": [
+      "pdl",
+      "gingiva"
+    ]
+  },
+  "mandibular-condyle": {
+    "summary": "La cabeza redondeada de la apófisis condilar de la mandíbula, que se articula con el hueso temporal en la articulación temporomandibular.",
+    "function": "Rota y se desliza hacia delante al abrir la boca.",
+    "related": [
+      "articular-disc",
+      "articular-fossa",
+      "lateral-pterygoid"
+    ]
+  },
+  "mandibular-foramen": {
+    "summary": "La abertura en la cara interna de la rama mandibular por la que el nervio y los vasos alveolares inferiores entran en el conducto mandibular.",
+    "clinical": "La zona diana del bloqueo del nervio alveolar inferior. La posición es el punto donde el trayecto nervioso del atlas atraviesa la superficie ósea.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mental-foramen": {
+    "summary": "Una abertura en la cara externa de la mandíbula, normalmente cerca de los ápices de los premolares, por la que salen el nervio y los vasos mentonianos.",
+    "clinical": "Su localización es importante en la cirugía de premolares, la colocación de implantes y el bloqueo del nervio mentoniano. La posición es el punto donde el trayecto nervioso del atlas atraviesa la superficie ósea.",
+    "related": [
+      "mental-nerve",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "gingiva": {
+    "summary": "La encía: la parte de la mucosa oral que cubre las apófisis alveolares y rodea el cuello de los dientes.",
+    "function": "Protege los tejidos periodontales subyacentes y forma un sellado alrededor de cada diente.",
+    "clinical": "La inflamación de la encía (gingivitis) es reversible; puede progresar a periodontitis con pérdida de inserción y de hueso.",
+    "related": [
+      "pdl",
+      "alveolar-bone"
+    ]
+  },
+  "periodontium": {
+    "summary": "Los tejidos que sostienen los dientes: encía, ligamento periodontal, cemento y hueso alveolar.",
+    "related": [
+      "gingiva",
+      "pdl",
+      "cementum"
+    ]
+  },
+  "inferior-alveolar-nerve": {
+    "summary": "Una rama de la división mandibular del nervio trigémino (V3). Entra por el agujero mandibular y recorre el conducto mandibular por debajo de las raíces de los dientes inferiores.",
+    "function": "Sensibilidad de los dientes inferiores; da el nervio mentoniano y continúa como nervio incisivo.",
+    "clinical": "Se anestesia con el bloqueo del nervio alveolar inferior. Su proximidad a las raíces de los terceros molares y a las zonas de implantes lo convierte en una estructura clave que hay que evitar en cirugía. El trayecto sigue el atlas Z-Anatomy, ajustado a este cráneo.",
+    "related": [
+      "mandibular-foramen",
+      "mental-nerve",
+      "inferior-alveolar-artery"
+    ]
+  },
+  "mental-nerve": {
+    "summary": "La rama terminal del nervio alveolar inferior que sale por el agujero mentoniano.",
+    "function": "Sensibilidad del labio inferior, el mentón y la encía vestibular de los dientes anteriores inferiores.",
+    "clinical": "Su lesión puede causar entumecimiento del labio inferior y del mentón. El trayecto sigue el atlas Z-Anatomy, ajustado a este cráneo.",
+    "related": [
+      "mental-foramen",
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "incisive-nerve": {
+    "summary": "La continuación del nervio alveolar inferior dentro del hueso, por delante del agujero mentoniano.",
+    "function": "Sensibilidad del canino y los incisivos inferiores.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "lingual-nerve": {
+    "summary": "Una rama de la división mandibular del nervio trigémino (V3) que discurre hacia delante por dentro de la rama mandibular, junto a la cortical lingual a la altura del tercer molar, hasta el suelo de la boca y la lengua.",
+    "function": "Sensibilidad general de los dos tercios anteriores de la lengua, del suelo de la boca y de la encía lingual; también lleva fibras gustativas de la cuerda del tímpano.",
+    "clinical": "Corre riesgo en la cirugía de los terceros molares inferiores. El trayecto sigue el atlas Z-Anatomy, ajustado a este cráneo.",
+    "related": [
+      "inferior-alveolar-nerve"
+    ]
+  },
+  "mandibular-nerve-branches": {
+    "summary": "Las ramas de la división mandibular del nervio trigémino (V3) relevantes en odontología.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve"
+    ]
+  },
+  "maxillary-nerve-branches": {
+    "summary": "Las ramas de la división maxilar del nervio trigémino (V2) que inervan los dientes superiores y los tejidos que los rodean.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "infraorbital-nerve": {
+    "summary": "La continuación del nervio maxilar (V2) por el suelo de la órbita, que sale a la cara por el agujero infraorbitario.",
+    "function": "Sensibilidad del párpado inferior, el ala de la nariz y el labio superior; da los nervios alveolares superiores anteriores (y, cuando existen, medios).",
+    "clinical": "El trayecto sigue el atlas Z-Anatomy, ajustado a este cráneo.",
+    "related": [
+      "anterior-superior-alveolar-nerve",
+      "middle-superior-alveolar-nerve"
+    ]
+  },
+  "posterior-superior-alveolar-nerve": {
+    "summary": "Una rama del nervio maxilar (V2) que entra en la cara posterior del maxilar, cerca de la tuberosidad.",
+    "function": "Sensibilidad de la mayoría de los molares superiores y de su encía vestibular.",
+    "clinical": "Diana del bloqueo del nervio alveolar superior posterior. El trayecto mostrado es esquemático.",
+    "related": [
+      "maxillary-nerve-branches"
+    ]
+  },
+  "middle-superior-alveolar-nerve": {
+    "summary": "Una rama del nervio infraorbitario presente solo en una parte de la población.",
+    "function": "Cuando existe, sensibilidad de los premolares superiores y de parte del primer molar.",
+    "clinical": "El trayecto mostrado es esquemático.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "anterior-superior-alveolar-nerve": {
+    "summary": "Una rama del nervio infraorbitario que desciende por la pared anterior del maxilar.",
+    "function": "Sensibilidad de los incisivos y el canino superiores.",
+    "clinical": "El trayecto mostrado es esquemático.",
+    "related": [
+      "infraorbital-nerve"
+    ]
+  },
+  "greater-palatine-nerve": {
+    "summary": "Una rama del nervio maxilar (V2) que parte de la fosa pterigopalatina. Desciende por el conducto palatino mayor junto con la arteria palatina descendente y sale por el agujero palatino mayor, a la altura palatina de los molares superiores.",
+    "function": "Sensibilidad del paladar duro y de la encía palatina desde el canino hacia atrás; junto al canino su territorio se superpone con el del nervio nasopalatino.",
+    "clinical": "Se anestesia con un bloqueo palatino mayor junto a su agujero para intervenir en la encía palatina de premolares y molares superiores. El trayecto mostrado es esquemático.",
+    "related": [
+      "maxillary-nerve",
+      "nasopalatine-nerve",
+      "descending-palatine-artery",
+      "palatine-bone"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      },
+      {
+        "title": "StatPearls: Pterygopalatine Fossa",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK513269/"
+      }
+    ]
+  },
+  "nasopalatine-nerve": {
+    "summary": "Una rama del nervio maxilar (V2) que sale de la fosa pterigopalatina por el agujero esfenopalatino, desciende hacia delante por el tabique nasal y llega a la boca por el conducto incisivo, justo detrás de los incisivos centrales.",
+    "function": "Sensibilidad del tabique nasal y de la mucosa y la encía palatinas de los seis dientes anteriores superiores. Los nervios derecho e izquierdo se unen antes de salir por el agujero incisivo.",
+    "clinical": "Un bloqueo nasopalatino en la papila incisiva anestesia el tejido palatino de los dientes anteriores superiores de ambos lados. El trayecto mostrado es esquemático.",
+    "related": [
+      "maxillary-nerve",
+      "greater-palatine-nerve",
+      "vomer",
+      "maxilla"
+    ],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "summary": "Una rama de la arteria maxilar que acompaña al nervio alveolar inferior por el conducto mandibular.",
+    "function": "Irrigación de la mandíbula y de los dientes inferiores.",
+    "clinical": "El trayecto sigue el atlas Z-Anatomy, ajustado a este cráneo.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "inferior-alveolar-vein": {
+    "summary": "La vena que acompaña a la arteria y al nervio alveolares inferiores en el conducto mandibular.",
+    "function": "Drenaje venoso de la mandíbula y de los dientes inferiores.",
+    "clinical": "El trayecto mostrado es esquemático.",
+    "related": [
+      "inferior-alveolar-artery"
+    ]
+  },
+  "tmj": {
+    "summary": "Las articulaciones temporomandibulares unen la mandíbula a los huesos temporales. Cada una es una articulación sinovial en la que el cóndilo mandibular se articula con la fosa mandibular y la eminencia articular, separados por un disco articular.",
+    "function": "Permite movimientos de bisagra (rotación) y de deslizamiento (traslación), de modo que la boca puede abrirse ampliamente y moverse de lado a lado.",
+    "clinical": "Los trastornos temporomandibulares (TTM) pueden causar dolor, chasquidos y limitación de la apertura.",
+    "related": [
+      "articular-disc",
+      "mandibular-condyle",
+      "lateral-pterygoid"
+    ]
+  },
+  "articular-disc": {
+    "summary": "Un disco fibroso denso entre el cóndilo mandibular y el hueso temporal que divide cada articulación en un compartimento superior y otro inferior.",
+    "function": "Permite una rotación y un deslizamiento suaves y reparte la carga en la articulación.",
+    "clinical": "El desplazamiento del disco es una causa frecuente de chasquidos articulares. El disco mostrado es esquemático.",
+    "related": [
+      "mandibular-condyle",
+      "articular-fossa"
+    ]
+  },
+  "articular-fossa": {
+    "summary": "La depresión del hueso temporal (fosa mandibular o glenoidea) que recibe al cóndilo mandibular.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "masseter": {
+    "summary": "Un músculo grueso y cuadrilátero que va del arco cigomático a la cara externa del ángulo y la rama de la mandíbula.",
+    "function": "Eleva la mandíbula (cierra la boca); un potente músculo de la masticación.",
+    "related": [
+      "temporalis",
+      "medial-pterygoid"
+    ]
+  },
+  "temporalis": {
+    "summary": "Un músculo en abanico del lado del cráneo que se inserta en la apófisis coronoides de la mandíbula.",
+    "function": "Eleva la mandíbula; sus fibras posteriores la retraen.",
+    "related": [
+      "masseter"
+    ]
+  },
+  "medial-pterygoid": {
+    "summary": "Un músculo en la cara interna de la rama mandibular, como una imagen especular del masetero.",
+    "function": "Eleva la mandíbula y ayuda a llevarla hacia delante y hacia el lado.",
+    "related": [
+      "masseter",
+      "lateral-pterygoid"
+    ]
+  },
+  "lateral-pterygoid": {
+    "summary": "Un músculo de dos cabezas que va hacia delante desde el cóndilo y la cápsula articular hasta el hueso esfenoides.",
+    "function": "Protruye la mandíbula y ayuda a abrir la boca y a desplazarla hacia el lado contrario.",
+    "related": [
+      "mandibular-condyle",
+      "articular-disc"
+    ]
+  },
+  "buccinator": {
+    "summary": "El músculo de la mejilla, en la profundidad de la pared lateral de la cavidad oral.",
+    "function": "Mantiene la mejilla contra los dientes y retiene el alimento sobre las caras oclusales al masticar.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "mentalis": {
+    "summary": "Un pequeño músculo del mentón.",
+    "function": "Eleva y protruye el labio inferior y arruga la piel del mentón.",
+    "related": [
+      "orbicularis-oris"
+    ]
+  },
+  "orbicularis-oris": {
+    "summary": "El músculo en forma de esfínter que rodea la boca dentro de los labios.",
+    "function": "Cierra los labios y les da forma para hablar, comer y expresarse.",
+    "related": [
+      "buccinator",
+      "mentalis"
+    ]
+  },
+  "skull": {
+    "summary": "Los huesos del cráneo y de la cara que rodean la zona, mostrados como contexto.",
+    "related": [
+      "maxilla",
+      "mandible"
+    ]
+  },
+  "trigeminal-nerve": {
+    "summary": "El quinto par craneal. Desde el ganglio trigeminal se divide en los nervios oftálmico (V1), maxilar (V2) y mandibular (V3).",
+    "function": "El principal nervio sensitivo de la cara, los dientes y la boca; su porción mandibular también mueve los músculos de la masticación.",
+    "related": [
+      "maxillary-nerve",
+      "mandibular-nerve"
+    ]
+  },
+  "maxillary-nerve": {
+    "summary": "La segunda división del nervio trigémino (V2). Sale del cráneo por el agujero redondo, cruza la fosa pterigopalatina y continúa como nervio infraorbitario.",
+    "function": "Sensibilidad de los dientes superiores, la encía superior, el paladar, el labio superior y la mejilla.",
+    "related": [
+      "infraorbital-nerve",
+      "posterior-superior-alveolar-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "mandibular-nerve": {
+    "summary": "La tercera división del nervio trigémino (V3). Sale del cráneo por el agujero oval y se divide en un tronco anterior y otro posterior.",
+    "function": "Sensibilidad de los dientes inferiores, la lengua, el labio inferior y el mentón; inervación motora de los músculos de la masticación.",
+    "related": [
+      "inferior-alveolar-nerve",
+      "lingual-nerve",
+      "buccal-nerve",
+      "trigeminal-nerve"
+    ]
+  },
+  "buccal-nerve": {
+    "summary": "Una rama sensitiva del tronco anterior del nervio mandibular (V3) que discurre hacia delante sobre el buccinador hasta la mejilla.",
+    "function": "Sensibilidad de la mejilla y de la encía vestibular de los molares inferiores.",
+    "clinical": "Se anestesia por separado (bloqueo del nervio bucal) en los procedimientos sobre la encía vestibular de los molares inferiores.",
+    "related": [
+      "mandibular-nerve"
+    ]
+  },
+  "external-carotid-artery": {
+    "summary": "La arteria que irriga la mayor parte de la cara y los maxilares. Asciende por detrás de la rama mandibular y termina dividiéndose en las arterias maxilar y temporal superficial.",
+    "function": "Sus ramas, entre ellas las arterias facial y maxilar, llevan sangre a los dientes, los maxilares, la cara y el cuero cabelludo.",
+    "related": [
+      "maxillary-artery",
+      "facial-artery"
+    ]
+  },
+  "maxillary-artery": {
+    "summary": "Una rama terminal de la arteria carótida externa. Discurre hacia delante por detrás del cuello de la mandíbula, a través de la fosa infratemporal, hasta la fosa pterigopalatina.",
+    "function": "Da las arterias alveolar inferior, alveolar superior posterior, bucal y palatina descendente, que irrigan los dientes, los maxilares y el paladar.",
+    "related": [
+      "external-carotid-artery",
+      "inferior-alveolar-artery",
+      "posterior-superior-alveolar-artery"
+    ]
+  },
+  "posterior-superior-alveolar-artery": {
+    "summary": "Una rama de la arteria maxilar que desciende por la cara posterior del maxilar (la tuberosidad) y penetra en él por pequeños agujeros.",
+    "function": "Irrigación de los molares y premolares superiores, del seno maxilar y de la encía vestibular.",
+    "clinical": "Puede sangrar durante el bloqueo del nervio alveolar superior posterior y en la elevación de seno.",
+    "related": [
+      "maxillary-artery",
+      "posterior-superior-alveolar-nerve"
+    ]
+  },
+  "descending-palatine-artery": {
+    "summary": "Una rama de la arteria maxilar que desciende por el conducto palatino mayor y continúa hacia delante por el paladar duro como arteria palatina mayor.",
+    "function": "Irrigación del paladar duro y de la encía palatina.",
+    "clinical": "Hay que tenerla en cuenta al tomar injertos de tejido blando del paladar y al hacer incisiones palatinas.",
+    "related": [
+      "maxillary-artery"
+    ]
+  },
+  "buccal-artery": {
+    "summary": "Una pequeña rama de la arteria maxilar que acompaña al nervio bucal hasta el buccinador.",
+    "function": "Irrigación de la mejilla y de la mucosa yugal.",
+    "related": [
+      "maxillary-artery",
+      "buccal-nerve"
+    ]
+  },
+  "facial-artery": {
+    "summary": "Una rama de la arteria carótida externa que rodea el borde inferior de la mandíbula justo por delante del masetero y asciende por la cara.",
+    "function": "Irrigación de los labios, la mejilla, el mentón y el ala de la nariz.",
+    "clinical": "Su pulso se palpa donde cruza el borde inferior de la mandíbula.",
+    "related": [
+      "external-carotid-artery",
+      "facial-vein"
+    ]
+  },
+  "pterygoid-plexus": {
+    "summary": "Una red de venas alrededor del músculo pterigoideo lateral en la fosa infratemporal. Las venas de los maxilares y los dientes drenan en ella, y ella drena en la vena maxilar.",
+    "function": "Recoge la sangre de las venas alveolares inferiores, los músculos de la masticación y el paladar.",
+    "clinical": "Puede puncionarse durante el bloqueo del nervio alveolar superior posterior y causar un hematoma. La red mostrada es esquemática.",
+    "related": [
+      "maxillary-vein",
+      "inferior-alveolar-vein"
+    ]
+  },
+  "maxillary-vein": {
+    "summary": "Una vena corta que lleva la sangre del plexo pterigoideo hacia atrás, por detrás del cuello de la mandíbula, donde se une a la vena temporal superficial para formar la vena retromandibular.",
+    "function": "Drena el plexo pterigoideo.",
+    "related": [
+      "pterygoid-plexus",
+      "retromandibular-vein"
+    ]
+  },
+  "retromandibular-vein": {
+    "summary": "La vena que desciende por detrás de la rama mandibular, dentro de la glándula parótida, y se divide en una rama anterior y otra posterior. Solo se muestra la rama anterior, que se une a la vena facial.",
+    "function": "Conduce la sangre de las venas maxilar y temporal superficial a las venas facial y yugular externa.",
+    "related": [
+      "maxillary-vein",
+      "facial-vein",
+      "internal-jugular-vein"
+    ]
+  },
+  "facial-vein": {
+    "summary": "La vena principal de la cara. Desciende por detrás de la arteria facial, cruza el borde inferior de la mandíbula y se une a la rama anterior de la vena retromandibular para formar la vena facial común.",
+    "function": "Drena la cara, los labios y el mentón en la vena yugular interna.",
+    "clinical": "Comunica con las venas de la órbita, por lo que las infecciones del labio superior y la nariz pueden extenderse hacia el interior.",
+    "related": [
+      "facial-artery",
+      "internal-jugular-vein"
+    ]
+  },
+  "internal-jugular-vein": {
+    "summary": "La gran vena del lado del cuello que lleva la sangre del encéfalo, la cara y el cuello hacia el corazón. Solo se muestra su parte superior.",
+    "function": "Recibe la vena facial y, a través de ella, la mayor parte de la sangre venosa de la cara y los maxilares.",
+    "related": [
+      "facial-vein",
+      "external-carotid-artery"
+    ]
+  }
+}

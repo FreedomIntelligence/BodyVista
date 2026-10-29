@@ -1,0 +1,396 @@
+{
+  "_meta": {
+    "status": "draft",
+    "note": "Concise educational summaries. Pending review against the verification sources listed in docs/content.md."
+  },
+  "crown": {
+    "summary": "The part of the tooth covered by enamel, above the cementoenamel junction.",
+    "function": "Forms the working surface of the tooth for cutting, tearing or grinding.",
+    "related": ["enamel", "dentin-coronal", "cej"]
+  },
+  "root": {
+    "summary": "The part of the tooth covered by cementum, embedded in the alveolar bone and attached to it by the periodontal ligament.",
+    "function": "Anchors the tooth in the jaw and transmits chewing forces to the bone.",
+    "related": ["cementum", "dentin-radicular", "pdl", "root-canals"]
+  },
+  "enamel": {
+    "summary": "The outer covering of the crown and the hardest tissue in the human body, composed mostly of hydroxyapatite crystals.",
+    "function": "Provides a wear-resistant surface for chewing and protects the underlying dentin.",
+    "clinical": "Enamel is acellular and cannot regenerate once lost. Demineralisation by acids from dental plaque is the first stage of caries.",
+    "facts": [
+      { "label": "Composition", "value": "About 96% mineral by weight" },
+      { "label": "Formed by", "value": "Ameloblasts (lost after tooth eruption)" }
+    ],
+    "related": ["dentin-coronal", "cej", "crown"]
+  },
+  "dentin": {
+    "summary": "The mineralised tissue that forms the bulk of the tooth, beneath the enamel in the crown and the cementum in the root.",
+    "function": "Supports the enamel and encloses the pulp. Dentinal tubules connect it with the pulp, making it sensitive.",
+    "clinical": "Exposed dentin can cause sensitivity. Dentin continues to form slowly throughout life (secondary dentin) and in response to irritation (tertiary dentin), gradually narrowing the pulp space.",
+    "facts": [
+      { "label": "Composition", "value": "About 70% mineral by weight" },
+      { "label": "Formed by", "value": "Odontoblasts lining the pulp" }
+    ],
+    "related": ["enamel", "pulp-chamber", "cementum"]
+  },
+  "dentin-coronal": {
+    "summary": "Dentin of the crown, lying beneath the enamel and around the pulp chamber.",
+    "function": "Supports the enamel and protects the pulp.",
+    "clinical": "When caries reaches coronal dentin it spreads laterally along the dentinoenamel junction.",
+    "related": ["enamel", "pulp-chamber"]
+  },
+  "dentin-radicular": {
+    "summary": "Dentin of the root, covered by cementum and surrounding the root canal(s).",
+    "function": "Forms the structure of the root.",
+    "related": ["cementum", "root-canals"]
+  },
+  "cementum": {
+    "summary": "A thin layer of mineralised tissue covering the root dentin.",
+    "function": "Provides attachment for the fibres of the periodontal ligament that hold the tooth in its socket.",
+    "clinical": "Cementum is thinnest near the cementoenamel junction and thicker toward the apex. Its thickness is exaggerated slightly in Dental Scope so it can be seen.",
+    "facts": [
+      { "label": "Composition", "value": "About 45–50% mineral by weight" }
+    ],
+    "related": ["pdl", "dentin-radicular"]
+  },
+  "pdl": {
+    "summary": "A thin layer of fibrous connective tissue between the root cementum and the alveolar bone.",
+    "function": "Suspends the tooth in its socket, absorbs chewing forces and provides sensory (proprioceptive) feedback.",
+    "clinical": "Its width is typically a fraction of a millimetre. Widening of the ligament space on radiographs can indicate occlusal trauma or disease.",
+    "related": ["cementum", "alveolar-bone"]
+  },
+  "pulp": {
+    "summary": "The soft connective tissue at the centre of the tooth, containing blood vessels, nerves and the odontoblasts that form dentin.",
+    "function": "Forms dentin, nourishes the tooth and transmits sensation.",
+    "clinical": "Inflammation of the pulp (pulpitis) is a common cause of toothache; irreversible pulpitis or pulp necrosis is typically treated by root canal treatment or extraction.",
+    "related": ["pulp-chamber", "root-canals", "apical-foramen"]
+  },
+  "pulp-chamber": {
+    "summary": "The part of the pulp cavity inside the crown and the cervical part of the tooth.",
+    "function": "Houses the coronal pulp; extensions toward the cusps form the pulp horns.",
+    "clinical": "The chamber shrinks with age as secondary dentin is deposited. Canal orifices open from its floor.",
+    "related": ["pulp-horn", "root-canals"]
+  },
+  "pulp-horn": {
+    "summary": "An extension of the pulp chamber toward a cusp tip or incisal edge.",
+    "clinical": "Pulp horns are at risk of exposure during deep cavity preparation, especially in young teeth.",
+    "related": ["pulp-chamber", "enamel"]
+  },
+  "root-canals": {
+    "summary": "The part of the pulp cavity that runs through the root(s), from the canal orifices to the apical foramen.",
+    "function": "Carries the nerves and blood vessels of the pulp between the tooth and the surrounding tissues.",
+    "clinical": "Canal number and shape vary widely. Root canal treatment cleans, shapes and fills this space. In Dental Scope canals follow each modeled root in their most common configuration.",
+    "related": ["pulp-chamber", "apical-foramen"]
+  },
+  "canal": {
+    "summary": "A single root canal: the channel of pulp tissue within a root.",
+    "function": "Carries nerves and vessels of the pulp.",
+    "clinical": "The configuration shown here is the most common one for this root; many variations exist.",
+    "related": ["apical-foramen", "pulp-chamber"]
+  },
+  "apical-foramen": {
+    "summary": "The opening at or near the root apex through which nerves and vessels enter and leave the pulp.",
+    "clinical": "The foramen often exits slightly short of or beside the anatomical apex; root canal fillings aim to end within the canal close to it.",
+    "related": ["root-canals", "apex"]
+  },
+  "apex": {
+    "summary": "The tip of the root.",
+    "clinical": "Infection spreading out of the canal may form a periapical lesion around the apex.",
+    "related": ["apical-foramen"]
+  },
+  "cej": {
+    "summary": "The cementoenamel junction: the line where the enamel of the crown meets the cementum of the root, also called the cervical line.",
+    "clinical": "A reference point for measuring gingival recession and clinical attachment loss. It curves toward the crown on the proximal surfaces, most markedly on anterior teeth.",
+    "related": ["enamel", "cementum"]
+  },
+  "maxilla": {
+    "summary": "The paired bone forming the upper jaw. It holds the maxillary teeth, forms most of the hard palate and parts of the orbit floor and nasal cavity, and contains the maxillary sinus.",
+    "function": "Supports the upper dentition and the midface.",
+    "clinical": "The roots of the maxillary posterior teeth can lie close to the floor of the maxillary sinus.",
+    "related": ["maxillary-alveolar-process", "palatine-bone", "maxillary-nerve-branches", "maxillary-sinus"]
+  },
+  "maxillary-sinus": {
+    "summary": "An air-filled space inside the body of the maxilla, above the roots of the upper premolars and molars. It opens into the nasal cavity.",
+    "function": "Lightens the skull and adds resonance to the voice. Its mucous lining drains into the nose.",
+    "clinical": "The roots of the upper molars and premolars often lie just below its floor and can reach into it. An extraction or implant in this region can open the sinus (an oroantral communication), and a dental infection can spread into it. The sinus shown here is modelled from the maxilla (neither source model contains it), so its size and floor are approximate.",
+    "related": ["maxilla", "maxillary-alveolar-process", "posterior-superior-alveolar-nerve", "infraorbital-nerve"]
+  },
+  "maxillary-alveolar-process": {
+    "summary": "The ridge of the maxilla that contains the sockets (alveoli) of the upper teeth.",
+    "function": "Supports and anchors the teeth via the periodontal ligament.",
+    "clinical": "Alveolar bone remodels in response to forces (the basis of orthodontic movement) and resorbs after tooth loss. In Dental Scope it is marked as the bone surrounding the roots.",
+    "related": ["pdl", "gingiva"]
+  },
+  "mandible": {
+    "summary": "The lower jaw — the only movable bone of the skull. It consists of a horseshoe-shaped body and two vertical rami ending in the condylar and coronoid processes.",
+    "function": "Holds the lower teeth and moves at the temporomandibular joints for chewing, speech and swallowing.",
+    "related": ["mandibular-alveolar-process", "tmj", "inferior-alveolar-nerve"]
+  },
+  "mandible-body": {
+    "summary": "The body and rami of the mandible, excluding the tooth-bearing alveolar part and the condylar heads shown separately.",
+    "function": "Provides attachment for the muscles of mastication and houses the mandibular canal.",
+    "related": ["mandibular-alveolar-process", "inferior-alveolar-nerve", "masseter"]
+  },
+  "mandibular-alveolar-process": {
+    "summary": "The upper part of the mandibular body containing the sockets of the lower teeth.",
+    "function": "Supports and anchors the lower teeth.",
+    "clinical": "Resorbs after tooth loss, which can reduce the bone height available above the mandibular canal for implants.",
+    "related": ["pdl", "gingiva"]
+  },
+  "mandibular-condyle": {
+    "summary": "The rounded head of the condylar process of the mandible, which articulates with the temporal bone at the temporomandibular joint.",
+    "function": "Rotates and glides forward during jaw opening.",
+    "related": ["articular-disc", "articular-fossa", "lateral-pterygoid"]
+  },
+  "mandibular-foramen": {
+    "summary": "The opening on the inner surface of the mandibular ramus where the inferior alveolar nerve and vessels enter the mandibular canal.",
+    "clinical": "The target region for the inferior alveolar nerve block. The position is where the atlas nerve path crosses the bone surface.",
+    "related": ["inferior-alveolar-nerve"]
+  },
+  "mental-foramen": {
+    "summary": "An opening on the outer surface of the mandible, usually near the apices of the premolars, through which the mental nerve and vessels emerge.",
+    "clinical": "Its location is important in premolar surgery, implant placement and mental nerve blocks. The position is where the atlas nerve path crosses the bone surface.",
+    "related": ["mental-nerve", "inferior-alveolar-nerve"]
+  },
+  "gingiva": {
+    "summary": "The gums: the part of the oral mucosa that covers the alveolar processes and surrounds the necks of the teeth.",
+    "function": "Protects the underlying periodontal tissues and forms a seal around each tooth.",
+    "clinical": "Inflammation of the gingiva (gingivitis) is reversible; it can progress to periodontitis with loss of attachment and bone.",
+    "related": ["pdl", "alveolar-bone"]
+  },
+  "periodontium": {
+    "summary": "The tissues that support the teeth: gingiva, periodontal ligament, cementum and alveolar bone.",
+    "related": ["gingiva", "pdl", "cementum"]
+  },
+  "inferior-alveolar-nerve": {
+    "summary": "A branch of the mandibular division of the trigeminal nerve (V3). It enters the mandibular foramen and runs through the mandibular canal beneath the roots of the lower teeth.",
+    "function": "Sensation to the mandibular teeth; gives off the mental nerve and continues as the incisive nerve.",
+    "clinical": "Anaesthetised by the inferior alveolar nerve block. Its proximity to third molar roots and to implant sites makes it a key structure to avoid in surgery. The path follows the Z-Anatomy atlas, fitted to this skull.",
+    "related": ["mandibular-foramen", "mental-nerve", "inferior-alveolar-artery"]
+  },
+  "mental-nerve": {
+    "summary": "The terminal branch of the inferior alveolar nerve that emerges from the mental foramen.",
+    "function": "Sensation to the lower lip, chin and the labial gingiva of the anterior mandibular teeth.",
+    "clinical": "Injury can cause numbness of the lower lip and chin. The path follows the Z-Anatomy atlas, fitted to this skull.",
+    "related": ["mental-foramen", "inferior-alveolar-nerve"]
+  },
+  "incisive-nerve": {
+    "summary": "The continuation of the inferior alveolar nerve within the bone, anterior to the mental foramen.",
+    "function": "Sensation to the mandibular canine and incisors.",
+    "related": ["inferior-alveolar-nerve"]
+  },
+  "lingual-nerve": {
+    "summary": "A branch of the mandibular division of the trigeminal nerve (V3) that runs forward medial to the ramus, close to the lingual plate near the third molar, to the floor of the mouth and tongue.",
+    "function": "General sensation to the anterior two-thirds of the tongue, the floor of the mouth and the lingual gingiva; it also carries taste fibres from the chorda tympani.",
+    "clinical": "At risk during mandibular third molar surgery. The path follows the Z-Anatomy atlas, fitted to this skull.",
+    "related": ["inferior-alveolar-nerve"]
+  },
+  "mandibular-nerve-branches": {
+    "summary": "Branches of the mandibular division of the trigeminal nerve (V3) relevant to dentistry.",
+    "related": ["inferior-alveolar-nerve", "lingual-nerve"]
+  },
+  "maxillary-nerve-branches": {
+    "summary": "Branches of the maxillary division of the trigeminal nerve (V2) that supply the upper teeth and surrounding tissues.",
+    "related": ["infraorbital-nerve", "posterior-superior-alveolar-nerve"]
+  },
+  "infraorbital-nerve": {
+    "summary": "The continuation of the maxillary nerve (V2) through the floor of the orbit, emerging onto the face at the infraorbital foramen.",
+    "function": "Sensation to the lower eyelid, side of the nose and upper lip; gives rise to the anterior (and, when present, middle) superior alveolar nerves.",
+    "clinical": "The path follows the Z-Anatomy atlas, fitted to this skull.",
+    "related": ["anterior-superior-alveolar-nerve", "middle-superior-alveolar-nerve"]
+  },
+  "posterior-superior-alveolar-nerve": {
+    "summary": "A branch of the maxillary nerve (V2) that enters the back of the maxilla near the tuberosity.",
+    "function": "Sensation to most maxillary molars and their buccal gingiva.",
+    "clinical": "Target of the posterior superior alveolar nerve block. The path shown is schematic.",
+    "related": ["maxillary-nerve-branches"]
+  },
+  "middle-superior-alveolar-nerve": {
+    "summary": "A branch of the infraorbital nerve, present in only part of the population.",
+    "function": "When present, sensation to the maxillary premolars and part of the first molar.",
+    "clinical": "The path shown is schematic.",
+    "related": ["infraorbital-nerve"]
+  },
+  "anterior-superior-alveolar-nerve": {
+    "summary": "A branch of the infraorbital nerve that descends in the anterior wall of the maxilla.",
+    "function": "Sensation to the maxillary incisors and canine.",
+    "clinical": "The path shown is schematic.",
+    "related": ["infraorbital-nerve"]
+  },
+  "greater-palatine-nerve": {
+    "summary": "A branch of the maxillary nerve (V2) from the pterygopalatine fossa. It descends through the greater palatine canal with the descending palatine artery and emerges from the greater palatine foramen, palatal to the upper molars.",
+    "function": "Sensation to the hard palate and the palatal gingiva from the canine backwards; near the canine its area overlaps with that of the nasopalatine nerve.",
+    "clinical": "Anaesthetised by a greater palatine block near its foramen for work on the palatal gingiva of the upper premolars and molars. The path shown is schematic.",
+    "related": ["maxillary-nerve", "nasopalatine-nerve", "descending-palatine-artery", "palatine-bone"],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      },
+      {
+        "title": "StatPearls: Pterygopalatine Fossa",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK513269/"
+      }
+    ]
+  },
+  "nasopalatine-nerve": {
+    "summary": "A branch of the maxillary nerve (V2) that leaves the pterygopalatine fossa through the sphenopalatine foramen, runs down and forward on the nasal septum and enters the mouth through the incisive canal, just behind the central incisors.",
+    "function": "Sensation to the nasal septum and to the palatal mucosa and gingiva of the six upper front teeth. The right and left nerves join before they emerge from the incisive foramen.",
+    "clinical": "A nasopalatine block at the incisive papilla anaesthetises the palatal tissue of the upper anterior teeth on both sides. The path shown is schematic.",
+    "related": ["maxillary-nerve", "greater-palatine-nerve", "vomer", "maxilla"],
+    "sources": [
+      {
+        "title": "StatPearls: Nasopalatine Nerve",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK538422/"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "summary": "A branch of the maxillary artery that accompanies the inferior alveolar nerve through the mandibular canal.",
+    "function": "Blood supply to the mandible and mandibular teeth.",
+    "clinical": "The path follows the Z-Anatomy atlas, fitted to this skull.",
+    "related": ["inferior-alveolar-nerve", "inferior-alveolar-vein"]
+  },
+  "inferior-alveolar-vein": {
+    "summary": "The vein accompanying the inferior alveolar artery and nerve in the mandibular canal.",
+    "function": "Venous drainage of the mandible and mandibular teeth.",
+    "clinical": "The path shown is schematic.",
+    "related": ["inferior-alveolar-artery"]
+  },
+  "tmj": {
+    "summary": "The temporomandibular joints connect the mandible to the temporal bones. Each is a synovial joint in which the mandibular condyle articulates with the mandibular fossa and articular eminence, separated by an articular disc.",
+    "function": "Allows both hinge (rotation) and gliding (translation) movements, so the jaw can open widely and move side to side.",
+    "clinical": "Temporomandibular disorders (TMD) can cause pain, clicking and limited opening.",
+    "related": ["articular-disc", "mandibular-condyle", "lateral-pterygoid"]
+  },
+  "articular-disc": {
+    "summary": "A dense fibrous disc between the mandibular condyle and the temporal bone that divides each joint into upper and lower compartments.",
+    "function": "Allows smooth rotation and gliding and distributes load across the joint.",
+    "clinical": "Displacement of the disc is a common cause of joint clicking. The disc shown is schematic.",
+    "related": ["mandibular-condyle", "articular-fossa"]
+  },
+  "articular-fossa": {
+    "summary": "The depression in the temporal bone (mandibular or glenoid fossa) that receives the mandibular condyle.",
+    "related": ["mandibular-condyle", "articular-disc"]
+  },
+  "masseter": {
+    "summary": "A thick quadrilateral muscle from the zygomatic arch to the outer surface of the mandibular angle and ramus.",
+    "function": "Elevates the mandible (closes the jaw); a powerful muscle of mastication.",
+    "related": ["temporalis", "medial-pterygoid"]
+  },
+  "temporalis": {
+    "summary": "A fan-shaped muscle from the side of the skull that inserts on the coronoid process of the mandible.",
+    "function": "Elevates the mandible; its posterior fibres retract it.",
+    "related": ["masseter"]
+  },
+  "medial-pterygoid": {
+    "summary": "A muscle on the inner side of the mandibular ramus, mirroring the masseter.",
+    "function": "Elevates the mandible and helps move it forward and to the side.",
+    "related": ["masseter", "lateral-pterygoid"]
+  },
+  "lateral-pterygoid": {
+    "summary": "A two-headed muscle running forward from the condyle and joint capsule to the sphenoid bone.",
+    "function": "Protrudes the mandible and helps open the jaw and move it to the opposite side.",
+    "related": ["mandibular-condyle", "articular-disc"]
+  },
+  "buccinator": {
+    "summary": "The muscle of the cheek, deep in the lateral wall of the oral cavity.",
+    "function": "Keeps the cheek against the teeth and holds food on the occlusal surfaces during chewing.",
+    "related": ["orbicularis-oris"]
+  },
+  "mentalis": {
+    "summary": "A small muscle of the chin.",
+    "function": "Raises and protrudes the lower lip and wrinkles the skin of the chin.",
+    "related": ["orbicularis-oris"]
+  },
+  "orbicularis-oris": {
+    "summary": "The sphincter-like muscle encircling the mouth within the lips.",
+    "function": "Closes and shapes the lips for speech, eating and expression.",
+    "related": ["buccinator", "mentalis"]
+  },
+  "skull": {
+    "summary": "Surrounding cranial and facial bones shown for context.",
+    "related": ["maxilla", "mandible"]
+  },
+  "trigeminal-nerve": {
+    "summary": "The fifth cranial nerve. From the trigeminal ganglion it divides into the ophthalmic (V1), maxillary (V2) and mandibular (V3) nerves.",
+    "function": "The main sensory nerve of the face, teeth and mouth; its mandibular part also moves the muscles of mastication.",
+    "related": ["maxillary-nerve", "mandibular-nerve"]
+  },
+  "maxillary-nerve": {
+    "summary": "The second division of the trigeminal nerve (V2). It leaves the skull through the foramen rotundum, crosses the pterygopalatine fossa and continues as the infraorbital nerve.",
+    "function": "Sensation to the upper teeth, the maxillary gingiva, the palate, the upper lip and the cheek.",
+    "related": ["infraorbital-nerve", "posterior-superior-alveolar-nerve", "trigeminal-nerve"]
+  },
+  "mandibular-nerve": {
+    "summary": "The third division of the trigeminal nerve (V3). It leaves the skull through the foramen ovale and splits into an anterior and a posterior division.",
+    "function": "Sensation to the lower teeth, the tongue, the lower lip and chin; motor supply to the muscles of mastication.",
+    "related": ["inferior-alveolar-nerve", "lingual-nerve", "buccal-nerve", "trigeminal-nerve"]
+  },
+  "buccal-nerve": {
+    "summary": "A sensory branch of the anterior division of the mandibular nerve (V3) that runs forward over the buccinator to the cheek.",
+    "function": "Sensation to the cheek and the buccal gingiva of the lower molars.",
+    "clinical": "Anaesthetised separately (long buccal block) for procedures on the buccal gingiva of the lower molars.",
+    "related": ["mandibular-nerve"]
+  },
+  "external-carotid-artery": {
+    "summary": "The artery that supplies most of the face and jaws. It rises behind the ramus of the mandible and ends by dividing into the maxillary and superficial temporal arteries.",
+    "function": "Its branches, including the facial and maxillary arteries, carry blood to the teeth, jaws, face and scalp.",
+    "related": ["maxillary-artery", "facial-artery"]
+  },
+  "maxillary-artery": {
+    "summary": "A terminal branch of the external carotid artery. It runs forward behind the neck of the mandible through the infratemporal fossa into the pterygopalatine fossa.",
+    "function": "Gives off the inferior alveolar, posterior superior alveolar, buccal and descending palatine arteries, which supply the teeth, jaws and palate.",
+    "related": ["external-carotid-artery", "inferior-alveolar-artery", "posterior-superior-alveolar-artery"]
+  },
+  "posterior-superior-alveolar-artery": {
+    "summary": "A branch of the maxillary artery that descends on the back of the maxilla (the tuberosity) and enters it through small foramina.",
+    "function": "Blood supply to the upper molars and premolars, the maxillary sinus and the buccal gingiva.",
+    "clinical": "Can bleed during the posterior superior alveolar nerve block and sinus lift surgery.",
+    "related": ["maxillary-artery", "posterior-superior-alveolar-nerve"]
+  },
+  "descending-palatine-artery": {
+    "summary": "A branch of the maxillary artery that runs down the greater palatine canal and continues forward on the hard palate as the greater palatine artery.",
+    "function": "Blood supply to the hard palate and the palatal gingiva.",
+    "clinical": "Kept in mind when taking palatal soft-tissue grafts and when placing palatal incisions.",
+    "related": ["maxillary-artery"]
+  },
+  "buccal-artery": {
+    "summary": "A small branch of the maxillary artery that runs with the buccal nerve onto the buccinator.",
+    "function": "Blood supply to the cheek and the buccal mucosa.",
+    "related": ["maxillary-artery", "buccal-nerve"]
+  },
+  "facial-artery": {
+    "summary": "A branch of the external carotid artery that curves over the lower border of the mandible just in front of the masseter and runs up across the face.",
+    "function": "Blood supply to the lips, cheek, chin and the side of the nose.",
+    "clinical": "Its pulse can be felt where it crosses the lower border of the mandible.",
+    "related": ["external-carotid-artery", "facial-vein"]
+  },
+  "pterygoid-plexus": {
+    "summary": "A network of veins around the lateral pterygoid muscle in the infratemporal fossa. The veins of the jaws and teeth drain into it, and it drains into the maxillary vein.",
+    "function": "Collects blood from the inferior alveolar veins, the muscles of mastication and the palate.",
+    "clinical": "Can be punctured during a posterior superior alveolar nerve block, causing a haematoma. The network shown is schematic.",
+    "related": ["maxillary-vein", "inferior-alveolar-vein"]
+  },
+  "maxillary-vein": {
+    "summary": "A short vein that carries blood from the pterygoid plexus back behind the neck of the mandible, where it joins the superficial temporal vein to form the retromandibular vein.",
+    "function": "Drains the pterygoid plexus.",
+    "related": ["pterygoid-plexus", "retromandibular-vein"]
+  },
+  "retromandibular-vein": {
+    "summary": "The vein that runs down behind the ramus of the mandible, inside the parotid gland, and divides into an anterior and a posterior division. Only its anterior division, which joins the facial vein, is shown.",
+    "function": "Drains the maxillary and superficial temporal veins into the facial and external jugular veins.",
+    "related": ["maxillary-vein", "facial-vein", "internal-jugular-vein"]
+  },
+  "facial-vein": {
+    "summary": "The main vein of the face. It runs down behind the facial artery, crosses the lower border of the mandible and joins the anterior division of the retromandibular vein as the common facial vein.",
+    "function": "Drains the face, lips and chin into the internal jugular vein.",
+    "clinical": "It has connections to the veins of the orbit, so infections of the upper lip and nose can spread inward.",
+    "related": ["facial-artery", "internal-jugular-vein"]
+  },
+  "internal-jugular-vein": {
+    "summary": "The large vein at the side of the neck that carries blood from the brain, face and neck down to the heart. Only its upper part is shown.",
+    "function": "Receives the facial vein and, through it, most of the venous blood of the face and jaws.",
+    "related": ["facial-vein", "external-carotid-artery"]
+  }
+}

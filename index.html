@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff"><link rel="icon" type="image/svg+xml" href="./src/brand/favicon.svg"><link rel="apple-touch-icon" href="./src/brand/bodyvista.png"><title>人体解剖 · BodyVista</title></head>
+<body>
+<header class="app-header">
+ <a class="atlas-brand" href="#" aria-label="BodyVista"><img class="brand-logo" src="./src/brand/bodyvista.png" width="26" height="26" alt=""><span>Body<b>Vista</b></span></a>
+ <button id="mobile-nav-toggle" type="button" aria-label="导航菜单" aria-expanded="false" aria-controls="header-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+ <div id="header-menu"><nav class="workspace-tabs" aria-label="学习模式"><button id="anatomy-workspace" aria-selected="true">人体解剖</button><button data-nav="media" id="motion-workspace">生命律动</button><button id="micro-workspace">微观探索</button><button data-nav="quiz" id="quiz-workspace">解剖挑战</button></nav>
+ <button id="view-gallery" data-nav="views" hidden>视图库</button>
+
+ <div class="header-actions"><select id="language" aria-label="语言"><option value="zh-CN">🇨🇳 中文</option><option value="en">🇺🇸 英语</option><option value="ja">🇯🇵 日语</option></select><button id="share-site" type="button" aria-label="分享" data-icon="share"></button><button id="settings" aria-label="设置" data-icon="settings"></button><button id="github-link" type="button" aria-label="GitHub" data-url="https://github.com/FreedomIntelligence/BodyVista"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.62 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.04.76 2.1v3.09c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg></button><button id="fullscreen" aria-label="全屏" data-icon="fullscreen"></button></div>
+</div>
+</header>
+<main id="workspace">
+ <section id="canvas-area">
+ <button id="restore-knowledge" hidden aria-label="展开结构知识" aria-expanded="false"><span aria-hidden="true">‹</span><span>结构知识</span></button><button id="restore-activity" hidden aria-label="展开动态面板" aria-expanded="false"><span aria-hidden="true">‹</span><span>动态演示</span></button>
+ <div id="edit-tools" aria-label="模型工具"><button id="pan-view" title="浏览" aria-label="浏览" aria-pressed="true"><span data-icon="pan"></span>浏览</button><button id="select-tool" aria-pressed="false"><span data-icon="select"></span>选择</button><button id="dissect-tool" aria-pressed="false"><span data-icon="scalpel"></span>解剖</button>
+ <button id="multiselect-tool" aria-pressed="false"><span data-icon="multi"></span>多选</button>
+ <button id="draw-tool" aria-pressed="false"><span data-icon="pencil"></span>画图</button><button id="section-tool" aria-pressed="false"><span data-icon="section"></span>剖切</button><button id="measure-tool" aria-pressed="false"><span data-icon="measure"></span>测量</button><button id="undo" class="history-tool" disabled aria-label="撤销" title="撤销 Ctrl+Z"><span data-icon="undo"></span>撤销</button><button id="redo" class="history-tool" disabled aria-label="重做" title="重做 Ctrl+Y"><span data-icon="redo"></span>重做</button></div>
+  <div id="mode-bar" hidden><div><strong id="mode-name">自由探索</strong><span id="mode-hint">拖动旋转 · 双指缩放</span></div><button id="exit-mode" hidden>退出模式</button></div><div id="stage" aria-label="三维人体场景"></div><div id="annotation-labels"></div>
+  <div id="selection-options" hidden><label><input type="checkbox" id="auto-labels"> 悬停显示结构标签</label></div>
+  <div id="annotation-tools" hidden aria-label="画图与测量"><div id="drawing-options"><div class="drawing-modes"><button id="draw-pen" aria-pressed="true">画笔</button><button id="draw-eraser" aria-pressed="false" title="擦除整条笔画">橡皮擦</button></div><label>标注颜色<input type="color" id="draw-color" value="#de735e"></label><label for="draw-width">画笔粗细<output id="draw-width-value">3 px</output></label><input id="draw-width" type="range" min="1" max="16" value="3"></div><div id="measurement-options"><p class="subtle">测量以全身高度的百分比显示。</p></div><button id="clear-annotations" class="wide">清除当前画图和标签</button></div>
+  <div class="scene-heading" aria-live="polite"><p id="scene-eyebrow">全身解剖</p><h1 id="scene-name">全身解剖</h1><p id="scene-subtitle"></p></div>
+  <div id="loading" role="status"><span class="spinner"></span><span id="loading-text">加载中...</span></div>
+  <button id="toggle-view-navigation" aria-expanded="false" aria-label="视图工具">视图</button>
+  <div id="view-navigation" aria-label="视图导航">
+   <div id="view-gizmo" aria-label="拖动旋转视图"><svg viewBox="0 0 100 100" aria-hidden="true"><line data-axis="front" x1="50" y1="50" x2="50" y2="50" /><line data-axis="back" x1="50" y1="50" x2="50" y2="50" /><line data-axis="left" x1="50" y1="50" x2="50" y2="50" /><line data-axis="right" x1="50" y1="50" x2="50" y2="50" /><line data-axis="top" x1="50" y1="50" x2="50" y2="50" /><line data-axis="bottom" x1="50" y1="50" x2="50" y2="50" /></svg><button data-direction="front" aria-label="前面">前</button><button data-direction="back" aria-label="后面">后</button><button data-direction="left" aria-label="左侧">左</button><button data-direction="right" aria-label="右侧">右</button><button data-direction="top" aria-label="上方">上</button><button data-direction="bottom" aria-label="下方">下</button></div>
+   <div class="navigation-buttons">
+    <button id="zoom-view" title="缩放：点击或拖动" aria-label="缩放：点击或拖动" aria-expanded="false"><span data-icon="search"></span><span class="nav-label">缩放</span></button>
+    <button id="fit" title="恢复默认视角" aria-label="恢复默认视角"><span data-icon="fit"></span><span class="nav-label">复位</span></button>
+    <button id="projection-toggle" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14l3 16H2zM8 4 6 20m10-16 2 16M4 9h16M3 14h18"/></svg><span>透视</span></button><button id="capture-image" title="截图" aria-label="截图"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h4l2-3h4l2 3h4a2 2 0 0 1 2 2v11H2V8a2 2 0 0 1 2-2Z"/><circle cx="12" cy="12" r="4"/></svg><span class="nav-label">截图</span></button>
+    <output id="zoom-factor" aria-label="放大倍数" title="放大倍数">1x</output>
+    <div class="navigation-zoom" hidden><button id="zoom-in" aria-label="放大">+</button><button id="zoom-out" aria-label="缩小">−</button></div>
+   <button id="exit-fullscreen" hidden>退出全屏</button><div id="zoom-pad" class="navigation-pad" hidden><button data-zoom="zoom-in" aria-label="放大">+</button><button data-zoom="zoom-out" aria-label="缩小">−</button></div>
+   </div>
+  </div>
+  <div id="scene-actions"><div id="playback-bar" hidden><button id="quick-play">暂停</button><button id="open-playback">播放设置</button><button id="return-body">返回人体</button></div><div id="selection-tray" hidden><span id="selection-count"></span><button id="isolate-selected">单独查看</button><button id="hide-selected">隐藏</button><button id="fade-selected">半透明</button><button id="clear-selected">取消</button></div>
+  <div id="slice-bar" hidden aria-label="剖切">
+   <div class="slice-header"><span class="slice-title"><span data-icon="section"></span>剖切</span><button id="close-section" aria-label="退出剖切" title="退出剖切">×</button></div>
+   <select id="axis" aria-label="剖切方向"><option value="z">横断面</option><option value="x">矢状面</option><option value="y">冠状面</option></select>
+   <div class="slice-control"><div class="slice-label"><label for="section">剖切位置</label><output id="section-value" for="section">0%</output></div><input id="section" type="range" min="0" max="100" value="0" aria-label="剖切位置"></div>
+   <div class="slice-control"><div class="slice-label"><label for="explode">部件展开</label><output id="explode-value" for="explode">0%</output></div><input id="explode" type="range" min="0" max="100" value="0" aria-label="部件展开"></div>
+  </div></div>
+ </section>
+ <aside id="sidebar" aria-label="人体系统">
+  <div class="sidebar-head">人体系统<button data-command="toggle-sidebar" aria-label="收起系统图层">‹</button></div><button class="sidebar-search" data-command="open-search"><span data-icon="search"></span>查找与浏览</button>
+  <div class="body-presets"><label class="region-label"><span class="sr-only">观察区域</span><select id="region" aria-label="观察区域"><option value="all">全身</option><option value="head">头部</option><option value="neck">颈部</option><option value="thorax">胸部</option><option value="abdomen">腹部</option><option value="pelvis">盆部</option><option value="upper">上肢</option><option value="lower">下肢</option></select></label><button id="base-view" title="骨骼与体表" aria-label="骨骼与体表" ><span data-organ="skin"></span><span>骨骼与体表</span></button><button id="organs-view" title="内部器官" aria-label="内部器官" ><span data-organ="body-organs"></span><span>内部器官</span></button><button id="all-layers" title="显示全部系统" aria-label="显示全部系统"><span data-icon="layers"></span><span>全部系统</span></button></div>
+  <div id="layers" aria-label="系统图层"></div>
+  <div class="sidebar-foot"><small id="visible-count"></small><small class="sidebar-copyright"><span>© 2026 FreedomAI</span><img class="visitor-badge" src="https://visitor-badge.laobi.icu/badge?page_id=FreedomIntelligence.BodyVista&amp;left_text=visitors" alt="访问量" height="14" decoding="async"></small></div>
+ </aside>
+ <button id="toggle-sidebar" aria-label="收起系统图层" aria-expanded="true"><span>人体系统</span><span data-icon="layers"></span></button>
+ <div class="life-launch"><button id="life-mode"><span data-icon="pulse"></span><span>生命律动</span></button><button data-nav="media" aria-label="选择动态" data-icon="chevron-right"></button></div>
+ <aside id="inspector" hidden data-panel="knowledge">
+  <div class="drawer-head"><button id="resize-panel" aria-label="展开面板" aria-expanded="false">↕</button><h2 id="drawer-title">结构知识</h2><button id="close-inspector" aria-label="关闭侧栏">×</button></div>
+  <div id="knowledge-panel"><h2 id="selected-name">选择一个结构</h2><p id="selected-english"></p><div id="structure-overview" hidden><p id="selected-system" class="knowledge-meta"></p><p id="knowledge-scope" class="knowledge-note" hidden>以下为该类别的基础知识。</p><section class="knowledge-section"><h3>概述</h3><p id="selected-summary"></p></section><section class="knowledge-section"><h3>所在区域</h3><p id="selected-region"></p></section></div><section id="knowledge-facts-section" class="knowledge-section"><h3 id="knowledge-facts-title" hidden>知识要点</h3><ul id="selected-facts"></ul></section><section id="dental-knowledge" class="knowledge-section" hidden><p id="dental-number-note" class="knowledge-note">FDI 牙位编号：第一位表示上下颌及左右侧，第二位表示从中线向后的牙位；左右以本人为准。</p><div id="dental-tissues"></div></section><section id="knowledge-related-section" class="knowledge-section" hidden><h3>相关结构</h3><p id="related-note" class="knowledge-note">同区域同系统</p><div id="selected-related"></div></section><section id="knowledge-sources-section" class="knowledge-section"><h3>参考资料</h3><div id="selected-sources"></div></section><div class="inline-actions"><button id="focus-selected">定位结构</button><button id="label-selected">添加标签</button><a id="ask-chatgpt" target="_blank" rel="noopener noreferrer">问 ChatGPT</a><a id="ask-deepseek" target="_blank" rel="noopener noreferrer">问 DeepSeek</a></div></div>
+  <div id="activity-panel" hidden>
+   <label>动态内容<select id="activity-select"></select></label>
+   <div id="vital-signs" hidden><div class="vital-item"><span data-icon="pulse"></span><b id="cardiac-phase">舒张充盈</b></div><div class="vital-item"><span data-organ="respiratory"></span><b id="breath-phase">呼气</b></div><svg id="rhythm-wave" viewBox="0 0 260 36" aria-label="心动周期节律"><path></path><circle r="3"></circle></svg></div>
+   <div id="circulation-guide" hidden><p>跟随一次循环</p><div id="circulation-stops"></div><div class="blood-legend"><span><i class="oxygenated"></i>富氧血</span><span><i class="deoxygenated"></i>低氧血</span></div></div>
+   <div class="motion-shell"><div hidden><button id="structures-tab"></button><button id="motion-tab"></button><button id="motion-launch"></button><span id="motion-count"></span></div><section id="motion-panel" hidden aria-label="动态演示控制">
+ <div class="motion-heading"><h2>器官律动</h2><button id="motion-vivid" class="motion-auto" type="button" aria-label="播放推荐联动" title="播放推荐联动">联动 ↗</button></div>
+ <label class="motion-field" for="motion-mode"><span class="sr-only">选择演示</span><select id="motion-mode"><option value="">选择动态演示…</option></select></label>
+ <div class="motion-transport"><button id="motion-play" class="primary" type="button" aria-pressed="false">▶ 播放</button><button id="motion-step" type="button" title="前进 2.5%">单步</button><button id="motion-reset" type="button">复位</button></div>
+ <div class="motion-phase-heading"><span>进度</span><output id="motion-progress">0%</output></div>
+ <input id="motion-phase" type="range" min="0" max="100" step="0.1" value="0" aria-label="演示进度">
+ <div class="motion-current"><strong id="motion-phase-label">准备开始</strong><p id="motion-phase-detail"></p></div>
+ <article class="motion-lesson"><span id="motion-kind">自主探索</span><p id="motion-description"></p><a id="motion-reference" target="_blank" rel="noopener noreferrer" hidden>了解更多 ↗</a></article>
+ <details id="motion-settings"><summary>播放设置</summary><div class="motion-settings-body">
+  <div class="motion-adjust"><label for="motion-speed">速度 <output id="motion-speed-value">1.0×</output></label><input id="motion-speed" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="播放速度"></div>
+  <div class="motion-adjust"><label for="motion-amplitude">幅度 <output id="motion-amplitude-value">100%</output></label><input id="motion-amplitude" type="range" min="0" max="100" step="1" value="100" aria-label="演示幅度"></div>
+  <label id="motion-side-label" class="motion-field" hidden for="motion-side">侧别<select id="motion-side"><option value="both">双侧</option><option value="left">左侧</option><option value="right">右侧</option></select></label>
+  <label class="motion-field" for="motion-rhythm">节律<select id="motion-rhythm"><option value="natural">自然</option><option value="calm">舒缓</option><option value="active">活跃</option><option value="slow">慢动作</option></select></label>
+  <label class="motion-context-label"><input id="motion-flow" type="checkbox" checked> 流向与信号粒子</label>
+  <div class="motion-focus-row"><label><input id="motion-focus" type="checkbox" checked> 自动定位</label><button id="motion-focus-now" type="button">定位</button></div>
+  <label class="motion-context-label"><input id="motion-context" type="checkbox" checked> 淡化周围结构</label>
+  <div id="motion-targets"></div>
+ </div></details>
+</section></div>
+   <div id="micro-controls" hidden><button id="micro-play" class="primary">❚❚ 暂停</button><label>速度<input id="micro-speed" type="range" min=".25" max="2" step=".25" value="1"></label></div>
+  </div>
+
+ </aside>
+</main>
+<button id="bug-feedback" type="button" aria-label="反馈 Bug" data-url="https://github.com/FreedomIntelligence/BodyVista/issues"><span aria-hidden="true">i</span></button>
+<footer class="tools" aria-label="主要工具"><button id="mobile-layers" aria-expanded="false"><span data-icon="layers"></span>系统</button><button id="mobile-edit" aria-expanded="false"><span data-icon="scalpel"></span>工具</button><button id="mobile-activity" hidden><span data-icon="pulse"></span>生命律动</button>
+ <button id="open-search"><span data-icon="search"></span>查找与浏览</button>
+
+</footer>
+<section id="gallery" class="overlay" hidden><div class="overlay-head"><div><p class="kicker">探索人体结构</p><h1 id="browse-title">查找与浏览</h1></div></div><label class="gallery-search"><span>⌕</span><input id="gallery-query" placeholder="按名称筛选视图…" aria-label="筛选视图"></label><nav id="browse-tabs" aria-label="查找与浏览"><button data-browse="structures" aria-selected="true">结构</button><button data-browse="views" aria-selected="false">视图</button></nav><nav class="gallery-tabs"><button data-gallery="systems" aria-selected="true">系统</button><button data-gallery="regions">区域</button><button data-gallery="lab">大体解剖实验室</button><button data-gallery="sections">横截面</button></nav>  <div id="search-panel" hidden><label class="search-box" hidden><span data-icon="search"></span><input id="structure-search" type="search" placeholder="输入结构名称…" aria-label="搜索解剖结构"></label><div id="search-filters" aria-label="按系统筛选"></div><div class="search-summary"><select id="search-system" aria-label="搜索系统"><option value="all">全部系统</option></select><p id="search-count" aria-live="polite"></p></div><div id="search-results"></div><button id="more-results" class="wide">显示更多</button></div><div id="gallery-content"></div></section>
+<section id="quiz" class="overlay" hidden><div class="overlay-head"><div><p class="kicker">在探索中学习</p><h1>解剖挑战</h1></div></div><div class="quiz-layout"><div class="quiz-card"><p class="kicker">主动回忆，让知识留得更久</p><h2 id="quiz-question">准备好认识人体了吗？</h2><p id="quiz-progress">选择练习范围，开始一次 5 题练习。</p><div id="quiz-types"><button data-quiz-kind="structure"><strong>结构识别</strong><span>观察模型，辨认人体结构</span></button><button data-quiz-kind="micro"><strong>显微解剖</strong><span>理解微观结构与功能</span></button><button data-quiz-kind="dissection"><strong>解剖寻找</strong><span>在人体中找到指定结构</span></button></div><div id="quiz-answers"></div><p id="quiz-feedback" role="status"></p><button id="quiz-next" class="primary" hidden>下一题</button><button id="quiz-locate" hidden>在人体中查看</button><div class="quiz-actions"><button id="quiz-start" hidden>重新开始</button><button id="quiz-home" hidden>结束练习</button></div></div><div class="quiz-aside"><h2>把结构与功能联系起来</h2><p>观察位置，理解关系，再用练习检验记忆。</p><div id="quiz-scores"></div></div></div></section>
+<dialog id="settings-dialog"><h2>显示设置</h2><label>背景<select id="background"><option value="light">柔白</option><option value="warm">暖灰</option><option value="dark">深色</option></select></label><div class="mobile-settings-actions"><button id="help">帮助</button><button data-command="fullscreen">全屏</button></div><div class="dialog-actions"><button data-dialog-close>完成</button></div></dialog>
+<dialog id="help-dialog"><h2>探索人体</h2><div class="help-grid"><p><b>系统图层</b>用 + / − 在隐藏、轮廓、半透明和实体之间切换。</p><p><b>结构搜索</b>搜索结构名称，点击结果添加并定位结构。</p><p><b>解剖与多选</b>解剖模式点击即隐藏；多选可同时隔离、隐藏多个结构。</p><p><b>画图与测量</b>在模型表面拖动绘制；测量模式点击两个位置。</p><p><b>生命律动</b>选择器官或关节动作，调节速度和进度，随时暂停或复位。</p><p><b>触屏操作</b>单指拖动旋转，双指缩放或平移。图层与详情可展开或收起。</p><p><b>快捷键</b>Ctrl+Z 撤销，Ctrl+Y 重做，Esc 退出当前工具。</p></div><div class="dialog-actions"><button data-dialog-close>开始探索</button></div></dialog>
+<div id="toast" role="status" hidden></div><script type="module" src="./src/main.js"></script><!-- Three.js license
+The MIT License
+
+Copyright © 2010-2024 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+--></body></html>
