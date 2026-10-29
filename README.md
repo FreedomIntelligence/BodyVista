@@ -1,4 +1,4 @@
-[中文](README.md) | [English](README.en.md)
+**English** | [中文](README.zh-CN.md)
 
 <p align="center">
   <img src="src/brand/bodyvista.png" alt="BodyVista logo" width="100" height="100">
@@ -6,7 +6,7 @@
 <h1 align="center">BodyVista</h1>
 
 <p align="center">
-  <a href="https://freedomintelligence.github.io/BodyVista/">🌐 在线访问</a>
+  <a href="https://freedomintelligence.github.io/BodyVista/">🌐 Live Demo</a>
 </p>
 
 <p align="center">
@@ -14,41 +14,48 @@
 </p>
 
 
-**从人体结构到生命活动，让解剖知识可以观察、操作和探索。**
+**From human anatomy to physiology—observe, interact with, and explore the human body.**
 
-`BodyVista` 是面向解剖与生理教学、自主学习的三维交互平台。它将 **2,900 个解剖结构、12 个人体系统、140 项动态演示入口与 6 个微观主题**整合到浏览器中，帮助学习者理解人体的空间关系、结构层次与生理功能。
+`BodyVista` is a 3D interactive platform for anatomy and physiology education and self-directed learning. It brings **2,900 anatomical structures, 12 body systems, 140 dynamic demonstration entries, and 6 microscopic topics** into the browser, helping learners understand spatial relationships, anatomical layers, and physiological functions.
 
-支持 **中文、英文、日文**，适配电脑与移动端。核心交互在浏览器本地运行，无需自建后端或数据库，可部署到 GitHub Pages。
+Available in **Chinese, English, and Japanese**, with desktop and mobile layouts. Core interactions run locally in the browser, requiring no self-hosted backend or database. The site can be deployed to GitHub Pages.
 
-## ✨ 功能
+## ✨ Features
 
-| 模块 | 功能与学习价值 |
+| Module | Features and learning value |
 | --- | --- |
-| 人体解剖 | 浏览 2,900 个结构，按系统与 7 大身体区域筛选；通过选择、逐层隐藏、多选、半透明和结构定位，观察毗邻关系与解剖层次。 |
-| 生命律动 | 提供 133 项系统动态、5 项全身联动和 2 项口腔与牙齿动态入口，连接静态解剖与功能理解；支持播放、进度及速度调节。 |
-| 微观探索 | 覆盖肺泡气体交换、肾单位、肌节收缩、神经突触、肠绒毛和血管壁 6 个主题，衔接宏观器官与微观机制。 |
-| 解剖挑战 | 通过结构识别、三维解剖寻找和微观知识问答进行练习；每轮 5 题，提供答案反馈、成绩与重新挑战入口。 |
+| Human Anatomy | Explore 2,900 structures by system and 7 major body regions. Use selection, progressive hiding, multiple selection, transparency, and structure focusing to examine neighboring structures and anatomical layers. |
+| Life in Motion | Access 133 system demonstrations, 5 whole-body demonstrations, and 2 oral and dental demonstrations to connect anatomy with function. Includes playback, progress, and speed controls. |
+| Microscopic Exploration | Explore 6 topics: alveolar gas exchange, the nephron, sarcomere contraction, neural synapses, intestinal villi, and the vessel wall, connecting organs with microscopic mechanisms. |
+| Anatomy Challenge | Practice structure identification, finding structures in 3D, and microscopic knowledge questions. Each round contains 5 questions, with answer feedback, results, and options to try again. |
 
+Additional features:
 
-本项目用于教学与学习。动态、微观及部分口腔结构包含示意性表达，不作为临床诊断或治疗决策工具。
+- **3D navigation and sectioning**: Rotate, pan, zoom, reset the view, switch between perspective and orthographic projection, and examine transverse, sagittal, and coronal sections.
+- **Drawing and measurement**: Adjustable brush size, an eraser, structure labels, and measurement tools support classroom demonstrations and independent exploration.
+- **Structure knowledge and search**: Find structures by name and view explanations, related structures, and references. Dental structures include FDI tooth numbers and tissue descriptions.
+- **AI-assisted further learning**: Open ChatGPT or DeepSeek with a prompt based on the current structure and selected language. These are external links; no API key is required in the project.
+- **Multilingual, responsive layouts**: Chinese, English, and Japanese interfaces and educational content, with desktop sidebars and collapsible mobile menus.
 
-## 🛠️ 技术栈
+This project is intended for teaching and learning. Animations, microscopic scenes, and some oral structures include schematic representations and are not intended for clinical diagnosis or treatment decisions.
 
-| 层级 | 技术 |
+## 🛠️ Technology Stack
+
+| Layer | Technology |
 | --- | --- |
-| 主站界面 | JavaScript ES Modules、HTML、CSS |
-| 三维渲染 | Three.js、WebGL、GLTFLoader |
-| 口腔模块 | TypeScript、Three.js、three-mesh-bvh；集成的上游模块使用 Zustand，并包含 React 依赖 |
-| 数据与多语言 | 本地 JSON 数据、三语词典与翻译覆盖检查 |
-| 构建 | Vite 7、npm |
-| 测试 | Node.js 内置测试运行器 |
-| 部署 | GitHub Actions、GitHub Pages |
+| Main interface | JavaScript ES Modules, HTML, CSS |
+| 3D rendering | Three.js, WebGL, GLTFLoader |
+| Oral module | TypeScript, Three.js, three-mesh-bvh; integrated upstream modules use Zustand and include React dependencies |
+| Data and localization | Local JSON data, dictionaries for three languages, and translation coverage checks |
+| Build | Vite 7, npm |
+| Testing | Node.js built-in test runner |
+| Deployment | GitHub Actions, GitHub Pages |
 
-## 🚀 如何运行
+## 🚀 Getting Started
 
-### 本地开发
+### Local Development
 
-准备 **Node.js 22.12 或更高版本**及 npm：
+Install **Node.js 22.12 or later** and npm:
 
 ```bash
 git clone https://github.com/FreedomIntelligence/BodyVista.git
@@ -57,9 +64,9 @@ npm ci
 npm run dev
 ```
 
-在浏览器中打开终端输出的本地地址。源码入口需要通过 Vite 运行，请勿直接双击 `index.html`。
+Open the local URL printed in the terminal. The source entry point must be served through Vite; do not open `index.html` directly from the filesystem.
 
-### 测试与构建
+### Testing and Building
 
 ```bash
 npm test
@@ -67,31 +74,35 @@ npm run build
 npm run preview
 ```
 
-`npm run build` 会先检查翻译及口腔模块内容覆盖，再将网站输出到 `dist/`。`npm run preview` 用于本地预览构建结果。
+`npm run build` checks translation and oral module content coverage before generating the site in `dist/`. Use `npm run preview` to preview the production build locally.
 
-模型与缩略图随仓库提供，克隆和首次加载需要一定时间。请保留 `assets/`、`thumbs/` 和 `dental/models/`。
+Models and thumbnails are included in the repository, so cloning and initial loading may take some time. Keep `assets/`, `thumbs/`, and `dental/models/` in place.
 
-### GitHub Pages 部署
+### GitHub Pages Deployment
 
-仓库使用 [GitHub Actions](.github/workflows/pages.yml) 自动部署。在仓库的 **Settings → Pages → Build and deployment** 中，将 **Source** 设置为 **GitHub Actions**。
+The repository deploys automatically through [GitHub Actions](.github/workflows/pages.yml). In **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
 
-每次推送到 `main`，工作流都会使用 Node.js 22 安装锁定依赖、运行测试和内容检查、构建网站及模型资源，然后发布 `dist/`。也可以在 **Actions → Deploy BodyVista to GitHub Pages → Run workflow** 手动部署。
+Every push to `main` installs locked dependencies with Node.js 22, runs tests and content checks, builds the website and model assets, and publishes `dist/`. You can also deploy manually from **Actions → Deploy BodyVista to GitHub Pages → Run workflow**.
 
-正式地址为 **https://freedomintelligence.github.io/BodyVista/**，路径与仓库名称的大小写一致。构建使用相对资源路径，以支持项目子目录下的主站、口腔页面和模型加载。无需额外配置部署密钥或个人访问令牌。
+The live site is **https://freedomintelligence.github.io/BodyVista/**, matching the capitalization of the repository name. Relative asset paths support the main site, dental pages, and model loading under the project subdirectory. No additional deployment keys or personal access tokens are required.
 
-## 🙏 致谢
+## 🌱 Our Vision
 
-感谢以下项目、作者与机构提供的资源和基础工作：
+We hope BodyVista can make learning about the human body more accessible, offering intuitive resources for science outreach and education in low-resource regions. We also aim to bring related research into **immersive VR and AR experiences**, enabling learners to observe, interact with, and explore human anatomy and physiology.
 
-- **Z-Anatomy、Lluís Vinent 及贡献者**：人体解剖模型与相关数据。结构来源记录见 [`catalog.json`](catalog.json) 中的 `source_attribution`。
-- **BodyParts3D / The Database Center for Life Science（DBCLS）**：人体与口腔模型的基础资源。
-- **Dental Scope、Yoseph 及贡献者**：口腔引擎、结构注册表、教学内容和模型。集成说明见 [`dental/README.md`](dental/README.md)，原始署名与修改记录见 [CREDITS](dental/vendor/CREDITS.md) 和 [模型来源文档](dental/vendor/docs/assets.md)。
-- **OpenStax《Anatomy and Physiology 2e》**：结构知识与生理主题的教学参考；具体章节链接保留在相应内容数据中。
-- **Three.js、Vite、three-mesh-bvh、Zustand、React** 及其贡献者：渲染、构建和口腔模块依赖。
+## 🙏 Acknowledgements
 
-各项第三方资源的来源及许可应分别保留，不能用 BodyVista 的项目署名替代原作者署名。
+We thank the following projects, authors, and institutions for their resources and foundational work:
 
-## 👥 贡献者
+- **Z-Anatomy, Lluís Vinent, and contributors**: Human anatomy models and related data. Per-structure provenance is recorded in the `source_attribution` fields of [`catalog.json`](catalog.json).
+- **BodyParts3D / The Database Center for Life Science (DBCLS)**: Foundational resources for human anatomy and oral models.
+- **Dental Scope, Yoseph, and contributors**: The oral engine, anatomical registry, educational content, and models. See the [integration notes](dental/README.md), original [CREDITS](dental/vendor/CREDITS.md), and [asset provenance documentation](dental/vendor/docs/assets.md) for attribution and modification records.
+- **OpenStax, Anatomy and Physiology 2e**: Educational references for anatomical knowledge and physiology topics. Links to specific chapters are retained in the relevant content data.
+- **Three.js, Vite, three-mesh-bvh, Zustand, React**, and their contributors: Rendering, build tooling, and oral module dependencies.
+
+Preserve the provenance and licenses of individual third-party resources. BodyVista attribution does not replace attribution to the original authors.
+
+## 👥 Contributors
 
 <table>
   <tr>
@@ -116,17 +127,19 @@ npm run preview
   </tr>
 </table>
 
-欢迎通过 Issue 和 Pull Request 参与。提交前请运行 `npm test` 和 `npm run build`；新增可见文本时，请同步补齐中文、英文和日文。修改解剖或生理内容时，请附上可核对的参考来源。
+Issues and pull requests are welcome. Run `npm test` and `npm run build` before submitting changes. Add Chinese, English, and Japanese translations for new visible text. Include verifiable references when changing anatomical or physiological content.
 
 ## 📄 Licence
 
-BodyVista 自有代码采用 **[MIT License](LICENSE)**。第三方代码、模型及改编教学内容不因本项目采用 MIT 而变更原有许可，详见 [第三方许可说明](THIRD_PARTY_NOTICES.md)。
+© 2026 FreedomAI
 
-第三方代码、模型与教学内容分别保留其原有许可：
+BodyVista's own code is licensed under the **[MIT License](LICENSE)**. This does not change the licenses of third-party code, models, or adapted educational content. See [Third-Party Notices](THIRD_PARTY_NOTICES.md).
 
-- **Dental Scope 代码**：MIT，见 [`dental/vendor/LICENSE`](dental/vendor/LICENSE)。该文件同时说明了模型与教学内容的单独许可。
-- **口腔模型与改编教学内容**：按 [CREDITS](dental/vendor/CREDITS.md)、[模型来源文档](dental/vendor/docs/assets.md) 和 [集成说明](dental/README.md) 中的逐项记录处理，包含 CC BY-SA 2.1 Japan 与 CC BY-SA 4.0 资源。
-- **主站人体模型**：以 `catalog.json` 中的逐结构来源记录为核对依据。当前部分记录包含 `NC exceptions; research only` 标记，相关来源与公开分发范围尚待核实，不应直接视为统一、无附加限制的授权。
-- **其他第三方库**：保留各自许可证与版权声明。
+Third-party code, models, and educational content retain their respective licenses:
 
-MIT 授权范围仅覆盖我们有权以该许可证发布的代码与文档，不包含第三方模型及另有许可的内容。
+- **Dental Scope code**: MIT; see [`dental/vendor/LICENSE`](dental/vendor/LICENSE). That file also describes the separate licensing of models and educational content.
+- **Oral models and adapted educational content**: Refer to the individual records in [CREDITS](dental/vendor/CREDITS.md), the [asset provenance documentation](dental/vendor/docs/assets.md), and the [integration notes](dental/README.md). These include resources under CC BY-SA 2.1 Japan and CC BY-SA 4.0.
+- **Main application anatomy models**: Consult the per-structure provenance records in `catalog.json`. Some records currently contain the marker `NC exceptions; research only`. Their provenance and permitted scope of public distribution remain to be verified; these records should not be treated as a uniform license without additional restrictions.
+- **Other third-party libraries**: Retain their respective licenses and copyright notices.
+
+The MIT grant covers only code and documentation that we have the right to release under that license. It excludes third-party models and separately licensed content.
