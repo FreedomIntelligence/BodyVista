@@ -77,8 +77,6 @@ npm run preview
 
 每次推送到 `main`，工作流都会使用 Node.js 22 安装锁定依赖、运行测试和内容检查、构建网站及模型资源，然后发布 `dist/`。也可以在 **Actions → Deploy BodyVista to GitHub Pages → Run workflow** 手动部署。
 
-正式地址为 **https://freedomintelligence.github.io/BodyVista/**，路径与仓库名称的大小写一致。构建使用相对资源路径，以支持项目子目录下的主站、口腔页面和模型加载。无需额外配置部署密钥或个人访问令牌。
-
 ## 🌱 期望
 
 我们希望 BodyVista 能降低人体科学知识的学习门槛，为低资源地区提供直观、易获取的科普与教学资源。同时，推动相关研究在 **VR、AR 等沉浸式场景**中落地，让人体结构与生命活动成为可观察、可交互、可探索的学习体验。
