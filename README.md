@@ -84,8 +84,6 @@ The repository deploys automatically through [GitHub Actions](.github/workflows/
 
 Every push to `main` installs locked dependencies with Node.js 22, runs tests and content checks, builds the website and model assets, and publishes `dist/`. You can also deploy manually from **Actions → Deploy BodyVista to GitHub Pages → Run workflow**.
 
-The live site is **https://freedomintelligence.github.io/BodyVista/**, matching the capitalization of the repository name. Relative asset paths support the main site, dental pages, and model loading under the project subdirectory. No additional deployment keys or personal access tokens are required.
-
 ## 🌱 Our Vision
 
 We hope BodyVista can make learning about the human body more accessible, offering intuitive resources for science outreach and education in low-resource regions. We also aim to bring related research into **immersive VR and AR experiences**, enabling learners to observe, interact with, and explore human anatomy and physiology.
