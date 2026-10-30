@@ -7,6 +7,8 @@
 
 <p align="center">
   <a href="https://freedomintelligence.github.io/BodyVista/">🌐 Live Demo</a>
+  ·
+  <a href="https://huggingface.co/spaces/FreedomIntelligence/BodyVista">🤗 Hugging Face Space</a>
 </p>
 
 <p align="center">
