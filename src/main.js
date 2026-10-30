@@ -79,13 +79,12 @@ async function loadSystem(key){
  const system=systems.get(key);if(!system)throw Error('未知系统');
  const promise=new Promise((resolve,reject)=>{
   const script=document.createElement('script'),timer=setTimeout(()=>reject(Error(system.name+'加载超时')),120000);
-  assetResolvers.set(key,{resolve:bundle=>{
-   try{
-    const bytes=Uint8Array.from(atob(bundle.glb),c=>c.charCodeAt(0));
-    loader.parse(bytes.buffer,'',gltf=>{
-     gltf.scene.traverse(m=>{
-      if(!m.isMesh)return;let p=m;while(p&&!p.userData.partId)p=p.parent;
-      const id=p?.userData.partId||m.name,part=partMap.get(id);
+  let settled=false;
+  const cleanup=()=>{clearTimeout(timer);script.remove();assetResolvers.delete(key);};
+  const parse=(buffer)=>loader.parse(buffer,'',gltf=>{
+      gltf.scene.traverse(m=>{
+       if(!m.isMesh)return;let p=m;while(p&&!p.userData.partId)p=p.parent;
+       const id=p?.userData.partId||m.name,part=partMap.get(id);
       if(!part){disposeTree(m);return;}
       if(entries.has(id)){disposeTree(m);return;}
       m.geometry.computeVertexNormals();m.geometry.computeBoundingBox();
@@ -93,14 +92,21 @@ async function loadSystem(key){
       const group=new THREE.Group();group.name=part.name;body.add(group);
       const entry={part,group,meshes:[m],caps:[],color:m.material.color.clone(),offset:V(),box:m.geometry.boundingBox.clone()};
       m.userData.entry=entry;entries.set(id,entry);
-     });
-     // Reparent after traversal so siblings are never skipped.
-     for(const entry of entries.values())if(!entry.meshes[0].parent||entry.meshes[0].parent!==entry.group&&!entry.motion)entry.group.add(...entry.meshes);
-     clearTimeout(timer);script.remove();assetResolvers.delete(key);applyVisibility();resolve(system);
-    },error=>{clearTimeout(timer);reject(error);});
-   }catch(e){clearTimeout(timer);reject(e);}
-  },reject});
-  script.src=system.file;script.onerror=()=>{clearTimeout(timer);loaded.delete(key);assetResolvers.delete(key);script.remove();reject(Error('找不到 '+system.file));};document.head.append(script);
+      });
+      // Reparent after traversal so siblings are never skipped.
+      for(const entry of entries.values())if(!entry.meshes[0].parent||entry.meshes[0].parent!==entry.group&&!entry.motion)entry.group.add(...entry.meshes);
+     if(!settled){settled=true;cleanup();applyVisibility();resolve(system);}
+    },error=>{if(!settled){settled=true;cleanup();reject(error);}});
+  const fallback=()=>{
+   if(settled)return;
+   assetResolvers.set(key,{resolve:bundle=>{
+    try{parse(Uint8Array.from(atob(bundle.glb),c=>c.charCodeAt(0)).buffer);}catch(e){settled=true;cleanup();reject(e);}
+   },reject});
+   script.src=system.file;
+   script.onerror=()=>{if(!settled){settled=true;cleanup();loaded.delete(key);reject(Error('找不到 '+system.file));}};
+   document.head.append(script);
+  };
+  fetchModelBuffer(system.file.replace(/\.js$/,'.glb')).then(parse).catch(fallback);
  });
  loaded.set(key,promise);return promise;
 }
@@ -108,27 +114,52 @@ const assetResolvers=new Map();
 window.Bio2MeshAssetReady=bundle=>assetResolvers.get(bundle.system)?.resolve(bundle);
 const detailResolvers=new Map(),detailed=new Map();
 window.Bio2MeshDetailReady=bundle=>detailResolvers.get(bundle.id)?.(bundle);
+// Bump this key when the model assets change so an old deployment cannot reuse them.
+const modelCacheName='bodyvista-models-v2';
+async function fetchModelBuffer(url){
+ const absolute=new URL(url,document.baseURI).href;
+ if('caches' in window){
+  try{
+   const cache=await caches.open(modelCacheName),cached=await cache.match(absolute);
+   if(cached)return cached.arrayBuffer();
+   const response=await fetch(absolute,{cache:'no-cache'});
+   if(!response.ok)throw Error(`模型请求失败：${response.status}`);
+   await cache.put(absolute,response.clone());
+   return response.arrayBuffer();
+  }catch{}
+ }
+ const response=await fetch(absolute);
+ if(!response.ok)throw Error(`模型请求失败：${response.status}`);
+ return response.arrayBuffer();
+}
 async function loadDetail(id){
  const part=partMap.get(id),entry=entries.get(id);
  if(!part?.detail_file||!entry||motion)return;
  if(detailed.has(id))return detailed.get(id);
  const promise=new Promise((resolve,reject)=>{
   const script=document.createElement('script'),timer=setTimeout(()=>reject(Error('结构细节载入超时')),90000);
-  detailResolvers.set(id,bundle=>{
-   try{const bytes=Uint8Array.from(atob(bundle.glb),c=>c.charCodeAt(0));
-    loader.parse(bytes.buffer,'',gltf=>{
+  let settled=false;
+  const cleanup=()=>{clearTimeout(timer);script.remove();detailResolvers.delete(id);};
+  const parse=(buffer)=>loader.parse(buffer,'',gltf=>{
      let detailMesh;gltf.scene.traverse(m=>{if(m.isMesh)detailMesh=m;});
-     if(!detailMesh){reject(Error('结构细节为空'));return;}
+     if(!detailMesh){if(!settled){settled=true;cleanup();reject(Error('结构细节为空'));}return;}
      // Clipping stencils share the previous geometry; release their materials before replacing it.
      for(const p of entry.caps){p.stencil.removeFromParent();p.stencil.children.forEach(m=>m.material.dispose());p.cap.removeFromParent();p.cap.geometry.dispose();p.cap.material.dispose();}
      entry.caps=[];entry.meshes[0].geometry.dispose();
      detailMesh.geometry.computeVertexNormals();detailMesh.geometry.computeBoundingBox();
      entry.meshes[0].geometry=detailMesh.geometry;entry.box.copy(detailMesh.geometry.boundingBox);detailMesh.material.dispose();entry.detailLoaded=true;
-     clearTimeout(timer);script.remove();detailResolvers.delete(id);updateSection();resolve();
-    },reject);
-   }catch(e){reject(e);}
-  });
-  script.src=part.detail_file;script.onerror=()=>{clearTimeout(timer);script.remove();detailResolvers.delete(id);detailed.delete(id);reject(Error('结构细节文件不可用'));};document.head.append(script);
+     if(!settled){settled=true;cleanup();updateSection();resolve();}
+    },error=>{if(!settled){settled=true;cleanup();detailed.delete(id);reject(error);}});
+  const fallback=()=>{
+   if(settled)return;
+   detailResolvers.set(id,bundle=>{
+    try{parse(Uint8Array.from(atob(bundle.glb),c=>c.charCodeAt(0)).buffer);}catch(e){settled=true;cleanup();detailed.delete(id);reject(e);}
+   });
+   script.src=part.detail_file;
+   script.onerror=()=>{if(!settled){settled=true;cleanup();detailed.delete(id);reject(Error('结构细节文件不可用'));}};
+   document.head.append(script);
+  };
+  fetchModelBuffer(part.detail_file.replace(/\.js$/,'.glb')).then(parse).catch(fallback);
  });
  detailed.set(id,promise);return promise;
 }
@@ -493,7 +524,7 @@ controls.addEventListener('start',()=>{updateCanvasCursor(false,true);hoverLabel
 controls.addEventListener('end',()=>{updateCanvasCursor();finishChange();});
 const regionNames={all:'全身',head:'头部',neck:'颈部',thorax:'胸部',abdomen:'腹部',pelvis:'盆部',upper:'上肢',lower:'下肢'};
 function thumb(key){
- const box=el('div','thumb'),img=el('img');img.alt='';img.loading='lazy';img.src='thumbs/'+key+'.png';
+ const box=el('div','thumb'),img=el('img');img.alt='';img.loading='lazy';img.decoding='async';img.fetchPriority='low';img.src='thumbs/'+key+'.png';
  img.onerror=()=>{img.remove();box.innerHTML=icon(systems.has(key)?key:'skin');};box.append(img);return box;
 }
 function card(title,subtitle,key,fn,attribute){
