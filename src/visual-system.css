@@ -114,3 +114,6 @@ body:not(.dark):not(.warm) #canvas-area { background:radial-gradient(ellipse at 
 #sidebar .sidebar-copyright { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:6px; margin:6px 0 2px; padding:0; color:var(--muted); font-size:10px; line-height:1.5; text-align:center; white-space:nowrap; }
 
 #sidebar .visitor-badge { display:block; height:14px; width:auto; max-width:100%; }
+@media (max-width:760px), (max-width:900px) and (max-height:500px) {
+  #sidebar .sidebar-copyright { display:none; }
+}
