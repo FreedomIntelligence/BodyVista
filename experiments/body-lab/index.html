@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>肌肉运动 · BodyVista</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="atlas-brand" href="http://127.0.0.1:4186/" title="返回 BodyVista 人体解剖"><b>Body</b>Vista</a>
+    <nav class="workspace-nav" aria-label="工作区">
+      <a href="http://127.0.0.1:4186/">人体解剖</a>
+      <a class="active" href="./" aria-current="page">肌肉运动</a>
+    </nav>
+    <div class="header-status"><span id="connection" class="badge">连接模型…</span><span id="workspaceStatus">动作自动保存到本机</span></div>
+    <details class="file-menu">
+      <summary>动作文件 <span aria-hidden="true">⌄</span></summary>
+      <div class="file-menu-content">
+        <button id="newSequence">新建动作</button>
+        <button id="export">导出动作</button>
+        <label class="file-button" for="import">导入动作<input type="file" id="import" accept="application/json,.json" hidden /></label>
+        <a href="../elbow-lab/">打开右臂实验</a>
+      </div>
+    </details>
+  </header>
+
+  <main class="motion-workspace" aria-label="全身动作编辑">
+    <aside class="workspace-sidebar" aria-label="动作工具">
+      <div class="sidebar-head"><h1>动作工具</h1><button id="toggleWorkspace" class="icon-button" aria-label="收起动作工具" aria-expanded="true">‹</button></div>
+      <nav class="workspace-tabs" role="tablist" aria-label="动作工具">
+        <button id="tab-pose" data-workspace-tab="pose" role="tab" aria-selected="true" aria-controls="panel-pose">关节</button>
+        <button id="tab-equipment" data-workspace-tab="equipment" role="tab" aria-selected="false" aria-controls="panel-equipment" tabindex="-1">器械与地面</button>
+        <button id="tab-motions" data-workspace-tab="motions" role="tab" aria-selected="false" aria-controls="panel-motions" tabindex="-1">动作库</button>
+      </nav>
+      <section id="panel-pose" class="workspace-panel" data-workspace-panel="pose" role="tabpanel" aria-labelledby="tab-pose">
+        <label class="search-field" for="jointSearch"><span class="sr-only">搜索关节</span><input id="jointSearch" type="search" placeholder="搜索肩、肘、膝…" autocomplete="off" /></label>
+        <label for="jointRegion">身体区域</label><select id="jointRegion"></select>
+        <p id="jointListHint" class="hint">正在读取可编辑关节…</p>
+        <div id="jointList" class="joint-list" aria-label="可编辑关节"><p class="hint">模型载入后可在这里选择关节。</p></div>
+        <div class="pose-actions">
+          <p id="draftState" class="hint help-copy">先摆出姿势，再记录关键帧。</p>
+          <div class="two-actions"><button id="replace" disabled>替换选中帧</button><button id="resetPose" disabled>回到站姿</button></div>
+        </div>
+        <details class="help-details"><summary>操作说明与姿势约束</summary><ol class="workflow-steps"><li>点选关节，选择旋转方向，拖动圆环。</li><li>点击底部“添加关键帧”保存这一刻。</li><li>摆出下一个姿势，添加并设置两帧间隔。</li><li>预览动作，或计算受力后播放。</li></ol><p id="anatomyNote" class="hint" aria-live="polite">姿势需满足关节活动范围与身体防穿插约束。</p></details>
+      </section>
+
+      <section id="panel-equipment" class="workspace-panel" data-workspace-panel="equipment" role="tabpanel" aria-labelledby="tab-equipment" hidden>
+        <div class="panel-heading"><h2>手持器械</h2><button type="button" class="help-button" aria-label="器械使用说明" data-help-source="equipmentHelp gripNote">?</button></div>
+        <p id="equipmentHelp" hidden>选择重量和握持手，再点“握住选定器械”；也可把哑铃拖到手上。双手各一只时，总质量平均分配。</p>
+        <div class="rack" aria-label="器械架">
+          <button class="equipment" data-gear="dumbbell" draggable="false"><svg viewBox="0 0 60 36" aria-hidden="true"><path d="M19 18h22M12 10v16M19 7v22M41 7v22M48 10v16" /></svg><span>哑铃</span></button>
+        </div>
+        <div class="pair"><div><label for="loadKg">总质量 / kg</label><input id="loadKg" type="number" min="0" max="30" step="0.5" value="0" /></div><div><label for="hand">握持手</label><select id="hand"><option value="right">右手</option><option value="left">左手</option><option value="both">双手各一只</option></select></div></div>
+        <p id="gearState" class="hint">空手</p>
+        <div class="gear-actions"><button id="regrip" class="primary">握住选定器械</button><button id="unload">卸下器械</button></div>
+        <button id="undoGrip" class="wide" hidden>撤销本次握持</button>
+        <p id="gripNote" class="hint help-copy">握持会调整当前姿势及各关键帧的手指；手腕和手臂保持原位。</p>
+        <div class="panel-heading divider"><h2>地面与支撑</h2><button type="button" class="help-button" aria-label="地面与重力说明" data-help-source="gravityNote">?</button></div>
+        <button id="groundToggle" class="ground-toggle" type="button" aria-pressed="false">地面：无</button>
+        <p id="gravityNote" hidden>重力始终生效。无地面时没有足底支撑，可选择外部支架。</p>
+        <div class="label-help"><label for="support">支撑方式</label><button type="button" class="help-button" aria-label="支撑方式说明" data-help-source="supportNote">?</button></div><select id="support"><option value="seated">骨盆外部支撑</option><option value="feet">足底支撑</option><option value="assisted">骨盆引导</option><option value="free">无外部支撑</option></select>
+        <p id="supportNote" hidden>身体所需的外部支撑单独显示。</p>
+        <div id="feetSettings" hidden><label for="supportFeet">承重脚</label><select id="supportFeet"><option value="both">双脚</option><option value="right">右脚</option><option value="left">左脚</option></select></div>
+        <details class="advanced-settings"><summary>肌肉力量参数</summary><label for="strengthScale">肌肉最大力比例</label><select id="strengthScale"><option value="1">100% · 原模型</option><option value="0.8">80% · 参数敏感性</option><option value="1.2">120% · 参数敏感性</option></select><p class="hint">用于探索参数假设，不代表个人力量测量。</p></details>
+      </section>
+
+      <section id="panel-motions" class="workspace-panel" data-workspace-panel="motions" role="tabpanel" aria-labelledby="tab-motions" hidden>
+        <div class="panel-heading"><h2 id="verifiedHeading">选择一个动作</h2><button type="button" class="help-button" aria-label="动作库说明" data-help="载入后停在首帧，按播放查看已保存的受力结果。修改姿势、时长、负重或支撑后，需重新计算。固定案例由外部支架支撑骨盆、无地面。">?</button></div>
+        <p class="hint" id="verifiedNote">正在读取已保存的案例目录…</p>
+        <div id="verifiedMotionList" class="verified-motion-list" role="group" aria-label="已验证动作"></div>
+        <p id="verifiedSelection" class="hint" aria-live="polite"></p>
+        <button id="restoreBeforeVerified" class="wide" hidden>恢复选择前的动作</button>
+        <details class="example-library"><summary>用腕、前臂和手指一起设计动作</summary>
+          <p class="hint">下载一个动作，从右上方“动作文件”中选择“导入动作”，再点“计算受力”。这两个文件只保存姿势和时长，力值由当前模型重新计算。你也可以先改关键帧。</p>
+          <div class="source-links"><a href="./examples/custom_right_rotate_bend_make_fist.json" download>右手：转前臂、弯腕并握拳</a><a href="./examples/custom_left_open_while_rotating.json" download>左手：旋转时逐渐张开手指</a></div>
+        </details>
+        <details class="example-library"><summary>探索示例与反例</summary><p class="hint">用于尝试编辑；这些示例不保证整段受力可行。</p><div class="example-buttons"><button id="exampleKnee">坐姿伸膝</button><button id="exampleLift">支撑抬物</button><button id="exampleHand">拇指屈伸</button><button id="exampleSpread">四指外展</button><button id="exampleGrip">握拳反例</button><button id="exampleNeck">头颈转动</button><button id="exampleTrunk">分段弯腰</button><button id="exampleSquat">蹲起反例</button></div></details>
+        <details id="evidence" class="evidence"><summary>模型范围与验证证据</summary><h3>覆盖范围</h3><div id="coverage">正在读取覆盖清单…</div><h3>验证证据</h3><div id="validation">正在读取验证结果…</div><p class="hint">肌腱单元与解剖肌肉的统计口径不同；数值检查不等于人体逐肌验证。</p><p id="surfaceContactScope" class="hint"></p><div class="source-links"><a href="./muscle-review.html" target="_blank" rel="noopener">肌肉实际运动录像</a><a href="./FULLBODY.md" target="_blank" rel="noopener">模型与使用说明</a><a href="./fullbody-validation.json" target="_blank" rel="noopener">数值验证结果</a><a href="./fullbody-ui-validation.json" target="_blank" rel="noopener">实际交互验收</a><a href="./fullbody-coverage.json" target="_blank" rel="noopener">完整覆盖清单</a><a href="https://github.com/google-deepmind/mujoco_menagerie/tree/main/ms_human_700" target="_blank" rel="noreferrer">官方模型来源</a></div></details>
+      </section>
+    </aside>
+
+    <section class="scene-column" aria-label="三维人体">
+      <div class="scene-top"><div class="scene-title"><b>全身肌肉</b><button type="button" class="help-button" aria-label="模型操作说明" data-help="拖动空白处旋转视角，滚轮缩放。鼠标靠近关节显示控制点；选择关节后，拖同色圆环旋转。点击肌肉可查看名称。">?</button><span id="poseLabel">正在载入模型</span></div><div class="view-buttons" role="group" aria-label="观察方向"><button data-view="perspective">立体</button><button data-view="front" class="selected">正面</button><button data-view="right">右侧</button><button data-view="left">左侧</button></div></div>
+      <div id="bodyView" class="body-view"><div id="viewLoading">正在准备精细解剖模型…</div></div>
+      <p id="surfaceStage" class="surface-stage" role="status" hidden></p>
+      <div class="scene-caption"><label for="muscleDisplay">显示<select id="muscleDisplay" aria-label="肌肉显示方式"><option value="anatomy">真实解剖表面</option><option value="paths">计算肌腱路径</option></select></label><details class="render-info"><summary>模型状态</summary><p id="renderNote">正在载入 BodyVista 解剖肌肉；关节编辑可先使用。</p></details></div>
+    </section>
+
+    <aside class="inspector" aria-label="当前选择与受力">
+      <div class="drawer-head"><h2>观察与调整</h2><button id="toggleInspector" class="icon-button" aria-label="收起观察面板" aria-expanded="true">›</button></div>
+      <nav class="inspector-tabs" role="tablist" aria-label="观察内容"><button id="tab-selection" data-inspector-tab="selection" role="tab" aria-selected="true" aria-controls="panel-selection">当前选择</button><button id="tab-forces" data-inspector-tab="forces" role="tab" aria-selected="false" aria-controls="panel-forces" tabindex="-1">受力结果</button></nav>
+      <section id="panel-selection" class="inspector-panel" data-inspector-panel="selection" role="tabpanel" aria-labelledby="tab-selection">
+        <h3 id="selectionLabel">选择关节或肌肉</h3>
+        <div id="jointInspectorMount"></div>
+        <details class="precise-pose"><summary>输入精确角度</summary><label for="coordinateRegion">身体区域 / 力矩列表区域</label><select id="coordinateRegion"></select><label for="coordinate">关节自由度</label><select id="coordinate"></select><div class="pair"><input id="coordinateValue" type="number" step="1" aria-label="关节角度" /><button id="applyCoordinate">设置</button></div><p class="hint" id="coordinateRange"></p><p class="hint"><a href="./ANATOMY_CONSTRAINTS.md" target="_blank" rel="noopener">关节约束与适用范围</a></p></details>
+        <div class="pose-check"><div class="button-help"><button id="checkPose" class="wide" disabled>检查当前姿势受力</button><button type="button" class="help-button" aria-label="姿势受力检查说明" data-help="检查当前姿势能否静止保持；相邻姿势之间的运动需用底部“计算受力”另行检查。">?</button></div><p id="poseCheckReport" class="hint" aria-live="polite"></p></div>
+      </section>
+      <section id="panel-forces" class="inspector-panel results" data-inspector-panel="forces" role="tabpanel" aria-labelledby="tab-forces" hidden>
+        <section id="solveDiagnosis" class="solve-diagnosis" aria-label="动作未通过原因" hidden><h3>动作未通过</h3><p id="failureSummary"></p><ul id="failureReasons"></ul><p id="failureAdvice" class="hint"></p><div id="failureActions" class="actions"></div></section>
+        <div class="panel-heading"><h2>当前帧受力</h2><span class="badge" id="resultKind">尚无计算</span></div>
+        <div class="metrics"><div><span>全身有效肌力</span><strong id="muscleCount">—</strong><small id="muscleTotal">肌腱单元</small></div><div><span>最大关节力矩</span><strong id="peakTorque">—</strong><small>N·m · 当前帧</small></div><div><span id="baseForceLabel">辅助基座力</span><strong id="baseForce">—</strong><small>N · 单独显示</small></div><div><span>肌肉力矩残差</span><strong id="balanceError">—</strong><small>N·m · 当前帧</small></div></div>
+        <div class="chart-title"><label for="muscleRegion">观察区域</label><select id="muscleRegion"></select><input id="muscleSearch" type="search" placeholder="搜索肌束名称" aria-label="搜索肌束名称" /><label for="muscleSelect">观察肌束</label><select id="muscleSelect" aria-describedby="muscleFilterNote" disabled></select><span id="muscleValue">— N</span></div>
+        <canvas id="forceChart" width="900" height="220" aria-label="选中肌束张力随时间变化"></canvas>
+        <div class="label-help"><p class="hint" id="muscleFilterNote"></p><button type="button" class="help-button" aria-label="肌束观察说明" data-help="观察列表只显示整段张力变化大于0.01 N的肌束，按变化幅度排序。全部肌腱仍参与计算。" data-help-source="muscleNote">?</button></div><p id="muscleNote" hidden>张力来自当前动作、负重与支撑条件下的逐帧求解。</p>
+        <details id="tendonBranchDetails" class="tendon-branch-details" hidden open><summary>肌腱各段张力</summary><p class="hint">同一肌腱向指伸肌腱膜传力；串联段不能相加作为肌肉总力。</p><table class="tendon-branch-table"><thead><tr><th scope="col">腱段</th><th scope="col">传力比例</th><th scope="col">张力 / N</th></tr></thead><tbody id="tendonBranchRows"></tbody></table></details>
+        <details class="torque-panel"><summary>关节力矩与支撑</summary><p class="hint">力矩单位 N·m。净需求已扣除模型中的关节被动作用与外部支撑；肌肉合计包含被动张力，止挡反力和未平衡量单列。在关节面板切换区域。</p><div id="torqueTable" class="torque-table">计算后显示。</div><details id="handPassiveDetails" hidden><summary>手指的被动关节作用</summary><p class="hint">参考标定的集总被动修正矩，包含在关节被动合计中；不是单根韧带力。</p><div class="torque-table"><table><thead><tr><th scope="col">关节</th><th scope="col">原有关节被动 / N·m</th><th scope="col">参考被动修正 / N·m</th></tr></thead><tbody id="handPassiveRows"></tbody></table></div></details><div id="contactReport" class="contact-report"></div></details>
+        <details><summary>本次计算的假设与限制</summary><div id="scope">计算后显示。</div></details>
+      </section>
+    </aside>
+  </main>
+
+  <section class="sequence" aria-label="关键帧与播放">
+    <div class="sequence-head"><div class="sequence-title"><h2>动作时间线</h2><span id="keyframeCount" class="small-label">0 个关键帧</span><button type="button" class="help-button" aria-label="关键帧与播放说明" data-help="摆好姿势后添加关键帧，再摆下一个姿势并设置间隔。点击关键帧可修改；预览只播放动作，计算受力后可查看肌力。空格播放或暂停。">?</button></div><button id="confirm" class="primary" disabled>＋ 添加关键帧</button></div>
+    <div id="timingBox" class="timing-box" hidden><label for="segmentTime">与上一帧间隔</label><div><input id="segmentTime" type="number" min="0.25" max="10" step="0.25" value="2" /><span>秒</span><button id="addTimed" class="primary">添加</button><button id="cancelTimed">取消</button></div></div>
+    <ol id="keyframes" class="keyframes"><li class="empty">暂无关键帧</li></ol>
+    <div class="playback-row"><div class="transport"><button id="previousFrame" class="icon-button" aria-label="上一关键帧" title="上一关键帧" disabled>⏮</button><button id="play" class="play-button" disabled>播放</button><button id="nextFrame" class="icon-button" aria-label="下一关键帧" title="下一关键帧" disabled>⏭</button><input type="range" id="timeline" min="0" max="1" value="0" step="1" aria-label="动作时间轴" disabled /><output id="clock">0.00 / 0.00 s</output><label class="speed-label"><span class="sr-only">播放速度</span><select id="playbackSpeed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label><label class="loop-label"><input type="checkbox" id="loop" /> 循环</label></div><div class="actions"><button id="preview" disabled>预览动作</button><button id="solve" class="primary" disabled>计算受力</button></div></div>
+    <div id="statusNotice" class="status-notice" hidden><p id="statusDetail"></p><button id="closeStatus" class="icon-button" aria-label="收起完整消息">×</button></div>
+    <div class="status-bar"><span id="status" role="status" aria-live="polite" tabindex="0" title="点击展开完整消息">连接中…</span><span id="playbackHealth" role="status"></span></div>
+  </section>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+

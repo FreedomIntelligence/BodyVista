@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:," />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#113a35" />
+    <title>右臂动作实验台 · BodyVista</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./pose-editor.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-inner">
+        <div class="brand">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="currentColor" />
+            <path
+              d="M6 19h6l3-11 4 17 3-10h4"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg
+          ><b>BodyVista</b>
+        </div>
+        <span class="bar-rule"></span><span>运动力学实验室</span
+        ><a class="bar-side" style="color:inherit" href="../body-lab/">进入全身实验 →</a>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <div class="eyebrow"><span></span> 肌骨实验　/　01</div>
+          <h1>右臂动作实验台</h1>
+          <p>拖关节摆出姿势，把器械递到手里，再让模型按你给的节奏运动。</p>
+        </div>
+        <div class="intro-tag"><span class="dot"></span> 右上肢 · 侧面编辑</div>
+      </div>
+      <section aria-label="姿势编辑工作区" class="panel author-panel">
+        <div id="poseStudio"></div>
+        <div class="action-strip">
+          <button type="button" id="solve" class="primary">生成并播放</button>
+          <button type="button" id="example" class="quiet">打开屈肘示范</button>
+          <span id="message" role="status" aria-live="polite"></span>
+        </div>
+        <div class="studio-transport" id="studioTransport" hidden>
+          <button type="button" class="quiet" id="studioPlay">播放</button>
+          <input
+            type="range"
+            id="studioTimeline"
+            step="1"
+            min="0"
+            max="1"
+            value="0"
+            aria-label="姿势编辑区回放时间轴"
+          />
+          <output id="studioTime">— / — s</output>
+        </div>
+      </section>
+      <div class="layout studio-layout">
+        <details class="panel editor settings">
+          <summary>实验管理与计算设置</summary>
+          <div class="editor-body" id="editorBody">
+            <label for="slot">当前实验</label
+            ><select id="slot"></select>
+            <button type="button" id="copy" class="quiet">复制此实验</button>
+            <label for="mode">求解模式</label
+            ><select id="mode">
+              <option value="prescribed">按指定轨迹求力</option>
+              <option value="predict">从目标姿势优化动作</option>
+            </select>
+            <p class="hint" id="modeNote" hidden>
+              肩或腕参与这段动作，按你指定的姿势和时间计算。固定上臂、仅屈肘时可优化中间动作。
+            </p>
+            <p class="hint" id="legacyLoad" hidden></p>
+            <div id="objectiveRow" hidden>
+              <label for="objective">动作目标</label
+              ><select id="objective">
+                <option value="effort">尽量省力</option>
+                <option value="smooth">尽量平稳</option>
+              </select>
+              <p class="hint">保留目标时刻，优化中间动作。求解可能需要数秒。</p>
+            </div>
+            <label for="extensor">伸肌最低激活度（0–0.8）</label
+            ><input id="extensor" type="number" min="0" max="0.8" step="any" />
+            <p class="hint">
+              增大这个值，可检验主动绷紧伸肌时，屈肌是否也要增加出力。
+            </p>
+            <p id="storageStatus" class="hint" role="status"></p>
+          </div>
+        </details>
+        <section class="work" aria-label="实验结果">
+          <section class="panel playback">
+            <div class="panel-heading">
+              <div>
+                <span class="kicker">02　同步回放</span>
+                <h2>空手与持物对照</h2>
+              </div>
+              <span id="status" class="badge">载入中</span>
+            </div>
+            <div class="compare">
+              <div class="arm-panel">
+                <div class="view-label">
+                  <span class="ref-line"></span>空手参照 <small>0 kg</small>
+                </div>
+                <div id="armReference" class="arm"></div>
+              </div>
+              <div class="arm-panel">
+                <div class="view-label">
+                  <span class="load-line"></span>当前实验
+                  <small id="loadBadge">—</small>
+                </div>
+                <div id="armExperiment" class="arm"></div>
+              </div>
+              <div id="veil" class="veil" hidden>等待求解</div>
+            </div>
+            <div class="render-hint">
+              拖动空白处旋转，点肌肉看曲线。肌腹长短随姿势变化；有逐肌解时，两图按同一张力色阶着色（0–400
+              N）。
+            </div>
+            <div class="transport">
+              <button type="button" id="play" aria-label="播放动作">
+                ▶ 播放</button
+              ><label for="timeline" class="sr">动作时间轴</label
+              ><input
+                id="timeline"
+                type="range"
+                min="0"
+                max="1"
+                step="1"
+                value="0"
+              /><output id="timeRead">— / — s</output>
+            </div>
+            <div class="metrics">
+              <div>
+                <span>屈肘角度</span><b id="angleRead">—</b><small>°</small>
+              </div>
+              <div>
+                <span>实验组净力矩</span><b id="torqueRead">—</b
+                ><small>N·m</small>
+              </div>
+              <div>
+                <span>相对空手的增量</span><b id="deltaRead">—</b
+                ><small>N·m</small>
+              </div>
+            </div>
+          </section>
+          <section class="panel chart-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="kicker">03　模型估计</span>
+                <h2>逐肌肉曲线</h2>
+              </div>
+              <div class="seg" aria-label="曲线类型">
+                <button type="button" id="forceTab" aria-pressed="true">
+                  张力（N）</button
+                ><button type="button" id="activationTab" aria-pressed="false">
+                  激活度
+                </button>
+              </div>
+            </div>
+            <div class="chart-body">
+              <div class="chart-controls">
+                <div>
+                  <label for="muscle">观察肌肉</label
+                  ><select id="muscle" aria-describedby="muscleFilterNote" disabled></select>
+                </div>
+                <div class="legend">
+                  <span><i class="ref-line"></i>空手 <b id="refRead">—</b></span
+                  ><span
+                    ><i class="load-line"></i>实验 <b id="forceRead">—</b></span
+                  >
+                </div>
+              </div>
+              <p class="hint" id="muscleFilterNote">
+                取得有效的肌力结果后，只列出整段张力有变化的肌肉。
+              </p>
+              <svg
+                id="chart"
+                viewBox="0 0 640 170"
+                role="img"
+                aria-label="所选肌肉的空手与实验曲线"
+              ></svg>
+              <p class="hint">
+                拖动时间轴或点选曲线区域，可查看同一时刻的动作和数值。张力单位为牛顿，激活度取值
+                0–1。
+              </p>
+            </div>
+          </section>
+          <details id="allMuscles" class="panel table-panel">
+            <summary>此刻六个肌肉单元</summary>
+            <div class="table-scroll">
+              <table>
+                <caption>
+                  张力包含被动拉伸。激活度为零时仍可能有张力。整段张力有变化的肌肉名称可点击并切换曲线；其余数值仍保留。
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">肌肉单元</th>
+                    <th scope="col">空手张力（N）</th>
+                    <th scope="col">实验张力（N）</th>
+                    <th scope="col">实验激活度</th>
+                  </tr>
+                </thead>
+                <tbody id="muscleRows"></tbody>
+              </table>
+            </div>
+          </details>
+          <div class="bottom-row">
+            <details class="panel">
+              <summary>模型、假设与求解诊断</summary>
+              <div id="diagnostics" class="detail-body"></div>
+            </details>
+            <input
+              id="packageFile"
+              type="file"
+              accept=".json,application/json"
+              hidden
+            />
+            <button type="button" id="openPackage" class="quiet export">
+              打开实验包
+            </button>
+            <button type="button" id="download" class="quiet export">
+              导出实验包 ↓
+            </button>
+          </div>
+          <p id="fileStatus" class="hint" role="status"></p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      BodyVista　/　肌骨力学教学实验<span>右上肢　·　矢状面</span>
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

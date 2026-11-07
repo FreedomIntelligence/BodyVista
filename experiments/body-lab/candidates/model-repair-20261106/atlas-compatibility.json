@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "baseModelSha256": "f67b100d68b0b4d2f1ed4af970ce4772f71d0d6c68b749814032ff58843bf263",
+  "modelSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+  "atlasManifestSha256BeforeCompatibilityUpdate": "a4f384989a1d31b9cb48cd67408bbb71df9dcd91ffe72dfd29459095f9a8e7ae",
+  "atlasBinarySha256": "645df971115568a0e24b47aec6cac88daa6c8eb2c94b01ba83e481fa51fa7d5a",
+  "checks": {
+    "body_pos": true,
+    "body_quat": true,
+    "body_parentid": true,
+    "jnt_axis": true,
+    "jnt_pos": true,
+    "jnt_range": true,
+    "qpos0": true,
+    "bodyNamesAndOrder": true,
+    "restWorldPositions": true,
+    "restWorldRotations": true,
+    "nativePathSet": true,
+    "nativeRestPaths": true,
+    "sourceStable": true
+  },
+  "nativePaths": [
+    {
+      "surface": "z_50e681ac8f51247f",
+      "muscle": "DELT1_l",
+      "samePath": true
+    },
+    {
+      "surface": "z_bc88f0f42d616eeb",
+      "muscle": "DELT1_r",
+      "samePath": true
+    }
+  ],
+  "scope": "Existing body binding and native DELT1 rest-path compatibility; not a new whole-surface visual audit."
+}

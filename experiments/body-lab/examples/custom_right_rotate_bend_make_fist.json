@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "model": "ms740-shoulder-hand-franko-v5",
+  "keyframes": [
+    {
+      "t": 0,
+      "q": {
+        "flexion_r": -3,
+        "pro_sup_r": 5,
+        "elbow_flexion_r": 32,
+        "2mcp_flexion": 3,
+        "2pm_flexion": 4,
+        "2md_flexion": 2,
+        "3mcp_flexion": 4,
+        "3pm_flexion": 5,
+        "3md_flexion": 3,
+        "4mcp_flexion": 4,
+        "4pm_flexion": 5,
+        "4md_flexion": 3,
+        "5mcp_flexion": 3,
+        "5pm_flexion": 4,
+        "5md_flexion": 2
+      }
+    },
+    {
+      "t": 2.4,
+      "q": {
+        "flexion_r": -14,
+        "pro_sup_r": 32,
+        "elbow_flexion_r": 44,
+        "2mcp_flexion": 31,
+        "2pm_flexion": 40,
+        "2md_flexion": 21,
+        "3mcp_flexion": 33,
+        "3pm_flexion": 43,
+        "3md_flexion": 24,
+        "4mcp_flexion": 36,
+        "4pm_flexion": 46,
+        "4md_flexion": 25,
+        "5mcp_flexion": 38,
+        "5pm_flexion": 49,
+        "5md_flexion": 28
+      }
+    },
+    {
+      "t": 4,
+      "q": {
+        "flexion_r": -7,
+        "pro_sup_r": 18,
+        "elbow_flexion_r": 38,
+        "2mcp_flexion": 16,
+        "2pm_flexion": 22,
+        "2md_flexion": 12,
+        "3mcp_flexion": 18,
+        "3pm_flexion": 24,
+        "3md_flexion": 13,
+        "4mcp_flexion": 19,
+        "4pm_flexion": 26,
+        "4md_flexion": 15,
+        "5mcp_flexion": 20,
+        "5pm_flexion": 27,
+        "5md_flexion": 16
+      }
+    }
+  ],
+  "loadKg": 0,
+  "support": "assisted",
+  "groundEnabled": false,
+  "hand": "right",
+  "equipment": {
+    "type": "none"
+  }
+}

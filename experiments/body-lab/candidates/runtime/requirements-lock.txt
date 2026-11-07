@@ -1,0 +1,11 @@
+absl-py==2.5.1
+etils==1.15.0
+fsspec==2026.9.0
+glfw==2.11.0
+mujoco==3.17.0
+numpy==2.3.3
+PyOpenGL==3.1.10
+scipy==1.18.0
+typing_extensions==4.16.0
+websockets==17.4
+zipp==4.1.2

@@ -1,0 +1,410 @@
+{
+  "status": "passed",
+  "candidatePreview": false,
+  "publicationValidated": false,
+  "startedAt": "2026-11-07T03:13:06.923Z",
+  "pageUrl": "http://127.0.0.1:4196/experiments/body-lab/",
+  "fixtureId": "custom_right_rotate_bend_make_fist",
+  "fixtureSha256": "90d16350e77827d2014ca14f2df5159f9333c7ce60ecc1ed71165e7590a6e50c",
+  "scriptSha256": "aee8a0bf46059892e72651c9e121abd0b13b99cfcc31748038e69beb185068e5",
+  "expectedModel": "ms740-shoulder-hand-franko-v5",
+  "compoundChanges": {
+    "flexion_r": [
+      -3,
+      -14,
+      -7
+    ],
+    "pro_sup_r": [
+      5,
+      32,
+      18
+    ],
+    "2mcp_flexion": [
+      3,
+      31,
+      16
+    ],
+    "2pm_flexion": [
+      4,
+      40,
+      22
+    ],
+    "2md_flexion": [
+      2,
+      21,
+      12
+    ],
+    "3mcp_flexion": [
+      4,
+      33,
+      18
+    ],
+    "3pm_flexion": [
+      5,
+      43,
+      24
+    ],
+    "3md_flexion": [
+      3,
+      24,
+      13
+    ],
+    "4mcp_flexion": [
+      4,
+      36,
+      19
+    ],
+    "4pm_flexion": [
+      5,
+      46,
+      26
+    ],
+    "4md_flexion": [
+      3,
+      25,
+      15
+    ],
+    "5mcp_flexion": [
+      3,
+      38,
+      20
+    ],
+    "5pm_flexion": [
+      4,
+      49,
+      27
+    ],
+    "5md_flexion": [
+      2,
+      28,
+      16
+    ]
+  },
+  "checks": [
+    {
+      "name": "v5_actual_anatomical_surface",
+      "passed": true,
+      "at": "2026-11-07T03:13:31.359Z",
+      "id": "ms740-shoulder-hand-franko-v5",
+      "sourceSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+      "computationSha256": "b5db51b54385a0df803d61fc68446543e9081a93d4e8b5e11ba17ac3d1058b0d",
+      "renderNote": "",
+      "screenshot": "2026-11-07T03-13-06-923Z-actual-anatomical-surface.png"
+    },
+    {
+      "name": "imported_custom_motion_real_solve",
+      "passed": true,
+      "at": "2026-11-07T03:14:18.997Z",
+      "frames": 50,
+      "musclesPerFrame": 740,
+      "solveRequests": 1,
+      "status": "整段 50/50 帧通过；每帧 740/740 个肌腱张力完整。支撑与关节止挡单独列出。",
+      "screenshot": "2026-11-07T03-13-06-923Z-custom-motion-solved.png"
+    },
+    {
+      "name": "changing_hand_branch_forces",
+      "passed": true,
+      "at": "2026-11-07T03:14:19.610Z",
+      "muscle": "EIP",
+      "changeN": 11.326203018059136,
+      "time": 0,
+      "rows": [
+        [
+          "主干",
+          "100.0%",
+          "15.7380"
+        ],
+        [
+          "中央腱束",
+          "59.0%",
+          "9.2854"
+        ],
+        [
+          "桡侧腱束",
+          "20.5%",
+          "3.2263"
+        ],
+        [
+          "尺侧腱束",
+          "20.5%",
+          "3.2263"
+        ],
+        [
+          "终末腱束",
+          "41.0%",
+          "6.4526"
+        ]
+      ],
+      "screenshot": "2026-11-07T03-13-06-923Z-hand-tendon-branch-forces.png"
+    },
+    {
+      "name": "hand_passive_terms_reported_separately",
+      "passed": true,
+      "at": "2026-11-07T03:14:19.768Z",
+      "time": 0,
+      "rows": [
+        [
+          "右食指掌指 · 屈伸",
+          "0.0000",
+          "0.0070"
+        ],
+        [
+          "右食指近端指间 · 屈伸",
+          "0.0000",
+          "0.0008"
+        ],
+        [
+          "右食指远端指间 · 屈伸",
+          "0.0000",
+          "0.0003"
+        ],
+        [
+          "右中指掌指 · 屈伸",
+          "0.0000",
+          "0.0067"
+        ],
+        [
+          "右中指近端指间 · 屈伸",
+          "0.0000",
+          "0.0006"
+        ],
+        [
+          "右中指远端指间 · 屈伸",
+          "0.0000",
+          "0.0002"
+        ],
+        [
+          "右环指掌指 · 屈伸",
+          "0.0000",
+          "0.0045"
+        ],
+        [
+          "右环指近端指间 · 屈伸",
+          "0.0000",
+          "0.0005"
+        ],
+        [
+          "右环指远端指间 · 屈伸",
+          "0.0000",
+          "0.0002"
+        ],
+        [
+          "右小指掌指 · 屈伸",
+          "0.0000",
+          "0.0024"
+        ],
+        [
+          "右小指近端指间 · 屈伸",
+          "0.0000",
+          "0.0003"
+        ],
+        [
+          "右小指远端指间 · 屈伸",
+          "0.0000",
+          "0.0002"
+        ],
+        [
+          "左食指掌指 · 屈伸",
+          "0.0000",
+          "0.0089"
+        ],
+        [
+          "左食指近端指间 · 屈伸",
+          "0.0000",
+          "0.0018"
+        ],
+        [
+          "左食指远端指间 · 屈伸",
+          "0.0000",
+          "0.0004"
+        ],
+        [
+          "左中指掌指 · 屈伸",
+          "0.0000",
+          "0.0094"
+        ],
+        [
+          "左中指近端指间 · 屈伸",
+          "0.0000",
+          "0.0022"
+        ],
+        [
+          "左中指远端指间 · 屈伸",
+          "0.0000",
+          "0.0004"
+        ],
+        [
+          "左环指掌指 · 屈伸",
+          "0.0000",
+          "0.0064"
+        ],
+        [
+          "左环指近端指间 · 屈伸",
+          "0.0000",
+          "0.0016"
+        ],
+        [
+          "左环指远端指间 · 屈伸",
+          "0.0000",
+          "0.0003"
+        ],
+        [
+          "左小指掌指 · 屈伸",
+          "0.0000",
+          "0.0031"
+        ],
+        [
+          "左小指近端指间 · 屈伸",
+          "0.0000",
+          "0.0006"
+        ],
+        [
+          "左小指远端指间 · 屈伸",
+          "0.0000",
+          "0.0002"
+        ]
+      ],
+      "screenshot": "2026-11-07T03-13-06-923Z-hand-passive-torques.png"
+    },
+    {
+      "name": "edit_invalidates_old_branch_forces",
+      "passed": true,
+      "at": "2026-11-07T03:14:20.723Z",
+      "beforeAngle": 32,
+      "nextAngle": 31,
+      "screenshot": "2026-11-07T03-13-06-923Z-edited-branch-values-cleared.png"
+    },
+    {
+      "name": "fixed_case_reads_cache_without_solve",
+      "passed": true,
+      "at": "2026-11-07T03:14:21.769Z",
+      "caseId": "elbow",
+      "cacheUrl": "http://127.0.0.1:4196/experiments/body-lab/motion-cache/ae1a4363d82635464069fdfb9e8094e4b601e9e72a988cd6f4b0c72f79923526.json",
+      "cacheRequests": 1,
+      "solveRequests": 0,
+      "model": "ms740-shoulder-hand-franko-v5",
+      "modelSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+      "computationSha256": "b5db51b54385a0df803d61fc68446543e9081a93d4e8b5e11ba17ac3d1058b0d",
+      "note": "已载入：右肘缓慢屈伸",
+      "screenshot": "2026-11-07T03-13-06-923Z-fixed-case-cache.png"
+    },
+    {
+      "name": "v3_pose_migration_preserves_knee_and_old_storage",
+      "passed": true,
+      "at": "2026-11-07T03:14:24.751Z",
+      "note": "已兼容升级并恢复 2 个关键帧及当前草稿。已有坐标保留，新增坐标使用默认值；旧版副本保留，力值需重新计算。",
+      "kneeFlexion": 30,
+      "kneeRotation": 10,
+      "oldStorageUnchanged": true,
+      "newStorageModel": "ms740-shoulder-hand-franko-v5",
+      "screenshot": "2026-11-07T03-13-06-923Z-v3-knee-scene-restored.png"
+    },
+    {
+      "name": "no_unhandled_browser_errors",
+      "passed": true,
+      "at": "2026-11-07T03:14:24.752Z",
+      "count": 0
+    }
+  ],
+  "pageErrors": [],
+  "network": [
+    {
+      "context": "custom",
+      "method": "GET",
+      "path": "/api/fullbody/model",
+      "at": "2026-11-07T03:13:08.228Z"
+    },
+    {
+      "context": "custom",
+      "method": "POST",
+      "path": "/api/fullbody/pose",
+      "at": "2026-11-07T03:13:23.267Z"
+    },
+    {
+      "context": "custom",
+      "method": "POST",
+      "path": "/api/fullbody/pose",
+      "at": "2026-11-07T03:13:31.484Z"
+    },
+    {
+      "context": "custom",
+      "method": "POST",
+      "path": "/api/fullbody/solve",
+      "at": "2026-11-07T03:13:32.361Z"
+    },
+    {
+      "context": "custom",
+      "method": "POST",
+      "path": "/api/fullbody/pose",
+      "at": "2026-11-07T03:14:19.939Z"
+    },
+    {
+      "context": "custom",
+      "method": "GET",
+      "path": "/api/fullbody/model",
+      "at": "2026-11-07T03:14:20.788Z"
+    },
+    {
+      "context": "custom",
+      "method": "GET",
+      "path": "/experiments/body-lab/motion-cache/ae1a4363d82635464069fdfb9e8094e4b601e9e72a988cd6f4b0c72f79923526.json",
+      "at": "2026-11-07T03:14:20.986Z"
+    },
+    {
+      "context": "migration",
+      "method": "GET",
+      "path": "/api/fullbody/model",
+      "at": "2026-11-07T03:14:22.154Z"
+    },
+    {
+      "context": "migration",
+      "method": "POST",
+      "path": "/api/fullbody/pose",
+      "at": "2026-11-07T03:14:22.365Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "actual-anatomical-surface",
+      "file": "2026-11-07T03-13-06-923Z-actual-anatomical-surface.png"
+    },
+    {
+      "name": "custom-motion-solved",
+      "file": "2026-11-07T03-13-06-923Z-custom-motion-solved.png"
+    },
+    {
+      "name": "hand-tendon-branch-forces",
+      "file": "2026-11-07T03-13-06-923Z-hand-tendon-branch-forces.png"
+    },
+    {
+      "name": "hand-passive-torques",
+      "file": "2026-11-07T03-13-06-923Z-hand-passive-torques.png"
+    },
+    {
+      "name": "edited-branch-values-cleared",
+      "file": "2026-11-07T03-13-06-923Z-edited-branch-values-cleared.png"
+    },
+    {
+      "name": "fixed-case-cache",
+      "file": "2026-11-07T03-13-06-923Z-fixed-case-cache.png"
+    },
+    {
+      "name": "v3-knee-scene-restored",
+      "file": "2026-11-07T03-13-06-923Z-v3-knee-scene-restored.png"
+    }
+  ],
+  "model": {
+    "id": "ms740-shoulder-hand-franko-v5",
+    "sourceSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+    "computationSha256": "b5db51b54385a0df803d61fc68446543e9081a93d4e8b5e11ba17ac3d1058b0d"
+  },
+  "solveResponseBytes": 19004704,
+  "solveResponseCapture": {
+    "requestId": "8500.26",
+    "bytes": 19004704,
+    "decodedSha256": "e40c52d060a8652f23c2449581944c395cb9cd7b93ebb5897c09f97589351622",
+    "source": "same-request-same-inspector-session"
+  },
+  "fixedCacheValidated": true,
+  "completedAt": "2026-11-07T03:14:24.767Z"
+}

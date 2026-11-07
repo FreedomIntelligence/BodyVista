@@ -1,0 +1,459 @@
+{
+  "method": "MuJoCo native tendon geometry + bounded differential_evolution extrema, two independent fixed seeds, source joint limits and equalities",
+  "mujoco": "3.17.0",
+  "scope": "Intrinsic hand muscles with zero source active capacity at neutral; no force or path edits.",
+  "reduction": "Fix all joints outside the selected hand; retain every within-hand source joint and equality.",
+  "limitations": "Geometric length-range estimates; not measured optimal fibre/slack tendon lengths, not an extensor-hood reconstruction.",
+  "documentation": "https://mujoco.readthedocs.io/en/stable/modeling.html#length-range",
+  "nativeSimulationAttempt": "mj_setLengthRange default failed to converge for actuator 172; extending simulated time produced QACC instability. No unstable output was adopted.",
+  "beforeSha256": "d517c7813656150553bc0ddca1a3a9d7521f62bebb5d6fa188621ade498b114d",
+  "afterSha256": "b8b8ba96f5e01d27446735fd296477f3bb8bbbe3104ec9db4f4371ab777a3832",
+  "muscles": [
+    {
+      "name": "1stDI_MC1",
+      "sourceLengthRangeM": [
+        0.102761,
+        0.124843
+      ],
+      "derivedLengthRangeM": [
+        0.05953897298587923,
+        0.0778407326519161
+      ],
+      "neutralLengthM": 0.06517856154507058,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -48.64542299180262,
+      "seconds": 6.192062899999655,
+      "extrema": [
+        {
+          "length": 0.05953897298587923,
+          "q": {
+            "cmc_flexion": 0.26179897175851236,
+            "cmc_abduction": -0.23054088355426322,
+            "2mcp_abduction": 0.04987944659236483,
+            "2mcp_flexion": 1.570799969029609
+          }
+        },
+        {
+          "length": 0.0778407326519161,
+          "q": {
+            "cmc_flexion": -0.7853979963109712,
+            "cmc_abduction": 0.43633199860124305,
+            "2mcp_abduction": -0.26179898181496075,
+            "2mcp_flexion": -0.6908421122279182
+          }
+        }
+      ]
+    },
+    {
+      "name": "1stDI_MC2",
+      "sourceLengthRangeM": [
+        0.111645,
+        0.13005
+      ],
+      "derivedLengthRangeM": [
+        0.053667812659271064,
+        0.06450838883474111
+      ],
+      "neutralLengthM": 0.06158811212379254,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -15.392176766187008,
+      "seconds": 1.8912960000016028,
+      "extrema": [
+        {
+          "length": 0.053667812659271064,
+          "q": {
+            "2mcp_abduction": 0.26179866589041945,
+            "2mcp_flexion": 1.5707999930367844
+          }
+        },
+        {
+          "length": 0.06450838883474111,
+          "q": {
+            "2mcp_abduction": -0.2617989970549724,
+            "2mcp_flexion": -0.7716860362201579
+          }
+        }
+      ]
+    },
+    {
+      "name": "1stPI",
+      "sourceLengthRangeM": [
+        0.0851285,
+        0.115625
+      ],
+      "derivedLengthRangeM": [
+        0.046193366152470855,
+        0.05279800535254901
+      ],
+      "neutralLengthM": 0.051032870862963854,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -37.822432946463195,
+      "seconds": 1.7286155999991024,
+      "extrema": [
+        {
+          "length": 0.046193366152470855,
+          "q": {
+            "2mcp_abduction": -0.1561148587948682,
+            "2mcp_flexion": 1.5707999945386744
+          }
+        },
+        {
+          "length": 0.05279800535254901,
+          "q": {
+            "2mcp_abduction": 0.2617989982648566,
+            "2mcp_flexion": -0.42820485047989354
+          }
+        }
+      ]
+    },
+    {
+      "name": "2ndPI",
+      "sourceLengthRangeM": [
+        0.0843358,
+        0.115957
+      ],
+      "derivedLengthRangeM": [
+        0.043901657093641674,
+        0.054740384693346106
+      ],
+      "neutralLengthM": 0.05075730333196121,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -32.04179648002632,
+      "seconds": 5.478705600000467,
+      "extrema": [
+        {
+          "length": 0.043901657093641674,
+          "q": {
+            "4cmc_flexion": 2.1575845332577614e-08,
+            "4mcp_abduction": -0.02778395553167677,
+            "4mcp_flexion": 1.5707999999321907
+          }
+        },
+        {
+          "length": 0.054740384693346106,
+          "q": {
+            "4cmc_flexion": 0.20319999606912126,
+            "4mcp_abduction": -0.2617989949683779,
+            "4mcp_flexion": -0.7853979422707198
+          }
+        }
+      ]
+    },
+    {
+      "name": "3rdDI",
+      "sourceLengthRangeM": [
+        0.090239,
+        0.121441
+      ],
+      "derivedLengthRangeM": [
+        0.05288430790873961,
+        0.05833077801005632
+      ],
+      "neutralLengthM": 0.05665286972576966,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -47.604631550251526,
+      "seconds": 2.0633713000006537,
+      "extrema": [
+        {
+          "length": 0.05288430790873961,
+          "q": {
+            "3mcp_abduction": -0.26179893981811614,
+            "3mcp_flexion": 1.5707999997949802
+          }
+        },
+        {
+          "length": 0.05833077801005632,
+          "q": {
+            "3mcp_abduction": 0.261798998607039,
+            "3mcp_flexion": -0.2846114689350907
+          }
+        }
+      ]
+    },
+    {
+      "name": "3rdPI",
+      "sourceLengthRangeM": [
+        0.081438,
+        0.110105
+      ],
+      "derivedLengthRangeM": [
+        0.04227681962897083,
+        0.04915026701501918
+      ],
+      "neutralLengthM": 0.04633620587895268,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -29.68480425106139,
+      "seconds": 1.7533289000002696,
+      "extrema": [
+        {
+          "length": 0.04227681962897083,
+          "q": {
+            "5mcp_abduction": -0.2617989699549275,
+            "5mcp_flexion": 1.5707999952296792
+          }
+        },
+        {
+          "length": 0.04915026701501918,
+          "q": {
+            "5mcp_abduction": -0.26179899498458165,
+            "5mcp_flexion": -0.7853979709886982
+          }
+        }
+      ]
+    },
+    {
+      "name": "4thDI",
+      "sourceLengthRangeM": [
+        0.089621,
+        0.120859
+      ],
+      "derivedLengthRangeM": [
+        0.04954101133882989,
+        0.05747421461065942
+      ],
+      "neutralLengthM": 0.056032239868774744,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -46.222412726176,
+      "seconds": 2.0212286000005406,
+      "extrema": [
+        {
+          "length": 0.04954101133882989,
+          "q": {
+            "4mcp_abduction": -0.2617989798860678,
+            "4mcp_flexion": 1.5707999849555652
+          }
+        },
+        {
+          "length": 0.05747421461065942,
+          "q": {
+            "4mcp_abduction": 0.2617989998181119,
+            "4mcp_flexion": -0.20087475155048373
+          }
+        }
+      ]
+    },
+    {
+      "name": "1stDI_MC1_l",
+      "sourceLengthRangeM": [
+        0.102761,
+        0.124843
+      ],
+      "derivedLengthRangeM": [
+        0.05953897298587923,
+        0.0778407326519161
+      ],
+      "neutralLengthM": 0.06517856154507058,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -48.64542299180262,
+      "seconds": 7.090295899999546,
+      "extrema": [
+        {
+          "length": 0.05953897298587923,
+          "q": {
+            "cmc_flexion_l": 0.26179897175851236,
+            "cmc_abduction_l": -0.23054088355426322,
+            "2mcp_abduction_l": 0.04987944659236483,
+            "2mcp_flexion_l": 1.570799969029609
+          }
+        },
+        {
+          "length": 0.0778407326519161,
+          "q": {
+            "cmc_flexion_l": -0.7853979963109712,
+            "cmc_abduction_l": 0.43633199860124305,
+            "2mcp_abduction_l": -0.26179898181496075,
+            "2mcp_flexion_l": -0.6908421122279182
+          }
+        }
+      ]
+    },
+    {
+      "name": "1stDI_MC2_l",
+      "sourceLengthRangeM": [
+        0.111645,
+        0.13005
+      ],
+      "derivedLengthRangeM": [
+        0.053667812659271064,
+        0.06450838883474111
+      ],
+      "neutralLengthM": 0.06158811212379254,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -15.392176766187008,
+      "seconds": 1.4712097000010544,
+      "extrema": [
+        {
+          "length": 0.053667812659271064,
+          "q": {
+            "2mcp_abduction_l": 0.26179866589041945,
+            "2mcp_flexion_l": 1.5707999930367844
+          }
+        },
+        {
+          "length": 0.06450838883474111,
+          "q": {
+            "2mcp_abduction_l": -0.2617989970549724,
+            "2mcp_flexion_l": -0.7716860362201579
+          }
+        }
+      ]
+    },
+    {
+      "name": "1stPI_l",
+      "sourceLengthRangeM": [
+        0.0851285,
+        0.115625
+      ],
+      "derivedLengthRangeM": [
+        0.046193366152470855,
+        0.05279800535254901
+      ],
+      "neutralLengthM": 0.051032870862963854,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -37.822432946463195,
+      "seconds": 1.4806134999998903,
+      "extrema": [
+        {
+          "length": 0.046193366152470855,
+          "q": {
+            "2mcp_abduction_l": -0.1561148587948682,
+            "2mcp_flexion_l": 1.5707999945386744
+          }
+        },
+        {
+          "length": 0.05279800535254901,
+          "q": {
+            "2mcp_abduction_l": 0.2617989982648566,
+            "2mcp_flexion_l": -0.42820485047989354
+          }
+        }
+      ]
+    },
+    {
+      "name": "2ndPI_l",
+      "sourceLengthRangeM": [
+        0.0843358,
+        0.115957
+      ],
+      "derivedLengthRangeM": [
+        0.043901657093641674,
+        0.054740384693346106
+      ],
+      "neutralLengthM": 0.05075730333196121,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -32.04179648002632,
+      "seconds": 4.710839600000327,
+      "extrema": [
+        {
+          "length": 0.043901657093641674,
+          "q": {
+            "4cmc_flexion_l": 2.1575845332577614e-08,
+            "4mcp_abduction_l": -0.02778395553167677,
+            "4mcp_flexion_l": 1.5707999999321907
+          }
+        },
+        {
+          "length": 0.054740384693346106,
+          "q": {
+            "4cmc_flexion_l": 0.20319999606912126,
+            "4mcp_abduction_l": -0.2617989949683779,
+            "4mcp_flexion_l": -0.7853979422707198
+          }
+        }
+      ]
+    },
+    {
+      "name": "3rdDI_l",
+      "sourceLengthRangeM": [
+        0.090239,
+        0.121441
+      ],
+      "derivedLengthRangeM": [
+        0.05288430790873961,
+        0.05833077801005632
+      ],
+      "neutralLengthM": 0.05665286972576966,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -47.604631550251526,
+      "seconds": 1.5951284000002488,
+      "extrema": [
+        {
+          "length": 0.05288430790873961,
+          "q": {
+            "3mcp_abduction_l": -0.26179893981811614,
+            "3mcp_flexion_l": 1.5707999997949802
+          }
+        },
+        {
+          "length": 0.05833077801005632,
+          "q": {
+            "3mcp_abduction_l": 0.261798998607039,
+            "3mcp_flexion_l": -0.2846114689350907
+          }
+        }
+      ]
+    },
+    {
+      "name": "3rdPI_l",
+      "sourceLengthRangeM": [
+        0.081438,
+        0.110105
+      ],
+      "derivedLengthRangeM": [
+        0.04227681962897083,
+        0.04915026701501918
+      ],
+      "neutralLengthM": 0.04633620587895268,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -29.68480425106139,
+      "seconds": 2.442447199999151,
+      "extrema": [
+        {
+          "length": 0.04227681962897083,
+          "q": {
+            "5mcp_abduction_l": -0.2617989699549275,
+            "5mcp_flexion_l": 1.5707999952296792
+          }
+        },
+        {
+          "length": 0.04915026701501918,
+          "q": {
+            "5mcp_abduction_l": -0.26179899498458165,
+            "5mcp_flexion_l": -0.7853979709886982
+          }
+        }
+      ]
+    },
+    {
+      "name": "4thDI_l",
+      "sourceLengthRangeM": [
+        0.089621,
+        0.120859
+      ],
+      "derivedLengthRangeM": [
+        0.04954101133882989,
+        0.05747421461065942
+      ],
+      "neutralLengthM": 0.056032239868774744,
+      "sourceActiveGainN": -0.0,
+      "derivedActiveGainN": -46.222412726176,
+      "seconds": 2.1213244999999006,
+      "extrema": [
+        {
+          "length": 0.04954101133882989,
+          "q": {
+            "4mcp_abduction_l": -0.2617989798860678,
+            "4mcp_flexion_l": 1.5707999849555652
+          }
+        },
+        {
+          "length": 0.05747421461065942,
+          "q": {
+            "4mcp_abduction_l": 0.2617989998181119,
+            "4mcp_flexion_l": -0.20087475155048373
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -53,6 +53,28 @@ This project is intended for teaching and learning. Animations, microscopic scen
 | Testing | Node.js built-in test runner |
 | Deployment | GitHub Actions, GitHub Pages |
 
+## Local biomechanics experiments
+
+GitHub Pages serves the static anatomy atlas. The two biomechanics labs share a Python service on your computer. The full-body lab estimates force for **740 musculotendon units** at each accepted motion sample, together with joint torques, external support and applicable hand–dumbbell contact forces. The arm lab uses six Arm26 units to estimate elbow forces. [Full-body lab](experiments/body-lab/FULLBODY.md) · [Arm lab](experiments/elbow-lab/README.md)
+
+For **BodyVista v1.1.0**, check out the release tag and use its matching `release-assets.json`. Place the manifest in `experiments/body-lab/`, or give its local path to `--manifest`. Four assets supply the bone volumes, atlas surfaces, MS-Human source files and fixed motion results. [Release asset instructions](experiments/body-lab/RELEASE_ASSETS.md)
+
+From that checkout, use Python 3.13 and run the following in PowerShell. The dependency lock includes MuJoCo, NumPy and SciPy. The local service also serves the arm lab from its bundled OpenSim-derived model table.
+
+```powershell
+python -m venv .venv-fullbody
+& ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
+& ./.venv-fullbody/Scripts/python.exe -B -X utf8 experiments/body-lab/setup_release_assets.py --manifest experiments/body-lab/release-assets.json --check
+& ./.venv-fullbody/Scripts/python.exe -B -X utf8 experiments/body-lab/setup_release_assets.py --manifest experiments/body-lab/release-assets.json --download
+& ./.venv-fullbody/Scripts/python.exe -X utf8 experiments/elbow-lab/server.py --port 4192
+```
+
+Open the [full-body lab](http://127.0.0.1:4192/experiments/body-lab/) or the [arm lab](http://127.0.0.1:4192/experiments/elbow-lab/). In the full-body motion library, choose a version-matched case and press Play. Its cached results cover seven unloaded movements and four dumbbell movements, including a 2 kg right-arm curl, a 1 kg left-arm curl, a bilateral curl with 1 kg per hand, and a 0.5 kg right-forearm rotation. Changing keyframes, timing, support or weight requires a new calculation. A failed sample disables force values for the entire motion and identifies the first failure.
+
+Two scene files can be imported from **Motion file → Import**. Save the raw JSON, import it in the full-body lab, then choose **Calculate forces**. Each file contains the movement inputs, including the keyframes. The right-hand rotation, bend and fist closure has 50 samples. The left-hand opening during rotation has 52 samples. [Right-hand scene](experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [Download right JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [Left-hand scene](experiments/body-lab/examples/custom_left_open_while_rotating.json) · [Download left JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_left_open_while_rotating.json)
+
+The v5 model applies measured deep flexor moment arms to three joints of each little finger. Eight existing flexor digitorum superficialis (FDS) units use a passive fibre and tendon in series. The middle finger retains its native path geometry. The Thelen tendon curve uses 0.04 strain at maximum isometric force. The model uses 24 finger coordinates to check passive reference torques. [Franko et al., Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3124620/) · [OpenSim 4.6 Thelen defaults](https://github.com/opensim-org/opensim-core/blob/4.6/OpenSim/Actuators/Thelen2003Muscle.cpp#L165-L171). All 740 units participate in whole-body recruitment. The muscle tensions and contact forces shown during playback are estimates for the chosen motion and constraints. The published moment arms used by the model are measurements of geometry, not direct measurements of these simulated forces. Finger–dumbbell forces depend on modeled contact geometry and friction, and muscle tensions are model estimates. Individual human muscle forces, cartilage pressure and ligament contact forces have not been validated by this experiment. [Model scope and sources](experiments/body-lab/FULLBODY.md)
+
 ## 🚀 Getting Started
 
 ### Local Development

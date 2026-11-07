@@ -25,6 +25,9 @@ async function convertModelScripts(sourceDir, outputDir) {
 export default defineConfig({
   base: './',
   publicDir: false,
+  server: {
+    watch: { ignored: ['**/.runtime-cache/**', '**/.venv*/**', '**/.playwright-cli/**'] },
+  },
   build: {
     target: 'es2022',
     assetsDir: 'app',

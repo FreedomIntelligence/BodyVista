@@ -1,0 +1,77 @@
+{
+  "model": "ms740-shoulder-hand-franko-v5",
+  "modelSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+  "computationSha256": "b5db51b54385a0df803d61fc68446543e9081a93d4e8b5e11ba17ac3d1058b0d",
+  "ready": true,
+  "publicationValidated": true,
+  "modelManifest": {
+    "path": "experiments/body-lab/candidates/runtime/expanded-motion-repair-v5-manifest.json",
+    "sha256": "3bdd9479dcafd1533fcd082ba20527fbf016c070787f94c58c57dd12cd342692"
+  },
+  "nativeValidation": {
+    "path": "experiments/body-lab/fullbody-validation.json",
+    "sha256": "88abcf2c3faf263a0bc90f24649bd514b47858ba17c880d5a8f15ba5c1cb091f"
+  },
+  "coverage": {
+    "path": "experiments/body-lab/fullbody-coverage.json",
+    "sha256": "73f760ec686ccba84de687771f81f5577da0578cf915fdf9c0fc31b5390ab588"
+  },
+  "atlasCompatibility": {
+    "path": "experiments/body-lab/candidates/model-repair-20261106/atlas-compatibility.json",
+    "sha256": "6c5309aad7e73db9120ccaee77d1ed8b974d099089caa0a55b302f7bf90fd2eb"
+  },
+  "suites": {
+    "smoke": {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/validation-v5/release/b5db51b54385a0df-6968302f2e/smoke.json",
+      "sha256": "ba31c3dfa6fe4de9a3164f68acf013267503c4e1b0fbefdee01a134bafac5873",
+      "fixture": {
+        "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/adm-smoke-inputs.json",
+        "sha256": "b7687923a0d20c9832bdee2660996b041580261c45bae25c0fb4ec3c20228734"
+      },
+      "cases": 16
+    },
+    "extended": {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/validation-v5/release/b5db51b54385a0df-6968302f2e/extended.json",
+      "sha256": "b9b0d190c62595c7ef040cde1881dbe72a8467bb3ac19c6d277a97b092547cb3",
+      "fixture": {
+        "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/extended-hand-fixtures.json",
+        "sha256": "063851e1452b09a845507f68bd74f22320667ba9adfa02b1c9559095eb27c0a6"
+      },
+      "cases": 16
+    },
+    "core": {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/validation-v5/release/b5db51b54385a0df-6968302f2e/core.json",
+      "sha256": "c19401a73cc11dd0b3cf9f2a04ee20a6178a846ac30e62fbf17bcd0463d72a48",
+      "fixture": {
+        "path": "experiments/body-lab/candidates/model-repair-20261106/normal-motion-fixtures.json",
+        "sha256": "85366ba5323368272b9b4a092417f13c791cfe291f5aa3a0d65f2e67d679e8d2"
+      },
+      "cases": 72
+    },
+    "standing": {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/validation-v5/release/b5db51b54385a0df-6968302f2e/standing.json",
+      "sha256": "8b14de69abe8f84776840f1f11f0fe9c0644010b1615a3ebc639f78578e36044",
+      "fixture": {
+        "path": "experiments/body-lab/candidates/model-repair-20261106/standing-motion-fixtures.json",
+        "sha256": "de3687f84a63c212d9361f667677abb413e0530f59e28b24ec47fd8ac1e87309"
+      },
+      "cases": 9
+    },
+    "custom": {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/validation-v5/release/b5db51b54385a0df-6968302f2e/custom.json",
+      "sha256": "de151c5b9432338c8e2861b5bec72cb7a503e23ed94796d325188e413b9dff95",
+      "fixture": {
+        "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/franko-native-candidate/custom-motion-inputs.json",
+        "sha256": "90d16350e77827d2014ca14f2df5159f9333c7ce60ecc1ed71165e7590a6e50c"
+      },
+      "cases": 2
+    }
+  },
+  "caseCount": 115,
+  "positiveFramesWith740Forces": 2036,
+  "uiValidation": {
+    "path": "experiments/body-lab/fullbody-ui-validation.json",
+    "sha256": "8a4748c804de25bcd8f603116e0172be66dc4e24b6123be186d980f44d75617e"
+  },
+  "scope": "本机正式网页和固定动作库已验收；此记录不表示已推送或已创建在线 Release。"
+}

@@ -2,3 +2,15 @@ node_modules/
 dist/
 .DS_Store
 *.log
+.venv-fullbody/
+.runtime-cache/
+__pycache__/
+
+# Large versioned assets are installed from the matching GitHub Release.
+experiments/body-lab/atlas-muscles.bin
+experiments/body-lab/geometry/bone-volumes.bin
+experiments/body-lab/candidates/ms-human-700/
+experiments/body-lab/motion-cache/
+experiments/body-lab/candidates/library-refresh-20261106/runs/
+experiments/body-lab/candidates/library-refresh-20261106/batch.lock
+.ruff_cache/

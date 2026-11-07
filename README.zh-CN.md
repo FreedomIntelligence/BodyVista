@@ -46,6 +46,30 @@
 | 测试 | Node.js 内置测试运行器 |
 | 部署 | GitHub Actions、GitHub Pages |
 
+## 本地肌骨实验
+
+GitHub Pages 提供静态解剖图谱。两套肌骨实验台共用本机 Python 服务。全身页在每个通过的采样时刻计算 **740 个肌腱单元**的张力与激活，并显示关节力矩、外部支撑及适用的手指与哑铃接触力。右臂页使用 Arm26 的六个单元估计肘部受力。[全身实验台说明](experiments/body-lab/FULLBODY.md) · [右臂实验台说明](experiments/elbow-lab/README.md)
+
+使用 **BodyVista v1.1.0** 时，检出该标签并取得同版 `release-assets.json`。将清单放入 `experiments/body-lab/`，也可以在 `--manifest` 后指定它的实际位置。四份资源分别提供骨体积、图谱表面、MS-Human 来源文件和固定动作的完整缓存。[发行资源安装说明](experiments/body-lab/RELEASE_ASSETS.md)
+
+从对应仓库的根目录运行以下 PowerShell 命令。使用 Python 3.13，锁定依赖包含 MuJoCo、NumPy 和 SciPy。右臂实验读取随版的 OpenSim 模型和已提取的模型表。
+
+```powershell
+python -m venv .venv-fullbody
+& ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
+& ./.venv-fullbody/Scripts/python.exe -B -X utf8 experiments/body-lab/setup_release_assets.py --manifest experiments/body-lab/release-assets.json --check
+& ./.venv-fullbody/Scripts/python.exe -B -X utf8 experiments/body-lab/setup_release_assets.py --manifest experiments/body-lab/release-assets.json --download
+& ./.venv-fullbody/Scripts/python.exe -X utf8 experiments/elbow-lab/server.py --port 4192
+```
+
+打开[全身实验台](http://127.0.0.1:4192/experiments/body-lab/)或[右臂实验台](http://127.0.0.1:4192/experiments/elbow-lab/)。在全身页左侧“动作库”中选择匹配版本的案例，再按播放。固定动作包括七组空手和四组哑铃，后者为右手 2 kg 弯举、左手 1 kg 屈伸、双手各 1 kg 同步屈肘、右手 0.5 kg 前臂旋转。修改关键帧、时长、支撑或负重后需重新计算。任一采样帧失败时，整段力值停用，页面显示首个失败位置。
+
+有两份可直接导入的自定义场景。下载原始 JSON，在全身页选“动作文件 → 导入”，再点击“计算受力”。文件只含关键姿势等动作输入。右手旋转、屈曲并握拳的轨迹采样 50 帧，左手旋转并松开的轨迹采样 52 帧。[右手场景](experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [下载右手 JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [左手场景](experiments/body-lab/examples/custom_left_open_while_rotating.json) · [下载左手 JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_left_open_while_rotating.json)
+
+v5 将实测指深屈肌力臂用于左右小指各三个屈曲轴。双侧八个指浅屈肌（FDS）单元采用肌纤维和肌腱串联的被动弹性，中指沿用原模型路径几何。肌腱在最大等长肌力下取 0.04 应变。[Franko 等人表 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3124620/) · [OpenSim 4.6 Thelen 默认参数](https://github.com/opensim-org/opensim-core/blob/4.6/OpenSim/Actuators/Thelen2003Muscle.cpp#L165-L171)
+
+v5 用 24 个手指坐标核对被动参考力矩，全部 740 个肌腱单元参与全身配力。指骨与哑铃的接触力受接触代理和摩擦假设影响，输出肌力属于模型估计。文献实测的是几何力臂。回放中的张力、关节与接触受力，是指定动作和支撑条件下的动力学估计。人体逐肌张力、软骨压力和韧带接触力仍超出这项实验的验证范围。[模型范围与来源](experiments/body-lab/FULLBODY.md)
+
 ## 🚀 如何运行
 
 ### 本地开发

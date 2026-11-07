@@ -1,0 +1,99 @@
+{
+  "muscles": [
+    {
+      "name": "斜方肌横部",
+      "state": "正式版",
+      "observation": "观察肩胛冈附近的肌腹。左右各检查了 98 个姿态记录，各自包含 38 种实际表面形状。所测动作中未发现旧版的翻边。",
+      "films": [
+        {
+          "label": "右侧",
+          "file": "trapezius-right.webm",
+          "caption": "上下是两种视角。四列依次为旧版单肌、修订后单肌、旧版同显邻肌和修订后同显邻肌。",
+          "recordingSha256": "948ee2a2e72ebddb3a44e2ae13f1974e40e8df9af777090e3f167e731aa1ce88"
+        },
+        {
+          "label": "左侧",
+          "file": "trapezius-left.webm",
+          "caption": "上下是两种视角。四列依次为旧版单肌、修订后单肌、旧版同显邻肌和修订后同显邻肌。",
+          "recordingSha256": "fbd9cb2eb4915f2047b57f591be58ec5892f6d3162390a1ac6d52a81725a0749"
+        }
+      ]
+    },
+    {
+      "name": "胸大肌锁骨部",
+      "state": "研究候选",
+      "observation": "观察胸骨旁的肌腹和肩前的交界。右肩前举至 165° 时，早先的三角空洞已闭合，前侧三角肌与胸大肌仍有毫米级穿入。",
+      "films": [
+        {
+          "label": "右侧",
+          "file": "pectoralis-right.webm",
+          "caption": "完整人体的右肩前举到 165°，同时显示其余肌肉。",
+          "recordingSha256": "e3ea26478a0bcb32232e7351adb51d25ffd10e2099a1d6ac822d1bfa81be1919"
+        },
+        {
+          "label": "左侧",
+          "file": "pectoralis-left.webm",
+          "caption": "左侧单肌修订的对照，同时观察两种视角及周围肌肉。",
+          "recordingSha256": "bfe55512c03a8c072f81b212e703c479eab55ad7526606076056c8b5cf5ef9c0"
+        }
+      ]
+    },
+    {
+      "name": "小收肌",
+      "state": "研究候选",
+      "observation": "观察小收肌两端和股骨之间的距离。十块髋部肌肉一起变形后，旧的折返明显减轻。完整人体中仍需处理与周围肌肉的交叉。",
+      "films": [
+        {
+          "label": "右侧",
+          "file": "minimus-right.mp4",
+          "caption": "屈髋 0° 至 110°。左列同显九块邻肌，右列显示目标肌肉和骨骼，上下是两个视角。",
+          "recordingSha256": "eca7678eafed366a2295809a0a461eda45b05f4d7c75565aebfe533c43731664"
+        },
+        {
+          "label": "左侧",
+          "file": "minimus-left.mp4",
+          "caption": "屈髋 0° 至 110°。左列同显九块邻肌，右列显示目标肌肉和骨骼，上下是两个视角。",
+          "recordingSha256": "131d008fa148d2254e8650a9644062ca242104efd4c6e3dbbcc15d814d35beb4"
+        }
+      ]
+    },
+    {
+      "name": "髂肌",
+      "state": "研究候选",
+      "observation": "观察髂窝宽端如何贴在骨盆上，以及窄端如何随股骨转动。深屈髋时髋前的短折痕和股骨侧附着仍需修正。",
+      "films": [
+        {
+          "label": "右侧",
+          "file": "iliacus-right.mp4",
+          "caption": "屈髋 0° 至 110°。左列同显九块邻肌，右列显示目标肌肉和骨骼，上下是两个视角。",
+          "recordingSha256": "095a5167ef5a6135d8bad03b0f293738a8d374e977a8bbdb34507eff51465a7d"
+        },
+        {
+          "label": "左侧",
+          "file": "iliacus-left.mp4",
+          "caption": "屈髋 0° 至 100°。按股骨局部凸起重新定位 54 个附着点后，止端下方的突瓣缩小，肌腹至肌腱处仍有横折。左列同显邻肌，右列为单肌近景。",
+          "recordingSha256": "980441f4d7d9f31340f6509fb481407c72a1f796b8e5010bf82961674980ab4c"
+        }
+      ]
+    },
+    {
+      "name": "股薄肌",
+      "state": "研究候选",
+      "observation": "沿大腿内侧从骨盆看到膝旁。分段约束体积和转角后，先前膝旁的大鼓包已经减小，靠骨盆的一段仍可见回弯。",
+      "films": [
+        {
+          "label": "右侧",
+          "file": "gracilis-right.mp4",
+          "caption": "屈髋 0° 至 110°。左列同显九块邻肌，右列显示目标肌肉和骨骼，上下是两个视角。",
+          "recordingSha256": "cb1cc7ec13dcfe1e49eca2e0df9e0ea34a698b34b2e56b76321a0493e900546b"
+        },
+        {
+          "label": "左侧",
+          "file": "gracilis-left.mp4",
+          "caption": "屈髋 0° 至 110°。左列同显九块邻肌，右列显示目标肌肉和骨骼，上下是两个视角。",
+          "recordingSha256": "bb1bb292ee6974e9542db51ca4ea767eb9e90ceede814543f86f32cd3288f0fe"
+        }
+      ]
+    }
+  ]
+}

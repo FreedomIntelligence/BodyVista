@@ -1,0 +1,529 @@
+{
+  "source": "BodyVista catalog.json and original detail GLB payloads; right side",
+  "units": [
+    "BIClong",
+    "BICshort",
+    "BRA",
+    "TRIlong",
+    "TRIlat",
+    "TRImed"
+  ],
+  "method": "骨端最靠近末端的 8.5% 高度带内顶点取均值，腕部取桡尺骨远端均值。两段分别将上臂、前臂轴校直到竖直零位，正屈肘沿图谱前方（−Y）。显示配准不改变求解器的力臂或附着。",
+  "shoulder": [
+    -0.2619729791304855,
+    0.054449246920239856,
+    0.783863574881491
+  ],
+  "elbow": [
+    -0.320765970390601,
+    0.06938700931772034,
+    0.36159180949043424
+  ],
+  "wrist": [
+    -0.3821230999883113,
+    -0.0036659595251142146,
+    0.01130829233945947
+  ],
+  "parts": [
+    {
+      "id": "z_2f20a3e66514e90d",
+      "name": "右侧头状骨",
+      "english": "capitate bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_2f20a3e66514e90d.js",
+      "source": {
+        "id": "z_2f20a3e66514e90d",
+        "name": "capitate bone right",
+        "sha256": "b740212058194062cf3553a586e8a4d2e11379a34f059f1f50c6c78c4f2d27b6",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_68a04acb0594e78d",
+      "name": "右侧锁骨",
+      "english": "clavicle right",
+      "role": "upper",
+      "file": "assets/detail/z_68a04acb0594e78d.js",
+      "source": {
+        "id": "z_68a04acb0594e78d",
+        "name": "clavicle right",
+        "sha256": "375d94f2bceacf887d598b88c02dc23b903d2f6360a073f2bd018ae3ee602e1b",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_0c77c2d8ff99f26b",
+      "name": "右侧第五指远节指骨",
+      "english": "distal phalanx of fifth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_0c77c2d8ff99f26b.js",
+      "source": {
+        "id": "z_0c77c2d8ff99f26b",
+        "name": "distal phalanx of fifth finger of hand right",
+        "sha256": "42296cb7ce2d5d30bfcb17a11b64ad421f4d2510389be0974dad0a3bd26d46b9",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_5f1ee7ec033a6f14",
+      "name": "右侧第一指远节指骨",
+      "english": "distal phalanx of first finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_5f1ee7ec033a6f14.js",
+      "source": {
+        "id": "z_5f1ee7ec033a6f14",
+        "name": "distal phalanx of first finger of hand right",
+        "sha256": "0fb581ec1158e0ab9b65ceed9b6b1906cb5e3573444b8c74269bbcf121ee038f",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_4ce81819884916bd",
+      "name": "右侧第四指远节指骨",
+      "english": "distal phalanx of fourth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_4ce81819884916bd.js",
+      "source": {
+        "id": "z_4ce81819884916bd",
+        "name": "distal phalanx of fourth finger of hand right",
+        "sha256": "af9c0e4f9c767f2f068be3442976b6b35354b3f273a8bb4ff04328dad7b1ebc7",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_754686312c3d292f",
+      "name": "右侧第二指远节指骨",
+      "english": "distal phalanx of second finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_754686312c3d292f.js",
+      "source": {
+        "id": "z_754686312c3d292f",
+        "name": "distal phalanx of second finger of hand right",
+        "sha256": "52e743480426c73d4e89b2df00ef15b74762a15d837083517bc149e567252f03",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_246f9aa59fd09a13",
+      "name": "右侧第三指远节指骨",
+      "english": "distal phalanx of third finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_246f9aa59fd09a13.js",
+      "source": {
+        "id": "z_246f9aa59fd09a13",
+        "name": "distal phalanx of third finger of hand right",
+        "sha256": "8d877479e3ad41320c83ac939eefd522fe40a597a825a61c88aa8246707e473f",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_63f1fe6563a53bda",
+      "name": "右侧第五掌骨",
+      "english": "fifth metacarpal bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_63f1fe6563a53bda.js",
+      "source": {
+        "id": "z_63f1fe6563a53bda",
+        "name": "fifth metacarpal bone right",
+        "sha256": "5b30fad0d5c18e332d8603ac2602ed254379639e4f7dfa162da788bb89e03c11",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_0ca27c38f6ab39af",
+      "name": "右侧第一掌骨",
+      "english": "first metacarpal bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_0ca27c38f6ab39af.js",
+      "source": {
+        "id": "z_0ca27c38f6ab39af",
+        "name": "first metacarpal bone right",
+        "sha256": "025e3d8789fceac865abedbb767911dd04fd26e8b746e36036eb8d7d6915444f",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_d885ef7d1a0584ad",
+      "name": "右侧第四掌骨",
+      "english": "fourth metacarpal bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_d885ef7d1a0584ad.js",
+      "source": {
+        "id": "z_d885ef7d1a0584ad",
+        "name": "fourth metacarpal bone right",
+        "sha256": "7139c31bda18d48d60f300afae83bc533eeaec4433e8234c3c973f5479060b7e",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_bf08851726db8fc8",
+      "name": "右侧钩骨",
+      "english": "hamate bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_bf08851726db8fc8.js",
+      "source": {
+        "id": "z_bf08851726db8fc8",
+        "name": "hamate bone right",
+        "sha256": "588c08ba04d9fecb57c7f6fe12cbc952d56d7ff5ec37e1990a8d430ef4974599",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_bcf4932a02405a07",
+      "name": "右侧肱骨",
+      "english": "humerus right",
+      "role": "upper",
+      "file": "assets/detail/z_bcf4932a02405a07.js",
+      "source": {
+        "id": "z_bcf4932a02405a07",
+        "name": "humerus right",
+        "sha256": "2b6fbff6618f5f92b0d3fba028f4d879c7b56d35c6f237798552e06e8bc02a04",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_0fb4cef4d6ede9ce",
+      "name": "右侧月骨",
+      "english": "lunate bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_0fb4cef4d6ede9ce.js",
+      "source": {
+        "id": "z_0fb4cef4d6ede9ce",
+        "name": "lunate bone right",
+        "sha256": "3d2968e2e6f486fc04f90509b4f7b9aa39926c000214eab61519a70922748197",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_a4d46065b8067298",
+      "name": "右侧第五指中节指骨",
+      "english": "middle phalanx of fifth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_a4d46065b8067298.js",
+      "source": {
+        "id": "z_a4d46065b8067298",
+        "name": "middle phalanx of fifth finger of hand right",
+        "sha256": "b5393170eaf030267f303a9a4fe03814ebdd3ad7791fb51df78200d4a6f2010c",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_4869c6ede8bd4690",
+      "name": "右侧第四指中节指骨",
+      "english": "middle phalanx of fourth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_4869c6ede8bd4690.js",
+      "source": {
+        "id": "z_4869c6ede8bd4690",
+        "name": "middle phalanx of fourth finger of hand right",
+        "sha256": "563aacacfa5499495e4e25915fdeeee4140def921e6f4350ef40ab941ac7041c",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_c60a22411ad8c0a9",
+      "name": "右侧第二指中节指骨",
+      "english": "middle phalanx of second finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_c60a22411ad8c0a9.js",
+      "source": {
+        "id": "z_c60a22411ad8c0a9",
+        "name": "middle phalanx of second finger of hand right",
+        "sha256": "c70178ae1b968b04577ebba583e149185703e0a11cd40724836981f60a6854ee",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_e4e03b2db07bd193",
+      "name": "右侧第三指中节指骨",
+      "english": "middle phalanx of third finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_e4e03b2db07bd193.js",
+      "source": {
+        "id": "z_e4e03b2db07bd193",
+        "name": "middle phalanx of third finger of hand right",
+        "sha256": "359cb51a9824488126c8fd4fcf78494083aca1a3cb63555562c3d9cc20d8c705",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_0d7f6b6754750280",
+      "name": "右侧豌豆骨",
+      "english": "pisiform bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_0d7f6b6754750280.js",
+      "source": {
+        "id": "z_0d7f6b6754750280",
+        "name": "pisiform bone right",
+        "sha256": "bfb85f89b79df9c1204691416e7a6720a1a0c85066aab1fad75cca87e2b24334",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_5a47814091b92245",
+      "name": "右侧第五指近节指骨",
+      "english": "proximal phalanx of fifth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_5a47814091b92245.js",
+      "source": {
+        "id": "z_5a47814091b92245",
+        "name": "proximal phalanx of fifth finger of hand right",
+        "sha256": "1518d694fc3275335e6186490f1a6ec63b6167d6522a13ca2c839e5f6bd05d77",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_e6c7801fd264ef8a",
+      "name": "右侧第一指近节指骨",
+      "english": "proximal phalanx of first finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_e6c7801fd264ef8a.js",
+      "source": {
+        "id": "z_e6c7801fd264ef8a",
+        "name": "proximal phalanx of first finger of hand right",
+        "sha256": "1d75bf1e75c0f86fb7de0361d72e0845aca4ffc48b8054b71a8a2021fb495bbc",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_ce23d4b5c9b625bd",
+      "name": "右侧第四指近节指骨",
+      "english": "proximal phalanx of fourth finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_ce23d4b5c9b625bd.js",
+      "source": {
+        "id": "z_ce23d4b5c9b625bd",
+        "name": "proximal phalanx of fourth finger of hand right",
+        "sha256": "3ffd4b68202e74a4d1165f8e8da2119752cc3da7dee637b0db32baa468a07067",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_b7e1d81f56ce2f15",
+      "name": "右侧第二指近节指骨",
+      "english": "proximal phalanx of second finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_b7e1d81f56ce2f15.js",
+      "source": {
+        "id": "z_b7e1d81f56ce2f15",
+        "name": "proximal phalanx of second finger of hand right",
+        "sha256": "066d91e40719ac2fcdb67c1644b0a1b0052b763d363045bfcc349fc1e3b85edc",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_35f7092ca4daad4b",
+      "name": "右侧第三指近节指骨",
+      "english": "proximal phalanx of third finger of hand right",
+      "role": "forearm",
+      "file": "assets/detail/z_35f7092ca4daad4b.js",
+      "source": {
+        "id": "z_35f7092ca4daad4b",
+        "name": "proximal phalanx of third finger of hand right",
+        "sha256": "a47c6b864d3dbe71955f93df0b7e21ff2398594a33784ad9dd269376778a4b5a",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_8a48faa6b2bf8117",
+      "name": "右侧桡骨",
+      "english": "radius right",
+      "role": "forearm",
+      "file": "assets/detail/z_8a48faa6b2bf8117.js",
+      "source": {
+        "id": "z_8a48faa6b2bf8117",
+        "name": "radius right",
+        "sha256": "710cc13e1b5701ec97348c55f15d24a341a403be9592962ba4ffcab59fa74faa",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_557649a62d5eb1a6",
+      "name": "右侧手舟骨",
+      "english": "scaphoid bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_557649a62d5eb1a6.js",
+      "source": {
+        "id": "z_557649a62d5eb1a6",
+        "name": "scaphoid bone right",
+        "sha256": "3828ae4926958103ba847e72a6331ed6a7663934974e600a4ec81f97f9df89d3",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_cdbfb237d6bba5c9",
+      "name": "右侧肩胛骨",
+      "english": "scapula right",
+      "role": "upper",
+      "file": "assets/detail/z_cdbfb237d6bba5c9.js",
+      "source": {
+        "id": "z_cdbfb237d6bba5c9",
+        "name": "scapula right",
+        "sha256": "2aaecaee9c259062afa532c0d9e920034271ce50699fdc69c2fac54db518f788",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_2c738171c8d19fbd",
+      "name": "右侧第二掌骨",
+      "english": "second metacarpal bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_2c738171c8d19fbd.js",
+      "source": {
+        "id": "z_2c738171c8d19fbd",
+        "name": "second metacarpal bone right",
+        "sha256": "c8db76240a9ed81097152e5f0ff35b0b1198989f0646dfb51bbe9aeab3c8ad9b",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_a30ca0ea41b7498a",
+      "name": "右侧第三掌骨",
+      "english": "third metacarpal bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_a30ca0ea41b7498a.js",
+      "source": {
+        "id": "z_a30ca0ea41b7498a",
+        "name": "third metacarpal bone right",
+        "sha256": "e74c67335db9375387652e44d2a844ed9abe5a8388f1f9095d7daee8c5575317",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_04ddba2f2d5778f5",
+      "name": "右侧大多角骨",
+      "english": "trapezium bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_04ddba2f2d5778f5.js",
+      "source": {
+        "id": "z_04ddba2f2d5778f5",
+        "name": "trapezium bone right",
+        "sha256": "7d92c7adbf1ba88b1fe34b0f872e49d93586bd1aefb4eeeff597969d9aeea2ee",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_467ce626607969ad",
+      "name": "右侧小多角骨",
+      "english": "trapezoid bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_467ce626607969ad.js",
+      "source": {
+        "id": "z_467ce626607969ad",
+        "name": "trapezoid bone right",
+        "sha256": "cdf2f84b0b64af94bfdc1a6c82de36eda28d96f847c8a18b1475a076d05ef4f0",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_4ab9be69a1e5847f",
+      "name": "右侧三角骨",
+      "english": "triquetrum bone right",
+      "role": "forearm",
+      "file": "assets/detail/z_4ab9be69a1e5847f.js",
+      "source": {
+        "id": "z_4ab9be69a1e5847f",
+        "name": "triquetrum bone right",
+        "sha256": "f3e62abede3a0267413433dd43fe45b9ade13bd673d1edee9597482e6f8bf54a",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_7bf2093c9bc127c0",
+      "name": "右侧尺骨",
+      "english": "ulna right",
+      "role": "forearm",
+      "file": "assets/detail/z_7bf2093c9bc127c0.js",
+      "source": {
+        "id": "z_7bf2093c9bc127c0",
+        "name": "ulna right",
+        "sha256": "b3272cf0c92f813c5fcb36b72a523d1e2f669857657df7cdcaa0ef7742f64a23",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      }
+    },
+    {
+      "id": "z_96ab3ac3accfa505",
+      "name": "右侧肱肌",
+      "english": "brachialis muscle right",
+      "role": "muscle",
+      "file": "assets/detail/z_96ab3ac3accfa505.js",
+      "source": {
+        "id": "z_96ab3ac3accfa505",
+        "name": "brachialis muscle right",
+        "sha256": "80092bdc40b1b9fabea4f22c3277a6b3a2e22a7051c00bcb4b9d52ac00b029cd",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "BRA"
+    },
+    {
+      "id": "z_8969933cb597044f",
+      "name": "右侧肱三头肌外侧头",
+      "english": "lateral head of triceps brachii right",
+      "role": "muscle",
+      "file": "assets/detail/z_8969933cb597044f.js",
+      "source": {
+        "id": "z_8969933cb597044f",
+        "name": "lateral head of triceps brachii right",
+        "sha256": "e9e3829142e565ef2491f8cbd60266b6dfb8458feb3a4f40f20ddb0ed0ce80b8",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "TRIlat"
+    },
+    {
+      "id": "z_9c0235353a40cca2",
+      "name": "右侧肱二头肌长头",
+      "english": "long head of biceps brachii right",
+      "role": "muscle",
+      "file": "assets/detail/z_9c0235353a40cca2.js",
+      "source": {
+        "id": "z_9c0235353a40cca2",
+        "name": "long head of biceps brachii right",
+        "sha256": "a2825ef58efec4d3fbf6f13e806624ba3312d16409609c8847567bf446113728",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "BIClong"
+    },
+    {
+      "id": "z_2b9227516bdcec60",
+      "name": "右侧肱三头肌长头",
+      "english": "long head of triceps brachii right",
+      "role": "muscle",
+      "file": "assets/detail/z_2b9227516bdcec60.js",
+      "source": {
+        "id": "z_2b9227516bdcec60",
+        "name": "long head of triceps brachii right",
+        "sha256": "7088b90370839304ee34ae1b3fcbc8f5e038c5364edafb606bb37af95b07e724",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "TRIlong"
+    },
+    {
+      "id": "z_57697192a9eac6bf",
+      "name": "右侧肱三头肌内侧头",
+      "english": "medial head of triceps brachii right",
+      "role": "muscle",
+      "file": "assets/detail/z_57697192a9eac6bf.js",
+      "source": {
+        "id": "z_57697192a9eac6bf",
+        "name": "medial head of triceps brachii right",
+        "sha256": "0524992dfe48eae542e1dfabf9cf6ed52218265687bd51cf9e2af87bc7fd2677",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "TRImed"
+    },
+    {
+      "id": "z_b13d4b0e56fad4b1",
+      "name": "右侧肱二头肌短头",
+      "english": "short head of biceps brachii right",
+      "role": "muscle",
+      "file": "assets/detail/z_b13d4b0e56fad4b1.js",
+      "source": {
+        "id": "z_b13d4b0e56fad4b1",
+        "name": "short head of biceps brachii right",
+        "sha256": "e0b05f4976abe3d1f50243ffda502b3b85b2ec64c9869e927f94c23af1d93528",
+        "license": "Z-Anatomy CC-BY-SA-4.0 with per-source attribution and NC exceptions; research only"
+      },
+      "unit": "BICshort"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "scope": "Predeclared hand-authored trajectories; simultaneous smooth changes of wrist, forearm, elbow and four fingers without a preset or a cached force frame.",
+  "cases": [
+    {
+      "id": "custom_right_rotate_bend_make_fist",
+      "expectedFeasible": true,
+      "scene": {
+        "keyframes": [
+          {
+            "t": 0,
+            "q": {
+              "flexion_r": -3,
+              "pro_sup_r": 5,
+              "elbow_flexion_r": 32,
+              "2mcp_flexion": 3,
+              "2pm_flexion": 4,
+              "2md_flexion": 2,
+              "3mcp_flexion": 4,
+              "3pm_flexion": 5,
+              "3md_flexion": 3,
+              "4mcp_flexion": 4,
+              "4pm_flexion": 5,
+              "4md_flexion": 3,
+              "5mcp_flexion": 3,
+              "5pm_flexion": 4,
+              "5md_flexion": 2
+            }
+          },
+          {
+            "t": 2.4,
+            "q": {
+              "flexion_r": -14,
+              "pro_sup_r": 32,
+              "elbow_flexion_r": 44,
+              "2mcp_flexion": 31,
+              "2pm_flexion": 40,
+              "2md_flexion": 21,
+              "3mcp_flexion": 33,
+              "3pm_flexion": 43,
+              "3md_flexion": 24,
+              "4mcp_flexion": 36,
+              "4pm_flexion": 46,
+              "4md_flexion": 25,
+              "5mcp_flexion": 38,
+              "5pm_flexion": 49,
+              "5md_flexion": 28
+            }
+          },
+          {
+            "t": 4,
+            "q": {
+              "flexion_r": -7,
+              "pro_sup_r": 18,
+              "elbow_flexion_r": 38,
+              "2mcp_flexion": 16,
+              "2pm_flexion": 22,
+              "2md_flexion": 12,
+              "3mcp_flexion": 18,
+              "3pm_flexion": 24,
+              "3md_flexion": 13,
+              "4mcp_flexion": 19,
+              "4pm_flexion": 26,
+              "4md_flexion": 15,
+              "5mcp_flexion": 20,
+              "5pm_flexion": 27,
+              "5md_flexion": 16
+            }
+          }
+        ],
+        "loadKg": 0,
+        "support": "assisted",
+        "groundEnabled": false,
+        "hand": "right",
+        "equipment": {
+          "type": "none"
+        }
+      }
+    },
+    {
+      "id": "custom_left_open_while_rotating",
+      "expectedFeasible": true,
+      "scene": {
+        "keyframes": [
+          {
+            "t": 0,
+            "q": {
+              "flexion_l": 11,
+              "pro_sup_l": -21,
+              "elbow_flexion_l": 55,
+              "2mcp_flexion_l": 31,
+              "2pm_flexion_l": 40,
+              "2md_flexion_l": 22,
+              "3mcp_flexion_l": 32,
+              "3pm_flexion_l": 42,
+              "3md_flexion_l": 23,
+              "4mcp_flexion_l": 34,
+              "4pm_flexion_l": 45,
+              "4md_flexion_l": 25,
+              "5mcp_flexion_l": 36,
+              "5pm_flexion_l": 48,
+              "5md_flexion_l": 27
+            }
+          },
+          {
+            "t": 2.2,
+            "q": {
+              "flexion_l": -6,
+              "pro_sup_l": 18,
+              "elbow_flexion_l": 49,
+              "2mcp_flexion_l": 17,
+              "2pm_flexion_l": 23,
+              "2md_flexion_l": 13,
+              "3mcp_flexion_l": 18,
+              "3pm_flexion_l": 25,
+              "3md_flexion_l": 14,
+              "4mcp_flexion_l": 20,
+              "4pm_flexion_l": 26,
+              "4md_flexion_l": 15,
+              "5mcp_flexion_l": 22,
+              "5pm_flexion_l": 28,
+              "5md_flexion_l": 16
+            }
+          },
+          {
+            "t": 4.1,
+            "q": {
+              "flexion_l": -12,
+              "pro_sup_l": 28,
+              "elbow_flexion_l": 44,
+              "2mcp_flexion_l": 3,
+              "2pm_flexion_l": 4,
+              "2md_flexion_l": 2,
+              "3mcp_flexion_l": 4,
+              "3pm_flexion_l": 5,
+              "3md_flexion_l": 3,
+              "4mcp_flexion_l": 5,
+              "4pm_flexion_l": 6,
+              "4md_flexion_l": 3,
+              "5mcp_flexion_l": 5,
+              "5pm_flexion_l": 6,
+              "5md_flexion_l": 4
+            }
+          }
+        ],
+        "loadKg": 0,
+        "support": "assisted",
+        "groundEnabled": false,
+        "hand": "left",
+        "equipment": {
+          "type": "none"
+        }
+      }
+    }
+  ]
+}

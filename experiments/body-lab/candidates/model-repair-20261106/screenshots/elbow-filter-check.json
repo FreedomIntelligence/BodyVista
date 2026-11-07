@@ -1,0 +1,45 @@
+{
+  "scope": "elbow-observer-ui-only",
+  "cases": [
+    {
+      "fixture": "archived-demo",
+      "selectableIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "tableButtonsEnabled": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "fixture": "ui-mixed-range",
+      "selectableIndices": [
+        0,
+        4
+      ],
+      "tableButtonsEnabled": [
+        0,
+        4
+      ]
+    },
+    {
+      "fixture": "ui-constant",
+      "selectableIndices": [],
+      "tableButtonsEnabled": []
+    }
+  ],
+  "scriptSha256": "07191b498452c829990bd7dc1d3baa03a99b1b4a5077af6816fef194da45c11a",
+  "completedAt": "2026-11-07T03:07:26.9709917Z",
+  "status": "passed",
+  "startedAt": "2026-11-07T03:07:18.8301040Z",
+  "url": "http://127.0.0.1:4196/experiments/elbow-lab/?demo=1"
+}

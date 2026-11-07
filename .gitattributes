@@ -1,0 +1,2 @@
+# Experiment identities, models and test inputs use SHA-256 of the exact bytes.
+experiments/** -text
