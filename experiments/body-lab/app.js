@@ -2255,6 +2255,8 @@ async function useVerifiedMotion(motion) {
       `已载入：${motion.label}。当前停在首帧，按播放查看完整受力结果。`;
     $("verifiedSelection").textContent = `已载入：${motion.label}`;
     if (replay) {
+      if (window.parent !== window)
+        window.parent.postMessage({type: "bodyvista:muscle-case", id: motion.id}, location.origin);
       for (const button of $("verifiedMotionList").querySelectorAll("button"))
         button.setAttribute("aria-pressed", String(button.dataset.motion === motion.id));
       if (matchMedia("(max-width: 760px)").matches) {

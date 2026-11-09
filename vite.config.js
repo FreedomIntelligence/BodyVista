@@ -1,10 +1,27 @@
 import { defineConfig } from 'vite';
 import { cp, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 // Keep original model URLs and directory layout in development and production.
 const root = fileURLToPath(new URL('.', import.meta.url));
-const publicLab = 'https://freedomintelligence.github.io/BodyVista/experiments/body-lab/';
+const labPath = 'experiments/body-lab';
+const publishedPlayer = 'https://freedomintelligence.github.io/BodyVista/experiments/body-lab/player.html';
+
+// The bookmarked lab URL opens the atlas tab. An ordinary build without local
+// release assets can load the published player in that same tab's iframe.
+function workspaceEntry(usePublishedPlayer = false) {
+  return `<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>肌肉运动 · BodyVista</title>
+<a href="../../?workspace=muscle-motion" target="_top">打开肌肉运动</a>
+<script>
+  const target = new URL(document.querySelector('a').href);
+  const chosen = new URLSearchParams(location.search).get('case');
+  const destination = ${usePublishedPlayer ? `window.parent === window ? target : new URL('${publishedPlayer}')` : 'target'};
+  if (chosen) destination.searchParams.set('case', chosen);
+  if (location.href !== destination.href) location.replace(destination.href);
+</script></html>`;
+}
 
 async function convertModelScripts(sourceDir, outputDir) {
   const entries = await readdir(sourceDir, { withFileTypes: true });
@@ -45,10 +62,20 @@ export default defineConfig({
   plugins: [{
     name: 'atlas-model-assets',
     configureServer(server) {
-      server.middlewares.use((req, res, next) => {
-        if (req.method !== 'GET' || !/^\/experiments\/body-lab\/(?:index\.html)?(?:\?|$)/.test(req.url)) return next();
-        res.writeHead(302, { Location: publicLab });
-        res.end();
+      server.middlewares.use(async (req, res, next) => {
+        const {pathname} = new URL(req.url, 'http://localhost');
+        if (req.method !== 'GET' || !pathname.includes('/experiments/body-lab/')) return next();
+        const legacy = pathname.endsWith('/experiments/body-lab/') || pathname.endsWith('/experiments/body-lab/index.html');
+        const player = pathname.endsWith('/experiments/body-lab/player.html');
+        if (!legacy && !player) return next();
+        try {
+          const installed = player && existsSync(`${root}${labPath}/motion-cache/catalog.json`);
+          const html = installed
+            ? (await readFile(`${root}${labPath}/index.html`, 'utf8')).replace('<head>', '<head><meta name="bodyvista-mode" content="replay">')
+            : workspaceEntry(player);
+          res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+          res.end(html);
+        } catch (error) { next(error); }
       });
     },
     async closeBundle() {
@@ -60,12 +87,10 @@ export default defineConfig({
         await cp(`${root}${directory}`, `${root}dist/${directory}`, { recursive: true, filter });
       }
       await convertModelScripts(`${root}assets`, `${root}dist/assets`);
-      // Standalone builds do not download the release library. The Pages workflow
-      // replaces this entry with the verified player before uploading the site.
-      const labDir = `${root}dist/experiments/body-lab`;
+      const labDir = `${root}dist/${labPath}`;
       await mkdir(labDir, { recursive: true });
-      await writeFile(`${labDir}/index.html`,
-        `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>肌肉运动 · BodyVista</title><a href="${publicLab}">打开肌肉运动</a><script>if (location.href.split(/[?#]/)[0] !== '${publicLab}') location.replace('${publicLab}');</script></html>`);
+      await writeFile(`${labDir}/index.html`, workspaceEntry());
+      await writeFile(`${labDir}/player.html`, workspaceEntry(true));
     },
   }],
 });

@@ -48,7 +48,7 @@
 
 ## 肌肉运动
 
-从公网首页顶部进入「肌肉运动」，可以播放 11 个固定动作，查看随时间变化的肌肉张力，其中包括 4 个哑铃动作。自定义动作的编辑与受力计算使用本机 Python 服务，安装步骤见下文。[打开公网肌肉运动栏目](https://freedomintelligence.github.io/BodyVista/experiments/body-lab/)
+从公网首页顶部进入「肌肉运动」，可以播放 11 个固定动作，查看随时间变化的肌肉张力，其中包括 4 个哑铃动作。自定义动作的编辑与受力计算使用本机 Python 服务，安装步骤见下文。[打开公网肌肉运动栏目](https://freedomintelligence.github.io/BodyVista/?workspace=muscle-motion)
 
 全身模型在每个通过的采样时刻计算 **740 个肌腱单元**的张力与激活，并显示关节力矩、外部支撑及适用的手指与哑铃接触力。右臂页使用 Arm26 的六个单元估计肘部受力。[全身实验台说明](experiments/body-lab/FULLBODY.md) · [右臂实验台说明](experiments/elbow-lab/README.md)
 

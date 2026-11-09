@@ -1,6 +1,6 @@
 # BodyVista 项目入口
 
-主站用于查看三维解剖图谱。首页顶部的「肌肉运动」进入同域全身动作回放，访客可直接播放固定动作、查看肌力。自定义动作和右臂实验台由本机 Python 服务提供。主站使用 `npm ci`、`npm run dev`、`npm test`、`npm run build`。实验台的安装、版本资源和启动命令见[中文说明](README.zh-CN.md)及[资源安装说明](experiments/body-lab/RELEASE_ASSETS.md)。
+主站用于查看三维解剖图谱。「肌肉运动」是原顶栏中的工作区，地址为 `?workspace=muscle-motion`。栏目切换、语言和设置共用首页的顶栏，顶栏下方才加载动作回放。访客可播放固定动作、查看肌力，选中的案例可以通过 `case` 参数分享。自定义动作和右臂实验台由本机 Python 服务提供。主站使用 `npm ci`、`npm run dev`、`npm test`、`npm run build`。实验台的安装、版本资源和启动命令见[中文说明](README.zh-CN.md)及[资源安装说明](experiments/body-lab/RELEASE_ASSETS.md)。
 
 - **全身实验台**：本地 `/experiments/body-lab/`。当前模型 `ms740-shoulder-hand-franko-v5` 有 740 个肌腱单元。动作可从零设计、导入或从固定案例修改。自定义动作通过本地服务按关键帧求解；固定库的 11 个动作含 4 个哑铃动作，只有输入和模型版本均匹配才能读取预计算结果。两个[可编辑的腕、前臂与手指动作](experiments/body-lab/examples)没有附带力值。模型给出的是在指定姿势、速度、负重和支撑下的一组可行力值，不代表人体逐肌实测值。
 - **计算与来源**：`experiments/body-lab/fullbody_engine.py` 读取派生模型；`fullbody_solver.py` 处理动作采样、支撑和力矩平衡；`franko_transmission.py` 与 `passive_series.py` 分别描述指定小指肌腱的传动和指定指屈肌的被动力。模型声明、来源与力学边界见 [FULLBODY.md](experiments/body-lab/FULLBODY.md)。任何帧不满足约束时，整段不输出可当作有效的肌力数字。

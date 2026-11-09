@@ -1,5 +1,6 @@
 import {dentalFDI,dentalTissues,dentalRelated} from './dental-structure.js';
 import {openDental,closeDental,setupDental,setupDentalMotion} from './dental-workspace.js';
+import {setupMuscleWorkspace} from './muscle-workspace.js';
 import './styles.css';
 import {regionIcon} from './region-icon.js';
 import {structureChatGPTLink,structureDeepSeekLink} from './chatgpt-link.js';
@@ -660,14 +661,14 @@ function resize(){
 }
 new ResizeObserver(resize).observe($('stage'));
 let lastLabels=0;
-renderer.setAnimationLoop(time=>{
+function renderAtlas(time){
  if(document.body.dataset.dental)return;
  controls.update();motion?.tick(time);
  if(micro){if(microPlaying&&microLast)microTime+=Math.min(.08,(time-microLast)/1000)*Number($('micro-speed').value);microLast=time;micro.tick(microTime);}
  if(time-lastLabels>90){renderLabels();updateVitalSigns();interaction?.syncPlayback();lastLabels=time;}
  viewNavigation?.update();
  renderer.render(scene,camera);
-});
+}
 function openNav(name){
  if(['media','micro','quiz'].includes(name))historyScope(name==='media'?'motion':name);
  closeOverlays();setTool('');if(quizRun)quizRun.finding=false;finder.hidden=true;
@@ -697,7 +698,8 @@ $('gallery-query').oninput=()=>{searchLimit=60;renderGallery();};
 for(const button of document.querySelectorAll('[data-browse]'))button.onclick=()=>{browseMode=button.dataset.browse;searchLimit=60;renderGallery();interaction?.sync();};
 for(const id of ['bug-feedback','github-link'])$(id).onclick=()=>{const url=$(id).dataset.url?.trim();if(url)window.open(url,'_blank','noopener,noreferrer');};
 $('share-site').onclick=async()=>{
- const text=t("BodyVista 是一个免费的三维人体交互学习网站，提供 2,900 个解剖结构、12 个人体系统、140 项动态演示入口和 6 个微观主题。你可以旋转、缩放、剖切人体，探索结构与功能，并通过解剖挑战检验学习成果。支持中文、英文、日文，电脑和手机均可使用。")+'\n\n'+t("欢迎访问 https://freedomintelligence.github.io/bodyvista/ 体验");
+ const text=document.body.hasAttribute('data-muscle-workspace') ? document.title+'\n'+location.href :
+ t("BodyVista 是一个免费的三维人体交互学习网站，提供 2,900 个解剖结构、12 个人体系统、140 项动态演示入口和 6 个微观主题。你可以旋转、缩放、剖切人体，探索结构与功能，并通过解剖挑战检验学习成果。支持中文、英文、日文，电脑和手机均可使用。")+'\n\n'+t("欢迎访问 https://freedomintelligence.github.io/bodyvista/ 体验");
  try {
   try { await navigator.clipboard.writeText(text); }
   catch {
@@ -788,6 +790,7 @@ $('quiz-next').onclick=()=>{
 };
 $('quiz-locate').onclick=()=>action(()=>focusPart(quizRun.questions[quizRun.index].id));
 window.addEventListener('keydown',event=>{
+ if(document.body.hasAttribute('data-muscle-workspace'))return;
  const typing=/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName);
  if(!typing&&(event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='z'){event.preventDefault();$(event.shiftKey?'redo':'undo').click();}
  if(!typing&&(event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='y'){event.preventDefault();$('redo').click();}
@@ -816,13 +819,37 @@ interaction=setupInteraction({
 document.addEventListener('atlas:language',()=>{if(state.selected[0]&&!state.micro)showKnowledge(partMap.get(state.selected[0]));if($('inspector').dataset.panel==='search')renderSearch();if(!$('gallery').hidden)renderGallery();$('quiz-scores').textContent=scoreText();motion?.refresh(true);updateVitalSigns();interaction.sync();renderLabels();});
 setupDental({exit:mode=>action(async()=>{if(mode==='anatomy')await presetRegion('head');else await playActivity('whole-body:whole-body-vitality');interaction?.sync();}),sync:()=>interaction?.sync()});
  setTool('pan',false);initLanguage();resize();historyUI();
-try{
- await ensure(['skeletal','skin']);applyVisibility();fit();
- const major=parts.filter(p=>p.detail_file&&/^(frontal bone|parietal bone|temporal bone|occipital bone|sphenoid bone|maxilla|mandible|zygomatic bone|sacrum|hip bone|femur|humerus|tibia|ulna|radius)( |$)/.test(p.english));
- busy();for(let i=0;i<major.length;i+=5)await Promise.all(major.slice(i,i+5).map(p=>loadDetail(p.id)));
+const majorBones=parts.filter(p=>p.detail_file&&/^(frontal bone|parietal bone|temporal bone|occipital bone|sphenoid bone|maxilla|mandible|zygomatic bone|sacrum|hip bone|femur|humerus|tibia|ulna|radius)( |$)/.test(p.english));
+let atlasStartup=null,baseLoaded=false,nextBone=0;
+async function loadInitialAtlas(){
+ if(!baseLoaded){
+  await ensure(['skeletal','skin']);applyVisibility();fit();baseLoaded=true;
+ }
+ while(nextBone<majorBones.length){
+  if(document.body.hasAttribute('data-muscle-workspace'))return;
+  busy();await Promise.all(majorBones.slice(nextBone,nextBone+5).map(p=>loadDetail(p.id)));
+  nextBone+=5;
+ }
  idle();document.body.dataset.ready='true';
 }
-catch(error){setText($('loading-text'),'模型加载失败：'+error.message);document.body.dataset.ready='error';}
+function resumeAtlas(){
+ renderer.setAnimationLoop(renderAtlas);
+ resize();
+ if(!atlasStartup&&document.body.dataset.ready!=='true'){
+  atlasStartup=loadInitialAtlas().catch(error=>{
+   setText($('loading-text'),'模型加载失败：'+error.message);document.body.dataset.ready='error';
+  }).finally(()=>{atlasStartup=null;});
+ }
+}
+setupMuscleWorkspace({
+ closeNavigation:interaction.closeNavigation,
+ onChange(open){
+  if(open){closeDental();renderer.setAnimationLoop(null);}
+  else resumeAtlas();
+  interaction.sync();
+ }
+});
+if(!document.body.hasAttribute('data-muscle-workspace'))resumeAtlas();
 
 /* Workspace controls and original line icons for the full-body Atlas. */
 function atlasToolIcon(key){

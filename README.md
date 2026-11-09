@@ -55,7 +55,7 @@ This project is intended for teaching and learning. Animations, microscopic scen
 
 ## Local biomechanics experiments
 
-Choose **Muscle Motion** in the atlas navigation to replay 11 verified movements, including four dumbbell exercises, and inspect their muscle tensions. Use the local Python service described below to edit a movement or calculate forces for a new one. [Open Muscle Motion on GitHub Pages](https://freedomintelligence.github.io/BodyVista/experiments/body-lab/)
+Choose **Muscle Motion** in the atlas navigation to replay 11 verified movements, including four dumbbell exercises, and inspect their muscle tensions. Use the local Python service described below to edit a movement or calculate forces for a new one. [Open Muscle Motion on GitHub Pages](https://freedomintelligence.github.io/BodyVista/?workspace=muscle-motion)
 
 The full-body lab estimates force for **740 musculotendon units** at each accepted motion sample, together with joint torques, external support and applicable hand–dumbbell contact forces. The arm lab uses six Arm26 units to estimate elbow forces. [Full-body lab](experiments/body-lab/FULLBODY.md) · [Arm lab](experiments/elbow-lab/README.md)
 

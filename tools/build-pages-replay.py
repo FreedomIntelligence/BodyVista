@@ -16,7 +16,7 @@ import setup_release_assets as release
 TAG = "v1.1.0"
 MANIFEST_SHA256 = "56a52cc1835f83ffa009ecfb566314ae96398feff235eba1a2a836e2bc3c12dc"
 PLAYER_FILES = (
-    "index.html", "style.css", "app.js", "public-replay.js", "motion-cache.js",
+    "style.css", "app.js", "public-replay.js", "motion-cache.js",
     "fullbody-view.js", "muscle-shape-pool.js", "muscle-shape-worker.js",
     "muscle-sheet-shape.js", "muscle-path-shape.js", "bone-volumes.js",
     "geometry/fullbody-bones.json", "fullbody-model-data.json",
@@ -60,10 +60,10 @@ def assemble(bundle_dir, dist):
             target = player / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / LAB / name, target)
-        html = (player / "index.html").read_text(encoding="utf-8")
+        html = (ROOT / LAB / "index.html").read_text(encoding="utf-8")
         if html.count("<head>") != 1 or 'name="bodyvista-mode"' in html:
             raise ValueError("实验台页面缺少唯一的静态模式注入位置。")
-        (player / "index.html").write_text(html.replace(
+        (player / "player.html").write_text(html.replace(
             "<head>", '<head>\n  <meta name="bodyvista-mode" content="replay" />', 1
         ), encoding="utf-8")
         license_path = "experiments/body-lab/candidates/ms-human-700/LICENSE"
@@ -83,7 +83,7 @@ def assemble(bundle_dir, dist):
         shutil.copytree(stage, dist, dirs_exist_ok=True)
 
     return {"release": TAG, "cases": len(motions), "frames": 803, "cacheFiles": len(members),
-            "entry": (LAB / "index.html").as_posix()}
+            "entry": "./?workspace=muscle-motion", "player": (LAB / "player.html").as_posix()}
 
 
 def main():

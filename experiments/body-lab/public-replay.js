@@ -16,10 +16,12 @@ export async function fetchPublicMotion(url) {
 export function preparePublicReplay() {
   document.body.classList.add("public-replay");
   const byId = id => document.getElementById(id);
-  document.querySelectorAll(".app-header a[href='http://127.0.0.1:4186/']").forEach(link => {
-    link.href = "../../";
-  });
-  document.querySelector(".file-menu:not(#publicDesign)").hidden = true;
+  if (window.parent === window) {
+    const workspace = new URL("../../?workspace=muscle-motion", location.href);
+    const chosen = new URLSearchParams(location.search).get("case");
+    if (chosen) workspace.searchParams.set("case", chosen);
+    location.replace(workspace.href);
+  }
   byId("publicDesign").hidden = false;
   document.querySelector(".sidebar-head h1").textContent = "动作库";
   document.querySelector(".drawer-head h2").textContent = "受力结果";

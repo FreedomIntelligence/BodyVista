@@ -9,6 +9,14 @@ body { color:#31464f; }
 .workspace-tabs a { display:flex; align-items:center; justify-content:center; color:inherit; text-decoration:none; }
 .workspace-tabs a:hover { background:var(--control-hover); }
 .workspace-tabs button[aria-selected=true] { border-bottom-color:var(--accent); }
+.workspace-tabs a[aria-current=page] { border-bottom-color:var(--accent); background:var(--accent-soft); color:var(--accent); }
+#muscle-panel:not([hidden]) { height:calc(100dvh - var(--top)); }
+#muscle-panel iframe { display:block; width:100%; height:100%; border:0; }
+body[data-muscle-workspace] > :is(#workspace,.tools,.overlay,#bug-feedback) { display:none !important; }
+/* The atlas places its full-screen exit inside its canvas. Keep the header's
+   full-screen control accessible when a different workspace owns that space. */
+:root:fullscreen:has(body[data-muscle-workspace]) { --top:64px; }
+:root:fullscreen body[data-muscle-workspace] > .app-header { display:flex; }
 .view-history { display:flex; gap:0; margin-left:auto; }
 .header-actions { align-items:center; }
 .header-actions button, .header-actions button:nth-child(2) { color:#526b77; margin:0; border:0; border-radius:8px; }
@@ -355,6 +363,7 @@ body:has(#motion-workspace[aria-selected="true"]) #bug-feedback::after { left:0;
  #header-menu .workspace-tabs { display:flex; flex-direction:column; width:100%; height:auto; gap:4px; }
  #header-menu .workspace-tabs :is(button, a) { flex:none; width:100%; min-height:44px; text-align:left; border:0; border-radius:7px; padding:12px; }
  #header-menu .workspace-tabs a { justify-content:flex-start; }
+ :root:fullscreen:has(body[data-muscle-workspace]) { --top:calc(52px + env(safe-area-inset-top)); }
  #header-menu .workspace-tabs button[aria-selected=true] { background:var(--accent-soft); color:var(--accent); }
  #header-menu .header-actions { display:flex; justify-content:flex-end; gap:10px; width:100%; margin:0; border-top:1px solid var(--line); padding-top:10px; }
  #header-menu #language { margin-right:auto; width:100px; }

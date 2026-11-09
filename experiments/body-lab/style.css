@@ -272,5 +272,8 @@ body[data-workspace-collapsed="true"] #toggleWorkspace, body[data-inspector-coll
 .public-replay .keyframe-main { min-height: 46px; }
 .public-replay #muscleDisplay:disabled { opacity: 1; color: var(--ink); appearance: none; cursor: default; }
 .public-replay .file-menu-content { width: min(240px, 85vw); }
+.public-replay #publicDesign .file-menu-content { top: auto; bottom: calc(100% + 6px); }
 .public-replay .file-menu-content > p { padding: 6px 8px; }
 .public-replay #viewLoading:not([hidden]) { background: #eef3f5db; }
+html:has(meta[name="bodyvista-mode"][content="replay"]) body { grid-template-rows: minmax(0, 1fr) var(--timeline-height); }
+html:has(meta[name="bodyvista-mode"][content="replay"]) .app-header { display: none; }

@@ -12,7 +12,7 @@ export function setupInteraction({ context, exitMode, togglePlayback, openPlayba
   };
   $('mobile-nav-toggle').onclick=()=>toggleNav(!body.classList.contains('nav-open'));
   document.querySelector('.app-header').addEventListener('click',event=>{
-    if(event.target.closest('.workspace-tabs button,.atlas-brand,.header-actions button'))toggleNav(false);
+    if(event.target.closest('.workspace-tabs :is(button,a),.atlas-brand,.header-actions button'))toggleNav(false);
   });
   document.addEventListener('pointerdown',event=>{
     if(!event.target.closest('.app-header'))toggleNav(false);
@@ -76,10 +76,11 @@ export function setupInteraction({ context, exitMode, togglePlayback, openPlayba
     $('fade-selected').textContent = c.allFaded ? '恢复不透明' : '半透明';
     $('isolate-selected').textContent = c.isolated ? '显示周围结构' : '单独查看';
     const activeWorkspace = c.dental ? (c.dental==='anatomy'?'anatomy':'motion') : overlay === 'quiz' || c.finding ? 'quiz' : c.micro || (overlay === 'gallery' && $('gallery').dataset.browseMode === 'micro') ? 'micro' : c.motion || body.dataset.panel === 'activity' ? 'motion' : 'anatomy';
-    const pageName=c.dental ? (c.dental==='anatomy'?'口腔与牙齿':c.dental==='jaw'?'开合口与咬合':'牙齿发育') : overlay==='gallery'&&$('gallery').dataset.browseMode!=='micro'?'查找与浏览':{anatomy:'人体解剖',motion:'生命律动',micro:'微观探索',quiz:'解剖挑战'}[activeWorkspace];
+    const muscleOpen=body.hasAttribute('data-muscle-workspace');
+    const pageName=muscleOpen?'肌肉运动':c.dental ? (c.dental==='anatomy'?'口腔与牙齿':c.dental==='jaw'?'开合口与咬合':'牙齿发育') : overlay==='gallery'&&$('gallery').dataset.browseMode!=='micro'?'查找与浏览':{anatomy:'人体解剖',motion:'生命律动',micro:'微观探索',quiz:'解剖挑战'}[activeWorkspace];
     const pageTitle=t(pageName)+' · BodyVista';
     if(document.title!==pageTitle)document.title=pageTitle;
-    for (const name of ['anatomy','motion','micro','quiz']) $(name+'-workspace').setAttribute('aria-selected',String(activeWorkspace === name));
+    for (const name of ['anatomy','motion','micro','quiz']) $(name+'-workspace').setAttribute('aria-selected',String(!muscleOpen && activeWorkspace === name));
     $('select-tool').setAttribute('aria-pressed',String(!c.tool && !c.slicing));
     const selectionParent = mode === 'multi' ? $('scene-actions') : $('inspector');
     if ($('selection-tray').parentElement !== selectionParent) {
@@ -133,5 +134,5 @@ export function setupInteraction({ context, exitMode, togglePlayback, openPlayba
   });
   for (const id of ['inspector','gallery','quiz']) observer.observe($(id), {attributes:true,attributeFilter:['hidden','data-panel']});
   resize();
-  return {sync, syncPlayback, closePopovers};
+  return {sync, syncPlayback, closePopovers, closeNavigation: () => toggleNav(false)};
 }
