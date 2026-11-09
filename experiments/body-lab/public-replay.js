@@ -33,7 +33,7 @@ export function preparePublicReplay() {
     "点选关键帧或拖动时间轴查看该姿势的力值。按空格或播放按钮开始回放。";
   document.querySelector("#panel-motions a[href='./muscle-review.html']").hidden = true;
   document.querySelector("#panel-forces .torque-panel > .hint").textContent =
-    "单位为 N·m。净需求已扣除关节被动作用与外部支撑。肌肉合计包含被动张力，止挡反力和未平衡量单列。";
+    "可用上方“观察区域”切换关节。力矩单位为 N·m。净需求已扣除关节被动作用与外部支撑。肌肉合计包含被动张力，止挡反力和未平衡量单列。";
   byId("workspaceStatus").textContent = "动作回放";
   byId("viewLoading").textContent = "正在载入骨骼和动作库…";
   byId("muscleDisplay").value = "paths";

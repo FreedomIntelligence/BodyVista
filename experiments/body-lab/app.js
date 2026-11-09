@@ -1483,7 +1483,7 @@ function drawResults() {
     base ? norm([base.pelvis_tx, base.pelvis_ty, base.pelvis_tz]) : NaN,
   );
   $("balanceError").textContent = fmt(f.balanceErrorNm, 5);
-  const selectedRegion = $("coordinateRegion").value;
+  const selectedRegion = $(replay ? "muscleRegion" : "coordinateRegion").value;
   if (!torqueRows || torqueRows.region !== selectedRegion) {
     const table = document.createElement("table"),
       head = document.createElement("tr");
