@@ -55,7 +55,9 @@ This project is intended for teaching and learning. Animations, microscopic scen
 
 ## Local biomechanics experiments
 
-GitHub Pages serves the static anatomy atlas. The two biomechanics labs share a Python service on your computer. The full-body lab estimates force for **740 musculotendon units** at each accepted motion sample, together with joint torques, external support and applicable hand–dumbbell contact forces. The arm lab uses six Arm26 units to estimate elbow forces. [Full-body lab](experiments/body-lab/FULLBODY.md) · [Arm lab](experiments/elbow-lab/README.md)
+Choose **Muscle Motion** in the atlas navigation to replay 11 verified movements, including four dumbbell exercises, and inspect their muscle tensions. Use the local Python service described below to edit a movement or calculate forces for a new one. [Open Muscle Motion on GitHub Pages](https://freedomintelligence.github.io/BodyVista/experiments/body-lab/)
+
+The full-body lab estimates force for **740 musculotendon units** at each accepted motion sample, together with joint torques, external support and applicable hand–dumbbell contact forces. The arm lab uses six Arm26 units to estimate elbow forces. [Full-body lab](experiments/body-lab/FULLBODY.md) · [Arm lab](experiments/elbow-lab/README.md)
 
 For **BodyVista v1.1.0**, check out the release tag and use its matching `release-assets.json`. Place the manifest in `experiments/body-lab/`, or give its local path to `--manifest`. Four assets supply the bone volumes, atlas surfaces, MS-Human source files and fixed motion results. [Release asset instructions](experiments/body-lab/RELEASE_ASSETS.md)
 

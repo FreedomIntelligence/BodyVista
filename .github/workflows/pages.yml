@@ -30,6 +30,13 @@ jobs:
         run: npm test
       - name: Build website and copy models
         run: npm run build
+      - name: Add the verified motion library and browser player
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v1.1.0 --repo FreedomIntelligence/BodyVista --dir "$RUNNER_TEMP/bodyvista-release" \
+            --pattern 'release-assets.json' --pattern 'bodyvista-motion-cache-v1.1.0.zip'
+          python3 tools/build-pages-replay.py --bundle-dir "$RUNNER_TEMP/bodyvista-release"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

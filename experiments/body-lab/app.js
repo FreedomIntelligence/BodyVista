@@ -2,6 +2,9 @@ import { createBodyView } from "./fullbody-view.js";
 import { assertCompleteResult, cachedForceSeries, cachedMuscleRanges, loadCachedMotion, sceneSignature } from "./motion-cache.js";
 
 const $ = (id) => document.getElementById(id);
+const replay = document.querySelector('meta[name="bodyvista-mode"][content="replay"]')
+  ? await import("./public-replay.js") : null;
+replay?.preparePublicReplay();
 let store = null;
 const regionLabels = {
   all: "全身",
@@ -133,6 +136,7 @@ function wrapFrame(value, lazy = false) {
 }
 
 const view = createBodyView($("bodyView"), {
+  pathsOnlyView: Boolean(replay),
   initialSurfaceQuality: "detail",
   maxPixelRatio: 1,
   maxRenderPixels: 1_000_000,
@@ -250,6 +254,13 @@ const view = createBodyView($("bodyView"), {
 });
 
 async function api(path, body, signal) {
+  if (replay) {
+    if (path !== "model" || body !== undefined)
+      throw Error("自定义动作请使用“设计动作”中的本机实验台。");
+    const response = await fetch("./fullbody-model-data.json", { signal });
+    if (!response.ok) throw Error(`无法载入动作模型（${response.status}）。`);
+    return response.json();
+  }
   if (body && info?.computationSha256)
     body = { ...body, computationSha256: info.computationSha256 };
   if (body && ["pose", "rotate"].includes(path))
@@ -301,7 +312,7 @@ function setPlaybackHealth(text) {
   if ($("playbackHealth")) $("playbackHealth").textContent = text;
 }
 function updatePanelButtons() {
-  for (const [id, name, label, openText] of [["toggleWorkspace", "workspaceCollapsed", "工具", "‹"], ["toggleInspector", "inspectorCollapsed", "详情", "›"]]) {
+  for (const [id, name, label, openText] of [["toggleWorkspace", "workspaceCollapsed", replay ? "动作" : "工具", "‹"], ["toggleInspector", "inspectorCollapsed", replay ? "受力" : "详情", "›"]]) {
     const button = $(id);
     if (!button) continue;
     const collapsed = document.body.dataset[name] === "true";
@@ -408,6 +419,7 @@ function inputScene() {
   };
 }
 function save() {
+  if (replay) return;
   try {
     localStorage.setItem(
       store,
@@ -533,7 +545,7 @@ function updateButtons() {
     control.disabled = !info || updating;
   for (const id of ["previousFrame", "nextFrame"])
     if ($(id)) $(id).disabled = !frames.length || solving || gripBusy || verifiedLoading || Boolean(moviePreparation);
-  if ($("keyframeCount")) $("keyframeCount").textContent = `${keys.length} / 10`;
+  if ($("keyframeCount")) $("keyframeCount").textContent = replay ? `${keys.length} 个关键帧` : `${keys.length} / 10`;
   updateCaptureButtons();
   $("resetPose").disabled = !info || updating || Boolean(rotationGesture);
   $("groundToggle").disabled = !info || updating || Boolean(rotationGesture);
@@ -913,10 +925,16 @@ function renderKeys() {
         updateCoordinate();
       } else
         await setDraft(key.q, { invalidateResult: false, allowInvalid: true });
+      if (replay) return;
       $("draftState").textContent =
         `编辑姿势 ${i + 1}；调整后点“替换选中帧”，或添加下一帧。`;
       showWorkspace("pose");
     };
+    if (replay) {
+      item.append(main);
+      target.append(item);
+      return;
+    }
     const tools = document.createElement("div");
     tools.className = "keyframe-tools";
     if (i > 0) {
@@ -2141,8 +2159,10 @@ async function loadEvidence() {
 }
 async function loadVerifiedMotions() {
   try {
-    const saved = localStorage.getItem(`${store}.before-verified`);
-    if (saved) beforeVerified = JSON.parse(saved);
+    if (!replay) {
+      const saved = localStorage.getItem(`${store}.before-verified`);
+      if (saved) beforeVerified = JSON.parse(saved);
+    }
   } catch {
     /* The presets still work when no backup has been stored. */
   }
@@ -2180,6 +2200,11 @@ async function loadVerifiedMotions() {
     $("verifiedNote").textContent =
       `${motions.length} 个动作 · 已保存受力结果`;
     updateButtons();
+    if (replay && motions.length) {
+      const caseId = new URLSearchParams(location.search).get("case");
+      const initial = motions.find(motion => motion.id === caseId) ?? motions[0];
+      await useVerifiedMotion(initial);
+    }
   } catch (error) {
     $("verifiedNote").textContent = error.message;
   }
@@ -2190,17 +2215,24 @@ async function useVerifiedMotion(motion) {
   verifiedLoading = true;
   updateButtons();
   pause();
-  const backup = beforeVerified ? null : {
+  const backup = replay || beforeVerified ? null : {
     schema: 1, model: info.id, ...inputScene(), draft: clone(draft),
   };
   invalidate("正在读取固定案例缓存…");
+  if (replay) {
+    for (const button of $("verifiedMotionList").querySelectorAll("button"))
+      button.setAttribute("aria-pressed", "false");
+    $("verifiedSelection").textContent = `正在读取并校验：${motion.label}`;
+    $("viewLoading").hidden = false;
+    $("viewLoading").textContent = `正在载入${motion.label}…`;
+  }
   const version = revision;
   try {
-    const currentModel = await api("model");
+    const currentModel = replay ? info : await api("model");
     if (currentModel.id !== info.id || currentModel.sourceSha256 !== info.sourceSha256 ||
         currentModel.computationSha256 !== info.computationSha256)
       throw Error("模型或计算版本已经改变，请刷新页面；旧缓存未启用。");
-    const { value } = await loadCachedMotion(motion, info);
+    const { value } = await loadCachedMotion(motion, info, replay?.fetchPublicMotion);
     if (version !== revision) throw Error("读取期间动作已改变，未应用缓存。");
     if (backup) {
       localStorage.setItem(`${store}.before-verified`, JSON.stringify(backup));
@@ -2222,11 +2254,22 @@ async function useVerifiedMotion(motion) {
     $("draftState").textContent =
       `已载入：${motion.label}。当前停在首帧，按播放查看完整受力结果。`;
     $("verifiedSelection").textContent = `已载入：${motion.label}`;
+    if (replay) {
+      for (const button of $("verifiedMotionList").querySelectorAll("button"))
+        button.setAttribute("aria-pressed", String(button.dataset.motion === motion.id));
+      if (matchMedia("(max-width: 760px)").matches) {
+        document.body.dataset.workspaceCollapsed = "true";
+        document.body.dataset.inspectorCollapsed = "true";
+        updatePanelButtons();
+      }
+    }
     save();
   } catch (error) {
+    if (replay) $("verifiedSelection").textContent = `${motion.label}未载入，可以再次选择。`;
     status(`动作未载入：${error.message}`, true);
     return;
   } finally {
+    if (replay) $("viewLoading").hidden = true;
     verifiedLoading = false;
     updateButtons();
   }
@@ -2927,6 +2970,16 @@ async function boot() {
     populateCoordinates();
     populateMuscles();
     view.setView(viewMode);
+    if (replay) {
+      draft = clone(defaults);
+      showInspector("forces");
+      showWorkspace("motions");
+      $("connection").textContent = `${info.muscles.length} 个肌腱单元`;
+      $("resultKind").textContent = "等待回放";
+      $("viewLoading").hidden = true;
+      await loadVerifiedMotions();
+      return;
+    }
     let restored = false,
       restoredDraft = null,
       migrated = false,

@@ -230,6 +230,7 @@ export function createBodyView(
     metadata = {},
     showRegionSelector = true,
     initialSurfaceQuality = "detail",
+    pathsOnlyView = false,
     maxPixelRatio = 2,
     maxRenderPixels = Infinity,
     maxSurfaceCacheBytes = 128 * 1024 * 1024,
@@ -457,8 +458,8 @@ export function createBodyView(
     disposed = false,
     pendingCompilation = null,
     readyGeometry = false,
-    editing = true,
-    handlesVisible = true;
+    editing = !pathsOnlyView,
+    handlesVisible = !pathsOnlyView;
   let renderFrame = 0, lastRenderedFrame = null, lastRenderedRefined = false;
   let gpuFence = null, fenceTimer = 0, renderRequested = false;
   let lastRenderTiming = { cpuMs: 0, elapsedMs: 0, busy: false, stalled: false };
@@ -473,7 +474,7 @@ export function createBodyView(
     error => onAnatomyStatus({ error: true, message: `肌肉动画计算失败：${error.message}；保留上一完整画面。` }),
   );
   let musclesVisible = true,
-    muscleDisplay = "anatomy",
+    muscleDisplay = pathsOnlyView ? "paths" : "anatomy",
     anatomicalMuscles = null,
     hasAnatomicalFrame = false,
     bonesVisible = true,
@@ -2559,7 +2560,7 @@ export function createBodyView(
     });
     return anatomyReady;
   }
-  loadSurface(initialSurfaceQuality);
+  if (!pathsOnlyView) loadSurface(initialSurfaceQuality);
   return {
     ready,
     get anatomyReady() { return anatomyReady; },
@@ -2662,7 +2663,7 @@ export function createBodyView(
     },
     regions: availableRegions,
     setEditing(value) {
-      editing = Boolean(value);
+      editing = !pathsOnlyView && Boolean(value);
       labelPosition();
     },
     setHandlesVisible(value) {

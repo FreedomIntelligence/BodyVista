@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 // Keep original model URLs and directory layout in development and production.
 const root = fileURLToPath(new URL('.', import.meta.url));
+const publicLab = 'https://freedomintelligence.github.io/BodyVista/experiments/body-lab/';
 
 async function convertModelScripts(sourceDir, outputDir) {
   const entries = await readdir(sourceDir, { withFileTypes: true });
@@ -43,6 +44,13 @@ export default defineConfig({
   },
   plugins: [{
     name: 'atlas-model-assets',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.method !== 'GET' || !/^\/experiments\/body-lab\/(?:index\.html)?(?:\?|$)/.test(req.url)) return next();
+        res.writeHead(302, { Location: publicLab });
+        res.end();
+      });
+    },
     async closeBundle() {
       await cp(`${root}dental/vendor`, `${root}dist/dental/vendor`, { recursive: true, filter: source => !source.includes('/vendor/src') });
       for (const directory of ['assets', 'thumbs', 'dental/models']) {
@@ -52,6 +60,12 @@ export default defineConfig({
         await cp(`${root}${directory}`, `${root}dist/${directory}`, { recursive: true, filter });
       }
       await convertModelScripts(`${root}assets`, `${root}dist/assets`);
+      // Standalone builds do not download the release library. The Pages workflow
+      // replaces this entry with the verified player before uploading the site.
+      const labDir = `${root}dist/experiments/body-lab`;
+      await mkdir(labDir, { recursive: true });
+      await writeFile(`${labDir}/index.html`,
+        `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>肌肉运动 · BodyVista</title><a href="${publicLab}">打开肌肉运动</a><script>if (location.href.split(/[?#]/)[0] !== '${publicLab}') location.replace('${publicLab}');</script></html>`);
     },
   }],
 });

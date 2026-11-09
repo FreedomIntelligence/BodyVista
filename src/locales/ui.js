@@ -1,5 +1,6 @@
 // [English, Japanese]. Chinese is the source language and remains the fallback.
 export default {
+'肌肉运动':['Muscle Motion','筋肉の運動'],
 '横截面':['Sections','断面'], '恢复不透明':['Restore opacity','不透明に戻す'],
 '人体解剖 · BodyVista':['Human Anatomy · BodyVista','人体解剖 · BodyVista'],
 '视图':['Views','ビュー'], '撤销':['Undo','元に戻す'], '重做':['Redo','やり直す'],

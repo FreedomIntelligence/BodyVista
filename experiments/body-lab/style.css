@@ -262,3 +262,15 @@ body[data-workspace-collapsed="true"] #toggleWorkspace, body[data-inspector-coll
 @media (max-width: 460px) { .header-status { display: none; } .file-menu { margin-left: auto; } .app-header { gap: 7px; padding: 0 9px; } .workspace-nav a { padding: 8px; } .transport { gap: 3px; } .transport output { font-size: 10px; } .loop-label { font-size: 10px !important; } .speed-label select { width: 55px; } .transport .icon-button { display: none; } .scene-caption .render-info { display: none; } }
 @media (max-height: 700px) and (min-width: 761px) { :root { --timeline-height: 198px; --header-height: 56px; } .sequence { grid-template-rows: 31px minmax(0, 1fr) 44px 22px; padding-top: 7px; } .scene-column { grid-template-rows: 42px minmax(0, 1fr) 31px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+
+.public-replay .workspace-tabs, .public-replay .inspector-tabs,
+.public-replay #panel-pose, .public-replay #panel-equipment, .public-replay #panel-selection,
+.public-replay .example-library, .public-replay #confirm, .public-replay .playback-row > .actions {
+  display: none !important;
+}
+.public-replay .keyframe { align-self: center; }
+.public-replay .keyframe-main { min-height: 46px; }
+.public-replay #muscleDisplay:disabled { opacity: 1; color: var(--ink); appearance: none; cursor: default; }
+.public-replay .file-menu-content { width: min(240px, 85vw); }
+.public-replay .file-menu-content > p { padding: 6px 8px; }
+.public-replay #viewLoading:not([hidden]) { background: #eef3f5db; }

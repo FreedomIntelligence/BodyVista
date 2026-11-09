@@ -46,9 +46,11 @@
 | 测试 | Node.js 内置测试运行器 |
 | 部署 | GitHub Actions、GitHub Pages |
 
-## 本地肌骨实验
+## 肌肉运动
 
-GitHub Pages 提供静态解剖图谱。两套肌骨实验台共用本机 Python 服务。全身页在每个通过的采样时刻计算 **740 个肌腱单元**的张力与激活，并显示关节力矩、外部支撑及适用的手指与哑铃接触力。右臂页使用 Arm26 的六个单元估计肘部受力。[全身实验台说明](experiments/body-lab/FULLBODY.md) · [右臂实验台说明](experiments/elbow-lab/README.md)
+从公网首页顶部进入「肌肉运动」，可以播放 11 个固定动作，查看随时间变化的肌肉张力，其中包括 4 个哑铃动作。自定义动作的编辑与受力计算使用本机 Python 服务，安装步骤见下文。[打开公网肌肉运动栏目](https://freedomintelligence.github.io/BodyVista/experiments/body-lab/)
+
+全身模型在每个通过的采样时刻计算 **740 个肌腱单元**的张力与激活，并显示关节力矩、外部支撑及适用的手指与哑铃接触力。右臂页使用 Arm26 的六个单元估计肘部受力。[全身实验台说明](experiments/body-lab/FULLBODY.md) · [右臂实验台说明](experiments/elbow-lab/README.md)
 
 使用 **BodyVista v1.1.0** 时，检出该标签并取得同版 `release-assets.json`。将清单放入 `experiments/body-lab/`，也可以在 `--manifest` 后指定它的实际位置。四份资源分别提供骨体积、图谱表面、MS-Human 来源文件和固定动作的完整缓存。[发行资源安装说明](experiments/body-lab/RELEASE_ASSETS.md)
 
