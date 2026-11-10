@@ -84,7 +84,14 @@
         <section id="solveDiagnosis" class="solve-diagnosis" aria-label="动作未通过原因" hidden><h3>动作未通过</h3><p id="failureSummary"></p><ul id="failureReasons"></ul><p id="failureAdvice" class="hint"></p><div id="failureActions" class="actions"></div></section>
         <div class="panel-heading"><h2>当前帧受力</h2><span class="badge" id="resultKind">尚无计算</span></div>
         <div class="metrics"><div><span>全身有效肌力</span><strong id="muscleCount">—</strong><small id="muscleTotal">肌腱单元</small></div><div><span>最大关节力矩</span><strong id="peakTorque">—</strong><small>N·m · 当前帧</small></div><div><span id="baseForceLabel">辅助基座力</span><strong id="baseForce">—</strong><small>N · 单独显示</small></div><div><span>肌肉力矩残差</span><strong id="balanceError">—</strong><small>N·m · 当前帧</small></div></div>
-        <div class="chart-title"><label for="muscleRegion">观察区域</label><select id="muscleRegion"></select><input id="muscleSearch" type="search" placeholder="搜索肌束名称" aria-label="搜索肌束名称" /><label for="muscleSelect">观察肌束</label><select id="muscleSelect" aria-describedby="muscleFilterNote" disabled></select><span id="muscleValue">— N</span></div>
+        <div class="chart-title">
+          <label id="musclePickerLabel" for="muscleSelect">观察肌束</label>
+          <div class="muscle-picker">
+            <input id="muscleSelect" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="muscleOptions" aria-describedby="muscleFilterNote" placeholder="搜索肌束名称" autocomplete="off" spellcheck="false" disabled />
+            <ul id="muscleOptions" role="listbox" aria-labelledby="musclePickerLabel" data-motion-localized hidden></ul>
+          </div>
+          <span id="muscleValue">— N</span>
+        </div>
         <canvas id="forceChart" width="900" height="220" aria-label="选中肌束张力随时间变化"></canvas>
         <div class="label-help"><p class="hint" id="muscleFilterNote"></p><button type="button" class="help-button" aria-label="肌束观察说明" data-help="观察列表只显示整段张力变化大于0.01 N的肌束，按变化幅度排序。全部肌腱仍参与计算。" data-help-source="muscleNote">?</button></div><p id="muscleNote" hidden>张力来自当前动作、负重与支撑条件下的逐帧求解。</p>
         <details id="tendonBranchDetails" class="tendon-branch-details" hidden open><summary>肌腱各段张力</summary><p class="hint">同一肌腱向指伸肌腱膜传力；串联段不能相加作为肌肉总力。</p><table class="tendon-branch-table"><thead><tr><th scope="col">腱段</th><th scope="col">传力比例</th><th scope="col">张力 / N</th></tr></thead><tbody id="tendonBranchRows"></tbody></table></details>
@@ -102,7 +109,7 @@
         <summary>自定义动作 · 离线版开发中 <span aria-hidden="true">⌄</span></summary>
         <div class="file-menu-content">
           <p class="hint">安装离线版可以自定义动作并计算受力。此功能仍在开发中。</p>
-          <a id="motionSetupGuide" href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.3/docs/OFFLINE_MOTION.md" target="_blank" rel="noopener">离线版安装和启动说明 ↗</a>
+          <a id="motionSetupGuide" href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.4/docs/OFFLINE_MOTION.md" target="_blank" rel="noopener">离线版安装和启动说明 ↗</a>
           <a href="http://127.0.0.1:4192/?workspace=muscle-motion" target="_blank" rel="noopener">打开已启动的本机实验台 ↗</a>
         </div>
       </details>

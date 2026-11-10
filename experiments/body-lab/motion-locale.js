@@ -68,13 +68,13 @@ function paintNode(node) {
   }
 }
 
+const skipTranslation = "script,style,textarea,code,pre,[data-motion-localized]";
 function paintTree(root) {
-  if (!root.isConnected || (root.parentElement?.closest("script,style,textarea,code,pre")) ||
-      root.matches?.("script,style,textarea,code,pre")) return;
+  if (!root.isConnected || root.parentElement?.closest(skipTranslation) || root.matches?.(skipTranslation)) return;
   paintNode(root);
   if (root.nodeType !== 1) return;
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
-    acceptNode: n => n.matches?.("script,style,textarea,code,pre") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+    acceptNode: n => n.matches?.(skipTranslation) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
   });
   while (walker.nextNode()) paintNode(walker.currentNode);
 }
@@ -87,7 +87,9 @@ export function startMotionLocale() {
   const observer = new MutationObserver(records => {
     for (const record of records) {
       if (record.type === "childList") for (const node of record.addedNodes) paintTree(node);
-      else if (record.type === "attributes") paintNode(record.target);
+      else if (record.type === "attributes") {
+        if (!record.target.closest(skipTranslation)) paintNode(record.target);
+      }
       else paintTree(record.target);
     }
   });
@@ -105,7 +107,7 @@ export function startMotionLocale() {
       const url = new URL(local.href); url.searchParams.set("lang", language); local.href = url.href;
     }
     const guide = document.getElementById("motionSetupGuide");
-    if (guide) guide.href = "https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.3/docs/" +
+    if (guide) guide.href = "https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.4/docs/" +
       (language === "zh-CN" ? "OFFLINE_MOTION.md" : `OFFLINE_MOTION.${language}.md`);
     if (language !== "zh-CN") observer.observe(document.documentElement, {
       subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:attrs

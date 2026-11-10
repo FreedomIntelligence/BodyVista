@@ -57,6 +57,7 @@ BODY_STATIC = {
       for side in ("left", "right")),
     "app.js",
     "motion-cache.js",
+    "muscle-picker.js",
     "motion-locale.js", "motion-locale-static.js", "motion-locale-data.js",
     "motion-locale-runtime.js", "motion-locale-evidence.js", "motion-locale-review.js",
     "motion-cache/catalog.json",

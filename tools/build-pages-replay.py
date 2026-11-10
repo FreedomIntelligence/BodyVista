@@ -22,7 +22,7 @@ PAGES_LIMIT_BYTES = 1_000_000_000
 CHUNK_BYTES = 8 * 1024 * 1024
 SURFACE_MANIFESTS = {"atlas-muscles": "atlas-muscles.json", "bone-volumes": "geometry/bone-volumes.json"}
 PLAYER_FILES = (
-    "style.css", "app.js", "public-replay.js", "motion-cache.js",
+    "style.css", "app.js", "public-replay.js", "motion-cache.js", "muscle-picker.js",
     "motion-locale.js", "motion-locale-static.js", "motion-locale-data.js",
     "motion-locale-runtime.js", "motion-locale-evidence.js",
     "fullbody-view.js", "muscle-shape-pool.js", "muscle-shape-worker.js",

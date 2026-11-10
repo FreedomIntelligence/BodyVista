@@ -1,4 +1,5 @@
 import { createBodyView } from "./fullbody-view.js";
+import { createMusclePicker } from "./muscle-picker.js";
 import { sourceAttribute, sourceText, startMotionLocale, translateMotion } from "./motion-locale.js";
 import { assertCompleteResult, cachedForceSeries, cachedMuscleRanges, loadCachedMotion, sceneSignature } from "./motion-cache.js";
 
@@ -138,6 +139,16 @@ function wrapFrame(value, lazy = false) {
   return visual;
 }
 
+const musclePicker = createMusclePicker({
+  input: $("muscleSelect"),
+  list: $("muscleOptions"),
+  onSelect(value) {
+    selectedAnatomicalMuscle = null;
+    view.setSelected(value);
+    $("selectionLabel").textContent = musclePicker.sourceLabel;
+    drawResults();
+  },
+});
 const view = createBodyView($("bodyView"), {
   readOnly: Boolean(replay),
   progressiveSurface: Boolean(replay),
@@ -197,9 +208,7 @@ const view = createBodyView($("bodyView"), {
     $("coordinateRegion").value = region;
     if ($("jointRegion")) $("jointRegion").value = region;
     renderJointList();
-    $("muscleRegion").value = region;
     populateCoordinates();
-    populateMuscles();
     drawResults();
   },
   onViewChange: (name) => {
@@ -234,7 +243,7 @@ const view = createBodyView($("bodyView"), {
       $("selectionLabel").textContent =
         `${name.label}${name.tissueType === "tendon" ? " · 跟腱连接表面" : name.mapping === "group" ? ` · 对应 ${name.units.length} 个计算单元` : name.mapping === "unmapped" ? " · 尚无计算单元映射" : ""}`;
       if (!info?.muscles.some((m) => m.name === key)) {
-        $("muscleSelect").value = "";
+        musclePicker.setValue("");
         $("muscleValue").textContent = "— N";
         $("muscleNote").textContent =
           name.tissueType === "tendon"
@@ -245,19 +254,16 @@ const view = createBodyView($("bodyView"), {
       }
     }
     if (info?.muscles.some((m) => m.name === key)) {
-      $("muscleRegion").value = "all";
-      $("muscleSearch").value = "";
       const changingKey = [key, ...(name?.units || [])].find((unit) =>
         muscleVariations.has(unit),
       );
-      populateMuscles(changingKey);
-      $("muscleSelect").value = changingKey || "";
+      musclePicker.setValue(changingKey || "");
       view.setSelected(name?.atlasId || changingKey || null, {
         preserveSurfaceCard: Boolean(name?.atlasId),
       });
       if (!name?.atlasId)
         $("selectionLabel").textContent =
-          sourceText($("muscleSelect").selectedOptions[0]) || key;
+          musclePicker.sourceLabel || key;
       drawResults();
     }
   },
@@ -311,8 +317,9 @@ async function api(path, body, signal) {
   return value;
 }
 function status(text, error = false) {
+  $("status").hidden = !text;
   $("status").textContent = text;
-  $("status").title = `${text}（点击查看完整消息）`;
+  $("status").title = text ? `${text}（点击查看完整消息）` : "";
   $("status").classList.toggle("error", error);
   if ($("statusDetail")) $("statusDetail").textContent = text;
   if ($("statusNotice")) $("statusNotice").hidden = !error;
@@ -1360,12 +1367,12 @@ function clearResults() {
   $("scope").textContent = "计算后显示。";
   $("muscleValue").textContent = "— N";
   $("muscleNote").textContent =
-    "头颈、躯干、双臂、双手与双腿共同配力。选择区域和肌束查看计算张力。";
+    "选择肌束可查看张力曲线。";
   drawChart();
 }
 function drawChart() {
   const canvas = $("forceChart"),
-    name = $("muscleSelect").value;
+    name = musclePicker.value;
   if (!canvas.clientWidth) return;
   const width = Math.round(canvas.clientWidth), height = Math.round(canvas.clientHeight);
   if (canvas.width !== width || canvas.height !== height) {
@@ -1474,32 +1481,13 @@ function drawChartBackground(canvas, name) {
   ctx.stroke();
   return duration;
 }
-function drawResults() {
-  if (document.querySelector('[data-inspector-panel="forces"]')?.hidden ||
-      document.body.dataset.inspectorCollapsed === "true") return;
-  if (!result || !frames.length) { drawChart(); return; }
-  const f = frames.includes(displayedFrame) ? displayedFrame : null;
-  if (!f) return;
-  const muscles = f.muscles || [],
-    valid = muscles.filter((m) => Number.isFinite(m.force));
-  $("muscleCount").textContent = String(valid.length);
-  const torques = f.torques || {},
-    rotational = Object.entries(torques).filter(
-      ([k, v]) => !/^pelvis_t[xyz]$/.test(k) && Number.isFinite(v),
-    );
-  $("peakTorque").textContent = fmt(
-    rotational.length
-      ? Math.max(...rotational.map(([, v]) => Math.abs(v)))
-      : NaN,
-  );
-  const base = f.support?.baseResidual;
-  $("baseForceLabel").textContent =
-    f.support?.mode === "free" ? "整体未平衡力" : "辅助基座力";
-  $("baseForce").textContent = fmt(
-    base ? norm([base.pelvis_tx, base.pelvis_ty, base.pelvis_tz]) : NaN,
-  );
-  $("balanceError").textContent = fmt(f.balanceErrorNm, 5);
-  const selectedRegion = $(replay ? "muscleRegion" : "coordinateRegion").value;
+const torquePanel = document.querySelector(".torque-panel");
+torquePanel.addEventListener("toggle", () => {
+  if (torquePanel.open) drawResults();
+});
+function renderTorqueTable(f) {
+  const selectedRegion = replay ? "all" : $("coordinateRegion").value;
+  const torques = f.torques || {};
   if (!torqueRows || torqueRows.region !== selectedRegion) {
     const table = document.createElement("table"),
       head = document.createElement("tr");
@@ -1542,12 +1530,39 @@ function drawResults() {
     });
   }
   showHandPassiveTorques(f, selectedRegion);
-  const muscle = muscles.find((m) => m.name === $("muscleSelect").value);
+}
+function drawResults() {
+  if (document.querySelector('[data-inspector-panel="forces"]')?.hidden ||
+      document.body.dataset.inspectorCollapsed === "true") return;
+  if (!result || !frames.length) { drawChart(); return; }
+  const f = frames.includes(displayedFrame) ? displayedFrame : null;
+  if (!f) return;
+  const muscles = f.muscles || [],
+    valid = muscles.filter((m) => Number.isFinite(m.force));
+  $("muscleCount").textContent = String(valid.length);
+  const torques = f.torques || {},
+    rotational = Object.entries(torques).filter(
+      ([k, v]) => !/^pelvis_t[xyz]$/.test(k) && Number.isFinite(v),
+    );
+  $("peakTorque").textContent = fmt(
+    rotational.length
+      ? Math.max(...rotational.map(([, v]) => Math.abs(v)))
+      : NaN,
+  );
+  const base = f.support?.baseResidual;
+  $("baseForceLabel").textContent =
+    f.support?.mode === "free" ? "整体未平衡力" : "辅助基座力";
+  $("baseForce").textContent = fmt(
+    base ? norm([base.pelvis_tx, base.pelvis_ty, base.pelvis_tz]) : NaN,
+  );
+  $("balanceError").textContent = fmt(f.balanceErrorNm, 5);
+  if (torquePanel.open) renderTorqueTable(f);
+  const muscle = muscles.find((m) => m.name === musclePicker.value);
   $("muscleValue").textContent = `${fmt(muscle?.force)} N`;
   showTendonBranches(muscle, result.quantitativeValid === true && f.quantitativeValid === true &&
     selectedAnatomicalMuscle?.mapping !== "unmapped" && selectedAnatomicalMuscle?.tissueType !== "tendon");
   const sensitivity = result.sensitivity?.muscles?.find(
-    (m) => m.name === $("muscleSelect").value,
+    (m) => m.name === musclePicker.value,
   );
   $("muscleNote").textContent =
     sensitivity && Number.isFinite(sensitivity.minN)
@@ -1555,7 +1570,7 @@ function drawResults() {
       : !muscle && result.quantitativeValid === true
         ? selectedAnatomicalMuscle?.mapping !== "unmapped" && selectedAnatomicalMuscle
           ? "此表面关联的肌束在整段动作中张力变化均不超过 0.01 N，未列入观察列表。"
-          : "当前筛选下没有可观察的变化肌束，可调整区域或搜索条件。"
+          : "选择肌束可查看张力曲线。"
       : Number.isFinite(muscle?.force)
         ? `当前 ${regionLabels[muscle.region] || "模型"}肌束张力 ${fmt(muscle.force)} N，激活水平 ${fmt((muscle.activation || 0) * 100)}%。逐帧求最小激活总和，尚未约束激活变化；分配切换时曲线可能跳变。`
         : "此动作没有有效张力；失败结果不参与肌力比较。";
@@ -1567,10 +1582,10 @@ function drawResults() {
       "此解剖肌肉尚未映射到计算单元，不显示推断张力。";
   else if (selectedAnatomicalMuscle?.mapping === "group" && muscle)
     $("muscleNote").textContent +=
-      ` 当前曲线是 ${muscle?.name || $("muscleSelect").value} 单元，不代表整块 ${selectedAnatomicalMuscle.label} 的合力。`;
+      ` 当前曲线是 ${muscle?.name || musclePicker.value} 单元，不代表整块 ${selectedAnatomicalMuscle.label} 的合力。`;
   $("selectionLabel").textContent = selectedAnatomicalMuscle
     ? `${selectedAnatomicalMuscle.label} · ${selectedAnatomicalMuscle.tissueType === "tendon" ? "跟腱连接表面" : selectedAnatomicalMuscle.mapping === "unmapped" ? "尚无计算映射" : "对应计算单元见右侧"}`
-    : sourceText($("muscleSelect").selectedOptions[0]) || "点肌肉可查看名称";
+    : musclePicker.sourceLabel || "点肌肉可查看名称";
   drawChart();
   const contactLines = [];
   if (f.grasp && Number($("loadKg").value) > 0) {
@@ -1873,7 +1888,7 @@ function presentResult(value, { preview = false, cached = false, preferredMuscle
       ? "已生成姿势预览；此回放不提供力学结果。"
       : value.status === "infeasible"
         ? `${value.metrics.failedFrames}/${frames.length} 帧未通过，第一处在 ${fmt(value.failures?.[0]?.t, 3)} 秒。\n${(value.failures?.[0]?.reasons || value.failures?.[0]?.errors || ["求解器未返回具体原因。"]).map(readableFailure).join("\n")}\n动作已保留，肌力结果不可用。`
-        : `${cached ? "已读取固定缓存。" : ""}整段 ${frames.length}/${frames.length} 帧通过；每帧 ${info.muscles.length}/${info.muscles.length} 个肌腱张力完整。支撑与关节止挡单独列出。`,
+        : cached ? "" : `整段 ${frames.length}/${frames.length} 帧通过；每帧 ${info.muscles.length}/${info.muscles.length} 个肌腱张力完整。支撑与关节止挡单独列出。`,
     value.status === "infeasible",
   );
   showFailureDiagnosis(value);
@@ -2076,8 +2091,6 @@ async function example(kind) {
     $("coordinateRegion").value = region;
     populateCoordinates();
     view.setRegion(region, { fit: true });
-    $("muscleRegion").value = region;
-    populateMuscles();
   }
   const resultRegion =
     {
@@ -2090,19 +2103,10 @@ async function example(kind) {
       trunk: "trunk",
     }[kind] || "all";
   $("coordinateRegion").value = resultRegion;
-  $("muscleRegion").value = resultRegion;
-  $("muscleSearch").value = "";
   populateCoordinates();
-  populateMuscles();
   const preferred =
     kind === "lift" ? "BIClong_r" : kind === "knee" ? "vaslat_r" : "";
-  if (
-    preferred &&
-    [...$("muscleSelect").options].some((o) => o.value === preferred)
-  ) {
-    $("muscleSelect").value = preferred;
-    view.setSelected(preferred);
-  }
+  populateMuscles(preferred);
   status(
     kind === "squat"
       ? "蹲起反例已载入：这些姿势未保持足底位置。计算后会报告接触冲突并停用肌力曲线。"
@@ -2302,8 +2306,6 @@ async function useVerifiedMotion(motion) {
     pendingGear = null;
     gripUndo = null;
     $("coordinateRegion").value = motion.region;
-    $("muscleRegion").value = motion.region;
-    $("muscleSearch").value = "";
     populateCoordinates();
     // Frame this case using its first pose, rather than the previous case's pose.
     view.setRegion(motion.region, { fit: "next-frame" });
@@ -2410,40 +2412,27 @@ function muscleOptionLabel(muscle) {
   return record?.label || record?.atlasName || record?.nameZh || muscle.label ||
     `${regionLabels[muscle.region] || ""} · ${muscle.name}`;
 }
-function populateMuscles(preferredMuscle) {
-  const previous = preferredMuscle || $("muscleSelect").value;
-  $("muscleSelect").replaceChildren();
-  const region = $("muscleRegion").value,
-    search = $("muscleSearch").value.trim().toLowerCase();
-  const available = (info?.muscles || []).filter(
-    (m) =>
-      muscleVariations.has(m.name) &&
-      (region === "all" || m.region === region) &&
-      (!search || [m.name, muscleOptionLabel(m), translateMotion(muscleOptionLabel(m))].join(" ").toLowerCase().includes(search)),
-  ).sort((a, b) => muscleVariations.get(b.name).change - muscleVariations.get(a.name).change);
-  for (const muscle of available) {
-    const option = document.createElement("option");
-    option.value = muscle.name;
+function populateMuscles(preferredMuscle = musclePicker.value) {
+  const changing = (info?.muscles || [])
+    .filter(muscle => muscleVariations.has(muscle.name))
+    .sort((a, b) => muscleVariations.get(b.name).change - muscleVariations.get(a.name).change);
+  const options = changing.map(muscle => {
     const range = muscleVariations.get(muscle.name);
-    option.title = `整段张力 ${fmt(range.min, 2)}–${fmt(range.max, 2)} N，变化 ${fmt(range.change, 2)} N`;
-    option.textContent = muscleOptionLabel(muscle);
-    $("muscleSelect").append(option);
-  }
-  if ([...$("muscleSelect").options].some((o) => o.value === previous))
-    $("muscleSelect").value = previous;
-  $("muscleSelect").disabled = !available.length;
-  if (!available.length) {
-    const placeholder = document.createElement("option");
-    placeholder.value = "";
-    placeholder.textContent = !result ? "计算后显示有变化的肌束" : "当前筛选下没有变化肌束";
-    $("muscleSelect").append(placeholder);
-  }
-  $("muscleFilterNote").textContent = !result
-    ? "暂无受力结果"
-    : result.quantitativeValid !== true
-      ? "受力结果未通过"
-      : `${available.length} 个肌束 · 全身 ${muscleVariations.size} 个有变化`;
-  view.setSelected($("muscleSelect").value || null, {
+    const label = muscleOptionLabel(muscle);
+    return {
+      value: muscle.name,
+      label: translateMotion(label),
+      sourceLabel: label,
+      title: translateMotion(`整段张力 ${fmt(range.min, 2)}–${fmt(range.max, 2)} N，变化 ${fmt(range.change, 2)} N`),
+    };
+  });
+  const selected = muscleVariations.has(preferredMuscle) ? preferredMuscle
+    : selectedAnatomicalMuscle ? "" : options[0]?.value || "";
+  const emptyLabel = !result ? "计算后显示有变化的肌束" : "当前筛选下没有变化肌束";
+  musclePicker.setOptions(options, selected, translateMotion(emptyLabel), translateMotion("没有匹配的肌束"));
+  $("muscleFilterNote").textContent = !result ? "暂无受力结果"
+    : result.quantitativeValid !== true ? "受力结果未通过" : `${options.length} 个肌束的张力有变化`;
+  view.setSelected(selectedAnatomicalMuscle?.atlasId || musclePicker.value || null, {
     preserveSurfaceCard: Boolean(selectedAnatomicalMuscle),
   });
 }
@@ -2628,16 +2617,6 @@ $("coordinateRegion").onchange = () => {
   view.setRegion($("coordinateRegion").value, { fit: true });
   drawResults();
 };
-$("muscleRegion").onchange = () => {
-  selectedAnatomicalMuscle = null;
-  populateMuscles();
-  drawResults();
-};
-$("muscleSearch").oninput = () => {
-  selectedAnatomicalMuscle = null;
-  populateMuscles();
-  drawResults();
-};
 $("applyCoordinate").onclick = () => {
   if (solving) return;
   const c = coordinates.find((c) => c.name === $("coordinate").value),
@@ -2778,13 +2757,6 @@ $("timeline").oninput = () => {
     seekTick = 0;
     selectFrame(Number($("timeline").value));
   });
-};
-$("muscleSelect").onchange = () => {
-  selectedAnatomicalMuscle = null;
-  view.setSelected($("muscleSelect").value);
-  $("selectionLabel").textContent =
-    sourceText($("muscleSelect").selectedOptions[0]) || "";
-  drawResults();
 };
 $("exampleKnee").onclick = () => example("knee");
 $("exampleLift").onclick = () => example("lift");
@@ -3035,7 +3007,7 @@ async function boot() {
     store = `bodyvista.body-lab.${info.id}.scene.v1`;
     view.setMetadata(info);
     void loadEvidence();
-    for (const id of ["coordinateRegion", "muscleRegion", "jointRegion"]) {
+    for (const id of ["coordinateRegion", "jointRegion"]) {
       if (!$(id)) continue;
       for (const [value, label] of Object.entries(regionLabels)) {
         const option = document.createElement("option");
@@ -3150,7 +3122,7 @@ async function boot() {
 document.addEventListener("motion:language", () => {
   chartCache = null;
   if ($("jointSearch").value) renderJointList();
-  if ($("muscleSearch").value) populateMuscles();
-  drawChart();
+  populateMuscles();
+  drawResults();
 });
 boot();

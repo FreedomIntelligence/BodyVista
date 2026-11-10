@@ -1,5 +1,8 @@
 // Chinese is the source language used by the motion editor, solver and replay data.
 export const runtimeStrings = {
+  "选择肌束可查看张力曲线。": ["Select a muscle unit to view its tension over time.", "筋束を選ぶと張力の推移を確認できます。"],
+  "没有匹配的肌束": ["No matching muscle units", "一致する筋束はありません"],
+  "力矩单位为 N·m。净需求已扣除关节被动作用与外部支撑。肌肉合计包含被动张力，止挡反力和未平衡量单列。": ["Torques are in N·m. Net demand accounts for passive joint forces and external support. Muscle totals include passive tension. Joint-stop reactions and residuals are listed separately.", "トルクの単位は N·m です。正味の必要トルクは関節の受動作用と外部支持を差し引いた値です。筋の合計には受動張力を含み、可動端の反力と残差は別に示します。"],
   "动作库": ["Motion library","動作ライブラリ"],
   "动作回放": ["Motion playback","動作の再生"],
   "受力结果": ["Force results","力の計算結果"],
@@ -573,7 +576,7 @@ const patterns = [
   ["动作未载入：{1}","Motion not loaded: {1}","動作を読み込めませんでした。{1}"],
   ["恢复失败，备份仍保留：{1}","Restore failed. The backup is preserved: {1}","復元に失敗しました。バックアップは保持されています。{1}"],
   ["整段张力 {#1}–{#2} N，变化 {#3} N","Tension over the motion: {1}–{2} N; change {3} N","動作全体の張力 {1}～{2} N、変化量 {3} N"],
-  ["{#1} 个肌束 · 全身 {#2} 个有变化","{1} muscle units shown · {2} vary across the body","表示中の筋束 {1} 個 · 全身で変化する筋束 {2} 個"],
+  ["{#1} 个肌束的张力有变化","Tension changes in {1} muscle units","張力が変化する筋束は {1} 個です"],
   ["关节 {1} 超出模型范围。","Joint {1} is outside the model range.","関節 {1} はモデルの可動域外です。"],
   ["未知 {1} 条件。","Unknown condition: {1}.","不明な条件です：{1}。"],
   ["已回到站姿，保留{1}持物时的手指姿势。","Returned to standing, preserving the {1} grip.","立位に戻し、{1}で器具を握る指の姿勢を保持しました。"],
