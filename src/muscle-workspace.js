@@ -1,4 +1,4 @@
-import { t } from './i18n.js';
+import { getLanguage, t } from './i18n.js';
 
 const mode = 'muscle-motion';
 const validCase = id => typeof id === 'string' && /^[a-z0-9_]{1,80}$/.test(id);
@@ -9,6 +9,14 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
   const header = tab.closest('header');
   let frame = null;
   let displayedCase = null;
+
+  function syncLanguage() {
+    if (!frame) return;
+    frame.title = t('肌肉运动');
+    // The standalone build can embed the verified player from Pages.
+    const origin = frame.contentDocument ? location.origin : 'https://freedomintelligence.github.io';
+    frame.contentWindow?.postMessage({type:'bodyvista:language', lang:getLanguage()}, origin);
+  }
 
   function applyLocation() {
     const url = new URL(location.href);
@@ -23,6 +31,7 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     document.body.toggleAttribute('data-muscle-workspace', open);
     if (open) {
       const src = new URL('./experiments/body-lab/player.html', location.href);
+      src.searchParams.set('lang', getLanguage());
       if (requestedCase) src.searchParams.set('case', requestedCase);
       const demo = url.searchParams.get('demo');
       if (demo) src.searchParams.set('demo', demo);
@@ -30,6 +39,7 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
       frame.title = t('肌肉运动');
       frame.addEventListener('load', ({currentTarget}) => {
         currentTarget.contentDocument?.addEventListener('pointerdown', closeNavigation, {capture:true});
+        syncLanguage();
       });
       frame.src = src.href;
       panel.append(frame);
@@ -79,8 +89,14 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     if (previous && previous.getAttribute('aria-selected') !== 'true') previous.click();
   });
   window.addEventListener('message', event => {
-    if (!frame || event.origin !== location.origin || event.source !== frame.contentWindow ||
-        event.data?.type !== 'bodyvista:muscle-case' || (event.data.id !== null && !validCase(event.data.id))) return;
+    if (!frame || event.source !== frame.contentWindow) return;
+    if (event.data?.type === 'bodyvista:language-ready' &&
+        (event.origin === location.origin || event.origin === 'https://freedomintelligence.github.io')) {
+      syncLanguage();
+      return;
+    }
+    if (event.origin !== location.origin || event.data?.type !== 'bodyvista:muscle-case' ||
+        (event.data.id !== null && !validCase(event.data.id))) return;
     displayedCase = event.data.id;
     const url = new URL(location.href);
     if (url.searchParams.get('case') === displayedCase) return;
@@ -88,8 +104,6 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     else url.searchParams.set('case', displayedCase);
     history.replaceState(history.state, '', url);
   });
-  document.addEventListener('atlas:language', () => {
-    if (frame) frame.title = t('肌肉运动');
-  });
+  document.addEventListener('atlas:language', syncLanguage);
   applyLocation();
 }

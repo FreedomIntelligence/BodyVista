@@ -1,3 +1,5 @@
+import { sourceAttribute, sourceText } from "./motion-locale.js";
+
 // GitHub Pages serves each verified result as a gzip file. The local
 // Python endpoint performs this transport step itself. The same result loader
 // validates the decompressed byte count, SHA-256, scene and every force frame.
@@ -18,8 +20,10 @@ export function preparePublicReplay() {
   const byId = id => document.getElementById(id);
   if (window.parent === window) {
     const workspace = new URL("../../?workspace=muscle-motion", location.href);
-    const chosen = new URLSearchParams(location.search).get("case");
+    const params = new URLSearchParams(location.search);
+    const chosen = params.get("case");
     if (chosen) workspace.searchParams.set("case", chosen);
+    if (["zh-CN", "en", "ja"].includes(params.get("lang"))) workspace.searchParams.set("lang", params.get("lang"));
     location.replace(workspace.href);
   }
   byId("publicDesign").hidden = false;
@@ -57,6 +61,6 @@ export function showSurfaceStatus(update, state) {
     ready: "精细解剖表面",
     error: preview ? "精细表面未载入，当前为预览" : "肌肉表面未载入",
   };
-  if (note.textContent !== labels[phase]) note.textContent = labels[phase];
-  if (update.message) note.title = update.message;
+  if (sourceText(note) !== labels[phase]) note.textContent = labels[phase];
+  if (update.message && sourceAttribute(note, "title") !== update.message) note.title = update.message;
 }

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BodyVista · 肌肉运动对照</title>
+<title data-review-text>BodyVista · 肌肉运动对照</title>
 <style>
   * { box-sizing: border-box; }
   body { margin: 0; color: #202020; background: white; font: 16px/1.6 system-ui,sans-serif; }
@@ -19,54 +19,17 @@
   small { color: #444; }
 </style>
 <main>
-  <header><h1>肌肉运动对照</h1><a href="./">返回全身实验台</a></header>
-  <p>选择肌肉和视角，可以播放、暂停或拖动录像进度。每段录像标明采用的模型和仍能看到的问题。</p>
+  <header><h1 data-review-text>肌肉运动对照</h1><a href="../../?workspace=muscle-motion" data-review-text>返回全身实验台</a></header>
+  <p data-review-text>选择肌肉和视角，可以播放、暂停或拖动录像进度。每段录像标明采用的模型和仍能看到的问题。</p>
   <nav aria-label="选择肌肉"></nav>
   <h2 id="name"></h2><p id="desc" role="status"></p>
-  <label>录像 <select id="recording"></select></label>
+  <label><span data-review-text>录像</span> <select id="recording"></select></label>
   <video controls playsinline muted loop preload="metadata" aria-label="所选肌肉的实际运动录像"></video>
   <p id="caption"></p>
-  <small>近看轮廓时，可以比较附着点是否留在骨上，以及肌腹是否在某个位置突然收窄或鼓起。</small>
+  <small data-review-text>近看轮廓时，可以比较附着点是否留在骨上，以及肌腹是否在某个位置突然收窄或鼓起。</small>
 </main>
 <script type="module">
-const nav = document.querySelector("nav");
-const selector = document.querySelector("select");
-const player = document.querySelector("video");
-let selected;
-
-function loadRecording() {
-  const film = selected.films[selector.selectedIndex];
-  player.pause();
-  player.src = "./review-media/" + film.file;
-  document.querySelector("#caption").textContent = film.caption;
-}
-
-function selectMuscle(muscle, index) {
-  selected = muscle;
-  for (const [i, button] of Array.from(nav.children).entries()) {
-    button.setAttribute("aria-pressed", String(i === index));
-  }
-  document.querySelector("#name").textContent = muscle.name + " · " + muscle.state;
-  document.querySelector("#desc").textContent = muscle.observation;
-  selector.replaceChildren(...muscle.films.map(film => new Option(film.label)));
-  loadRecording();
-}
-
-try {
-  const response = await fetch("./review-media/manifest.json");
-  if (!response.ok) throw new Error("录像清单无法读取");
-  const {muscles} = await response.json();
-  muscles.forEach((muscle, i) => {
-    const button = document.createElement("button");
-    button.textContent = muscle.name;
-    button.onclick = () => selectMuscle(muscle, i);
-    nav.append(button);
-  });
-  selector.onchange = loadRecording;
-  player.onerror = () => { document.querySelector("#caption").textContent = "该段录像未能载入，请刷新页面重试。"; };
-  selectMuscle(muscles[0], 0);
-} catch (error) {
-  document.querySelector("#desc").textContent = error.message;
-}
+import { startReview } from "./motion-locale-review.js";
+startReview();
 </script>
 </html>

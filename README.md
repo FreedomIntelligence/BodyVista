@@ -70,7 +70,7 @@ npm run dev
 
 Open the local URL printed in the terminal. The source entry point must be served through Vite; do not open `index.html` directly from the filesystem.
 
-To design movements and calculate forces on your computer, follow the [offline editor setup guide](docs/OFFLINE_MOTION.md). Custom motion editing is still in development.
+To design movements and calculate forces on your computer, follow the [offline editor setup guide](docs/OFFLINE_MOTION.en.md). Custom motion editing is still in development.
 
 ### Testing and Building
 

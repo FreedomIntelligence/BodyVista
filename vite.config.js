@@ -16,9 +16,11 @@ function workspaceEntry(usePublishedPlayer = false) {
 <a href="../../?workspace=muscle-motion" target="_top">打开肌肉运动</a>
 <script>
   const target = new URL(document.querySelector('a').href);
-  const chosen = new URLSearchParams(location.search).get('case');
+  const params = new URLSearchParams(location.search);
+  const chosen = params.get('case');
   const destination = ${usePublishedPlayer ? `window.parent === window ? target : new URL('${publishedPlayer}')` : 'target'};
   if (chosen) destination.searchParams.set('case', chosen);
+  if (['zh-CN', 'en', 'ja'].includes(params.get('lang'))) destination.searchParams.set('lang', params.get('lang'));
   if (location.href !== destination.href) location.replace(destination.href);
 </script></html>`;
 }

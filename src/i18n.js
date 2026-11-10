@@ -105,6 +105,20 @@ export function setLanguage(next) {
   document.dispatchEvent(new CustomEvent('atlas:language'));
 }
 export function initLanguage() {
-  document.getElementById('language').addEventListener('change', event => setLanguage(event.target.value));
-  setLanguage(language);
+  const url = new URL(location.href);
+  const requested = url.searchParams.get('lang');
+  document.getElementById('language').addEventListener('change', event => {
+    const next = event.target.value;
+    const current = new URL(location.href);
+    if (current.searchParams.has('lang')) {
+      current.searchParams.set('lang', next);
+      history.replaceState(history.state, '', current);
+    }
+    setLanguage(next);
+  });
+  window.addEventListener('popstate', () => {
+    const requested = new URL(location.href).searchParams.get('lang');
+    if (languages.includes(requested) && requested !== language) setLanguage(requested);
+  });
+  setLanguage(languages.includes(requested) ? requested : language);
 }

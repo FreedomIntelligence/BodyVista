@@ -57,6 +57,8 @@ BODY_STATIC = {
       for side in ("left", "right")),
     "app.js",
     "motion-cache.js",
+    "motion-locale.js", "motion-locale-static.js", "motion-locale-data.js",
+    "motion-locale-runtime.js", "motion-locale-evidence.js", "motion-locale-review.js",
     "motion-cache/catalog.json",
     "style.css",
     "body-view.js",
@@ -313,7 +315,7 @@ class LabHandler(BaseHTTPRequestHandler):
         if path in {BODY_PREFIX[:-1], BODY_PREFIX, BODY_PREFIX + "index.html"} or (
             path == player and self.headers.get("Sec-Fetch-Dest") == "document"
         ):
-            options = [(k, v) for k, v in parse_qsl(url.query) if k in {"case", "demo"}]
+            options = [(k, v) for k, v in parse_qsl(url.query) if k in {"case", "demo", "lang"}]
             return self.redirect(WORKSPACE_URL + ("&" + urlencode(options) if options else ""))
         if path == PREFIX[:-1]:
             return self.redirect(PREFIX)

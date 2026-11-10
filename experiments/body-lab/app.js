@@ -1,10 +1,12 @@
 import { createBodyView } from "./fullbody-view.js";
+import { sourceAttribute, sourceText, startMotionLocale, translateMotion } from "./motion-locale.js";
 import { assertCompleteResult, cachedForceSeries, cachedMuscleRanges, loadCachedMotion, sceneSignature } from "./motion-cache.js";
 
 const $ = (id) => document.getElementById(id);
 const replay = document.querySelector('meta[name="bodyvista-mode"][content="replay"]')
   ? await import("./public-replay.js") : null;
 replay?.preparePublicReplay();
+startMotionLocale();
 let store = null;
 const regionLabels = {
   all: "全身",
@@ -250,7 +252,7 @@ const view = createBodyView($("bodyView"), {
       });
       if (!name?.atlasId)
         $("selectionLabel").textContent =
-          $("muscleSelect").selectedOptions[0]?.textContent || key;
+          sourceText($("muscleSelect").selectedOptions[0]) || key;
       drawResults();
     }
   },
@@ -376,7 +378,7 @@ function renderJointList() {
   const region = $("jointRegion")?.value || "all";
   const matches = info.handles.filter(handle => handle.editable !== false &&
     handle.localCoordinates?.length && (region === "all" || handle.region === region) &&
-    (query ? `${handle.label} ${handle.name} ${regionLabels[handle.region]}`.toLocaleLowerCase().includes(query)
+    (query ? [handle.label, handle.name, regionLabels[handle.region], translateMotion(handle.label), translateMotion(regionLabels[handle.region])].filter(Boolean).join(" ").toLocaleLowerCase().includes(query)
       : region !== "all" || handle.overview));
   const order = ["humerus_r", "humerus_l", "ulna_r", "ulna_l", "radius_r", "radius_l", "capitate", "capitate_l", "femur_r", "femur_l", "tibia_r", "tibia_l", "talus_r", "talus_l", "calcn_r", "calcn_l", "toes_r", "toes_l", "head_neck", "thoracic1", "lumbar5", "pelvis"];
   const rank = name => { const i = order.indexOf(name); return i < 0 ? order.length : i; };
@@ -461,7 +463,7 @@ function invalidate(message = "姿势或条件已改变，请重新计算。", f
     if (window.parent !== window) window.parent.postMessage({type: "bodyvista:muscle-case", id: null}, location.origin);
   }
   revision += 1;
-  if (/本次实际计算|已打开固定案例/.test($("verifiedSelection").textContent))
+  if (/本次实际计算|已打开固定案例/.test(sourceText($("verifiedSelection"))))
     $("verifiedSelection").textContent =
       "动作或计算状态已更新；通过状态以接下来的实际计算结果为准。";
   pause();
@@ -1210,7 +1212,7 @@ function setupGear() {
       let moved = false;
       const ghost = document.createElement("div");
       ghost.className = "gear-ghost";
-      ghost.textContent = button.textContent;
+      ghost.textContent = sourceText(button);
       const move = (e) => {
         moved ||= Math.hypot(e.clientX - origin[0], e.clientY - origin[1]) > 5;
         if (moved && !ghost.isConnected) document.body.append(ghost);
@@ -1426,9 +1428,9 @@ function drawChartBackground(canvas, name) {
   if (!valid.length) {
     ctx.fillStyle = "#7c8c80";
     ctx.fillText(
-      result?.quantitativeValid === true && !name
+      translateMotion(result?.quantitativeValid === true && !name
         ? "请选择有张力变化的肌束"
-        : result ? "暂无有效张力数据" : "完成计算后显示张力曲线",
+        : result ? "暂无有效张力数据" : "完成计算后显示张力曲线"),
       left + 4,
       top + 40,
     );
@@ -1563,7 +1565,7 @@ function drawResults() {
       ` 当前曲线是 ${muscle?.name || $("muscleSelect").value} 单元，不代表整块 ${selectedAnatomicalMuscle.label} 的合力。`;
   $("selectionLabel").textContent = selectedAnatomicalMuscle
     ? `${selectedAnatomicalMuscle.label} · ${selectedAnatomicalMuscle.tissueType === "tendon" ? "跟腱连接表面" : selectedAnatomicalMuscle.mapping === "unmapped" ? "尚无计算映射" : "对应计算单元见右侧"}`
-    : $("muscleSelect").selectedOptions[0]?.textContent || "点肌肉可查看名称";
+    : sourceText($("muscleSelect").selectedOptions[0]) || "点肌肉可查看名称";
   drawChart();
   const contactLines = [];
   if (f.grasp && Number($("loadKg").value) > 0) {
@@ -1616,7 +1618,7 @@ function drawResults() {
   const contactReport = $("contactReport");
   contactLines.forEach(({ text, error }, i) => {
     const p = contactReport.children[i] || document.createElement("p");
-    if (p.textContent !== text) p.textContent = text;
+    if (sourceText(p) !== text) p.textContent = text;
     p.classList.toggle("error", Boolean(error));
     if (!p.parentNode) contactReport.append(p);
   });
@@ -2390,6 +2392,11 @@ function changingMuscleRanges(value) {
   }
   return ranges;
 }
+function muscleOptionLabel(muscle) {
+  const record = coverage?.units?.find(unit => unit.name === muscle.name || unit.modelName === muscle.name);
+  return record?.label || record?.atlasName || record?.nameZh || muscle.label ||
+    `${regionLabels[muscle.region] || ""} · ${muscle.name}`;
+}
 function populateMuscles(preferredMuscle) {
   const previous = preferredMuscle || $("muscleSelect").value;
   $("muscleSelect").replaceChildren();
@@ -2399,22 +2406,14 @@ function populateMuscles(preferredMuscle) {
     (m) =>
       muscleVariations.has(m.name) &&
       (region === "all" || m.region === region) &&
-      (!search || (m.label || m.name).toLowerCase().includes(search)),
+      (!search || [m.name, muscleOptionLabel(m), translateMotion(muscleOptionLabel(m))].join(" ").toLowerCase().includes(search)),
   ).sort((a, b) => muscleVariations.get(b.name).change - muscleVariations.get(a.name).change);
   for (const muscle of available) {
-    const record = coverage?.units?.find(
-      (unit) => unit.name === muscle.name || unit.modelName === muscle.name,
-    );
     const option = document.createElement("option");
     option.value = muscle.name;
     const range = muscleVariations.get(muscle.name);
     option.title = `整段张力 ${fmt(range.min, 2)}–${fmt(range.max, 2)} N，变化 ${fmt(range.change, 2)} N`;
-    option.textContent =
-      record?.label ||
-      record?.atlasName ||
-      record?.nameZh ||
-      muscle.label ||
-      `${regionLabels[muscle.region] || ""} · ${muscle.name}`;
+    option.textContent = muscleOptionLabel(muscle);
     $("muscleSelect").append(option);
   }
   if ([...$("muscleSelect").options].some((o) => o.value === previous))
@@ -2700,7 +2699,7 @@ $("groundToggle").onclick = () => {
   if (support !== "feet") lastNonFootSupport = support;
   $("groundToggle").setAttribute("aria-pressed", String(enabled));
   $("support").value = enabled ? "feet" : support === "feet" ? lastNonFootSupport : support;
-  const restoredSupport = $("support").selectedOptions[0]?.textContent || $("support").value;
+  const restoredSupport = sourceText($("support").selectedOptions[0]) || $("support").value;
   invalidate(
     enabled
       ? "已添加地面并启用足底支撑。重新计算后检查承重、接触与穿地。"
@@ -2766,7 +2765,7 @@ $("muscleSelect").onchange = () => {
   selectedAnatomicalMuscle = null;
   view.setSelected($("muscleSelect").value);
   $("selectionLabel").textContent =
-    $("muscleSelect").selectedOptions[0]?.textContent || "";
+    sourceText($("muscleSelect").selectedOptions[0]) || "";
   drawResults();
 };
 $("exampleKnee").onclick = () => example("knee");
@@ -2854,7 +2853,7 @@ function setupHelp() {
     if (!trigger || trigger.disabled || trigger === suppressed) return;
     clearTimeout(hideTimer);
     const sources = (trigger.dataset.helpSource || "").split(/\s+/).filter(Boolean);
-    const content = [trigger.dataset.help, ...sources.map(id => $(id)?.textContent?.trim())].filter(Boolean).join("\n\n");
+    const content = [sourceAttribute(trigger, "data-help"), ...sources.map(id => sourceText($(id)).trim())].filter(Boolean).join("\n\n");
     if (!content) return;
     if (active !== trigger) { hide(); active = trigger; }
     bubble.textContent = content;
@@ -3131,4 +3130,10 @@ async function boot() {
     status(error.message, true);
   }
 }
+document.addEventListener("motion:language", () => {
+  chartCache = null;
+  if ($("jointSearch").value) renderJointList();
+  if ($("muscleSearch").value) populateMuscles();
+  drawChart();
+});
 boot();
