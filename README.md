@@ -53,17 +53,6 @@ This project is intended for teaching and learning. Animations, microscopic scen
 | Testing | Node.js built-in test runner |
 | Deployment | GitHub Actions, GitHub Pages |
 
-## Muscle Motion
-
-Choose **Muscle Motion** in the atlas navigation and browse 50 verified movements in seven categories, including six dumbbell exercises. Each verified movement includes anatomical surfaces, muscle tensions, joint torques and external support. The full-body model reports 740 musculotendon units per valid frame. [Open the online motion library](https://freedomintelligence.github.io/BodyVista/?workspace=muscle-motion)
-
-**Install the offline edition to design movements and calculate their forces. Custom motion editing is still in development.** The editor uses the same BodyVista navigation as the online player. It supports keyframes, timing, load, support and JSON scene import/export. On Windows, clone tag `v1.2.0` with `core.autocrlf=false`, install the pinned Python 3.13 dependencies and run `python tools/install-motion-lab.py --download`. Build the frontend with `npm ci` and `npm run build`, then run `experiments/elbow-lab/server.py --port 4192` with that Python environment. [Installation steps](docs/OFFLINE_MOTION.md) · [Open the installed editor](http://127.0.0.1:4192/?workspace=muscle-motion) · [Full-body model](experiments/body-lab/FULLBODY.md)
-
-Two hand-authored scenes provide starting points for the offline editor. Both files contain motion inputs. Import one using the motion file menu, then calculate its forces. [Right wrist and fist](experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [Left hand and forearm](experiments/body-lab/examples/custom_left_open_while_rotating.json)
-
-
-The v5 model applies measured deep flexor moment arms to three joints of each little finger. Eight existing flexor digitorum superficialis (FDS) units use a passive fibre and tendon in series. The middle finger retains its native path geometry. The Thelen tendon curve uses 0.04 strain at maximum isometric force. The model uses 24 finger coordinates to check passive reference torques. [Franko et al., Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3124620/) · [OpenSim 4.6 Thelen defaults](https://github.com/opensim-org/opensim-core/blob/4.6/OpenSim/Actuators/Thelen2003Muscle.cpp#L165-L171). All 740 units participate in whole-body recruitment. The muscle tensions and contact forces shown during playback are estimates for the chosen motion and constraints. The published moment arms used by the model are measurements of geometry, not direct measurements of these simulated forces. Finger–dumbbell forces depend on modeled contact geometry and friction, and muscle tensions are model estimates. Individual human muscle forces, cartilage pressure and ligament contact forces have not been validated by this experiment. [Model scope and sources](experiments/body-lab/FULLBODY.md)
-
 ## 🚀 Getting Started
 
 ### Local Development
