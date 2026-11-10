@@ -18,7 +18,7 @@
 
 **从人体结构到生命活动，让解剖知识可以观察、操作和探索。**
 
-`BodyVista` 是面向解剖与生理教学、自主学习的三维交互平台。它将 **2,900 个解剖结构、12 个人体系统、140 项动态演示入口与 6 个微观主题**整合到浏览器中，帮助学习者理解人体的空间关系、结构层次与生理功能。
+`BodyVista` 是面向解剖与生理教学、自主学习的三维交互平台。它将 **2,900 个解剖结构、12 个人体系统、140 项动态演示入口、50 个肌肉动作和 6 个微观主题**整合到浏览器中，帮助学习者理解人体的空间关系、结构层次与生理功能。
 
 支持 **中文、英文、日文**，适配电脑与移动端。核心交互在浏览器本地运行，无需自建后端或数据库，可部署到 GitHub Pages。
 
@@ -28,6 +28,7 @@
 | --- | --- |
 | 人体解剖 | 浏览 2,900 个结构，按系统与 7 大身体区域筛选；通过选择、逐层隐藏、多选、半透明和结构定位，观察毗邻关系与解剖层次。 |
 | 生命律动 | 提供 133 项系统动态、5 项全身联动和 2 项口腔与牙齿动态入口，连接静态解剖与功能理解；支持播放、进度及速度调节。 |
+| 肌肉运动 | 回放 7 类共 50 个动作，其中包含 6 个哑铃练习。拖动时间线，观察关节屈伸时肌肉张力与关节力矩的变化。 |
 | 微观探索 | 覆盖肺泡气体交换、肾单位、肌节收缩、神经突触、肠绒毛和血管壁 6 个主题，衔接宏观器官与微观机制。 |
 | 解剖挑战 | 通过结构识别、三维解剖寻找和微观知识问答进行练习；每轮 5 题，提供答案反馈、成绩与重新挑战入口。 |
 
@@ -41,22 +42,11 @@
 | 主站界面 | JavaScript ES Modules、HTML、CSS |
 | 三维渲染 | Three.js、WebGL、GLTFLoader |
 | 口腔模块 | TypeScript、Three.js、three-mesh-bvh；集成的上游模块使用 Zustand，并包含 React 依赖 |
+| 离线动作求解 | Python 3.13、MuJoCo、NumPy、SciPy |
 | 数据与多语言 | 本地 JSON 数据、三语词典与翻译覆盖检查 |
 | 构建 | Vite 7、npm |
 | 测试 | Node.js 内置测试运行器 |
 | 部署 | GitHub Actions、GitHub Pages |
-
-## 肌肉运动
-
-从公网首页顶部进入「肌肉运动」，可以从七个分类中选择 50 个已验证动作，包括 6 个哑铃动作。播放或拖动时间线就能查看立体肌肉、张力、关节力矩和外部支撑。动作包含空手训练、手指精细动作和哑铃练习。[打开在线动作库](https://freedomintelligence.github.io/BodyVista/?workspace=muscle-motion)
-
-**安装离线版后可以自定义动作并计算受力，自定义功能目前仍在开发。** 离线版沿用同一主站顶栏，支持编辑关键帧、负重和支撑条件。全身模型在通过的采样帧提供 740 个肌腱单元的张力与激活；右臂专项实验使用 Arm26 的六个单元。[v1.2.0 离线安装与使用](docs/OFFLINE_MOTION.md) · [全身模型说明](experiments/body-lab/FULLBODY.md) · [右臂实验](experiments/elbow-lab/README.md)
-
-有两份可直接导入的自定义场景。下载原始 JSON，在全身页选“动作文件 → 导入”，再点击“计算受力”。文件只含关键姿势等动作输入。右手旋转、屈曲并握拳的轨迹采样 50 帧，左手旋转并松开的轨迹采样 52 帧。[右手场景](experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [下载右手 JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json) · [左手场景](experiments/body-lab/examples/custom_left_open_while_rotating.json) · [下载左手 JSON](https://raw.githubusercontent.com/FreedomIntelligence/BodyVista/v1.1.0/experiments/body-lab/examples/custom_left_open_while_rotating.json)
-
-v5 将实测指深屈肌力臂用于左右小指各三个屈曲轴。双侧八个指浅屈肌（FDS）单元采用肌纤维和肌腱串联的被动弹性，中指沿用原模型路径几何。肌腱在最大等长肌力下取 0.04 应变。[Franko 等人表 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3124620/) · [OpenSim 4.6 Thelen 默认参数](https://github.com/opensim-org/opensim-core/blob/4.6/OpenSim/Actuators/Thelen2003Muscle.cpp#L165-L171)
-
-v5 用 24 个手指坐标核对被动参考力矩，全部 740 个肌腱单元参与全身配力。指骨与哑铃的接触力受接触代理和摩擦假设影响，输出肌力属于模型估计。文献实测的是几何力臂。回放中的张力、关节与接触受力，是指定动作和支撑条件下的动力学估计。人体逐肌张力、软骨压力和韧带接触力仍超出这项实验的验证范围。[模型范围与来源](experiments/body-lab/FULLBODY.md)
 
 ## 🚀 如何运行
 
@@ -72,6 +62,8 @@ npm run dev
 ```
 
 在浏览器中打开终端输出的本地地址。源码入口需要通过 Vite 运行，请勿直接双击 `index.html`。
+
+安装离线版后，可以在本机设计动作并计算受力。自定义动作功能仍在开发中。[离线版安装说明](docs/OFFLINE_MOTION.md)
 
 ### 测试与构建
 
