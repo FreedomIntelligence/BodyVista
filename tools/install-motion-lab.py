@@ -1,4 +1,4 @@
-"""Install the v1.2.0 motion library and its v1.1.0 model assets into this checkout."""
+"""Install the motion library and its v1.1.0 model assets into this checkout."""
 
 import argparse
 import json
@@ -24,14 +24,17 @@ def catalog_state(root, expected, base):
     old_asset = next(a for a in base["assets"] if a["role"] == "motion-cache")
     if record == next(r for r in old_asset["files"] if r["path"] == showcase.CATALOG):
         return "v1.1.0"
-    raise ValueError("本地动作目录与两个正式版本都不同，已保留原文件。请在新的源码目录安装。")
+    previous = release._load_json(showcase.PREVIOUS_LOCK)
+    if record == next(r for r in previous["asset"]["files"] if r["path"] == showcase.CATALOG):
+        return previous["releaseTag"]
+    raise ValueError("本地动作目录与已知正式版本不同，已保留原文件。请在新的源码目录安装。")
 
 
 def install(root, *, download=False, bundle_dir=None):
     base = showcase.base_manifest()
     root_lock = root / showcase.LOCK.relative_to(showcase.ROOT)
     if not root_lock.is_file() or root_lock.read_bytes() != showcase.LOCK.read_bytes():
-        raise ValueError("请选择已经检出 v1.2.0 源码及其动作清单的目录")
+        raise ValueError(f"请选择已经检出 {showcase.TAG} 源码及其动作清单的目录")
     lock = release._load_json(showcase.LOCK)
     asset = showcase.validate_lock(lock, base, root)
     records = {r["path"]: r for r in asset["files"]}

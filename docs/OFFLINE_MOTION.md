@@ -7,8 +7,8 @@
 以下命令适用于 Windows PowerShell。先安装 Git、Python 3.13 和 Node.js 22.12 或更高的 22.x 版本。首次安装需要联网下载依赖、解剖模型和动作库。安装完成后，编辑和求解均可在本机运行。
 
 ```powershell
-git clone --config core.autocrlf=false --branch v1.2.4 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.2.4
-cd BodyVista-v1.2.4
+git clone --config core.autocrlf=false --branch v1.3.0 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.3.0
+cd BodyVista-v1.3.0
 py -3.13 -m venv .venv-fullbody
 & ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
 & ./.venv-fullbody/Scripts/python.exe -X utf8 tools/install-motion-lab.py --download

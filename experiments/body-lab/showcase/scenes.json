@@ -12,6 +12,11 @@
     "extended": {
       "path": "fingers/extended-hand-fixtures.json",
       "sha256": "063851e1452b09a845507f68bd74f22320667ba9adfa02b1c9559095eb27c0a6"
+    },
+    "verifiedDumbbells": {
+      "path": "../dumbbell-motions-20261103/catalog.json",
+      "sha256": "6e9703a2ed167fa33bfd867009691ef9d8358afcc406f1d028651dda02f87b19",
+      "sourceKey": "motions"
     }
   },
   "originals": [
@@ -80,7 +85,8 @@
       "region": "arm_r",
       "view": "front",
       "fixtureSet": "standing",
-      "fixture": "standing_shoulder_r_diagonal_raise"
+      "fixture": "standing_shoulder_r_diagonal_raise",
+      "cachedSha256": "9197b71e189b608083e0cbec190b51cc5577d1bf05b808a7929c7dd2b7e3f3d1"
     },
     {
       "id": "raised_sweep",
@@ -90,7 +96,8 @@
       "region": "arm_r",
       "view": "front",
       "fixtureSet": "core",
-      "fixture": "shoulder_r_raised_sweep"
+      "fixture": "shoulder_r_raised_sweep",
+      "cachedSha256": "e0dd4d3c08c2b94b46c36169e6a61a559d91d03267e77649a2d58cccb766d39c"
     },
     {
       "id": "raised_rotation",
@@ -100,7 +107,8 @@
       "region": "arm_l",
       "view": "left",
       "fixtureSet": "core",
-      "fixture": "shoulder_l_raised_rotation"
+      "fixture": "shoulder_l_raised_rotation",
+      "cachedSha256": "3dd71995fc76fd9bcf350fa579e99449c4e4a1cecaf15b64cdc4f5946c56f691"
     },
     {
       "id": "index_tip",
@@ -110,7 +118,8 @@
       "region": "hand_r",
       "view": "right",
       "fixtureSet": "core",
-      "fixture": "finger_r_2_dip_flex"
+      "fixture": "finger_r_2_dip_flex",
+      "cachedSha256": "0a47f45054a74e6d229187c1b4cc3ce4ef2654ae080862ecfe48fb8fb96b24e6"
     },
     {
       "id": "middle_pip",
@@ -120,7 +129,8 @@
       "region": "hand_r",
       "view": "right",
       "fixtureSet": "core",
-      "fixture": "finger_r_3_pip_flex"
+      "fixture": "finger_r_3_pip_flex",
+      "cachedSha256": "dfad1569d02cfc1f78813a2dfb81dc9bff7933c0035ea2ac7db3c67bac65e875"
     },
     {
       "id": "standing_hand_close",
@@ -130,7 +140,8 @@
       "region": "hand_r",
       "view": "right",
       "fixtureSet": "standing",
-      "fixture": "standing_hand_r_close"
+      "fixture": "standing_hand_r_close",
+      "cachedSha256": "030535c6cb7362db4cb32d75df16d6ac027fa02236ef338ac4e0837935244cf1"
     },
     {
       "id": "left_wrist_open",
@@ -140,7 +151,8 @@
       "region": "hand_l",
       "view": "left",
       "fixtureSet": "extended",
-      "fixture": "hand_l_open_wrist_minus20"
+      "fixture": "hand_l_open_wrist_minus20",
+      "cachedSha256": "f17bbfb10908415dfcfcdacb35a5c8a6696230c3f601aad1c3f1327b5d1e288c"
     },
     {
       "id": "grip_turn_in",
@@ -150,7 +162,8 @@
       "region": "hand_r",
       "view": "right",
       "fixtureSet": "extended",
-      "fixture": "hand_r_close_forearm_plus45"
+      "fixture": "hand_r_close_forearm_plus45",
+      "cachedSha256": "6457605d281452507978cbc6d81ffc75f0955d98c676783f381c20b28e854613"
     },
     {
       "id": "stand_lift_dumbbell",
@@ -160,7 +173,8 @@
       "region": "arm_r",
       "view": "right",
       "fixtureSet": "standing",
-      "fixture": "standing_loaded_r_raise_1kg"
+      "fixture": "standing_loaded_r_raise_1kg",
+      "cachedSha256": "d0d45e6f87dbae57da86a6d56e475876e27e28848fa79d83bcc02bd0f0611aba"
     },
     {
       "id": "standing_arms_hands",
@@ -170,7 +184,8 @@
       "region": "all",
       "view": "front",
       "fixtureSet": "standing",
-      "fixture": "standing_both_arms_and_hands"
+      "fixture": "standing_both_arms_and_hands",
+      "cachedSha256": "73a54d9c3cd765b5ebe30d97da8731e21fa5e3e335c556b1d9fa5a4764414f22"
     },
     {
       "id": "straight_leg_lift",
@@ -180,7 +195,8 @@
       "region": "leg_r",
       "view": "right",
       "fixtureSet": "core",
-      "fixture": "hip_control"
+      "fixture": "hip_control",
+      "cachedSha256": "4213c2b0b7b87c796f728dbf0ebadb05b5f7fe7c336f773b1c14cf501d24a75e"
     },
     {
       "id": "alternating_elbows",
@@ -208,7 +224,8 @@
             "elbow_flexion_l": 65
           }
         ]
-      ]
+      ],
+      "cachedSha256": "cdce1c8e0a55e76f28e1e8eef3d317386a5ed2773f3cf689a3935adb277b00e8"
     },
     {
       "id": "reach_unfold",
@@ -235,7 +252,8 @@
             "shoulder_elv_l": 40
           }
         ]
-      ]
+      ],
+      "cachedSha256": "c505e36425e4938fcc690ec5ab5f07a1fd1bd278374173bd2ae71fdfb51ca901"
     },
     {
       "id": "turn_forearm",
@@ -261,7 +279,8 @@
             "pro_sup_r": 35
           }
         ]
-      ]
+      ],
+      "cachedSha256": "6d6ff6e4e9b9f9d1ef94ec20f52ab12c3507f68e0019d484486c6af375d4894e"
     },
     {
       "id": "bend_wrist",
@@ -289,7 +308,8 @@
           2.5,
           {}
         ]
-      ]
+      ],
+      "cachedSha256": "32e68f0482856ce973be74e9f4597e90472e85342d4941ee6a25b0aba7f1b728"
     },
     {
       "id": "deviate_wrist",
@@ -313,7 +333,8 @@
             "deviation_l": 10
           }
         ]
-      ]
+      ],
+      "cachedSha256": "58e886e433945c69f38f2337b7e41ced61e8a7843c1bf2e8d498183348ad7451"
     },
     {
       "id": "wrist_oval",
@@ -355,7 +376,8 @@
             "flexion_r": 10
           }
         ]
-      ]
+      ],
+      "cachedSha256": "f31696200f51e03f58c2b1c6f0409ae843f9a94d20192345cb4e75093084dd72"
     },
     {
       "id": "turn_then_bend",
@@ -389,7 +411,8 @@
             "flexion_l": 14
           }
         ]
-      ]
+      ],
+      "cachedSha256": "917917257afe03ab46ad47f06c72eec5dc6fc8978999084c15c8893f38e209b0"
     },
     {
       "id": "thumb_index_curl",
@@ -416,7 +439,8 @@
             "2md_flexion": 15
           }
         ]
-      ]
+      ],
+      "cachedSha256": "f2952f029c64dac58025532ed146b14c694bd3cc72f2b7006224b043e589c88a"
     },
     {
       "id": "finger_wave",
@@ -482,7 +506,8 @@
             "5md_flexion": 10
           }
         ]
-      ]
+      ],
+      "cachedSha256": "9892595106bc6180948b168dc98bd66f1a55ad32846aa04d60b998ac2a2f0340"
     },
     {
       "id": "flat_fingers_fold",
@@ -507,7 +532,8 @@
             "5mcp_flexion_l": 35
           }
         ]
-      ]
+      ],
+      "cachedSha256": "87a051ea9f734e5a12255965ef65e7664b7adb9aa9b229365af8e78725331012"
     },
     {
       "id": "neck_nod",
@@ -533,7 +559,8 @@
           2.5,
           {}
         ]
-      ]
+      ],
+      "cachedSha256": "4ed910612f909ba75573057883f34a8a6b1e23ba886357ccaa21e10da8ebab8f"
     },
     {
       "id": "neck_side_bend",
@@ -557,7 +584,8 @@
             "T1_head_neck_LB": 7
           }
         ]
-      ]
+      ],
+      "cachedSha256": "218f7d96c7fb8b2eee58bdd7babd2576abb9f0cdde914c8a08073b4289f6fa0c"
     },
     {
       "id": "turn_head",
@@ -581,7 +609,8 @@
             "T1_head_neck_AR": 12
           }
         ]
-      ]
+      ],
+      "cachedSha256": "8bc4b9db97919a91339ce1410deb5385b0ed1792edf5c193fbaa3defacb7945e"
     },
     {
       "id": "lumbar_side_bend",
@@ -611,7 +640,8 @@
           3,
           {}
         ]
-      ]
+      ],
+      "cachedSha256": "71bc272e3632df0d97c169c716a54d55f150eadcbb8a568b15cdaa30dde5b2f4"
     },
     {
       "id": "thorax_turn",
@@ -639,7 +669,8 @@
             "T6_T7_AR": 0.2
           }
         ]
-      ]
+      ],
+      "cachedSha256": "1fd9f09ae1741a6e9afb29fbc24eeb075858081531ab92e25fa5f5016c183863"
     },
     {
       "id": "hip_out_and_back",
@@ -665,7 +696,8 @@
           3,
           {}
         ]
-      ]
+      ],
+      "cachedSha256": "dddd7f561c14617643663b7f00965fca248f01be9bd198596ea94695f2fe19a6"
     },
     {
       "id": "hip_rotation_bent",
@@ -693,7 +725,8 @@
             "hip_rotation_r": 10
           }
         ]
-      ]
+      ],
+      "cachedSha256": "a690c3e2cc62d14e7b9ae129c25561067c44a5f54a4f6a8e40c6cbace1b99e9c"
     },
     {
       "id": "ankle_pump",
@@ -717,7 +750,8 @@
             "ankle_angle_r": -18
           }
         ]
-      ]
+      ],
+      "cachedSha256": "f8a4b7ca7fa33547c63d7a51dd4df858faca0efd4793a3f55bc8c90c9d855bb2"
     },
     {
       "id": "heel_tilt",
@@ -741,7 +775,8 @@
             "subtalar_angle_l": 7
           }
         ]
-      ]
+      ],
+      "cachedSha256": "3eb7e4800ca7b08d55a87ebf859bc668450f2a621259c418096297a9b21ede90"
     },
     {
       "id": "toe_extension",
@@ -767,7 +802,8 @@
           3,
           {}
         ]
-      ]
+      ],
+      "cachedSha256": "8a5455ef3526f2a42b7a1b1bc29f7bd0e34d324cc02ff5ce9f26c11c693740fa"
     },
     {
       "id": "heel_draw",
@@ -789,7 +825,8 @@
             "knee_angle_l": 60
           }
         ]
-      ]
+      ],
+      "cachedSha256": "5ca1037cc727b2f91f5d2a31cf2a6ec5ece4a0b815d84f42a6765e5d887ec2fe"
     },
     {
       "id": "leg_lift_fold",
@@ -819,7 +856,8 @@
             "knee_angle_r": 15
           }
         ]
-      ]
+      ],
+      "cachedSha256": "2029d735e2c32297180990ab439e86fae34d755cc160a0adada73a8ad6fe0d9b"
     },
     {
       "id": "opposed_arm_swing",
@@ -851,7 +889,8 @@
             "elbow_flexion_r": 15
           }
         ]
-      ]
+      ],
+      "cachedSha256": "67ff73c32255be39c6e20421cc3ecf4db788f89bceea3af7e44dcc391422679d"
     },
     {
       "id": "march_support",
@@ -881,7 +920,8 @@
             "knee_angle_l": 38
           }
         ]
-      ]
+      ],
+      "cachedSha256": "2a68fa98a06cf7d3f0f35b126fd4aecbded5eb4f5c60f7b0fe9ed1cf4f19f0a0"
     },
     {
       "id": "look_and_reach",
@@ -906,7 +946,8 @@
             "elbow_flexion_l": 45
           }
         ]
-      ]
+      ],
+      "cachedSha256": "4ba93484a2b1426d3978f1b5aa58ae2b04dab8b4d1be4343249701901964c1d8"
     },
     {
       "id": "cross_body_lift",
@@ -932,7 +973,8 @@
             "knee_angle_l": 35
           }
         ]
-      ]
+      ],
+      "cachedSha256": "e1f989fff1c4da198c77e75d7b7d1da4e1c58e1b170ed3c75b6e328475a0c045"
     },
     {
       "id": "ankle_toe_sequence",
@@ -961,7 +1003,8 @@
             "mtp_angle_r": 15
           }
         ]
-      ]
+      ],
+      "cachedSha256": "0e353a5d19095b912fc11e352f79e523039ba8d545bb7125d567240bb8338358"
     },
     {
       "id": "dumbbell_bent_sweep",
@@ -989,8 +1032,2017 @@
             "elbow_flexion_r": 45
           }
         ]
+      ],
+      "cachedSha256": "05a5ce12623839a205fd93dc934d07abcc2bd56131a4d01c237c576626666dbd"
+    },
+    {
+      "id": "open_arms_low",
+      "category": "肩肘",
+      "label": "双臂向两侧展开",
+      "description": "双肘微屈，双臂从身侧向外抬起，再缓缓放下",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 0,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 0,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_r": 32,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 32,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 0,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 0,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 0,
+            "shoulder_rot_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "elbows_forward_fold",
+      "category": "肩肘",
+      "label": "上臂前举后双肘折回",
+      "description": "双臂先向前抬起，上臂停在原处，双肘再一同弯曲、伸开",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 10,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 0,
+            "elbow_flexion_l": 10,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_r": 30,
+            "elbow_flexion_r": 10,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 30,
+            "elbow_flexion_l": 10,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 30,
+            "elbow_flexion_r": 58,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 30,
+            "elbow_flexion_l": 58,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          3.75,
+          {
+            "shoulder_elv_r": 30,
+            "elbow_flexion_r": 10,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 30,
+            "elbow_flexion_l": 10,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "side_elbow_unfold",
+      "category": "肩肘",
+      "label": "侧抬上臂后伸肘",
+      "description": "先屈右肘，再把上臂向侧方抬起，最后保持上臂高度并慢慢伸肘",
+      "region": "arm_r",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 0,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 30,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0
+          }
+        ],
+        [
+          3.75,
+          {
+            "shoulder_elv_r": 30,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 0,
+            "shoulder_rot_r": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "fan_bent_arms",
+      "category": "肩肘",
+      "label": "双臂从前方向两侧打开",
+      "description": "保持双肘弯曲，双臂从前方沿弧线向两侧打开，再合回前方",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 26,
+            "elbow_flexion_r": 42,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 26,
+            "elbow_flexion_l": 42,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_r": 26,
+            "elbow_flexion_r": 42,
+            "elv_angle_r": 30,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 26,
+            "elbow_flexion_l": 42,
+            "elv_angle_l": 30,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 26,
+            "elbow_flexion_r": 42,
+            "elv_angle_r": 90,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 26,
+            "elbow_flexion_l": 42,
+            "elv_angle_l": 90,
+            "shoulder_rot_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "lift_with_shoulder_turn",
+      "category": "肩肘",
+      "label": "边抬左臂边转肩",
+      "description": "左肘轻弯，抬起上臂的同时绕上臂长轴小幅转动，随后沿原路放下",
+      "region": "arm_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_l": 7,
+            "elbow_flexion_l": 20,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_l": 32,
+            "elbow_flexion_l": 20,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 10
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_l": 7,
+            "elbow_flexion_l": 20,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "one_arm_stays_up",
+      "category": "肩肘",
+      "label": "单臂保持，另一臂接力",
+      "description": "左臂先抬起并停住，右臂再抬到相同高度，随后左臂放下，右臂保持",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 55,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 0,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_l": 28,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0,
+            "shoulder_elv_r": 0,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 55,
+            "shoulder_rot_r": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 28,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 55,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 28,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0
+          }
+        ],
+        [
+          3.75,
+          {
+            "shoulder_elv_r": 28,
+            "elbow_flexion_r": 12,
+            "elv_angle_r": 55,
+            "shoulder_rot_r": 0,
+            "shoulder_elv_l": 0,
+            "elbow_flexion_l": 12,
+            "elv_angle_l": 55,
+            "shoulder_rot_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "turn_during_curl",
+      "category": "肩肘",
+      "label": "屈肘时翻转前臂",
+      "description": "右肘弯起时同时转动前臂，回到起始姿势时观察两种动作一起反向",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 18,
+            "pro_sup_r": -15
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_r": 68,
+            "pro_sup_r": 20
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_r": 18,
+            "pro_sup_r": -15
+          }
+        ]
+      ]
+    },
+    {
+      "id": "forearm_turns_opposed",
+      "category": "前臂与腕",
+      "label": "双前臂反向翻转",
+      "description": "双肘保持弯曲，一侧前臂旋前，另一侧旋后，然后两侧交换方向",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 55,
+            "elbow_flexion_l": 55
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_r": 55,
+            "elbow_flexion_l": 55,
+            "pro_sup_r": 20,
+            "pro_sup_l": -20
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_r": 55,
+            "elbow_flexion_l": 55,
+            "pro_sup_r": -20,
+            "pro_sup_l": 20
+          }
+        ]
+      ]
+    },
+    {
+      "id": "wrist_wave_raised",
+      "category": "前臂与腕",
+      "label": "举臂摆腕",
+      "description": "保持右臂抬起、右肘弯曲，从腕部向两侧来回摆手，最后回到中间",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_r": 25,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 35,
+            "shoulder_rot_r": 0,
+            "deviation_r": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "shoulder_elv_r": 25,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 35,
+            "shoulder_rot_r": 0,
+            "deviation_r": 8
+          }
+        ],
+        [
+          2.5,
+          {
+            "shoulder_elv_r": 25,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 35,
+            "shoulder_rot_r": 0,
+            "deviation_r": -8
+          }
+        ],
+        [
+          3.75,
+          {
+            "shoulder_elv_r": 25,
+            "elbow_flexion_r": 55,
+            "elv_angle_r": 35,
+            "shoulder_rot_r": 0,
+            "deviation_r": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "dart_wrist_diagonal",
+      "category": "前臂与腕",
+      "label": "手腕沿对角线摆动",
+      "description": "左手从斜向一侧的姿势摆到对角另一侧，腕的屈伸和侧偏同时改变",
+      "region": "hand_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "flexion_l": -12,
+            "deviation_l": 6
+          }
+        ],
+        [
+          1.25,
+          {
+            "flexion_l": 14,
+            "deviation_l": -6
+          }
+        ],
+        [
+          2.5,
+          {
+            "flexion_l": -12,
+            "deviation_l": 6
+          }
+        ]
+      ]
+    },
+    {
+      "id": "cock_wrist_turn",
+      "category": "前臂与腕",
+      "label": "定腕翻前臂",
+      "description": "右腕先轻轻弯起，在腕角保持不变时翻转前臂，然后让手腕回正",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 55,
+            "pro_sup_r": -15
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_r": 55,
+            "pro_sup_r": -15,
+            "flexion_r": 12
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_r": 55,
+            "pro_sup_r": 18,
+            "flexion_r": 12
+          }
+        ],
+        [
+          3.75,
+          {
+            "elbow_flexion_r": 55,
+            "pro_sup_r": 18
+          }
+        ]
+      ]
+    },
+    {
+      "id": "curl_turn_release",
+      "category": "前臂与腕",
+      "label": "四指收拢后转腕松手",
+      "description": "左手四指先弯起，保持屈指并转动前臂，最后在转过的位置伸开四指",
+      "region": "hand_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_l": 45
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_l": 45,
+            "2mcp_flexion_l": 20,
+            "2pm_flexion_l": 22,
+            "2md_flexion_l": 12,
+            "3mcp_flexion_l": 20,
+            "3pm_flexion_l": 22,
+            "3md_flexion_l": 12,
+            "4mcp_flexion_l": 20,
+            "4pm_flexion_l": 22,
+            "4md_flexion_l": 12,
+            "5mcp_flexion_l": 20,
+            "5pm_flexion_l": 22,
+            "5md_flexion_l": 12
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_l": 45,
+            "pro_sup_l": 20,
+            "2mcp_flexion_l": 20,
+            "2pm_flexion_l": 22,
+            "2md_flexion_l": 12,
+            "3mcp_flexion_l": 20,
+            "3pm_flexion_l": 22,
+            "3md_flexion_l": 12,
+            "4mcp_flexion_l": 20,
+            "4pm_flexion_l": 22,
+            "4md_flexion_l": 12,
+            "5mcp_flexion_l": 20,
+            "5pm_flexion_l": 22,
+            "5md_flexion_l": 12
+          }
+        ],
+        [
+          3.75,
+          {
+            "elbow_flexion_l": 45,
+            "pro_sup_l": 20
+          }
+        ]
+      ]
+    },
+    {
+      "id": "wrists_opposed",
+      "category": "前臂与腕",
+      "label": "双腕交替屈伸",
+      "description": "双肘保持弯曲，左腕弯曲时右腕伸展，然后左右交换，最后回到中立位",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 52,
+            "elbow_flexion_l": 52,
+            "flexion_r": 0,
+            "flexion_l": 0
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_r": 52,
+            "elbow_flexion_l": 52,
+            "flexion_r": -12,
+            "flexion_l": 12
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_r": 52,
+            "elbow_flexion_l": 52,
+            "flexion_r": 12,
+            "flexion_l": -12
+          }
+        ],
+        [
+          3.75,
+          {
+            "elbow_flexion_r": 52,
+            "elbow_flexion_l": 52,
+            "flexion_r": 0,
+            "flexion_l": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "hook_then_fist",
+      "category": "手指",
+      "label": "从钩指到半握拳",
+      "description": "先弯起右手四指的中节和末节，再从指根屈曲成半握拳，最后伸开",
+      "region": "hand_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.25,
+          {
+            "2mcp_flexion": 0,
+            "2pm_flexion": 25,
+            "2md_flexion": 14,
+            "3mcp_flexion": 0,
+            "3pm_flexion": 25,
+            "3md_flexion": 14,
+            "4mcp_flexion": 0,
+            "4pm_flexion": 25,
+            "4md_flexion": 14,
+            "5mcp_flexion": 0,
+            "5pm_flexion": 25,
+            "5md_flexion": 14
+          }
+        ],
+        [
+          2.5,
+          {
+            "2mcp_flexion": 25,
+            "2pm_flexion": 25,
+            "2md_flexion": 14,
+            "3mcp_flexion": 25,
+            "3pm_flexion": 25,
+            "3md_flexion": 14,
+            "4mcp_flexion": 25,
+            "4pm_flexion": 25,
+            "4md_flexion": 14,
+            "5mcp_flexion": 25,
+            "5pm_flexion": 25,
+            "5md_flexion": 14
+          }
+        ],
+        [
+          3.75,
+          {}
+        ]
+      ]
+    },
+    {
+      "id": "two_finger_taps",
+      "category": "手指",
+      "label": "食指中指轮流轻点",
+      "description": "左手食指先屈下，再一边伸开食指一边屈下中指，最后两指放松",
+      "region": "hand_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.25,
+          {
+            "2mcp_flexion_l": 23,
+            "2pm_flexion_l": 14,
+            "2md_flexion_l": 6
+          }
+        ],
+        [
+          2.5,
+          {
+            "3mcp_flexion_l": 23,
+            "3pm_flexion_l": 14,
+            "3md_flexion_l": 6
+          }
+        ],
+        [
+          3.75,
+          {}
+        ]
+      ]
+    },
+    {
+      "id": "point_and_relax",
+      "category": "手指",
+      "label": "从半握拳中伸出食指",
+      "description": "右手四指原本弯曲，单独伸出食指作指向手势，再把食指收回",
+      "region": "hand_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "2mcp_flexion": 24,
+            "2pm_flexion": 30,
+            "2md_flexion": 15,
+            "3mcp_flexion": 24,
+            "3pm_flexion": 30,
+            "3md_flexion": 15,
+            "4mcp_flexion": 24,
+            "4pm_flexion": 30,
+            "4md_flexion": 15,
+            "5mcp_flexion": 24,
+            "5pm_flexion": 30,
+            "5md_flexion": 15
+          }
+        ],
+        [
+          1.25,
+          {
+            "3mcp_flexion": 24,
+            "3pm_flexion": 30,
+            "3md_flexion": 15,
+            "4mcp_flexion": 24,
+            "4pm_flexion": 30,
+            "4md_flexion": 15,
+            "5mcp_flexion": 24,
+            "5pm_flexion": 30,
+            "5md_flexion": 15
+          }
+        ],
+        [
+          2.5,
+          {
+            "2mcp_flexion": 24,
+            "2pm_flexion": 30,
+            "2md_flexion": 15,
+            "3mcp_flexion": 24,
+            "3pm_flexion": 30,
+            "3md_flexion": 15,
+            "4mcp_flexion": 24,
+            "4pm_flexion": 30,
+            "4md_flexion": 15,
+            "5mcp_flexion": 24,
+            "5pm_flexion": 30,
+            "5md_flexion": 15
+          }
+        ]
+      ]
+    },
+    {
+      "id": "thumb_joint_sequence",
+      "category": "手指",
+      "label": "拇指从指根弯到指尖",
+      "description": "左拇指先从根部弯起，再依次弯曲掌指关节和指尖关节",
+      "region": "hand_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.25,
+          {
+            "cmc_flexion_l": 8,
+            "mp_flexion_l": 0,
+            "ip_flexion_l": 0
+          }
+        ],
+        [
+          2.5,
+          {
+            "cmc_flexion_l": 8,
+            "mp_flexion_l": 18,
+            "ip_flexion_l": 0
+          }
+        ],
+        [
+          3.75,
+          {
+            "cmc_flexion_l": 8,
+            "mp_flexion_l": 18,
+            "ip_flexion_l": 15
+          }
+        ]
+      ]
+    },
+    {
+      "id": "ring_little_pair",
+      "category": "手指",
+      "label": "无名指与小指成对屈伸",
+      "description": "右手无名指与小指同步弯曲，食指和中指保持伸开，再松开两指",
+      "region": "hand_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.25,
+          {
+            "4mcp_flexion": 25,
+            "4pm_flexion": 28,
+            "4md_flexion": 12,
+            "5mcp_flexion": 25,
+            "5pm_flexion": 28,
+            "5md_flexion": 12
+          }
+        ],
+        [
+          2.5,
+          {}
+        ]
+      ]
+    },
+    {
+      "id": "finger_open_relay",
+      "category": "手指",
+      "label": "左右手交替松开四指",
+      "description": "左手从半握状态松开，同时右手四指弯起，然后两手交换",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {
+            "2mcp_flexion_l": 22,
+            "2pm_flexion_l": 26,
+            "2md_flexion_l": 12,
+            "3mcp_flexion_l": 22,
+            "3pm_flexion_l": 26,
+            "3md_flexion_l": 12,
+            "4mcp_flexion_l": 22,
+            "4pm_flexion_l": 26,
+            "4md_flexion_l": 12,
+            "5mcp_flexion_l": 22,
+            "5pm_flexion_l": 26,
+            "5md_flexion_l": 12
+          }
+        ],
+        [
+          1.25,
+          {
+            "2mcp_flexion": 22,
+            "2pm_flexion": 26,
+            "2md_flexion": 12,
+            "3mcp_flexion": 22,
+            "3pm_flexion": 26,
+            "3md_flexion": 12,
+            "4mcp_flexion": 22,
+            "4pm_flexion": 26,
+            "4md_flexion": 12,
+            "5mcp_flexion": 22,
+            "5pm_flexion": 26,
+            "5md_flexion": 12
+          }
+        ],
+        [
+          2.5,
+          {
+            "2mcp_flexion_l": 22,
+            "2pm_flexion_l": 26,
+            "2md_flexion_l": 12,
+            "3mcp_flexion_l": 22,
+            "3pm_flexion_l": 26,
+            "3md_flexion_l": 12,
+            "4mcp_flexion_l": 22,
+            "4pm_flexion_l": 26,
+            "4md_flexion_l": 12,
+            "5mcp_flexion_l": 22,
+            "5pm_flexion_l": 26,
+            "5md_flexion_l": 12
+          }
+        ]
+      ]
+    },
+    {
+      "id": "thumb_wrap_after_fingers",
+      "category": "手指",
+      "label": "先收四指再屈拇指",
+      "description": "左手四指先向掌心弯曲，再屈起拇指，最后五指一起松开",
+      "region": "hand_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.25,
+          {
+            "2mcp_flexion_l": 22,
+            "2pm_flexion_l": 25,
+            "2md_flexion_l": 13,
+            "3mcp_flexion_l": 22,
+            "3pm_flexion_l": 25,
+            "3md_flexion_l": 13,
+            "4mcp_flexion_l": 22,
+            "4pm_flexion_l": 25,
+            "4md_flexion_l": 13,
+            "5mcp_flexion_l": 22,
+            "5pm_flexion_l": 25,
+            "5md_flexion_l": 13
+          }
+        ],
+        [
+          2.5,
+          {
+            "2mcp_flexion_l": 22,
+            "2pm_flexion_l": 25,
+            "2md_flexion_l": 13,
+            "3mcp_flexion_l": 22,
+            "3pm_flexion_l": 25,
+            "3md_flexion_l": 13,
+            "4mcp_flexion_l": 22,
+            "4pm_flexion_l": 25,
+            "4md_flexion_l": 13,
+            "5mcp_flexion_l": 22,
+            "5pm_flexion_l": 25,
+            "5md_flexion_l": 13,
+            "cmc_flexion_l": 7,
+            "mp_flexion_l": 18,
+            "ip_flexion_l": 12
+          }
+        ],
+        [
+          3.75,
+          {}
+        ]
+      ]
+    },
+    {
+      "id": "neck_scan_low",
+      "label": "低头横向扫视",
+      "description": "先低头并转向一侧，保持低头姿势转到另一侧，最后抬头回正",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1,
+          {
+            "T1_head_neck_FE": -7,
+            "T1_head_neck_AR": 9
+          }
+        ],
+        [
+          2,
+          {
+            "T1_head_neck_FE": -7,
+            "T1_head_neck_AR": -9
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "颈与躯干",
+      "region": "neck",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "neck_tilt_then_turn",
+      "label": "歪头后转脸",
+      "description": "头先侧倾，保持倾角转脸，随后将头颈摆回中立位",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1,
+          {
+            "T1_head_neck_LB": 6
+          }
+        ],
+        [
+          2,
+          {
+            "T1_head_neck_LB": 6,
+            "T1_head_neck_AR": 8
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "颈与躯干",
+      "region": "neck",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "trunk_head_counterturn",
+      "label": "胸廓与头颈反向转动",
+      "description": "胸廓向一侧转动，头颈相对胸廓向相反方向转动，再一起回正",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.5,
+          {
+            "T12_L1_AR": 5,
+            "T1_head_neck_AR": -5
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "颈与躯干",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "trunk_bend_with_turn",
+      "label": "先侧弯再转胸廓",
+      "description": "从腰部向侧方弯曲，在侧弯位转动胸廓，再回到直立姿势",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1,
+          {
+            "L5_S1_LB": 5
+          }
+        ],
+        [
+          2,
+          {
+            "L5_S1_LB": 5,
+            "T12_L1_AR": 5
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "颈与躯干",
+      "region": "trunk",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "trunk_alternating_diagonals",
+      "label": "躯干交替斜向转动",
+      "description": "起始时腰部向一侧侧屈、胸廓同向转动；经过正中位后，腰部和胸廓转向另一侧",
+      "poses": [
+        [
+          0,
+          {
+            "L5_S1_LB": 4,
+            "T12_L1_AR": 4
+          }
+        ],
+        [
+          1.5,
+          {}
+        ],
+        [
+          3,
+          {
+            "L5_S1_LB": -4,
+            "T12_L1_AR": -4
+          }
+        ]
+      ],
+      "category": "颈与躯干",
+      "region": "trunk",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "hip_pendulum",
+      "label": "直膝前后摆腿",
+      "description": "右膝保持伸直，大腿从身体前方经中立位摆到后方，再回到中立位",
+      "poses": [
+        [
+          0,
+          {
+            "hip_flexion_r": 17
+          }
+        ],
+        [
+          1.5,
+          {
+            "hip_flexion_r": -10
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "leg_r",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "bent_knee_fan",
+      "label": "屈膝向侧方打开",
+      "description": "左髋和膝先弯曲，保持屈曲角度把膝盖带向侧方，再收回原位",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1,
+          {
+            "hip_flexion_l": 19,
+            "knee_angle_l": 36
+          }
+        ],
+        [
+          2,
+          {
+            "hip_flexion_l": 19,
+            "knee_angle_l": 36,
+            "hip_adduction_l": -12
+          }
+        ],
+        [
+          3,
+          {
+            "hip_flexion_l": 19,
+            "knee_angle_l": 36
+          }
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "leg_l",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "hip_arc_front_side",
+      "label": "直腿从前方向侧方划弧",
+      "description": "右腿先向前抬起，膝保持伸直，将腿斜向侧方带开，最后落回中立位",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          0.75,
+          {
+            "hip_flexion_r": 20
+          }
+        ],
+        [
+          1.5,
+          {
+            "hip_flexion_r": 12,
+            "hip_adduction_r": -12
+          }
+        ],
+        [
+          2.25,
+          {
+            "hip_adduction_r": -14
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "leg_r",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "knee_release_ankle_set",
+      "label": "勾脚伸膝后放松踝部",
+      "description": "左腿从屈髋屈膝位开始，先勾脚，再保持勾脚伸膝，最后让踝部回正",
+      "poses": [
+        [
+          0,
+          {
+            "hip_flexion_l": 25,
+            "knee_angle_l": 55
+          }
+        ],
+        [
+          1,
+          {
+            "hip_flexion_l": 25,
+            "knee_angle_l": 55,
+            "ankle_angle_l": 9
+          }
+        ],
+        [
+          2,
+          {
+            "hip_flexion_l": 25,
+            "knee_angle_l": 18,
+            "ankle_angle_l": 9
+          }
+        ],
+        [
+          3,
+          {
+            "hip_flexion_l": 25,
+            "knee_angle_l": 18
+          }
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "leg_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "seated_alternate_extend",
+      "label": "屈髋位双膝交替伸展",
+      "description": "双髋和双膝弯曲，先伸右膝，再屈回右膝并伸左膝",
+      "poses": [
+        [
+          0,
+          {
+            "hip_flexion_r": 32,
+            "hip_flexion_l": 32,
+            "knee_angle_r": 52,
+            "knee_angle_l": 52
+          }
+        ],
+        [
+          1.5,
+          {
+            "hip_flexion_r": 32,
+            "hip_flexion_l": 32,
+            "knee_angle_r": 16,
+            "knee_angle_l": 52
+          }
+        ],
+        [
+          3,
+          {
+            "hip_flexion_r": 32,
+            "hip_flexion_l": 32,
+            "knee_angle_r": 52,
+            "knee_angle_l": 16
+          }
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "ankle_opposite_pumps",
+      "label": "双踝反向勾绷",
+      "description": "一脚勾起，另一脚绷直，双腿保持不动，两侧脚踝交换方向",
+      "poses": [
+        [
+          0,
+          {
+            "ankle_angle_r": 11,
+            "ankle_angle_l": -13
+          }
+        ],
+        [
+          3,
+          {
+            "ankle_angle_r": -13,
+            "ankle_angle_l": 11
+          }
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "ankle_four_point_sweep",
+      "label": "左脚踝四向绕环",
+      "description": "左脚先勾起，再侧倾、绷直、反向侧倾，让足尖绕一圈回到起点",
+      "poses": [
+        [
+          0,
+          {
+            "ankle_angle_l": 9
+          }
+        ],
+        [
+          0.75,
+          {
+            "subtalar_angle_l": 6
+          }
+        ],
+        [
+          1.5,
+          {
+            "ankle_angle_l": -12
+          }
+        ],
+        [
+          2.25,
+          {
+            "subtalar_angle_l": -6
+          }
+        ],
+        [
+          3,
+          {
+            "ankle_angle_l": 9
+          }
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "foot_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "two_leg_open_close",
+      "label": "双腿同时向侧方开合",
+      "description": "保持双膝伸直，从髋部同时向两侧打开双腿，再缓慢合拢",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.5,
+          {
+            "hip_adduction_r": -12,
+            "hip_adduction_l": -12
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "hip_knee_pedal",
+      "label": "左腿空中蹬踏",
+      "description": "左腿抬膝后向前伸出，再把脚跟向后收，最后回到起始姿势",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          0.75,
+          {
+            "hip_flexion_l": 24,
+            "knee_angle_l": 45
+          }
+        ],
+        [
+          1.5,
+          {
+            "hip_flexion_l": 24,
+            "knee_angle_l": 12
+          }
+        ],
+        [
+          2.25,
+          {
+            "hip_flexion_l": 3,
+            "knee_angle_l": 35
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "髋膝踝",
+      "region": "leg_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "two_arm_raise_and_bow",
+      "label": "双臂抬起后点头",
+      "description": "双臂先向前抬起，在抬臂位轻点头，最后抬头并放下双臂",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90
+          }
+        ],
+        [
+          1,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "shoulder_elv_r": 24,
+            "shoulder_elv_l": 24
+          }
+        ],
+        [
+          2,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "shoulder_elv_r": 24,
+            "shoulder_elv_l": 24,
+            "T1_head_neck_FE": -7
+          }
+        ],
+        [
+          3,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90
+          }
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "standing",
+      "fixture": "standing_shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "opposite_elbow_heel",
+      "label": "对侧屈肘与收脚跟",
+      "description": "右肘屈曲时，左膝同时弯曲把脚跟向后收，再一起伸回",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.5,
+          {
+            "elbow_flexion_r": 50,
+            "knee_angle_l": 44
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "lateral_arm_leg",
+      "label": "同侧手脚向外展开",
+      "description": "左臂抬向侧方，左腿同时向外打开，再把手脚一起收回",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1.5,
+          {
+            "shoulder_elv_l": 26,
+            "hip_adduction_l": -10
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "turn_chest_and_extend",
+      "label": "转动胸廓并伸肘",
+      "description": "从右臂前举、屈肘的姿势开始，转动胸廓时伸出前臂，再回到起始姿势",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 90,
+            "shoulder_elv_r": 22,
+            "elbow_flexion_r": 52
+          }
+        ],
+        [
+          1.5,
+          {
+            "elv_angle_r": 90,
+            "shoulder_elv_r": 22,
+            "elbow_flexion_r": 12,
+            "T12_L1_AR": 5
+          }
+        ],
+        [
+          3,
+          {
+            "elv_angle_r": 90,
+            "shoulder_elv_r": 22,
+            "elbow_flexion_r": 52
+          }
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "standing",
+      "fixture": "standing_shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "lift_knee_nod",
+      "label": "提膝后低头",
+      "description": "左膝先抬起，保持腿的位置低头，再将头和腿一起复位",
+      "poses": [
+        [
+          0,
+          {}
+        ],
+        [
+          1,
+          {
+            "hip_flexion_l": 24,
+            "knee_angle_l": 39
+          }
+        ],
+        [
+          2,
+          {
+            "hip_flexion_l": 24,
+            "knee_angle_l": 39,
+            "T1_head_neck_FE": -7
+          }
+        ],
+        [
+          3,
+          {}
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "wrist_ankle_sync",
+      "label": "同侧手腕与脚踝联动",
+      "description": "右肘保持弯曲，右腕与右踝同步从一侧屈伸位摆向另一侧",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 40,
+            "flexion_r": -10,
+            "ankle_angle_r": -10
+          }
+        ],
+        [
+          3,
+          {
+            "elbow_flexion_r": 40,
+            "flexion_r": 10,
+            "ankle_angle_r": 10
+          }
+        ]
+      ],
+      "category": "协调动作",
+      "region": "all",
+      "view": "right",
+      "fixtureSet": "core",
+      "fixture": "shoulder_r_diagonal_raise"
+    },
+    {
+      "id": "db_alternating_curls",
+      "category": "哑铃",
+      "label": "双哑铃交替弯举",
+      "description": "双手各握 1 kg 哑铃，一侧屈肘提起时另一侧放下，再交换一次",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "verifiedDumbbells",
+      "fixture": "dumbbell_bilateral_2kg",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 65,
+            "elbow_flexion_l": 20
+          }
+        ],
+        [
+          2,
+          {
+            "elbow_flexion_r": 20,
+            "elbow_flexion_l": 65
+          }
+        ],
+        [
+          4,
+          {
+            "elbow_flexion_r": 65,
+            "elbow_flexion_l": 20
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_bilateral_front_raise",
+      "category": "哑铃",
+      "label": "双哑铃前平举起始段",
+      "description": "双手各握 1 kg 哑铃，双肘微屈并保持角度，两臂同步向前抬起一小段后放下",
+      "region": "all",
+      "view": "right",
+      "fixtureSet": "verifiedDumbbells",
+      "fixture": "dumbbell_bilateral_2kg",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90
+          }
+        ],
+        [
+          1.75,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "shoulder_elv_r": 24,
+            "shoulder_elv_l": 24
+          }
+        ],
+        [
+          3.5,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_curl_and_opposite_raise",
+      "category": "哑铃",
+      "label": "右手持铃悬停、左臂前举",
+      "description": "双手各握 1 kg 哑铃，右肘先屈起并维持高度，左臂随后向前抬起再放下",
+      "region": "all",
+      "view": "front",
+      "fixtureSet": "verifiedDumbbells",
+      "fixture": "dumbbell_bilateral_2kg",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90
+          }
+        ],
+        [
+          1.5,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "elbow_flexion_r": 55
+          }
+        ],
+        [
+          3.25,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "elbow_flexion_r": 55,
+            "shoulder_elv_l": 18
+          }
+        ],
+        [
+          4.5,
+          {
+            "elv_angle_r": 90,
+            "elv_angle_l": 90,
+            "elbow_flexion_r": 55
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_side_raise",
+      "category": "哑铃",
+      "label": "站立持铃侧举",
+      "description": "右手持 1 kg 哑铃，肘微屈并保持角度，上臂从身侧抬起再放下",
+      "region": "arm_r",
+      "view": "front",
+      "fixtureSet": "standing",
+      "fixture": "standing_loaded_r_raise_1kg",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 0,
+            "elbow_flexion_r": 15
+          }
+        ],
+        [
+          1.75,
+          {
+            "elv_angle_r": 0,
+            "elbow_flexion_r": 15,
+            "shoulder_elv_r": 25
+          }
+        ],
+        [
+          3.5,
+          {
+            "elv_angle_r": 0,
+            "elbow_flexion_r": 15
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_extend_bent_arm",
+      "category": "哑铃",
+      "label": "左上臂前举位持铃伸肘",
+      "description": "左手握 1 kg 哑铃，上臂固定在身体前方，伸肘将哑铃送远，再屈肘收回",
+      "region": "arm_l",
+      "view": "left",
+      "fixtureSet": "core",
+      "fixture": "loaded_l_raise_1kg",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_l": 90,
+            "shoulder_elv_l": 25,
+            "elbow_flexion_l": 65
+          }
+        ],
+        [
+          2,
+          {
+            "elv_angle_l": 90,
+            "shoulder_elv_l": 25,
+            "elbow_flexion_l": 20
+          }
+        ],
+        [
+          4,
+          {
+            "elv_angle_l": 90,
+            "shoulder_elv_l": 25,
+            "elbow_flexion_l": 65
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_curl_then_turn",
+      "category": "哑铃",
+      "label": "轻哑铃弯举后转前臂",
+      "description": "右手持 0.5 kg 哑铃，先屈肘提起，接着保持肘角，把前臂转过一小段再转回",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "verifiedDumbbells",
+      "fixture": "dumbbell_forearm_halfkg",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 25,
+            "pro_sup_r": 0
+          }
+        ],
+        [
+          2,
+          {
+            "elbow_flexion_r": 60,
+            "pro_sup_r": 0
+          }
+        ],
+        [
+          3.5,
+          {
+            "elbow_flexion_r": 60,
+            "pro_sup_r": 12
+          }
+        ],
+        [
+          4.5,
+          {
+            "elbow_flexion_r": 60,
+            "pro_sup_r": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_bent_elbow_shoulder_turn",
+      "category": "哑铃",
+      "label": "左肘弯曲持铃转肩",
+      "description": "左手持 1 kg 哑铃，肘部弯曲，上臂略离开身体并绕长轴转动，使哑铃横向摆动再回到起点",
+      "region": "arm_l",
+      "view": "front",
+      "fixtureSet": "core",
+      "fixture": "loaded_l_raise_1kg",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_l": 12,
+            "elbow_flexion_l": 55,
+            "shoulder_rot_l": -8
+          }
+        ],
+        [
+          2,
+          {
+            "shoulder_elv_l": 12,
+            "elbow_flexion_l": 55,
+            "shoulder_rot_l": 10
+          }
+        ],
+        [
+          4,
+          {
+            "shoulder_elv_l": 12,
+            "elbow_flexion_l": 55,
+            "shoulder_rot_l": -8
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_reach_retract",
+      "category": "哑铃",
+      "label": "站立持铃前送与收回",
+      "description": "右手握 1 kg 哑铃，从屈肘位向前抬起上臂，同时伸肘把哑铃送出，再沿原路收回",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "standing",
+      "fixture": "standing_loaded_r_raise_1kg",
+      "poses": [
+        [
+          0,
+          {
+            "elv_angle_r": 90,
+            "elbow_flexion_r": 55,
+            "shoulder_elv_r": 8
+          }
+        ],
+        [
+          2,
+          {
+            "elv_angle_r": 90,
+            "elbow_flexion_r": 22,
+            "shoulder_elv_r": 30
+          }
+        ],
+        [
+          4,
+          {
+            "elv_angle_r": 90,
+            "elbow_flexion_r": 55,
+            "shoulder_elv_r": 8
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_diagonal_descent",
+      "category": "哑铃",
+      "label": "左手持铃沿斜线落向身侧",
+      "description": "左手握 1 kg 哑铃，保持肘角，从前方抬臂位逐步改变上臂方向，将重物斜向放回身侧",
+      "region": "arm_l",
+      "view": "front",
+      "fixtureSet": "standing",
+      "fixture": "standing_loaded_l_raise_1kg",
+      "poses": [
+        [
+          0,
+          {
+            "shoulder_elv_l": 28,
+            "elv_angle_l": 80,
+            "elbow_flexion_l": 35
+          }
+        ],
+        [
+          1.5,
+          {
+            "shoulder_elv_l": 21,
+            "elv_angle_l": 45,
+            "elbow_flexion_l": 35
+          }
+        ],
+        [
+          3.5,
+          {
+            "shoulder_elv_l": 5,
+            "elv_angle_l": 12,
+            "elbow_flexion_l": 35
+          }
+        ]
+      ]
+    },
+    {
+      "id": "db_partial_then_full_curl",
+      "category": "哑铃",
+      "label": "右手持铃短弯举接深弯举",
+      "description": "右手持 2 kg 哑铃，先短程屈肘，只放下一部分，再从这个位置把哑铃举得更高",
+      "region": "arm_r",
+      "view": "right",
+      "fixtureSet": "verifiedDumbbells",
+      "fixture": "dumbbell_curl_2kg",
+      "poses": [
+        [
+          0,
+          {
+            "elbow_flexion_r": 15
+          }
+        ],
+        [
+          1.25,
+          {
+            "elbow_flexion_r": 44
+          }
+        ],
+        [
+          2.5,
+          {
+            "elbow_flexion_r": 23
+          }
+        ],
+        [
+          4.5,
+          {
+            "elbow_flexion_r": 72
+          }
+        ]
       ]
     }
   ]
 }
-

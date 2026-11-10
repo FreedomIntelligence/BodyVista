@@ -1,4 +1,4 @@
-"""Pack and verify the v1.2.0 replay catalog against its frozen v1.1.0 model."""
+"""Pack and verify the expanded replay catalog against its frozen v1.1.0 model."""
 
 import argparse
 import gzip
@@ -17,8 +17,9 @@ import setup_release_assets as release
 
 BASE_TAG = "v1.1.0"
 BASE_SHA256 = "56a52cc1835f83ffa009ecfb566314ae96398feff235eba1a2a836e2bc3c12dc"
-TAG = "v1.2.0"
+TAG = "v1.3.0"
 LOCK = ROOT / "tools/pages-assets" / f"showcase-{TAG}.json"
+PREVIOUS_LOCK = LOCK.with_name("showcase-v1.2.0.json")
 PREFIX = release.ZIP_PREFIXES["motion-cache"]
 CATALOG = PREFIX + "catalog.json"
 MODEL_FILE = (LAB / "fullbody-model-data.json").as_posix()
@@ -63,7 +64,7 @@ def validate_lock(lock, base, root=ROOT):
         base["modelId"], base["modelSha256"], base["computationSha256"]
     ):
         raise ValueError("动作数据和模型信息使用不同的模型或计算源码")
-    old_asset = next(item for item in base["assets"] if item["role"] == "motion-cache")
+    old_asset = release._load_json(PREVIOUS_LOCK)["asset"]
     files = {record["path"]: record for record in asset["files"]}
     for record in old_asset["files"]:
         if record["path"] != CATALOG and files.get(record["path"]) != record:
@@ -91,8 +92,8 @@ def catalog_summary(catalog):
         payloads.add(payload)
         groups.add(group)
         frames += count
-    if len(motions) < 50 or len(groups) < 2:
-        raise ValueError("需要至少 50 个已核验动作，且动作按类别划分")
+    if len(motions) != 100 or len(groups) != 7:
+        raise ValueError("本版动作库应包含 7 类共 100 个已核验动作")
     return {"cases": len(motions), "frames": frames, "categories": sorted(groups)}
 
 

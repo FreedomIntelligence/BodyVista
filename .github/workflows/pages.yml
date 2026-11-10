@@ -39,8 +39,8 @@ jobs:
           gh release download v1.1.0 --repo FreedomIntelligence/BodyVista --dir "$RUNNER_TEMP/bodyvista-release" \
             --pattern 'release-assets.json' \
             --pattern 'bodyvista-atlas-muscles-v1.1.0.bin' --pattern 'bodyvista-bone-volumes-v1.1.0.bin'
-          gh release download v1.2.0 --repo FreedomIntelligence/BodyVista --dir "$RUNNER_TEMP/bodyvista-release" \
-            --pattern 'bodyvista-motion-cache-v1.2.0.zip'
+          gh release download v1.3.0 --repo FreedomIntelligence/BodyVista --dir "$RUNNER_TEMP/bodyvista-release" \
+            --pattern 'bodyvista-motion-cache-v1.3.0.zip'
           python3 tools/build-pages-replay.py --bundle-dir "$RUNNER_TEMP/bodyvista-release" \
             --showcase-dir "$RUNNER_TEMP/bodyvista-release"
       - name: Upload Pages artifact

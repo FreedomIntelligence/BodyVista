@@ -198,7 +198,7 @@ def main():
     parser.add_argument("--bundle-dir", type=Path, required=True,
                         help="GitHub v1.1.0 发行清单、动作缓存 ZIP、肌肉表面和骨体积 BIN 所在目录")
     parser.add_argument("--showcase-dir", type=Path,
-                        help="v1.2.0 完整动作 ZIP 所在目录；提供此项时无需旧版动作 ZIP")
+                        help="v1.3.0 完整动作 ZIP 所在目录；提供此项时无需旧版动作 ZIP")
     parser.add_argument("--dist", type=Path, default=ROOT / "dist")
     args = parser.parse_args()
     print(json.dumps(assemble(args.bundle_dir.resolve(), args.dist.resolve(), args.showcase_dir), ensure_ascii=False))

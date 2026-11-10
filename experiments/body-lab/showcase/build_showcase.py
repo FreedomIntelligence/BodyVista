@@ -51,7 +51,7 @@ def prepare(spec, fixtures):
     path = FIXTURES / source["path"]
     data = path.read_bytes()
     check(digest(data) == source["sha256"], "Fixture source changed")
-    fixture = next(case for case in json.loads(data)["cases"] if case["id"] == spec["fixture"])
+    fixture = next(case for case in json.loads(data)[source.get("sourceKey", "cases")] if case["id"] == spec["fixture"])
     scene = deepcopy(fixture["scene"])
     if "poses" in spec:
         neutral = scene["keyframes"][0]["q"]
@@ -136,6 +136,13 @@ def asset(directory, ref):
     return directory / (ref["sha256"] + ".json.gz")
 
 
+def frozen_motion(by_id, identifier, sha256):
+    motion = by_id.get(identifier)
+    check(motion and motion["cachedResult"]["sha256"] == sha256,
+          f"Install the published v1.2.0 or v1.3.0 library and use --base-cache: {identifier}")
+    return deepcopy(motion)
+
+
 def cached(spec, definition, directory):
     path = directory / "receipt.json"
     if not path.exists():
@@ -162,11 +169,13 @@ def publish(definition, base):
     entries = []
     generation_times = [datetime.fromisoformat(old["generatedAt"])]
     for pin in definition["originals"]:
-        motion = deepcopy(by_id[pin["id"]])
-        check(motion["cachedResult"]["sha256"] == pin["sha256"], "Original data changed")
+        motion = frozen_motion(by_id, pin["id"], pin["sha256"])
         motion["category"] = pin["category"]
         entries.append((base, motion))
     for spec in definition["cases"]:
+        if "cachedSha256" in spec:
+            entries.append((base, frozen_motion(by_id, spec["id"], spec["cachedSha256"])))
+            continue
         directory = RUN / "cases" / spec["id"]
         check(cached(spec, definition, directory), f"Missing {spec['id']}")
         catalog = read(directory / "cache/catalog.json")
@@ -175,7 +184,7 @@ def publish(definition, base):
     generated_at = max(generation_times).astimezone(timezone.utc).isoformat()
     manifest = {**IDENTITY, "schema": 1, "generatedAt": generated_at, "motions": []}
     report = {**IDENTITY, "schema": 1, "motions": []}
-    check(len({m["id"] for _, m in entries}) == len(entries) >= 50, "Public coverage incomplete")
+    check(len({m["id"] for _, m in entries}) == len(entries) == 100, "Public coverage incomplete")
     for source, motion in entries:
         ref = motion["cachedResult"]
         path = asset(source, ref)
@@ -232,9 +241,17 @@ def main():
             publish(definition, args.base_cache.resolve())
             return
         kernel = windows_api()
+        by_id = None
         failures = []
         for identifier in args.case or specs:
             spec = specs[identifier]
+            if "cachedSha256" in spec:
+                if by_id is None:
+                    by_id = {m["id"]: m for m in read(args.base_cache / "catalog.json")["motions"]}
+                motion = frozen_motion(by_id, identifier, spec["cachedSha256"])
+                check(asset(args.base_cache, motion["cachedResult"]).is_file(),
+                      f"Missing published cache for {identifier}")
+                continue
             directory = RUN / "cases" / identifier
             if cached(spec, definition, directory):
                 continue

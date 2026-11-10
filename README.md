@@ -18,7 +18,7 @@
 
 **From human anatomy to physiology—observe, interact with, and explore the human body.**
 
-`BodyVista` is a 3D interactive platform for anatomy and physiology education and self-directed learning. It brings **2,900 anatomical structures, 12 body systems, 140 dynamic demonstration entries, 50 muscle movements, and 6 microscopic topics** into the browser, helping learners understand spatial relationships, anatomical layers, and physiological functions.
+`BodyVista` is a 3D interactive platform for anatomy and physiology education and self-directed learning. It brings **2,900 anatomical structures, 12 body systems, 140 dynamic demonstration entries, 100 muscle movements, and 6 microscopic topics** into the browser, helping learners understand spatial relationships, anatomical layers, and physiological functions.
 
 Available in **Chinese, English, and Japanese**, with desktop and mobile layouts. Core interactions run locally in the browser, requiring no self-hosted backend or database. The site can be deployed to GitHub Pages.
 
@@ -28,7 +28,7 @@ Available in **Chinese, English, and Japanese**, with desktop and mobile layouts
 | --- | --- |
 | Human Anatomy | Explore 2,900 structures by system and 7 major body regions. Use selection, progressive hiding, multiple selection, transparency, and structure focusing to examine neighboring structures and anatomical layers. |
 | Life in Motion | Access 133 system demonstrations, 5 whole-body demonstrations, and 2 oral and dental demonstrations to connect anatomy with function. Includes playback, progress, and speed controls. |
-| Muscle Motion | Replay 50 movements across 7 categories, including 6 dumbbell exercises. Drag the timeline to see how muscle tension and joint torque change as a joint bends or straightens. |
+| Muscle Motion | Replay 100 movements across 7 categories, including 16 dumbbell exercises. Drag the timeline to see how muscle tension and joint torque change as a joint bends or straightens. |
 | Microscopic Exploration | Explore 6 topics: alveolar gas exchange, the nephron, sarcomere contraction, neural synapses, intestinal villi, and the vessel wall, connecting organs with microscopic mechanisms. |
 | Anatomy Challenge | Practice structure identification, finding structures in 3D, and microscopic knowledge questions. Each round contains 5 questions, with answer feedback, results, and options to try again. |
 

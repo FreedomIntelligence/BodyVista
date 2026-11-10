@@ -34,7 +34,7 @@ function sourceCatalog() {
     ...read('candidates/dumbbell-motions-20261103/catalog.json').motions,
   ];
   const fixtures = new Map(Object.entries(fixtureSets).map(([id, source]) => [
-    id, read('candidates/model-repair-20261106/' + source.path).cases,
+    id, read('candidates/model-repair-20261106/' + source.path)[source.sourceKey || 'cases'],
   ]));
   const extended = cases.map(motion => {
     const fixture = fixtures.get(motion.fixtureSet).find(item => item.id === motion.fixture);
@@ -53,9 +53,9 @@ function quantities(text) {
     .map(([, value, unit]) => value + (units[unit] || unit)).sort();
 }
 
-test('all 50 motion titles, descriptions and seven categories have English and Japanese display text', () => {
+test('all 100 motion titles, descriptions and seven categories have English and Japanese display text', () => {
   const motions = sourceCatalog();
-  assert.equal(new Set(motions.map(motion => motion.id)).size, 50);
+  assert.equal(new Set(motions.map(motion => motion.id)).size, 100);
   assert.equal(new Set(motions.map(motion => motion.category)).size, 7);
   for (const motion of motions) {
     for (const [slot, lang] of languages.entries()) {
@@ -88,6 +88,25 @@ test('installed release catalog agrees with checked-in motion text', {
   const source = sourceCatalog().map(displayFields).sort();
   const release = read('motion-cache/catalog.json').motions.map(displayFields).sort();
   assert.deepEqual(release, source);
+});
+
+test('each published motion has its own verified scene and all previously pinned results stay intact', () => {
+  const report = read('showcase/verification.json');
+  const { originals, cases } = read('showcase/scenes.json');
+  const byId = new Map(report.motions.map(m => [m.id, m]));
+  assert.deepEqual(new Set(byId.keys()), new Set([...originals, ...cases].map(m => m.id)));
+  assert.equal(new Set(report.motions.map(m => m.sceneSha256)).size, byId.size);
+  for (const { id, sha256, cachedSha256 } of [...originals, ...cases]) {
+    const entry = byId.get(id);
+    assert.ok(entry.frames > 1 && entry.complete740Frames === entry.frames, id);
+    const pinned = sha256 ?? cachedSha256;
+    if (pinned) assert.equal(entry.envelopeSha256, pinned, id);
+  }
+  const previous = read('../../tools/pages-assets/showcase-v1.2.0.json');
+  const oldPaths = previous.asset.files.filter(f => f.path.endsWith('.json.gz'))
+    .map(f => f.path.split('/').pop().slice(0, -8));
+  const pins = [...originals.map(m => m.sha256), ...cases.map(m => m.cachedSha256).filter(Boolean)];
+  assert.deepEqual(pins.sort(), oldPaths.sort());
 });
 
 test('atlas surfaces and joint handles are localized and native muscle IDs remain intact', () => {

@@ -1,11 +1,11 @@
 # 全身实验台的发行资源
 
-## v1.2.0 的安装与升级
+## v1.3.0 的安装与升级
 
-从 v1.2.0 源码启动新版实验台。它使用 v1.1.0 已发布的骨体积、肌肉表面、MS-Human 来源包，以及 v1.2.0 的完整动作 ZIP。动作目录和每个 gzip 的校验值随源码保存。以下命令使用 Git、Node.js 22 和 Python 3.13，从 PowerShell 运行。
+从 v1.3.0 源码启动新版实验台。它使用 v1.1.0 已发布的骨体积、肌肉表面、MS-Human 来源包，以及 v1.3.0 的完整动作 ZIP。动作目录和每个 gzip 的校验值随源码保存。以下命令使用 Git、Node.js 22 和 Python 3.13，从 PowerShell 运行。
 
 ```powershell
-git clone --config core.autocrlf=false --branch v1.2.0 https://github.com/FreedomIntelligence/BodyVista.git BodyVista
+git clone --config core.autocrlf=false --branch v1.3.0 https://github.com/FreedomIntelligence/BodyVista.git BodyVista
 Set-Location BodyVista
 python -B -X utf8 tools/install-motion-lab.py --download
 python -B -X utf8 tools/install-motion-lab.py --check
@@ -18,14 +18,14 @@ python -m venv .venv-fullbody
 
 打开[本机肌肉运动工作区](http://127.0.0.1:4192/?workspace=muscle-motion)。本机服务支持播放和编辑案例、计算自定义动作。上述联网安装完成后，运行服务和播放动作可以断网。完整步骤见[离线使用说明](../../docs/OFFLINE_MOTION.md)。
 
-在已装 v1.1.0 的检出中，可以先保存工作文件，运行 `git fetch origin tag v1.2.0` 和 `git switch --detach v1.2.0`，再执行上面的安装与启动命令。安装器复用核对成功的基础资源和旧案例，所有新结果就位后才切换动作目录。已有目录或文件与正式版本不符时，安装器会报告冲突并保留文件。首次安装和升级都可以重试。
+已安装 v1.1.x 或 v1.2.x 的用户，可以先保存工作文件，运行 `git fetch origin tag v1.3.0` 和 `git switch --detach v1.3.0`，再执行上面的安装与启动命令。安装器复用核对成功的基础资源和旧案例，所有新结果就位后才切换动作目录。已有目录或文件与正式版本不符时，安装器会报告冲突并保留文件。首次安装和升级都可以重试。
 
 要在没有网络的机器恢复模型和动作资源，事先准备下表四个附件，放进同一目录，然后从新版源码根目录运行 `python -B -X utf8 tools/install-motion-lab.py --from-bundle D:/BodyVista-bundles`。恢复软件环境另需本机已有对应 Python、锁定依赖或其离线安装包。`--check` 只读核验，成功返回 0，缺少资源返回 2，文件冲突或校验失败返回 1。
 
 | 发行版本 | 要保存的附件 |
 |---|---|
 | [v1.1.0](https://github.com/FreedomIntelligence/BodyVista/releases/tag/v1.1.0) | `bodyvista-bone-volumes-v1.1.0.bin`、`bodyvista-atlas-muscles-v1.1.0.bin`、`bodyvista-ms-human-700-98a70c569c4c.zip` |
-| [v1.2.0](https://github.com/FreedomIntelligence/BodyVista/releases/tag/v1.2.0) | `bodyvista-motion-cache-v1.2.0.zip` |
+| [v1.3.0](https://github.com/FreedomIntelligence/BodyVista/releases/tag/v1.3.0) | `bodyvista-motion-cache-v1.3.0.zip` |
 
 ### 维护者复建网页和新版附件
 
@@ -37,7 +37,7 @@ npm run build
 python -B -X utf8 tools/build-pages-replay.py --bundle-dir D:/BodyVista-bundles --showcase-dir D:/BodyVista-bundles
 ```
 
-要从已核验的合并目录重新打包，运行 `python -B -X utf8 tools/showcase_release.py --cache <motion-cache目录> --output <附件目录>`。输入目录包含 `catalog.json` 和按内容哈希命名的 `.json.gz`。工具在固定成员顺序、日期和权限下打包，并输出 `showcase-v1.2.0.json`，可与源码中 `tools/pages-assets/` 下的同名文件逐字节比较。
+要从已核验的合并目录重新打包，运行 `python -B -X utf8 tools/showcase_release.py --cache <motion-cache目录> --output <附件目录>`。输入目录包含 `catalog.json` 和按内容哈希命名的 `.json.gz`。工具在固定成员顺序、日期和权限下打包，并输出 `showcase-v1.3.0.json`，可与源码中 `tools/pages-assets/` 下的同名文件逐字节比较。
 
 ## v1.1.0 历史版本
 
