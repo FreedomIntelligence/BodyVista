@@ -698,7 +698,7 @@ export function translateRuntime(text, lang, t) {
   if (coords.length > 1) return coords.map(part).join(" · ");
   const coordinateValue = /^(.+) ([-+−]?\d+(?:\.\d+)?)(°|m)$/.exec(text);
   if (coordinateValue) return part(coordinateValue[1]) + " " + coordinateValue[2] + coordinateValue[3];
-  const modelUnit = /^(.+) · ([A-Za-z][\w-]*)$/.exec(text);
+  const modelUnit = /^(.+) · ([\w-]+)$/.exec(text);
   if (modelUnit) return part(modelUnit[1]) + " · " + modelUnit[2];
 
   // Anatomical names may themselves contain a middle dot (e.g. a rib's axis).

@@ -97,7 +97,12 @@ test('atlas surfaces and joint handles are localized and native muscle IDs remai
     for (const { label } of [...surfaces, ...model.bodyMetadata]) {
       assert.ok(translateAnatomy(label, lang), `${lang}: ${label}`);
     }
-    for (const { name } of model.muscles) assert.equal(translateAnatomy(name, lang), undefined, name);
+    for (const { name } of model.muscles) {
+      assert.equal(translateAnatomy(name, lang), undefined, name);
+      const label = translateMotion('左手与手指 · ' + name, lang);
+      assert.ok(label.endsWith(' · ' + name));
+      assert.ok(!label.startsWith('左手与手指'));
+    }
   }
   assert.equal(translateAnatomy('右第 4 肋 · X 轴', 'en'), 'Right rib 4 · X axis');
   assert.equal(translateAnatomy('右第 4 肋 · X 轴', 'ja'), '右第4肋骨 · X軸');

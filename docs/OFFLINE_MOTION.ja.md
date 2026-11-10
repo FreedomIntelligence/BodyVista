@@ -7,8 +7,8 @@
 Git、Python 3.13、Node.js 22.x（22.12 以降）をインストールし、PowerShell で次のコマンドを実行します。初回は依存パッケージ、人体モデル、動作ライブラリのダウンロードにインターネット接続が必要です。
 
 ```powershell
-git clone --config core.autocrlf=false --branch v1.2.1 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.2.1
-cd BodyVista-v1.2.1
+git clone --config core.autocrlf=false --branch v1.2.2 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.2.2
+cd BodyVista-v1.2.2
 py -3.13 -m venv .venv-fullbody
 & ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
 & ./.venv-fullbody/Scripts/python.exe -X utf8 tools/install-motion-lab.py --download
