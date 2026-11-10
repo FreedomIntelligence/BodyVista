@@ -13,7 +13,7 @@ export function makeBoneVolumes(manifest, buffer, partCount) {
   return buildBoneVolumes(manifest, buffer, partCount, false);
 }
 
-function buildBoneVolumes(manifest, buffer, partCount, distancesChecked) {
+function buildBoneVolumes(manifest, buffer, partCount, distancesChecked, paddedField = null) {
   if (manifest.version !== 1 || manifest.coordinateSystem !== "body-local native"
     || !Array.isArray(manifest.bones) || !manifest.bones.length
     || manifest.bones.length > MAX_BONES || buffer.byteLength !== manifest.byteLength
@@ -31,8 +31,8 @@ function buildBoneVolumes(manifest, buffer, partCount, distancesChecked) {
   if (height > 16384) throw Error("骨碰撞体积超过纹理容量。");
   // CPU queries and the GPU upload share this one padded array. Do not retain
   // a second complete 150 MB field solely for the CPU sampler.
-  const field = new Float32Array(FIELD_WIDTH * height);
-  field.set(new Float32Array(buffer));
+  const field = paddedField || new Float32Array(FIELD_WIDTH * height);
+  if (!paddedField) field.set(new Float32Array(buffer));
   const info = new Float32Array(manifest.bones.length * 32);
   const candidates = new Float32Array((MAX_BONES + 1) * partCount);
   const inverse = new THREE.Matrix4();
@@ -342,7 +342,17 @@ export async function readSurfaceBinary(response, byteLength, signal, onBytes) {
   }
 }
 
-export async function loadBoneVolumes(url, partCount, expectedSha256 = null, signal) {
+export async function readAtlasAsset(manifest, manifestUrl, binaryFile, signal, onBytes, destination) {
+  if (manifest.binaryChunks !== undefined) {
+    const {readSurfaceChunks} = await import("./surface-binary.js");
+    return readSurfaceChunks(manifest, manifestUrl, signal, onBytes, destination);
+  }
+  const response = await fetch(new URL(binaryFile, manifestUrl), {signal});
+  if (!response.ok) throw Error("解剖表面或其骨体积数据未找到。");
+  return readSurfaceBinary(response, manifest.byteLength, signal, onBytes);
+}
+
+export async function loadBoneVolumes(url, partCount, expectedSha256 = null, signal, onProgress) {
   signal?.throwIfAborted();
   const reply = await fetch(url, {signal});
   if (!reply.ok) throw Error("骨碰撞体积清单未找到。");
@@ -350,16 +360,23 @@ export async function loadBoneVolumes(url, partCount, expectedSha256 = null, sig
   signal?.throwIfAborted();
   if (expectedSha256 !== null && manifest.binarySha256 !== expectedSha256)
     throw Error("骨碰撞体积与肌肉静止配准版本不一致。");
-  const binaryReply = await fetch(new URL(manifest.binaryFile, url), {signal});
-  if (!binaryReply.ok) throw Error("骨碰撞体积数据未找到。");
-  const buffer = await readSurfaceBinary(binaryReply, manifest.byteLength, signal);
+  // Inflate the public chunks into the GPU texture's final storage. Its last
+  // row is padded; only the original bytes participate in both hash checks.
+  const bytes = manifest.byteLength;
+  if (!Number.isSafeInteger(bytes) || bytes <= 0 || bytes % 4 || bytes > 512 * 1024 * 1024)
+    throw Error("骨体积字节数无效。");
+  const padded = manifest.binaryChunks
+    ? new Float32Array(FIELD_WIDTH * Math.ceil(bytes / (4 * FIELD_WIDTH))) : null;
+  const buffer = await readAtlasAsset(manifest, url, manifest.binaryFile, signal, loaded =>
+    onProgress?.({loaded, total: bytes, message: "正在载入精细表面的骨接触数据"}),
+    padded ? new Uint8Array(padded.buffer, 0, bytes) : undefined);
   signal?.throwIfAborted();
   const digest = await crypto.subtle.digest("SHA-256", buffer);
   signal?.throwIfAborted();
   const hash = Array.from(new Uint8Array(digest), x => x.toString(16).padStart(2, "0")).join("");
   if (hash !== manifest.binarySha256) throw Error("骨碰撞体积与清单版本不一致。");
-  if (!signal) return makeBoneVolumes(manifest, buffer, partCount);
-  const field = new Float32Array(buffer);
+  if (!signal) return buildBoneVolumes(manifest, buffer, partCount, false, padded);
+  const field = padded ? padded.subarray(0, bytes / 4) : new Float32Array(buffer);
   let nextYield = performance.now() + 12;
   for (let start = 0; start < field.length; start += 131072) {
     if (!field.subarray(start, start + 131072).every(Number.isFinite)) throw Error("骨体积含有无效距离。");
@@ -370,7 +387,7 @@ export async function loadBoneVolumes(url, partCount, expectedSha256 = null, sig
     }
   }
   signal.throwIfAborted();
-  return buildBoneVolumes(manifest, buffer, partCount, true);
+  return buildBoneVolumes(manifest, buffer, partCount, true, padded);
 }
 
 const BONE_VOLUME_GLSL = `

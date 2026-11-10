@@ -24,6 +24,8 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     if (open) {
       const src = new URL('./experiments/body-lab/player.html', location.href);
       if (requestedCase) src.searchParams.set('case', requestedCase);
+      const demo = url.searchParams.get('demo');
+      if (demo) src.searchParams.set('demo', demo);
       frame = document.createElement('iframe');
       frame.title = t('肌肉运动');
       frame.addEventListener('load', ({currentTarget}) => {
@@ -64,6 +66,7 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     const url = new URL(location.href);
     url.searchParams.delete('workspace');
     url.searchParams.delete('case');
+    url.searchParams.delete('demo');
     history.pushState(state, '', url);
     applyLocation(); // The clicked control then runs its original atlas action.
   }, true);
@@ -77,11 +80,12 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
   });
   window.addEventListener('message', event => {
     if (!frame || event.origin !== location.origin || event.source !== frame.contentWindow ||
-        event.data?.type !== 'bodyvista:muscle-case' || !validCase(event.data.id)) return;
+        event.data?.type !== 'bodyvista:muscle-case' || (event.data.id !== null && !validCase(event.data.id))) return;
     displayedCase = event.data.id;
     const url = new URL(location.href);
     if (url.searchParams.get('case') === displayedCase) return;
-    url.searchParams.set('case', displayedCase);
+    if (displayedCase === null) url.searchParams.delete('case');
+    else url.searchParams.set('case', displayedCase);
     history.replaceState(history.state, '', url);
   });
   document.addEventListener('atlas:language', () => {

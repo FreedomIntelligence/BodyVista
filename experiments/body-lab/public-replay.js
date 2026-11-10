@@ -38,7 +38,25 @@ export function preparePublicReplay() {
     "可用上方“观察区域”切换关节。力矩单位为 N·m。净需求已扣除关节被动作用与外部支撑。肌肉合计包含被动张力，止挡反力和未平衡量单列。";
   byId("workspaceStatus").textContent = "动作回放";
   byId("viewLoading").textContent = "正在载入骨骼和动作库…";
-  byId("muscleDisplay").value = "paths";
-  byId("muscleDisplay").disabled = true;
-  byId("renderNote").textContent = "当前显示计算用肌腱路径。张力从灰绿渐变为橙色、红色。";
+  byId("publicSurfaceStatus").hidden = false;
+  byId("renderNote").textContent = "正在载入真实解剖表面。";
+}
+
+export function showSurfaceStatus(update, state) {
+  const note = document.getElementById("publicSurfaceStatus");
+  const retry = document.getElementById("retryPublicSurface");
+  const preview = state.showPreview;
+  note.hidden = state.muscleDisplay !== "anatomy";
+  retry.hidden = note.hidden || !state.surfaceLoadError;
+  if (note.hidden) return;
+  const phase = state.surfaceLoadError || update.error ? "error" : update.ready && !preview ? "ready" : preview ? "preview" : "loading";
+  note.dataset.phase = phase;
+  const labels = {
+    loading: "正在载入肌肉表面…",
+    preview: "预览 · 正在载入精细表面…",
+    ready: "精细解剖表面",
+    error: preview ? "精细表面未载入，当前为预览" : "肌肉表面未载入",
+  };
+  if (note.textContent !== labels[phase]) note.textContent = labels[phase];
+  if (update.message) note.title = update.message;
 }

@@ -1,0 +1,287 @@
+{
+  "releaseTag": "v1.2.0",
+  "baseManifestSha256": "56a52cc1835f83ffa009ecfb566314ae96398feff235eba1a2a836e2bc3c12dc",
+  "modelData": {
+    "path": "experiments/body-lab/fullbody-model-data.json",
+    "bytes": 1203437,
+    "sha256": "deada215ea06233720cbc220fdcccccf45a3438f5651010a033bf7bbd9ef5378"
+  },
+  "summary": {
+    "cases": 50,
+    "frames": 2066,
+    "categories": [
+      "前臂与腕",
+      "协调动作",
+      "哑铃",
+      "手指",
+      "肩肘",
+      "颈与躯干",
+      "髋膝踝"
+    ]
+  },
+  "asset": {
+    "role": "motion-cache",
+    "name": "bodyvista-motion-cache-v1.2.0.zip",
+    "format": "zip",
+    "files": [
+      {
+        "path": "experiments/body-lab/motion-cache/030535c6cb7362db4cb32d75df16d6ac027fa02236ef338ac4e0837935244cf1.json.gz",
+        "bytes": 3095840,
+        "sha256": "2b3b8a7882d3621c8fd680af83914326626b34e5fe6c12871e630f69b249c4ea"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/05a5ce12623839a205fd93dc934d07abcc2bd56131a4d01c237c576626666dbd.json.gz",
+        "bytes": 2748387,
+        "sha256": "f22cf111fb1d1e22dd238d0f7a46e0f8488397da43fcd60776d662a25fbf9f13"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/0a47f45054a74e6d229187c1b4cc3ce4ef2654ae080862ecfe48fb8fb96b24e6.json.gz",
+        "bytes": 2027635,
+        "sha256": "22532e3aacd722e081aa9929687a9f12ec280057e5ba53f57cfc033909547d8f"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/0e353a5d19095b912fc11e352f79e523039ba8d545bb7125d567240bb8338358.json.gz",
+        "bytes": 3015515,
+        "sha256": "e137241ecabd629c5f2f43fa5a347df0375bff6b502f4d91d17cbe5460165cbf"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/1fd9f09ae1741a6e9afb29fbc24eeb075858081531ab92e25fa5f5016c183863.json.gz",
+        "bytes": 2616113,
+        "sha256": "1b9dfacc3e0a9a31cd1b812dcf99182684d317449fcd702e28033136a9799c9b"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/2029d735e2c32297180990ab439e86fae34d755cc160a0adada73a8ad6fe0d9b.json.gz",
+        "bytes": 3066888,
+        "sha256": "4349f5494ca9c2d15dee1f347adbd2c04ba52e4c27b782f3c36377abb7f78c35"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/218f7d96c7fb8b2eee58bdd7babd2576abb9f0cdde914c8a08073b4289f6fa0c.json.gz",
+        "bytes": 2501734,
+        "sha256": "8059bf4377c8d3f0333a950766cf22793b7465eae9c52364eda1eb96d65b0137"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/2a68fa98a06cf7d3f0f35b126fd4aecbded5eb4f5c60f7b0fe9ed1cf4f19f0a0.json.gz",
+        "bytes": 3071138,
+        "sha256": "9e6ba7e4d5089a069e46e03b0bfef91b1162e3c2ef326047535ab7beffde2b1b"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/2b98d314d60febff88a75758b55306df0c9524c8a981a3076d2a906a4cacd732.json.gz",
+        "bytes": 7411349,
+        "sha256": "b0a19ab4ac7d5dbd56c3cdd3d9d36766747e2c9a808b3bc8f498a73219e7d910"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/32e68f0482856ce973be74e9f4597e90472e85342d4941ee6a25b0aba7f1b728.json.gz",
+        "bytes": 2543096,
+        "sha256": "1294d0d5d111aa646f6a005f805711adc51bf1c7d763bf73333b12209b798b7b"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/3aa8966493e0681d3f7beba8646204883a589ced0c2566aba7c9e66020b5e3dc.json.gz",
+        "bytes": 5977581,
+        "sha256": "5cc41c2ff4c3b61c5963c17128fc621928d28beb3f955e86d4b8bca9eb3d2688"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/3dd71995fc76fd9bcf350fa579e99449c4e4a1cecaf15b64cdc4f5946c56f691.json.gz",
+        "bytes": 3045426,
+        "sha256": "99762380dd0608537cd419832b644302705611cce39ea3e3480d6641d4e9d3bc"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/3eb7e4800ca7b08d55a87ebf859bc668450f2a621259c418096297a9b21ede90.json.gz",
+        "bytes": 2524379,
+        "sha256": "25b71c9ef8d3540ff4243a001b7dab2f71931ddc901c15031c242f665fab49dd"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/4213c2b0b7b87c796f728dbf0ebadb05b5f7fe7c336f773b1c14cf501d24a75e.json.gz",
+        "bytes": 2064354,
+        "sha256": "56e4c9917c02d117e9bec56baf65192572e3c8d1caeedde19d2ab0a617e7acfc"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/4ba93484a2b1426d3978f1b5aa58ae2b04dab8b4d1be4343249701901964c1d8.json.gz",
+        "bytes": 2590512,
+        "sha256": "8c247045dc22b3248e96c3538ca491fc77fb1b0609025aefad730a83efb10656"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/4bad90734347b5cf6fe3e59ae9f499f3f26144ece0e8540d2cc2674b8e24e01d.json.gz",
+        "bytes": 5051472,
+        "sha256": "f753ad938f1d2895cdb004126289d5034762464d595c51086b524133ae7b2f84"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/4ed910612f909ba75573057883f34a8a6b1e23ba886357ccaa21e10da8ebab8f.json.gz",
+        "bytes": 2503382,
+        "sha256": "d29a6bda9562f9dec657dc669ff8a9c98ff59dbb38b729ac202bf5bf15f8a79a"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/547f05051c5214601450cd80382876ca5fb072a1575dbfc446b309322da2ecd0.json.gz",
+        "bytes": 7408931,
+        "sha256": "f47b3f6c9b97ae0ac1407d85505b0a85cb668ed6a2dac72949872fd22d6249d8"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/58e886e433945c69f38f2337b7e41ced61e8a7843c1bf2e8d498183348ad7451.json.gz",
+        "bytes": 2054033,
+        "sha256": "ec33f5672c018f0b289abc7a84d9b605a0eaad761d605be44886b72d17067ce1"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/5b76ac54bb229c2f9a4e12d5d62a3985d66723a3d14b77dba51bc7f6d17bad3e.json.gz",
+        "bytes": 5008079,
+        "sha256": "df2f6917b58691fd09eaaff6abab1a4da198b657a9d6744ab7b9d20d862a5e93"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/5ca1037cc727b2f91f5d2a31cf2a6ec5ece4a0b815d84f42a6765e5d887ec2fe.json.gz",
+        "bytes": 2543465,
+        "sha256": "6b854d543f7410a39fc778e3e21ed35e21668258bdf0ebffc477301d8f152989"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/6457605d281452507978cbc6d81ffc75f0955d98c676783f381c20b28e854613.json.gz",
+        "bytes": 3071627,
+        "sha256": "34ace3045478211b052107aa8324b6d38712398305e8867190af273b90afa03a"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/668557db5cb93034020ea6ee1e6541222fb0d7fa113ef0539f400a17c3ecbcec.json.gz",
+        "bytes": 4929823,
+        "sha256": "21e91cc6b9959704075a18d9aa11b5380b2d30d8f516dea1cd500b10be2364cf"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/67ff73c32255be39c6e20421cc3ecf4db788f89bceea3af7e44dcc391422679d.json.gz",
+        "bytes": 2594039,
+        "sha256": "66d3c1f3608c6d35da6533b565351bb81e744923e6ed0a9a9cd53c9b777f9282"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/6ca065b5fe6c58f3b88f29a1299e2f5968165a83795fe1d9195362048e6a6e5b.json.gz",
+        "bytes": 5922496,
+        "sha256": "b59aae5c2db63c7ce40917441a4ac966e0b5bf85d3498b333e8d18a2e5feac25"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/6d6ff6e4e9b9f9d1ef94ec20f52ab12c3507f68e0019d484486c6af375d4894e.json.gz",
+        "bytes": 2535978,
+        "sha256": "4989fb5b2ab9b7c43ee80be38332d3e493bcaf6376fa77585239fc7d2d03988d"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/71bc272e3632df0d97c169c716a54d55f150eadcbb8a568b15cdaa30dde5b2f4.json.gz",
+        "bytes": 3126235,
+        "sha256": "89870f92817b8786b1cf2dc47ca78763178eab26616aa1ed90b65dc0e675778f"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/73a54d9c3cd765b5ebe30d97da8731e21fa5e3e335c556b1d9fa5a4764414f22.json.gz",
+        "bytes": 3066015,
+        "sha256": "28b6f4220d1c05c18ad992c2674338c39524690222507546e346128f11776902"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/87a051ea9f734e5a12255965ef65e7664b7adb9aa9b229365af8e78725331012.json.gz",
+        "bytes": 2040749,
+        "sha256": "22adbfa32a69f9298e53412c335293b9127847f1076b9b1ed1baebc3f97c9e06"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/8a5455ef3526f2a42b7a1b1bc29f7bd0e34d324cc02ff5ce9f26c11c693740fa.json.gz",
+        "bytes": 2998066,
+        "sha256": "4f73a64ca1c0e2717e72c9e5396d61c63cbfac6e75abee1bcd6008397dccb8df"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/8bc4b9db97919a91339ce1410deb5385b0ed1792edf5c193fbaa3defacb7945e.json.gz",
+        "bytes": 2503440,
+        "sha256": "934381d031c6573f2c8e1f569b0fd1097bb2e3717e1573a27fb7c8d893dfec14"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/917917257afe03ab46ad47f06c72eec5dc6fc8978999084c15c8893f38e209b0.json.gz",
+        "bytes": 3026379,
+        "sha256": "df629a62d19dfb0a0516c1b97ec5d4ca0542c2360e14d377d6effff9932c3eaf"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/9197b71e189b608083e0cbec190b51cc5577d1bf05b808a7929c7dd2b7e3f3d1.json.gz",
+        "bytes": 2086830,
+        "sha256": "8be6bb0716d931d4ba46c68d41772b5a52c1b4391339bf3b6ab7beffe85e1ad9"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/9892595106bc6180948b168dc98bd66f1a55ad32846aa04d60b998ac2a2f0340.json.gz",
+        "bytes": 3032141,
+        "sha256": "a74643916d1b758a020c51264c355eb554433f0aa1d49597a403fd9fc8302eab"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/a690c3e2cc62d14e7b9ae129c25561067c44a5f54a4f6a8e40c6cbace1b99e9c.json.gz",
+        "bytes": 2571548,
+        "sha256": "be8cffc4066a0051d3204f2f43876ea3c888917b24fe0ce5ea1d7a46bae2dd49"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/ae1a4363d82635464069fdfb9e8094e4b601e9e72a988cd6f4b0c72f79923526.json.gz",
+        "bytes": 4983656,
+        "sha256": "c59ab985fd882a1a8eeff61ececcaf8e8fa4d2fd422c9215e803b34de2f4cd1d"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/b20fcf90752e83235fef2d859592e9fe05b79602dc1d0b36a3a02e9ef8b8049b.json.gz",
+        "bytes": 7417778,
+        "sha256": "4989ed856b5a09972c1c08640ecf356312d09a78c38b7da734ec30903b98667b"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/c505e36425e4938fcc690ec5ab5f07a1fd1bd278374173bd2ae71fdfb51ca901.json.gz",
+        "bytes": 2551857,
+        "sha256": "dee7636b1f3419b49d861228b0bdc8b79a9b727f45d3713aa83bb81736c61250"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/catalog.json",
+        "bytes": 1061494,
+        "sha256": "4edf475dd6923f2bf1d8debe37542e75d52eb75fb8f88f0a545d7107ab1475c7"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/cdce1c8e0a55e76f28e1e8eef3d317386a5ed2773f3cf689a3935adb277b00e8.json.gz",
+        "bytes": 3024885,
+        "sha256": "e0b8809bf4864abe6f1cbe9fd1f0a943d3cd40aaf3fe6a788262c5253530b83e"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/d0d45e6f87dbae57da86a6d56e475876e27e28848fa79d83bcc02bd0f0611aba.json.gz",
+        "bytes": 3281159,
+        "sha256": "b094bc7bb85ac26632274f34deb82953f5ba155a9e902132defe711aaab5a10b"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/d3b2cdda55ae58a1ad93c271ca932987aaaf9fbad6ec08471f697369a0ff75e0.json.gz",
+        "bytes": 5990672,
+        "sha256": "d0784e4223d13aa9d969774cf34a1ad6259ac4527da0583a761ca17646a1210f"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/dddd7f561c14617643663b7f00965fca248f01be9bd198596ea94695f2fe19a6.json.gz",
+        "bytes": 3048231,
+        "sha256": "8fd00b6c591bc87741934146610e4b95558bd624c44d13949589a2c94de5fad4"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/dfad1569d02cfc1f78813a2dfb81dc9bff7933c0035ea2ac7db3c67bac65e875.json.gz",
+        "bytes": 2030401,
+        "sha256": "10023e60d784f6de0af161ca40eb27a8f4fd017828b1d8281e9e6879455a862f"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/e0dd4d3c08c2b94b46c36169e6a61a559d91d03267e77649a2d58cccb766d39c.json.gz",
+        "bytes": 2056772,
+        "sha256": "f67fc2bf2973d567e827b37145c4bc42e661887115585f78a95626d33ca73c32"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/e1f989fff1c4da198c77e75d7b7d1da4e1c58e1b170ed3c75b6e328475a0c045.json.gz",
+        "bytes": 2618480,
+        "sha256": "a4b4e0bdbe9df10d65821759855767bb5a036ca79ffa6a940fac820cfde75736"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/f17bbfb10908415dfcfcdacb35a5c8a6696230c3f601aad1c3f1327b5d1e288c.json.gz",
+        "bytes": 3089198,
+        "sha256": "c5edc4afad1705a43a4d385068da364d26431871fafc730143206241a9d5786f"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/f2952f029c64dac58025532ed146b14c694bd3cc72f2b7006224b043e589c88a.json.gz",
+        "bytes": 2534574,
+        "sha256": "e9d92891f20a85da315a0d6a4ac58314ff1446eae8fe80dcd85c8eb37ea1ce28"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/f31696200f51e03f58c2b1c6f0409ae843f9a94d20192345cb4e75093084dd72.json.gz",
+        "bytes": 3041324,
+        "sha256": "22eacd67cc01e97c23f759025f6d2fc756113c2035c85eafb6e964e232ee74d1"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/f61b98689fda4cec912075a77b2bcd2f1b6d330033bcc63ef83ad990fa6b1622.json.gz",
+        "bytes": 7501480,
+        "sha256": "3856bbd37069fbb3209aa7c7176ff9eec173e4b80241bd5e73dcea4eda0c6993"
+      },
+      {
+        "path": "experiments/body-lab/motion-cache/f8a4b7ca7fa33547c63d7a51dd4df858faca0efd4793a3f55bc8c90c9d855bb2.json.gz",
+        "bytes": 2527567,
+        "sha256": "26a8e9edbfcd4795c576f6afe6db6d16a5e2f2925d3cd04355856e45c847d108"
+      }
+    ],
+    "bytes": 173148793,
+    "sha256": "d3841c5a1cb654288fd0b600028c090bc5da4363a827060bfa8c021eb83c0a38",
+    "url": "https://github.com/FreedomIntelligence/BodyVista/releases/download/v1.2.0/bodyvista-motion-cache-v1.2.0.zip"
+  }
+}

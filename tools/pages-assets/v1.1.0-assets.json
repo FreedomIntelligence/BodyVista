@@ -1,0 +1,2203 @@
+{
+  "schema": 1,
+  "repository": "FreedomIntelligence/BodyVista",
+  "releaseTag": "v1.1.0",
+  "sourceCommit": "4234a2f4ac186de5b3465e2859a3ad4c13f64ff7",
+  "modelId": "ms740-shoulder-hand-franko-v5",
+  "modelSha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62",
+  "computationSha256": "b5db51b54385a0df803d61fc68446543e9081a93d4e8b5e11ba17ac3d1058b0d",
+  "requiredFiles": [
+    {
+      "path": ".gitattributes",
+      "bytes": 101,
+      "sha256": "0fa634cecd866aceaf1fc3aa04f1924c16de0f96fd72a700f074dad5bcfbf6b4"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "2a81648b0b700e8ba745e25c9ce681cb42f48d4e75ab60c6581e0c3f163015ee"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13300,
+      "sha256": "f9189dfa0cd8235aa5af87e674ac33588d6e3dee3527e8f392d3bc6360bc6590"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 10927,
+      "sha256": "73f241915daec9abb3341695138d25f83f031136291caca87b29563f923a2318"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 7986,
+      "sha256": "25e6c8fa317a11d25c2d97e2da2fffabbef2c85bb6b65bde538ad92cfd34cb06"
+    },
+    {
+      "path": "assets/detail/z_04ddba2f2d5778f5.js",
+      "bytes": 18078,
+      "sha256": "1ddc587572fbdbe89f4e9209ffbfef44852a293fde0fb3a1b97c33d2a5532998"
+    },
+    {
+      "path": "assets/detail/z_0c77c2d8ff99f26b.js",
+      "bytes": 8270,
+      "sha256": "fb72c8b6d7371acdb3b51e80b75e422c63352a7c83d52879fe1887bad87dc041"
+    },
+    {
+      "path": "assets/detail/z_0ca27c38f6ab39af.js",
+      "bytes": 23914,
+      "sha256": "d7b00dcc0d2631d6dda9c247bc6d591d7aca1a5b2bccc8d73b789ed23503387c"
+    },
+    {
+      "path": "assets/detail/z_0d7f6b6754750280.js",
+      "bytes": 55454,
+      "sha256": "72c1555c82056686c778a09809e13e63e6733c522a06523a77fa027598a80124"
+    },
+    {
+      "path": "assets/detail/z_0fb4cef4d6ede9ce.js",
+      "bytes": 68882,
+      "sha256": "7a338d315fe1ec040e95a5186f4499ad4f5be12cd61cf527b5910bb3226c10f6"
+    },
+    {
+      "path": "assets/detail/z_246f9aa59fd09a13.js",
+      "bytes": 8270,
+      "sha256": "0c4f764c00dcc4058f481b698cbc06f18b0fae3c4301a2f24525f088baff374b"
+    },
+    {
+      "path": "assets/detail/z_2b9227516bdcec60.js",
+      "bytes": 128514,
+      "sha256": "f750838c725cabe6c8d2cc9a7ebe9bc031cf29efb0096fb6911bd0ed34ef23c6"
+    },
+    {
+      "path": "assets/detail/z_2c738171c8d19fbd.js",
+      "bytes": 26538,
+      "sha256": "12a9f3e843486a550b4e50f6de9e358419b60eaddd269f1bac1ec2105fdfcdb4"
+    },
+    {
+      "path": "assets/detail/z_2f20a3e66514e90d.js",
+      "bytes": 17170,
+      "sha256": "8be16ebebda1f002e2d85d12990ccc694d255c383b45fc968328c79412f2dd78"
+    },
+    {
+      "path": "assets/detail/z_35f7092ca4daad4b.js",
+      "bytes": 16210,
+      "sha256": "1a3efbf2f40d6b7d01e03266aa5b7db628c4324ad04c736dd8b714183c569436"
+    },
+    {
+      "path": "assets/detail/z_467ce626607969ad.js",
+      "bytes": 13726,
+      "sha256": "c11aa5b4745c902b50eac05bc21630ceece24ff46343b4f5fb0c5d1b9c643e02"
+    },
+    {
+      "path": "assets/detail/z_4869c6ede8bd4690.js",
+      "bytes": 16402,
+      "sha256": "b36ad46905c3dc2aa4a08139461a041ac46f86fedb0ebfd3163402a28025ab2c"
+    },
+    {
+      "path": "assets/detail/z_4ab9be69a1e5847f.js",
+      "bytes": 7706,
+      "sha256": "fed5964f3e1e07c85813f17af358d6cfe5b87e98a53234ac377baa20edcc64ea"
+    },
+    {
+      "path": "assets/detail/z_4ce81819884916bd.js",
+      "bytes": 6414,
+      "sha256": "a1d8933490f7be5a655053b860bd548f460801971035f06ac4539872d10e235d"
+    },
+    {
+      "path": "assets/detail/z_557649a62d5eb1a6.js",
+      "bytes": 14542,
+      "sha256": "cb6268bbada6e5e15b3912d5cbbc71093cbfc4469bf126831156dd37b7729097"
+    },
+    {
+      "path": "assets/detail/z_57697192a9eac6bf.js",
+      "bytes": 88074,
+      "sha256": "31a25f2779ac986bd2a5fdb9f16beba058ec16e5bd0d0a3f8379ea026e943f93"
+    },
+    {
+      "path": "assets/detail/z_5a47814091b92245.js",
+      "bytes": 20050,
+      "sha256": "9897c0be6e00068187d4f518355b82b711f253374ea2a7b14d24cd095014f7c2"
+    },
+    {
+      "path": "assets/detail/z_5f1ee7ec033a6f14.js",
+      "bytes": 9230,
+      "sha256": "774d82ad79433f6f16d6bcf6b2db42cb6be8f7c0e01699ddb5a1d065586daddc"
+    },
+    {
+      "path": "assets/detail/z_63f1fe6563a53bda.js",
+      "bytes": 18474,
+      "sha256": "7a4f4b1434a366146a0cae64d0cd7609ec446b4f623a31263f31e042a3c018e7"
+    },
+    {
+      "path": "assets/detail/z_68a04acb0594e78d.js",
+      "bytes": 51650,
+      "sha256": "a0efe17a18c5cd9ca395b51b9f19e384d81a6303625f69558b0220985c5386af"
+    },
+    {
+      "path": "assets/detail/z_754686312c3d292f.js",
+      "bytes": 10130,
+      "sha256": "3cd06ff2ed2fc334b9e220b4420475da75adf91fb35a90f435b576a6f5e00c96"
+    },
+    {
+      "path": "assets/detail/z_7bf2093c9bc127c0.js",
+      "bytes": 30974,
+      "sha256": "e802a222a942972bac7191f1497259c1b4abfb7aa8839c932e0d7f53b0cf01c3"
+    },
+    {
+      "path": "assets/detail/z_8969933cb597044f.js",
+      "bytes": 118222,
+      "sha256": "1ff789813e98f8609c410f9cabea13862e15f7b21e3aa884f02ea427273c6346"
+    },
+    {
+      "path": "assets/detail/z_8a48faa6b2bf8117.js",
+      "bytes": 27134,
+      "sha256": "f477fdd28e996105a14f30bb3c7ad99a10f7dd95a277b1d7b88da6780e9ce033"
+    },
+    {
+      "path": "assets/detail/z_96ab3ac3accfa505.js",
+      "bytes": 113362,
+      "sha256": "2bd4155161c176c67a32767d87a319b9ebe0faee329dabec8c582b639aed7b27"
+    },
+    {
+      "path": "assets/detail/z_9c0235353a40cca2.js",
+      "bytes": 105090,
+      "sha256": "68bc457b744ffe7fc82a6c869fa8385fa9c12fd4ef5abaaa24661159389e8811"
+    },
+    {
+      "path": "assets/detail/z_a30ca0ea41b7498a.js",
+      "bytes": 24738,
+      "sha256": "ec4f83e761960742c879929c565780eb99959b50c574a2d2b795e3c4f99536c4"
+    },
+    {
+      "path": "assets/detail/z_a4d46065b8067298.js",
+      "bytes": 11470,
+      "sha256": "471030954625b80ad0e31a9eb8de18563278e6d5f86a51a645b39394d09aca5e"
+    },
+    {
+      "path": "assets/detail/z_b13d4b0e56fad4b1.js",
+      "bytes": 88194,
+      "sha256": "8ef36c69b715103751c49561053202700f3478298eb50db5de8e93281e62e2e3"
+    },
+    {
+      "path": "assets/detail/z_b7e1d81f56ce2f15.js",
+      "bytes": 15378,
+      "sha256": "76c4c0bf6abbfa0c8f513e8f2b8632fa2abdd233fce6823044fd5031a93f3077"
+    },
+    {
+      "path": "assets/detail/z_bcf4932a02405a07.js",
+      "bytes": 139050,
+      "sha256": "f11478f088f65110fac2ebf55747be1b3922044d9aa30024f6d2571b508fbc78"
+    },
+    {
+      "path": "assets/detail/z_bf08851726db8fc8.js",
+      "bytes": 19210,
+      "sha256": "f6db3edcf5f256bbc6b9b3653d3dec0888c4f92f24cb3dee66acc9ff59f608d3"
+    },
+    {
+      "path": "assets/detail/z_c60a22411ad8c0a9.js",
+      "bytes": 12174,
+      "sha256": "751165e526a115d5106bcb5b47b2fd9f535b43660d8a28237ccd750e2de09c18"
+    },
+    {
+      "path": "assets/detail/z_cdbfb237d6bba5c9.js",
+      "bytes": 642074,
+      "sha256": "33191636871cda52f09d89323f81db669841817a1a8e039fdf7219c7edd2edcf"
+    },
+    {
+      "path": "assets/detail/z_ce23d4b5c9b625bd.js",
+      "bytes": 13906,
+      "sha256": "b387a867dc530c42f95ea1bbbe7986e7772ccdcbdb980f084a34d9876bb6bdcb"
+    },
+    {
+      "path": "assets/detail/z_d885ef7d1a0584ad.js",
+      "bytes": 22634,
+      "sha256": "66f83b8806a823378555dc6ced020fb9540a4f308ed3caf5a60d8cfd2254c822"
+    },
+    {
+      "path": "assets/detail/z_e4e03b2db07bd193.js",
+      "bytes": 13650,
+      "sha256": "c22b8a6bd230d793a0f6cc3651837dc8e02fec52cbabbd39345beabde686ba17"
+    },
+    {
+      "path": "assets/detail/z_e6c7801fd264ef8a.js",
+      "bytes": 12626,
+      "sha256": "030cbde03ba45f5cbdc0be49b26289ed4bb8d14f37f51696db54dbbfee9e319b"
+    },
+    {
+      "path": "experiments/body-lab/ANATOMY_CONSTRAINTS.md",
+      "bytes": 8996,
+      "sha256": "97e68787dbc1e246d13970a9f2f2e4544adec7abe780b151e3190b17aa4126bd"
+    },
+    {
+      "path": "experiments/body-lab/ASSET_ATTRIBUTION.md",
+      "bytes": 10423,
+      "sha256": "d9627247c76e5e9c02ac7889d84273f8dbd83431c8073942723538801817dd42"
+    },
+    {
+      "path": "experiments/body-lab/BONE_CONTACT.md",
+      "bytes": 7208,
+      "sha256": "a69a41986cc4ba24a7bf999b497ac3cb2c142bad27026770370b1921631b166d"
+    },
+    {
+      "path": "experiments/body-lab/FULLBODY.md",
+      "bytes": 28939,
+      "sha256": "616f789b70e0167bd3dbb440dd0c08a45c4cd39410effe4d38dfc37d6d8f2f0c"
+    },
+    {
+      "path": "experiments/body-lab/GRASP.md",
+      "bytes": 9650,
+      "sha256": "430216e58005711d57fdd8288170fa0f68ac8b2fd6206c11449d1d270fe9af7e"
+    },
+    {
+      "path": "experiments/body-lab/README.md",
+      "bytes": 2255,
+      "sha256": "7cd2399ff23f454d1ab293731f8ce49021884d08ca243b7a1720b6c275af6533"
+    },
+    {
+      "path": "experiments/body-lab/RELEASE_ASSETS.md",
+      "bytes": 7457,
+      "sha256": "d599425eb6d104dda8d5fb77aa67ff164ff72005e675167bbac88e869aa2fd89"
+    },
+    {
+      "path": "experiments/body-lab/__init__.py",
+      "bytes": 53,
+      "sha256": "8475c93606f3f88dbd11c84ae6246d5a57d49d4fc5d0decf3abc15302b99e8c9"
+    },
+    {
+      "path": "experiments/body-lab/anatomical-muscles.js",
+      "bytes": 60866,
+      "sha256": "92c61156b6d769693e0f20bab31a1327d6a68f39fdb33ec4d840981d7dd4f733"
+    },
+    {
+      "path": "experiments/body-lab/anatomy_constraints.py",
+      "bytes": 20302,
+      "sha256": "0c457ea4b9046ca39ca3908caa689050aa2831fb7f31423bcaa73c8b83536a49"
+    },
+    {
+      "path": "experiments/body-lab/app.js",
+      "bytes": 123089,
+      "sha256": "2b65302e957c5fbdf5cd2f4c5930ebb67bf004e5b625ff2a0c1122cc0f59ff57"
+    },
+    {
+      "path": "experiments/body-lab/atlas-muscles.json",
+      "bytes": 1353775,
+      "sha256": "d2902032350bb70be654cdd77065d985bb149da9cd73adbdfeb071e12408936e"
+    },
+    {
+      "path": "experiments/body-lab/bone-volumes.js",
+      "bytes": 22920,
+      "sha256": "3313e40ef33540983acaf022e4ccf290717d0bc1d9037e46cddb3b8c24a73001"
+    },
+    {
+      "path": "experiments/body-lab/build_motion_cache.py",
+      "bytes": 15410,
+      "sha256": "e751b8172200d9d3eff15003086f3e88633a1651263b580a5f27b7fd02aa78cb"
+    },
+    {
+      "path": "experiments/body-lab/candidates/dumbbell-motions-20261103/catalog.json",
+      "bytes": 134154,
+      "sha256": "6e9703a2ed167fa33bfd867009691ef9d8358afcc406f1d028651dda02f87b19"
+    },
+    {
+      "path": "experiments/body-lab/candidates/dumbbell-motions-20261103/dumbbell_bilateral_2kg.scene.json",
+      "bytes": 26316,
+      "sha256": "447cdf8f9ce5dfb4728dc88c97ec8ea927987769cb0c57e4934cfe39c84e8421"
+    },
+    {
+      "path": "experiments/body-lab/candidates/dumbbell-motions-20261103/dumbbell_curl_2kg.scene.json",
+      "bytes": 25104,
+      "sha256": "1cde6be76c55bf05647ac189e10eb3ae19163d96110a505963e4ef006a0f7427"
+    },
+    {
+      "path": "experiments/body-lab/candidates/dumbbell-motions-20261103/dumbbell_forearm_halfkg.scene.json",
+      "bytes": 25112,
+      "sha256": "62e65e070cdabc90d2b7ebc610f3c8ea29fd25e028a7bc4ebcc12687998733f2"
+    },
+    {
+      "path": "experiments/body-lab/candidates/dumbbell-motions-20261103/dumbbell_left_curl_1kg.scene.json",
+      "bytes": 25104,
+      "sha256": "46cad159156f34ddd0075380cf78094d84c4f7e0a04361b1ec34e67745540fc3"
+    },
+    {
+      "path": "experiments/body-lab/candidates/library-refresh-20261106/refresh_library.py",
+      "bytes": 17069,
+      "sha256": "72c44aedc10d5ebe35a125c3ce3fcd328f1f1d73da9bc24d8603c1956bccd914"
+    },
+    {
+      "path": "experiments/body-lab/candidates/library-refresh-20261106/resource_guard.py",
+      "bytes": 9579,
+      "sha256": "1c7dadcb16f9edce725d8d7c9ae82b42a3b60ed0873c20fc49cc0c65b4d64fe4"
+    },
+    {
+      "path": "experiments/body-lab/candidates/library-refresh-20261106/test_refresh_library.py",
+      "bytes": 6361,
+      "sha256": "f8d9f3a95b84451e903af4ee92ee73406c2ea7357be88f17ab53059cad38fee2"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/RELEASE_PREPARATION.md",
+      "bytes": 8260,
+      "sha256": "4f4b4b2d15901ca56e738ddf20990b33f931ae49a93298efd2d17c81f3c43102"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/browser-check.mjs",
+      "bytes": 34902,
+      "sha256": "aee8a0bf46059892e72651c9e121abd0b13b99cfcc31748038e69beb185068e5"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/export_model_info.py",
+      "bytes": 1524,
+      "sha256": "f8ca164749f234281fc7c6172b2ca59f32580b4e4ccb9cfe39f5a8aa64cd1602"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/adm-smoke-inputs.json",
+      "bytes": 168651,
+      "sha256": "b7687923a0d20c9832bdee2660996b041580261c45bae25c0fb4ec3c20228734"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/extended-hand-fixtures.json",
+      "bytes": 235438,
+      "sha256": "063851e1452b09a845507f68bd74f22320667ba9adfa02b1c9559095eb27c0a6"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/fingers/franko-native-candidate/custom-motion-inputs.json",
+      "bytes": 4334,
+      "sha256": "90d16350e77827d2014ca14f2df5159f9333c7ce60ecc1ed71165e7590a6e50c"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/normal-motion-fixtures.json",
+      "bytes": 1060233,
+      "sha256": "85366ba5323368272b9b4a092417f13c791cfe291f5aa3a0d65f2e67d679e8d2"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/standing-motion-fixtures.json",
+      "bytes": 133856,
+      "sha256": "de3687f84a63c212d9361f667677abb413e0530f59e28b24ec47fd8ac1e87309"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/verify_normal_motions.py",
+      "bytes": 11773,
+      "sha256": "a402aa3d26440a3a3e8097d0da9c75e84fb9d3bfe34c777038c6bea2d0501da3"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/verify_release_motions.py",
+      "bytes": 6200,
+      "sha256": "6968302f2e5dd3fbb54cee73bdb3b50731a9fc1a9e406f27365db20678b8e3f6"
+    },
+    {
+      "path": "experiments/body-lab/candidates/model-repair-20261106/verify_suites.py",
+      "bytes": 3785,
+      "sha256": "59d1baa101a023fcb5e712dd96a761551957a3f3347cbf8ccfa4b61f4ba4088a"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-before-range-calibration.xml",
+      "bytes": 737267,
+      "sha256": "d517c7813656150553bc0ddca1a3a9d7521f62bebb5d6fa188621ade498b114d"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-knee-rotation-manifest.json",
+      "bytes": 21822,
+      "sha256": "478f69d601a84fa691585dfe4c99ea8ed21fd652eb1e0804ef2648fd04b9509f"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-knee-rotation.xml",
+      "bytes": 725688,
+      "sha256": "f67b100d68b0b4d2f1ed4af970ce4772f71d0d6c68b749814032ff58843bf263"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-manifest.json",
+      "bytes": 19567,
+      "sha256": "faf4bbf6293e2c85b550455d9a1db155f87b08277cefd5f8b108757dfbf9a9de"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-motion-repair-manifest.json",
+      "bytes": 332870,
+      "sha256": "50303263621e3b56c4e3c2c5310cf2d423a79015e77957a680250a7f796e3bd3"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-motion-repair-v5-manifest.json",
+      "bytes": 336229,
+      "sha256": "3bdd9479dcafd1533fcd082ba20527fbf016c070787f94c58c57dd12cd342692"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded-motion-repair.xml",
+      "bytes": 797654,
+      "sha256": "d754382200ed601e74949b7d2edc1fc4b1cb29bcfa4bc22f96d21010dc631b62"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/expanded.xml",
+      "bytes": 726068,
+      "sha256": "b8b8ba96f5e01d27446735fd296477f3bb8bbbe3104ec9db4f4371ab777a3832"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/hand-range-calibration.json",
+      "bytes": 13010,
+      "sha256": "0e661a5077d7d4fdcfe0b242e1911ad358186719f8f795589f4f9b9a9e4124ac"
+    },
+    {
+      "path": "experiments/body-lab/candidates/runtime/requirements-lock.txt",
+      "bytes": 173,
+      "sha256": "71d92b440e3ae279eba9395c77b1cecf2646fc1f12b40901221e889f30933431"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/arm_raise.scene.json",
+      "bytes": 14512,
+      "sha256": "d8e071def567c6cc876d9007da9f4d957ba9307f95a5e2d8076830781a8a6d58"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/catalog.json",
+      "bytes": 220430,
+      "sha256": "604703883f7ca5ff83b7e05d34e90cbc066e9e658d126b0fd8e592aa9af04b15"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/elbow.scene.json",
+      "bytes": 14512,
+      "sha256": "1250a5b71946374bddd347fb2c292e52c39ac4eaee7bd96ce33d1865920c2168"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/finger_spread.scene.json",
+      "bytes": 14516,
+      "sha256": "358e97c002a15e983ddcedd3e77bbdb422d1e6229271842d821e732665a6570d"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/knee_extension.scene.json",
+      "bytes": 14524,
+      "sha256": "8bd48e1036b6e94a84903b6f6a4b11941d0d270fac4240895326c539fa411dae"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/knee_rotation.scene.json",
+      "bytes": 14522,
+      "sha256": "5da5814eca44c3f50c0012853417d0a12c21d0d2f71052fa878825071d33a848"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/neck.scene.json",
+      "bytes": 14510,
+      "sha256": "5911a7eadc78238ac135673f81e8faebd1fa2090808253cdbf30957a24bb86de"
+    },
+    {
+      "path": "experiments/body-lab/candidates/verified-motions-20261103/thumb.scene.json",
+      "bytes": 14514,
+      "sha256": "5b14048e7ac7b4c58d89454902b51a7fbe7e453fa301ee6e2d8f9b99d41a22b3"
+    },
+    {
+      "path": "experiments/body-lab/examples/custom_left_open_while_rotating.json",
+      "bytes": 1715,
+      "sha256": "53ee8fc289c63c5a55cdc5c09de5d7abb0e1af68991e4519a7ccb2ebb8e83bdd"
+    },
+    {
+      "path": "experiments/body-lab/examples/custom_right_rotate_bend_make_fist.json",
+      "bytes": 1640,
+      "sha256": "e920bebcaedbfce84ecf4fa1ad2b4d1b51486440899fc770a5833c270a511ae4"
+    },
+    {
+      "path": "experiments/body-lab/franko_transmission.py",
+      "bytes": 11994,
+      "sha256": "707b693b66618ba4c15cc2fa8e52c25f1ab137a8b710f425afda2dba41d34336"
+    },
+    {
+      "path": "experiments/body-lab/fullbody-coverage.json",
+      "bytes": 352366,
+      "sha256": "73f760ec686ccba84de687771f81f5577da0578cf915fdf9c0fc31b5390ab588"
+    },
+    {
+      "path": "experiments/body-lab/fullbody-ui-validation.json",
+      "bytes": 3303,
+      "sha256": "8a4748c804de25bcd8f603116e0172be66dc4e24b6123be186d980f44d75617e"
+    },
+    {
+      "path": "experiments/body-lab/fullbody-validation.json",
+      "bytes": 237207,
+      "sha256": "88abcf2c3faf263a0bc90f24649bd514b47858ba17c880d5a8f15ba5c1cb091f"
+    },
+    {
+      "path": "experiments/body-lab/fullbody-view.js",
+      "bytes": 108823,
+      "sha256": "60db365ea28eb9732d1f0b21d079dae623df06992936b52bbe7976ff9b3f95a9"
+    },
+    {
+      "path": "experiments/body-lab/fullbody_engine.py",
+      "bytes": 75627,
+      "sha256": "222ecfffb40138c8053f4eda5429d20eb7f9bdbe591424cd9bab13e2f3f0268f"
+    },
+    {
+      "path": "experiments/body-lab/fullbody_solver.py",
+      "bytes": 35778,
+      "sha256": "647a56c95997228605b97608bb79e9e482e180ed5960a2aca21c3a8e9bbf9d48"
+    },
+    {
+      "path": "experiments/body-lab/fullbody_verify.py",
+      "bytes": 110497,
+      "sha256": "3688619acd1f11968ad41dc033f0d2d3d7c7442a348a0308a35fff7e3e0992e8"
+    },
+    {
+      "path": "experiments/body-lab/geometry/bone-volumes.json",
+      "bytes": 282144,
+      "sha256": "47daba9efacf8c6361e63f4ef9f2dde8c5436baffad51968ceeccca2225fd736"
+    },
+    {
+      "path": "experiments/body-lab/geometry/fullbody-bones.json",
+      "bytes": 12485212,
+      "sha256": "9ae445a96a95d5828ec6490a8518662071d8f09e4cea5b46decade8ad287c07c"
+    },
+    {
+      "path": "experiments/body-lab/grasp.py",
+      "bytes": 20374,
+      "sha256": "4aad19b990e39527a73367e24fe10afcc2d5f94f2061123b34a61e81b7515c7e"
+    },
+    {
+      "path": "experiments/body-lab/hand_mechanics.py",
+      "bytes": 17159,
+      "sha256": "da7a1f3ccd3426ec8a7c4c1a77a990941dfeb68112ee7d98134830fc615b6905"
+    },
+    {
+      "path": "experiments/body-lab/index.html",
+      "bytes": 18831,
+      "sha256": "4420ead0fbdf8171d0a04211189fda8adb550369946d408ec77c9089142abc95"
+    },
+    {
+      "path": "experiments/body-lab/licenses/Z-Anatomy-License.txt",
+      "bytes": 1549,
+      "sha256": "9304fab639baf94d709b0b68a173b0302b18d6c0e64dabfd8e258b76a2636942"
+    },
+    {
+      "path": "experiments/body-lab/make_release_spec.py",
+      "bytes": 12985,
+      "sha256": "0f6a9dd48b41f0596f7277aa2b55dcd415a3e96d9e45d640c52bf4590015c051"
+    },
+    {
+      "path": "experiments/body-lab/model_mechanics.py",
+      "bytes": 2424,
+      "sha256": "728d7e0f5ab3feec89fa6c6c456f34805bd0c3504594435ce22f97bc8e5943dc"
+    },
+    {
+      "path": "experiments/body-lab/motion-cache.js",
+      "bytes": 15226,
+      "sha256": "3fd67167e977ee9ad4ee86147f52c6b3e0fa3fd35de1c01ff42809837e95e591"
+    },
+    {
+      "path": "experiments/body-lab/muscle-path-shape.js",
+      "bytes": 49871,
+      "sha256": "cb8f9dd9963494656a58c395c36b4524e61ac477c4c97e6e8656376e279e80f6"
+    },
+    {
+      "path": "experiments/body-lab/muscle-review.html",
+      "bytes": 3276,
+      "sha256": "3392a754c43494f4f3d4fdfb9a1c9070debfac2c6bf17a85a3d3ff00e05792ea"
+    },
+    {
+      "path": "experiments/body-lab/muscle-shape-pool.js",
+      "bytes": 6969,
+      "sha256": "c837b40c28763475b67b6ecaf177bd393ea32185f2ee02c206cad49d6b23e99b"
+    },
+    {
+      "path": "experiments/body-lab/muscle-shape-worker.js",
+      "bytes": 1338,
+      "sha256": "e85b4a5a6254610125ed0eff1463cd15983e5a8448175b7a974149a67fb34e70"
+    },
+    {
+      "path": "experiments/body-lab/muscle-sheet-shape.js",
+      "bytes": 90501,
+      "sha256": "f7e864945ee3da267501497c486817d8488777e095774f1d29b9b56e2e243396"
+    },
+    {
+      "path": "experiments/body-lab/muscle-surface-contact.js",
+      "bytes": 165,
+      "sha256": "ae5b4ffc2f15fb0f56db8f556c701d13cf97ae49b6ac9d2eef6138f7e0e686c7"
+    },
+    {
+      "path": "experiments/body-lab/native_bridge.py",
+      "bytes": 6862,
+      "sha256": "a21b68062b006f1d7658de2c26d5c8175b143432a97765c7433024d903286c83"
+    },
+    {
+      "path": "experiments/body-lab/native_worker.py",
+      "bytes": 4058,
+      "sha256": "bfaa72cb64e65f8e726de349f8043dd5c746e0f67b476f4c25fc87ef29a90fe9"
+    },
+    {
+      "path": "experiments/body-lab/passive_series.py",
+      "bytes": 6003,
+      "sha256": "f751211ef28d470dd941f95d79c7dea3e9ad1dddcdeb657545d3780f7ef46e76"
+    },
+    {
+      "path": "experiments/body-lab/prepare_release_bundle.py",
+      "bytes": 28463,
+      "sha256": "4ad939133eb815894cef0403facec39b9e04d161c4c7e4544f4c1d4e173078a7"
+    },
+    {
+      "path": "experiments/body-lab/preview-muscles.bin",
+      "bytes": 2204160,
+      "sha256": "aa8ea41567b796edd1ab2fdc79d6a1432274a20d3f667126efc9a81ad9473de1"
+    },
+    {
+      "path": "experiments/body-lab/preview-muscles.js",
+      "bytes": 16303,
+      "sha256": "a2647a3ae70ed1e0ee656fe7b1a8129f4d8fd1398309777f7bb29101d7e58877"
+    },
+    {
+      "path": "experiments/body-lab/preview-muscles.json",
+      "bytes": 364347,
+      "sha256": "421931b613e4c5936244812174ebf4fb2a68a6d55782c2e302f3a42cd5b75a29"
+    },
+    {
+      "path": "experiments/body-lab/review-media/gracilis-left.mp4",
+      "bytes": 330465,
+      "sha256": "bb1bb292ee6974e9542db51ca4ea767eb9e90ceede814543f86f32cd3288f0fe"
+    },
+    {
+      "path": "experiments/body-lab/review-media/gracilis-right.mp4",
+      "bytes": 339536,
+      "sha256": "cb1cc7ec13dcfe1e49eca2e0df9e0ea34a698b34b2e56b76321a0493e900546b"
+    },
+    {
+      "path": "experiments/body-lab/review-media/iliacus-left.mp4",
+      "bytes": 498683,
+      "sha256": "980441f4d7d9f31340f6509fb481407c72a1f796b8e5010bf82961674980ab4c"
+    },
+    {
+      "path": "experiments/body-lab/review-media/iliacus-right.mp4",
+      "bytes": 440549,
+      "sha256": "095a5167ef5a6135d8bad03b0f293738a8d374e977a8bbdb34507eff51465a7d"
+    },
+    {
+      "path": "experiments/body-lab/review-media/manifest.json",
+      "bytes": 4714,
+      "sha256": "8eb7f3a789cce94239ffbf53fceeec9f39a60f2cc0e069186dbc59060958ee3c"
+    },
+    {
+      "path": "experiments/body-lab/review-media/minimus-left.mp4",
+      "bytes": 500398,
+      "sha256": "131d008fa148d2254e8650a9644062ca242104efd4c6e3dbbcc15d814d35beb4"
+    },
+    {
+      "path": "experiments/body-lab/review-media/minimus-right.mp4",
+      "bytes": 497464,
+      "sha256": "eca7678eafed366a2295809a0a461eda45b05f4d7c75565aebfe533c43731664"
+    },
+    {
+      "path": "experiments/body-lab/review-media/pectoralis-left.webm",
+      "bytes": 2376161,
+      "sha256": "bfe55512c03a8c072f81b212e703c479eab55ad7526606076056c8b5cf5ef9c0"
+    },
+    {
+      "path": "experiments/body-lab/review-media/pectoralis-right.webm",
+      "bytes": 1528904,
+      "sha256": "e3ea26478a0bcb32232e7351adb51d25ffd10e2099a1d6ac822d1bfa81be1919"
+    },
+    {
+      "path": "experiments/body-lab/review-media/trapezius-left.webm",
+      "bytes": 2611357,
+      "sha256": "fbd9cb2eb4915f2047b57f591be58ec5892f6d3162390a1ac6d52a81725a0749"
+    },
+    {
+      "path": "experiments/body-lab/review-media/trapezius-right.webm",
+      "bytes": 2623853,
+      "sha256": "948ee2a2e72ebddb3a44e2ae13f1974e40e8df9af777090e3f167e731aa1ce88"
+    },
+    {
+      "path": "experiments/body-lab/runtime_performance.py",
+      "bytes": 9025,
+      "sha256": "e921cf3fa8e4ae46a1b75fe146e8eb0171238eedc953254d69a2fdc73794d34f"
+    },
+    {
+      "path": "experiments/body-lab/setup_release_assets.py",
+      "bytes": 30728,
+      "sha256": "54c3c97b256d43a592d88479eb4935cab526cecd7ca1ebafdae38fb5a673bcbc"
+    },
+    {
+      "path": "experiments/body-lab/style.css",
+      "bytes": 26120,
+      "sha256": "3d273942cd4d6f6e18abf0c51fc461ba383bb990b8423a9e5c01537b6b4dfba6"
+    },
+    {
+      "path": "experiments/body-lab/verify_bundle_restore.py",
+      "bytes": 2858,
+      "sha256": "ba99dc3e4dd71c1aa81c95fec94ab1e2bbbd44762caf023828c3a65f44d9232f"
+    },
+    {
+      "path": "experiments/elbow-lab/README.md",
+      "bytes": 8566,
+      "sha256": "5527155728f137c03bf3db0d9ce6f0ffa622151ea8bd41243e7267bc7e0ab6f8"
+    },
+    {
+      "path": "experiments/elbow-lab/app.js",
+      "bytes": 36394,
+      "sha256": "a3e676ba3f9161276c6c6103bb7f9aeebd1d8ace38531e8e9fde5ad14e5a38e3"
+    },
+    {
+      "path": "experiments/elbow-lab/arm-view.js",
+      "bytes": 22252,
+      "sha256": "b4a73a8c4a3cc155f94e6b6b83981a29b6231741a11e3b1045d87daaa1ea6927"
+    },
+    {
+      "path": "experiments/elbow-lab/atlas/bindings.json",
+      "bytes": 21156,
+      "sha256": "03fc797ba787d095b43843a18703d55f880026c13bf208037734b808d725b512"
+    },
+    {
+      "path": "experiments/elbow-lab/demo.json",
+      "bytes": 88577,
+      "sha256": "7a794de5da7916ae3dc58e25adaa0689aa069dfdfe6d2a6b1a7b829eb0c2ea55"
+    },
+    {
+      "path": "experiments/elbow-lab/engine.py",
+      "bytes": 5187,
+      "sha256": "d04ea1fece8e643808a3722022943fd9742ede50e737b618fa04a33b0e973e8e"
+    },
+    {
+      "path": "experiments/elbow-lab/index.html",
+      "bytes": 9844,
+      "sha256": "8697e18211a75f6017e39b42f249f3bcc24e4dd0bc9e26ef3d2bbdc30f68e94c"
+    },
+    {
+      "path": "experiments/elbow-lab/model/README.md",
+      "bytes": 3702,
+      "sha256": "9bb0116b25fd35f6cd02c5337ab25f0e2575e16d3a94df9a6ef59a4fa1157fcd"
+    },
+    {
+      "path": "experiments/elbow-lab/model/arm26-table.json",
+      "bytes": 156764,
+      "sha256": "37fa48bde8ceadbe378989e1b330179ef8e9cf4fd49e51300800e34cc857f868"
+    },
+    {
+      "path": "experiments/elbow-lab/model/arm26.osim",
+      "bytes": 90192,
+      "sha256": "e2224d0044eb393b05d64926c3fa1682c451a9adc7f510e5517ef9958d3d41b9"
+    },
+    {
+      "path": "experiments/elbow-lab/model/fiber-lengths.json",
+      "bytes": 69537,
+      "sha256": "c5e1d4ec9d09185f512d893e2550282c9b3e65495fea62af892193e2bccdf26d"
+    },
+    {
+      "path": "experiments/elbow-lab/model/pose-forces.json",
+      "bytes": 2584363,
+      "sha256": "79f3575b29482a80e4ae5b6a056d4849ed839fae052fa20bd086c43a982194a9"
+    },
+    {
+      "path": "experiments/elbow-lab/muscle-shape.js",
+      "bytes": 8024,
+      "sha256": "19b882c024b8c00146820f82018a9a3c89c028c1b85d04a512762a85a36f2704"
+    },
+    {
+      "path": "experiments/elbow-lab/pose-editor.css",
+      "bytes": 8690,
+      "sha256": "5b37161e1c1879acc51a6643d7674c221343268bbc379531a6a3c9b50aa06b2d"
+    },
+    {
+      "path": "experiments/elbow-lab/pose-editor.js",
+      "bytes": 30493,
+      "sha256": "afaa9b28cc5d4fddad6b74033bd4a4e0fc301abceadde664b62759de44630a99"
+    },
+    {
+      "path": "experiments/elbow-lab/pose_dynamics.py",
+      "bytes": 7055,
+      "sha256": "bf5e3ecc7d220e7af9c360f65c1eb9bdf787c165d3ffdd9ceb96c2ec4ded22b2"
+    },
+    {
+      "path": "experiments/elbow-lab/server.py",
+      "bytes": 20518,
+      "sha256": "c80662400b355a6bc64a00444821d305057d11749e4ab3c2be90ed6592bd8a1c"
+    },
+    {
+      "path": "experiments/elbow-lab/solver.py",
+      "bytes": 20388,
+      "sha256": "24b476401f25677b17c1fdaec652bea09b526cddee068837639a65a47f062381"
+    },
+    {
+      "path": "experiments/elbow-lab/style.css",
+      "bytes": 13679,
+      "sha256": "1ec9cb60939c463914276784ae0fab69a47dd457bae03dea70093516d7f5a36c"
+    },
+    {
+      "path": "src/vendor/GLTFLoader.js",
+      "bytes": 110264,
+      "sha256": "c079fa2e7aa72a46cff89e1c9bb882d7b408a52836cee49921c02808f57b5d09"
+    },
+    {
+      "path": "src/vendor/OrbitControls.js",
+      "bytes": 32139,
+      "sha256": "49617c6a9be488e6d5b0a73a71d433c44e3008d07916274d9c9bd13552f1e474"
+    },
+    {
+      "path": "src/vendor/buffer-utils.js",
+      "bytes": 31773,
+      "sha256": "c8a8b8dd3e018b5ef2ae0ef8bae598a8ae7f560a368780582f7466db4f11968f"
+    },
+    {
+      "path": "src/vendor/three.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    }
+  ],
+  "assets": [
+    {
+      "role": "bone-volumes",
+      "name": "bodyvista-bone-volumes-v1.1.0.bin",
+      "format": "raw",
+      "files": [
+        {
+          "path": "experiments/body-lab/geometry/bone-volumes.bin",
+          "bytes": 154992868,
+          "sha256": "ac3ef71696fff0ff24ac8f0a8ab66d2c26f1a39c2f8aa195e82c340fd92b7a0e"
+        }
+      ],
+      "bytes": 154992868,
+      "sha256": "ac3ef71696fff0ff24ac8f0a8ab66d2c26f1a39c2f8aa195e82c340fd92b7a0e",
+      "url": "https://github.com/FreedomIntelligence/BodyVista/releases/download/v1.1.0/bodyvista-bone-volumes-v1.1.0.bin"
+    },
+    {
+      "role": "atlas-muscles",
+      "name": "bodyvista-atlas-muscles-v1.1.0.bin",
+      "format": "raw",
+      "files": [
+        {
+          "path": "experiments/body-lab/atlas-muscles.bin",
+          "bytes": 85305104,
+          "sha256": "645df971115568a0e24b47aec6cac88daa6c8eb2c94b01ba83e481fa51fa7d5a"
+        }
+      ],
+      "bytes": 85305104,
+      "sha256": "645df971115568a0e24b47aec6cac88daa6c8eb2c94b01ba83e481fa51fa7d5a",
+      "url": "https://github.com/FreedomIntelligence/BodyVista/releases/download/v1.1.0/bodyvista-atlas-muscles-v1.1.0.bin"
+    },
+    {
+      "role": "ms-human-source",
+      "name": "bodyvista-ms-human-700-98a70c569c4c.zip",
+      "format": "zip",
+      "files": [
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/CHANGELOG.md",
+          "bytes": 104,
+          "sha256": "924876c27b058afbf53b403f001a7b0073305ff7765ba5ffc87c10812969b31b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/LICENSE",
+          "bytes": 11558,
+          "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/MS-Human-700-Locomotion.xml",
+          "bytes": 3732,
+          "sha256": "2061b0dc1a95189a733a9533e2e7e42fa352cfd477d99c2ad557ba1da52c6880"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/MS-Human-700-Manipulation.xml",
+          "bytes": 4103,
+          "sha256": "7a74b19a4b6b42633b171257641edf1c023604fe57abe0526aa6cee384864058"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/MS-Human-700.xml",
+          "bytes": 4189,
+          "sha256": "93a45f651f28e0910f51de69d7f513e750d7e4505af8e674964f22e30a30148e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/README.md",
+          "bytes": 2362,
+          "sha256": "e1b8abc1241ab52c2b21a1ae15da9462a2a2caa1f3ea0827bd4ad15d4c832f54"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/SOURCE_MANIFEST.json",
+          "bytes": 60516,
+          "sha256": "398c7173af58e726098997c1c3c483c809d952337399cb26a0be1cda990dc5f8"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/asset/Asset_Lowerbody.xml",
+          "bytes": 1465,
+          "sha256": "20472e46ba3d0be39bfc62e1dc4c2a523d39f6f3b2d62ee3d90afded2271119b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/asset/Asset_Others.xml",
+          "bytes": 601,
+          "sha256": "ea42c79fba4972c23f0446bfc55c9126e0511aca246bef7470b6f2a5747fc6ef"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/asset/Asset_Torso.xml",
+          "bytes": 4263,
+          "sha256": "5fc07c8600f809bf44d9e6d14722d2dbe0d0bbaae4bbc56a022db5adb714145b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/asset/Asset_Upperbody.xml",
+          "bytes": 11780,
+          "sha256": "2b543e8001789459f767ebdf6e939d363ee38c39b87c96a9cae65874afa73b30"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/asset/marble.png",
+          "bytes": 388987,
+          "sha256": "393bd6f18954eef65bad5c72ce428ceb350dd713a284d4c8981b0b5061a1ea0c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_locomotion/Body_Arm_l.xml",
+          "bytes": 54640,
+          "sha256": "71d9d783825cb415518430c075fede39b1aa3c4f9b42b7b2e6d9e393532d35d8"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_locomotion/Body_Arm_r.xml",
+          "bytes": 54191,
+          "sha256": "5498ffa9d20559164bf287a53459a321eaf9035e217d0da391caa678ad6b7091"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_locomotion/Body_Leg_Foot_l.xml",
+          "bytes": 16119,
+          "sha256": "6d79352fec2274aeaecf65079878ee470c4fee87fbb7e26af4fbcc3d3b743e48"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_locomotion/Body_Leg_Foot_r.xml",
+          "bytes": 16060,
+          "sha256": "b4c52e390b1ee1171fd32e3f737a994868e8a986984d77954045f775ab938daa"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_locomotion/Body_Torso_Simple.xml",
+          "bytes": 166029,
+          "sha256": "4632ebbd5797c329e42dfd3719352a2b63a66563af67aade10268c1aebf13148"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Arm_Hand_Vis_l.xml",
+          "bytes": 58045,
+          "sha256": "95593fd53f84f1c5a44d6ac0b6948635d5d5e1862a9c4f2bd3fd5ae27873d914"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Arm_Hand_r.xml",
+          "bytes": 66564,
+          "sha256": "f6f9e5a455a81445c59ce97ec35cee22e93f65f26e389bba18c1c6fd76969cbf"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Leg_Foot_Vis_l.xml",
+          "bytes": 13191,
+          "sha256": "dd6efbd29a6e673cf40bcddfd74c702de9005bd5dc33fa9eb2fdc1e4ae824951"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Leg_Foot_Vis_r.xml",
+          "bytes": 13138,
+          "sha256": "24cacf6979a09d0c1b81559573e5cbdf08c45c6d88268b4a6fb719eba0467fdd"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Torso_Unimanual.xml",
+          "bytes": 165977,
+          "sha256": "c82f2e0ba2caeda0fcd14d87dc449cd06b57d15dbb475cb878013008c5885718"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_manipulation/Body_Waterbottle.xml",
+          "bytes": 1489,
+          "sha256": "1999e2c6eb86df19af696ad4653b6efae8a6bad3773bdd778d5141a6b113c1a4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_primary/Body_Arm_l.xml",
+          "bytes": 57074,
+          "sha256": "7ae4819d8adea174f45861a7eca4169c7bdd0165b0708ede12fd14a61689914e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_primary/Body_Arm_r.xml",
+          "bytes": 56561,
+          "sha256": "720d5257a7ce1843857ba70dcd463e7c4c97816641baa29d64b09c106096ef03"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_primary/Body_Leg_Foot_l.xml",
+          "bytes": 16119,
+          "sha256": "6d79352fec2274aeaecf65079878ee470c4fee87fbb7e26af4fbcc3d3b743e48"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_primary/Body_Leg_Foot_r.xml",
+          "bytes": 16060,
+          "sha256": "b4c52e390b1ee1171fd32e3f737a994868e8a986984d77954045f775ab938daa"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/body_primary/Body_Torso_Simple.xml",
+          "bytes": 180517,
+          "sha256": "71883da57fffda334e62a91889bb7cc2ff6be84b40423a194ca4b326f20bf0aa"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/contact/Contact_Lowerbody.xml",
+          "bytes": 520,
+          "sha256": "31d9391896aa50359c4bfe1f17d82b7c80686de2cfdb579f877869bb72e81391"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/contact/Contact_Upperbody.xml",
+          "bytes": 763,
+          "sha256": "a1ea231be8cde2e5b53c27093104129aa9563bf068cf5975bc15cdeb0537e65e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/equality/Equality_Lowerbody.xml",
+          "bytes": 3419,
+          "sha256": "283afb3d4de4cc8e9fb81687c71c28c6c8e52f5e0826e4f16aa1610c6ec6afb4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/equality/Equality_Upperbody.xml",
+          "bytes": 3896,
+          "sha256": "bff9074bbe647e88c80e7257cb54cb32bc9beaa9dd92293ff0b28dedb1d2dbd5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/equality/Equality_Upperbody_r.xml",
+          "bytes": 2102,
+          "sha256": "b6c3afacf26353b2eb72b005050eadfc4be54f0f4a82b4e1da5dc7d3eb6d5187"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/1mc.stl",
+          "bytes": 287284,
+          "sha256": "b75e58243a2005af787bc731c5d1aa6b7da4669f36e9bcd7409a430c1cc311b6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/1mc_mirror.obj",
+          "bytes": 290468,
+          "sha256": "f3cf65960fcec88828dc91abccc375ff72d9b43d53acb965bac78627b5f12ddb"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2distph.stl",
+          "bytes": 110384,
+          "sha256": "39fca9372434520835703ffd34b5cc37a3f15f86ec9841b5fd841acac51adb88"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2distph_mirror.obj",
+          "bytes": 110117,
+          "sha256": "f866135513fddb1ec2f4c50d9bdcef617fb14f61344f7f6809492a7a226e73ff"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2mc.stl",
+          "bytes": 418084,
+          "sha256": "ac3286bfb7281a7d2dc3ff2ac32fcb8f0424764aa97ad526992a10b739334fe2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2mc_mirror.obj",
+          "bytes": 428324,
+          "sha256": "ab6c4837842aa4367a9129ad85f27f8e48a9f0d0c18271cfe2cde2eaeee659f2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2midph.stl",
+          "bytes": 100084,
+          "sha256": "074318c92e652ba05d26cbe0ad8e781891e2970e6b7415bc63585536e8beda72"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2midph_mirror.obj",
+          "bytes": 98604,
+          "sha256": "bbac206f117108cce2466d4e38c2be6cb2fc4f72340b2adf98ccfbf6912d2b0f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2proxph.stl",
+          "bytes": 256184,
+          "sha256": "041bf5a60e9376c0c47a3981c312698caa8d28f6d8ca08f59c3222da4244fb9d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/2proxph_mirror.obj",
+          "bytes": 260202,
+          "sha256": "57828d9c7f0ecd46394dc45a74c7a174f6a4d55dcbbbb93aaaa328244853207d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3distph.stl",
+          "bytes": 127384,
+          "sha256": "d5ecddeac9b4572091a32d386a117ba475a0c784e42d06016ba963432396b612"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3distph_mirror.obj",
+          "bytes": 128109,
+          "sha256": "46eb0f1f74e9f1f726c9b68f5843dcaa603c3af2881e9cd508786818174f9c30"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3mc.stl",
+          "bytes": 404384,
+          "sha256": "eaa77802c8afe5a3187293880d0f95b5b2f0367adcb3639c8038993d39ff8f5c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3mc_mirror.obj",
+          "bytes": 414023,
+          "sha256": "e422ccfe45fb9e7b64c04a9cb0a49320f1d53d59c40e9a7b01df745cacd654a3"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3midph.stl",
+          "bytes": 111784,
+          "sha256": "5e0ef3d76f2f99f950e9aefac28131009fa7fad7129f1421f50b5e7086655c88"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3midph_mirror.obj",
+          "bytes": 111260,
+          "sha256": "e2907c8640d8d792f046b0261f410328d49e7e40d53c446e646f33a8abb0427a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3proxph.stl",
+          "bytes": 280284,
+          "sha256": "48094bce62d115aee9f2527b22061ff1f5656936e647879d83672b2c62c20728"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/3proxph_mirror.obj",
+          "bytes": 286628,
+          "sha256": "10fec655c81a37a93b83441b3e4ca0739d4ea96aaa5e9a5c525f4b52c1fa9182"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4distph_new.stl",
+          "bytes": 130484,
+          "sha256": "bd3cb01c42b7adf4de51e6334536c0a96e24818192db3333cdb649b1e47f202a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4distph_new_mirror.obj",
+          "bytes": 131708,
+          "sha256": "32d402214ec9740b22b955a6642780df5f2a0863104355e2ea240ed9f843ecf3"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4mc_new.stl",
+          "bytes": 324284,
+          "sha256": "58ca462f843342ea5d454a549e175e95881f8aebe50f79890b15de30527a40e1"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4mc_new_mirror.obj",
+          "bytes": 333582,
+          "sha256": "06fedff4c931648b8d7e6948306a80cd31dc61ccac81df025dd8d503be4cc350"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4midph_new.stl",
+          "bytes": 110284,
+          "sha256": "033f579ef014126182992485e57340c9f33c510aa2cec1a2f6380fa5ee8c6b81"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4midph_new_mirror.obj",
+          "bytes": 109888,
+          "sha256": "19fb40b010b9114e32961531bfc146aaf246e62ff40a7d4a621d85b1d99499ef"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4proxph_new.stl",
+          "bytes": 263284,
+          "sha256": "941e740611606e680952b08205f88fe826830bbe0ffdea006c8c7f7c4ab75848"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/4proxph_new_mirror.obj",
+          "bytes": 269852,
+          "sha256": "6a3f3b60e0d519343c6d1251e08ca097194b996fc0eff845554adb3142d2b076"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5distph_new.stl",
+          "bytes": 149034,
+          "sha256": "cda87e548fa9a520352d1c2e1007142178149e67f1c81cd207a5eb7806ba122c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5distph_new_mirror.obj",
+          "bytes": 151582,
+          "sha256": "6f98dc9bb8dcfc26ec42f3593d116a324327cbf9901e74d1d9b6ec89d7d2b973"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5mc_new.stl",
+          "bytes": 250884,
+          "sha256": "d1fe2ae707a4c3430c721b04c2e060972646522583e380275c9b2e30a6813545"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5mc_new_mirror.obj",
+          "bytes": 256146,
+          "sha256": "0d333c08f595d40750de398e6ab1ba2331949eacd3967ba448a30c5338f5ffe0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5midph_new.stl",
+          "bytes": 78384,
+          "sha256": "554dcbd0c9648d4bb38a64ff9ecacafb6a7e0e3eb419fcf28044882a3de3552c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5midph_new_mirror.obj",
+          "bytes": 77488,
+          "sha256": "5f41c4c78aba458defccde639f3648afe0795356de9ec642256dedd77d6b27e0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5proxph_new.stl",
+          "bytes": 187184,
+          "sha256": "20f15d183aabdfe63ecec1965ea3a22b1073ae0e75a3b6501c8f3c8eaf317267"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/5proxph_new_mirror.obj",
+          "bytes": 190042,
+          "sha256": "ad71c445aa6f5a5c43e4bac1843fc66fba2d2d6e6e8f32f301a8bc813ef30046"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib10L.obj",
+          "bytes": 14657,
+          "sha256": "0c3fe7c1febcd82d8ccf9f1bfba4d68dee4d8b7ec8f7bf6245c0c76cae0a58e7"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib10R.obj",
+          "bytes": 14617,
+          "sha256": "f137d2ab94e4929061e7592cee5d0d631c0cf036db4473c3d0f04cae55a2b0e9"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib11L.obj",
+          "bytes": 12280,
+          "sha256": "a7b77cd39d82a0a85295c5ea46bc48fe4e56899ae999720c822721ebd9cc45d9"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib11R.obj",
+          "bytes": 12747,
+          "sha256": "abcccb60ae207fa8b917187a7ab77c76324c0acdfc88b0ef1dc39a2f59b3fb8c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib12L.obj",
+          "bytes": 10813,
+          "sha256": "23253c4939897267854eedb17599b6f9dab61c4a453bcdbe0c885b9f76fcc273"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib12R.obj",
+          "bytes": 11622,
+          "sha256": "31b4d04375b9b778c03356779742ca1ef337473aa468cdf861f906d06f0a1988"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib1L.obj",
+          "bytes": 168828,
+          "sha256": "02688a8a0fbc9216ffbdfdec40bdcdd63583a2406864b3445160428e00789a35"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib1R.obj",
+          "bytes": 11317,
+          "sha256": "f7c73e252668f3d4d4d5c3ea61f2873238f1bec0de74dc38dd5d964d85a84610"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib2L.obj",
+          "bytes": 8419,
+          "sha256": "ff6e665a9541693b1e16008f06d4b06745ff3cdf46afb21c969b476de55d00b5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib2R.obj",
+          "bytes": 9029,
+          "sha256": "b072207c9e326ae47f63626371d80d7dc9fd81d0b799943d2b8ef31fe4e792ac"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib3L.obj",
+          "bytes": 12763,
+          "sha256": "1d3b7f3c1a59a5e022316067c4a35390a209ac752d33b0016f7b6a63a7329083"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib3R.obj",
+          "bytes": 13895,
+          "sha256": "232b0f1ccb23e30173c0562c717870c553798e10c57a7420e8e87eabd6fbd540"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib4L.obj",
+          "bytes": 13083,
+          "sha256": "d828e5206fdda22b202beedfac7d39a7338458a4da87c98d25dd220a22e8c21d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib4R.obj",
+          "bytes": 13944,
+          "sha256": "30d98319e669abd5497214487d790a442b00dbecf793e1638c0798025e626172"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib5L.obj",
+          "bytes": 16109,
+          "sha256": "07d7a282f6e459d9e27a0ac960bb8a590764be31c6968d26317d0ccf173bcf44"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib5R.obj",
+          "bytes": 17142,
+          "sha256": "3f97398225e3021059a30bd6a0f9f93b8a4b91ce9368de4beada40df303b33ab"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib6L.obj",
+          "bytes": 16663,
+          "sha256": "fbd635e62ef2b60c004abc4afc7fa4433b334e71a068bf77ee52edd1ff542ae4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib6R.obj",
+          "bytes": 18092,
+          "sha256": "8ecbae9bbd2cc4bb88570e64283b48ff85d2c5b0fc3a6bcdf1a953304f83d180"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib7L.obj",
+          "bytes": 13541,
+          "sha256": "d2564f89b5ba3a8dc94b7eb063d5f443d21937b9feb0a659e9f7bee3b06bfbec"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib7R.obj",
+          "bytes": 14018,
+          "sha256": "b761a1d1ef84b497048afc93fa304a91e3e4f929a99f44fdb84c6be3b71c50fe"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib8L.obj",
+          "bytes": 14029,
+          "sha256": "ea615e89de626a634a1b7e70f5c9363c63c55675f708975059b4630a6b4aa054"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib8R.obj",
+          "bytes": 14741,
+          "sha256": "cdcc14ce80e3ca5caf65a047cbe910f9fb1f9c7d32a4c3f750c1f49afef415a0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib9L.obj",
+          "bytes": 14746,
+          "sha256": "1acb41945b6c1c2161487bc74b5f670a2ea2559251424a5e328bd90a7cf2aa34"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Rib9R.obj",
+          "bytes": 15168,
+          "sha256": "c985f02ea159aaf4b286f9670e09dbb81d01092cfbbff8a1ec9bf897d99d8a91"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Sternum.obj",
+          "bytes": 16274,
+          "sha256": "133f4804dce4afa1ca0c975723e1ce1bf6fb58a975dcb55d89b08f7882798ac4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/Sternum.stl",
+          "bytes": 84,
+          "sha256": "f6a500a0e00953f170c255908c54ba5dbf694740d48a47413b819be4eaf11001"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/capitate.stl",
+          "bytes": 237384,
+          "sha256": "51c4ff14860a267fcf22d63f27cdedf17cdbb0cf4240fdf8c641ae4bcfaa1a8c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/capitate_mirror.obj",
+          "bytes": 241963,
+          "sha256": "998675e5d9b4a08735905fb60eb8a1e0d5fc5099f4348b24aaacf9a0f19db0e2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv1.stl",
+          "bytes": 31084,
+          "sha256": "39ff5cbc8d55cca11ff2477391e6fd570d72db12c534ae534b2aa48c4d19cf0d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv2.stl",
+          "bytes": 14484,
+          "sha256": "ac2ea6dc0b93da0a180cc007ce0497735f1e05b59ef5cb6a7d57c075303c7ef6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv3.stl",
+          "bytes": 14484,
+          "sha256": "115d3eb2de930f0bbe352fec62e31a98c746da92036646cad7f26aae98105cc6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv4.stl",
+          "bytes": 14484,
+          "sha256": "332e959a0cfb15aec8d1f0092356c37800be1d24bc0fa31ebd02ca376820320b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv5.stl",
+          "bytes": 14284,
+          "sha256": "2df996d22591e2d1bc9bd167947c79914278ba0bf22777613978106e8f63b5a1"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/cerv6.stl",
+          "bytes": 14484,
+          "sha256": "f712c7e0c7847d5a7f4fb9fbe3a90c9e8860190890a25655f60d3652a37dfc6e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/clavicle.stl",
+          "bytes": 19984,
+          "sha256": "11c83e56c5df39e0213c3e3b119c079cc6953f278f9c222d5887df1a2f0e6aad"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/clavicle_mirror.stl",
+          "bytes": 19934,
+          "sha256": "4db4a2afb7255c886d10435f04eebf4f37f7feb78b190ca6cecdec2a7bca567f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hamate.stl",
+          "bytes": 258384,
+          "sha256": "d880faf00df1cc473626cc9141d68d6a7eca26f1f46eedde423649263c54e134"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hamate_mirror.obj",
+          "bytes": 264422,
+          "sha256": "6c36ec7c9dff2bfdd3d2a1e837267512ba50fbe7187dbc9efea3240ec0c62396"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_1mc.stl",
+          "bytes": 188584,
+          "sha256": "e3be917b826f598a637a771489d56e4effd29433458eea21c00ebda4d7a4d200"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_1mc_mirror.stl",
+          "bytes": 188134,
+          "sha256": "20dba8ee01c6e169af1fe89626b2a93b783ebd603514e4d46a339627c64ec845"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2distph.stl",
+          "bytes": 39284,
+          "sha256": "85a1a5b059b658ccba325b58f54eca5b7347b81cf78cee6caa535062cce5e6e5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2distph_mirror.stl",
+          "bytes": 38584,
+          "sha256": "bb2214ff1c345811a86adb038adfc6d3bf4c9dce03ca09fe7c83a9eaa34e666b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2midph.stl",
+          "bytes": 100084,
+          "sha256": "f2f1e4267a25d0250f6c9f752458e33a88febe12b40f6052ad3972e71e56c613"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2midph_mirror.stl",
+          "bytes": 100084,
+          "sha256": "be4b995a228464b02841d6e4424902f9953ff51544a9155a394048084312dc7a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2proxph.stl",
+          "bytes": 150384,
+          "sha256": "c3c7aab40ede40286715339bc7269a572554c7d832c4949f402ebfdc9d7f6c33"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_2proxph_mirror.stl",
+          "bytes": 149284,
+          "sha256": "a6fb1acf04a01daa64cdde6faf4016523e01dd1dcece03aebcbd86ab0883eaa3"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3distph.stl",
+          "bytes": 45884,
+          "sha256": "06f29395bf7bf4bd236d62559d41b30d4ac6ea05eb4c08adc5662cdcfa0720fe"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3distph_mirror.stl",
+          "bytes": 45284,
+          "sha256": "06a4de57a1255d9d00c6fbf517a8517d1f1d7bd2189c71d4818f64f180deb381"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3midph.stl",
+          "bytes": 78284,
+          "sha256": "75e7c9adc47d56a763e3bd97d9cb95d0654c475b3bd88b241f23c2421738062f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3midph_mirror.stl",
+          "bytes": 77784,
+          "sha256": "30faca0db71683073560d53be056ca9a7162cc2ce32cf566ec0c88e5956d4e26"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3proxph.stl",
+          "bytes": 158584,
+          "sha256": "4f94e8ebe820ca71d1b141a66a3577bfc2216abf55f769183c853e164edc852c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_3proxph_mirror.stl",
+          "bytes": 157284,
+          "sha256": "7b46655abfb3312d2c59c5cb280c682db3248cb4d44dffcddc4d2a345ae7e1c8"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4distph.stl",
+          "bytes": 45084,
+          "sha256": "9491a59233365d85ca63c7e8f66a51e30f243a625a3be2163559473db0c81bde"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4distph_mirror.stl",
+          "bytes": 44184,
+          "sha256": "90379a8ca79174fa86dfdb9c3877e0943ee72518d6079f64ef7f4d8195068393"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4midph.stl",
+          "bytes": 63984,
+          "sha256": "c852a8db761ec8ee2dbad56783bd395793ae24ea3a0e913d23ea8e77676153c0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4midph_mirror.stl",
+          "bytes": 63634,
+          "sha256": "b74f6c30f16845d98746fb1ce2310a923f16c1d4ddf91164d59efd4b2724166f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4proxph.stl",
+          "bytes": 129484,
+          "sha256": "baf08120ff2fe3345513d74d06300b7add3b1dedc6b3c9a3dbd5924968d15cbc"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_4proxph_mirror.stl",
+          "bytes": 128334,
+          "sha256": "2a392d8b73c241dc37924405a0f52ce7b2e852f50f54523ad1b281ff25dbd41a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5distph.stl",
+          "bytes": 48484,
+          "sha256": "bd78ad7c51b5af5a88aa9c0bcdd3a0cd151c5c9a8cc048bdd6bffdb884d72099"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5distph_mirror.stl",
+          "bytes": 46934,
+          "sha256": "1e22a68d21eeb31b41a5d34486f85fd747edc4a01efbd26381576d77efc45c13"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5midph.stl",
+          "bytes": 54884,
+          "sha256": "c8cf776fb0958102c32349e2b9f45b810772fa4bf7ded8df6ad7560ec87b148e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5midph_mirror.stl",
+          "bytes": 54684,
+          "sha256": "e8ef4a41b15702338b7af46e0db55b5efec8be821aa8a87e98ea8db63ad0e176"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5proxph.stl",
+          "bytes": 114684,
+          "sha256": "b25ec61b280364c728c38d7dae71f36f8a2714a31c179ad6b4e6b8888c86142b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_5proxph_mirror.stl",
+          "bytes": 113634,
+          "sha256": "c6c8819b9650b0b2d9975dab6c3e1c6af6d77de414835f191f3092007fda7e9c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_capitate.stl",
+          "bytes": 240684,
+          "sha256": "d425a7b8a1fd63cc1b454b7bc276d56b1659ebb66b9c774c62ca8668630346bc"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_capitate_mirror.stl",
+          "bytes": 237384,
+          "sha256": "8bbe99de1e469d3e3b348ffbf483bfcffde352f957fc9b2453f48fe72581bb7b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_lunate.stl",
+          "bytes": 186084,
+          "sha256": "55223a9c1bce0a4d5c389246174e6ab89b68dfdc0959e1bcee0cdd951157cc15"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_lunate_mirror.stl",
+          "bytes": 185134,
+          "sha256": "cbc4385c68a351d87f26a91db1661f1a50f91c4646cb2d7de2b6ec7de1de9290"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_thumbdist.stl",
+          "bytes": 58384,
+          "sha256": "b502123cb0f85fcd565631b5c73548eaf0670eb61462e3f3cd39c4f68f48541c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_thumbdist_mirror.stl",
+          "bytes": 57934,
+          "sha256": "fde59d09c2f636bae403cba45b5be4b000ac8fefaf375932b20104d22025dd4f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_thumbprox.stl",
+          "bytes": 114784,
+          "sha256": "e676938442ec4be916a6203ee50307575ff91ae324cd504336409ca49c2e9b58"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/hand_thumbprox_mirror.stl",
+          "bytes": 114084,
+          "sha256": "1ca55a76bbcd25007b206cef20a1b76ddd4bdeec32727533734f6716ff06000d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/humerus.stl",
+          "bytes": 29484,
+          "sha256": "ae77708e6e2115abea33a546ad7928c33d182799710ebe307ebc05ea7bfeb37b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/humerus_mirror.stl",
+          "bytes": 29484,
+          "sha256": "4054190fe903d0da8b092625df7fbb86fcef32df0b8248aa7e1cbe7949192218"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/jaw.stl",
+          "bytes": 145884,
+          "sha256": "82a9c352bb9c73b9ca0c8e4561dfcccd46d4b44beeeb3460365e7c5c4b8f2d54"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_bofoot.stl",
+          "bytes": 92084,
+          "sha256": "e3cc26950da6a22ac921e937740408bba43193f1c422810716435a4dd39a0ad1"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_femur.stl",
+          "bytes": 45484,
+          "sha256": "d72e3bc4c1d0bbf76e189d50cd0594e3275169d1b2bf48370cb07d3d2a1a848d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_fibula.stl",
+          "bytes": 12084,
+          "sha256": "1b31ecc2af2935d3602f977af1787c55551a2179d38a44bb015005698a1e1bae"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_foot.stl",
+          "bytes": 97834,
+          "sha256": "4cb976c3d03dc47cbee8786999a572f580044976e149c1bdeffe27666a0e42f7"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_patella.stl",
+          "bytes": 7084,
+          "sha256": "1cd80b37a1ba01dd6c135273e7e85a14733c9940905aaa72ce001fc164659440"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_pelvis.stl",
+          "bytes": 12384,
+          "sha256": "6998661b30f05288f018ca3e4934ae45560b1fd62f638f339fcf4881aa16c1a4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_talus.stl",
+          "bytes": 9784,
+          "sha256": "45cff977c3cf0e2da78832366630f662f20526a5c5ad4f753c268a58b10b3a6a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/l_tibia.stl",
+          "bytes": 19584,
+          "sha256": "0b4392cf63f523dba4fa0d9fdd62cf2bf0b464eaeaad320103d33534fc9e5b60"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lumbar1.stl",
+          "bytes": 21284,
+          "sha256": "233c4723903137d3ef0d41e0de0c74d12cdf86dfdd1580846fd5a2896dcbf75f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lumbar2.stl",
+          "bytes": 21284,
+          "sha256": "848a9aa16f522a75863664118307035118fbd9c23d56ef1e0b012027c623aef0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lumbar3.stl",
+          "bytes": 21284,
+          "sha256": "5011db2045c44918939854934057ad0b978c8855ea46f10dccfd667efa46431f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lumbar4.stl",
+          "bytes": 21284,
+          "sha256": "07a27646165dc5889fec0546ff61a61d34796496c265143445c0e58d0326075d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lumbar5.stl",
+          "bytes": 21284,
+          "sha256": "7088542065c3c122408e41eb10e4d06463cde7d03b170b4568d7cbe9f1218c5b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lunate.stl",
+          "bytes": 186084,
+          "sha256": "55223a9c1bce0a4d5c389246174e6ab89b68dfdc0959e1bcee0cdd951157cc15"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/lunate_mirror.obj",
+          "bytes": 188344,
+          "sha256": "be15c6ef2b1cb4ddbdd4386f32ad7d3ebe2bf9a9b37a75316a8c35db69848416"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/pisiform.stl",
+          "bytes": 356384,
+          "sha256": "b56d96a70bae178e434568a22a27b355f65652fbca48c199635a9cc67506a698"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/pisiform_mirror.obj",
+          "bytes": 358038,
+          "sha256": "525029eb34973aa2747918ae0f5a09877bd6187749febfe80b0038681fb12cb6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_bofoot.stl",
+          "bytes": 92084,
+          "sha256": "39dae011e441c0018cba4a00664d4076f0bb8f86f73522567275ececf6f78db5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_femur.stl",
+          "bytes": 45484,
+          "sha256": "7d6e76a58e964551824169d89ae4b6142617f947bfdbc4ee0a4328040acf9f63"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_fibula.stl",
+          "bytes": 12084,
+          "sha256": "2cb0f77671c5421abdec1643aab77b41af2c2b5a8eff49845b098b2393443354"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_foot.stl",
+          "bytes": 97834,
+          "sha256": "e95cf6418432ea49488790364588246202b7ce54d6827bef49ac3406733d9f4f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_patella.stl",
+          "bytes": 7084,
+          "sha256": "6a08e1e74354c65940bfd00ba343823e65eece2ebf10d9bf66c0429e83588128"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_pelvis.stl",
+          "bytes": 12384,
+          "sha256": "6eb7bbe904ce85566fc6afcde0935eda11ae12da341965616c7c798c9b2d7ee4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_talus.stl",
+          "bytes": 9784,
+          "sha256": "96202bdab4836e8fede82d3897b4b1bbc6f1afd6fc77e87b8bb444212df2ae90"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/r_tibia.stl",
+          "bytes": 19584,
+          "sha256": "7c016de88550dab6bb33d3060ba7aa42b061ca78c5224b7d92a4c766f25ca15f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/radius.stl",
+          "bytes": 19584,
+          "sha256": "696850e4d3b270bb27bf4ccbd5948bd92a3d9a4fdcc48f247f587e468af04eb6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/radius_mirror.stl",
+          "bytes": 19584,
+          "sha256": "3135655a73ec4e495200332c8defde4901062ea96084b27613c0b7dd53a88e1f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_distal_lvs.stl",
+          "bytes": 12384,
+          "sha256": "ba7f9adf2876239b3da90d5a54e2f60ac1531c88314ebb6b82c495f3a24bf5e9"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_distal_rvs.stl",
+          "bytes": 12384,
+          "sha256": "c829699b1ea854ae355d7864f0d34af96aec259a973e2d2025b8b03f21f970d5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_medial_lvs.stl",
+          "bytes": 17284,
+          "sha256": "7311b037e5b378f8b06d1b4e3200e5819155e81dfff2bb909040536f6121166a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_medial_rvs.stl",
+          "bytes": 17284,
+          "sha256": "7cd89cd433cb02c0b7a8eb3c76d2239b43e4f586174314046fa6ac10a96f6f9a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_proximal_lvs.stl",
+          "bytes": 13084,
+          "sha256": "ade76aca3b0e265d82a90da2e6f901fcce9cb9ca8e5142715c9a288d556509a0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ring_proximal_rvs.stl",
+          "bytes": 13084,
+          "sha256": "fafe0be1092227fa513b8b6e7c946d6617d85f5ee059b2527b85bc96f36ae056"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/rotatedcerv7.stl",
+          "bytes": 14484,
+          "sha256": "ae2eff718fcb8305f29fff34880badebca10383344cd801f1277c6a429435cc6"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sacrum.stl",
+          "bytes": 19084,
+          "sha256": "e513525e227c21786ba696e9f9ffc9969b631db046aafa3ca9dc2acf750f24fb"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scaphoid.stl",
+          "bytes": 182784,
+          "sha256": "02a9e3522776d965b43030e39d72d63db12c3782c10a8015ab38c70e2a0f5184"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scaphoid_l.stl",
+          "bytes": 184984,
+          "sha256": "608a07e01bcdd31c8b46379f55ad49ad81d8f46f2e18d0c42e0c4315425f609e"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scaphoid_lvs.stl",
+          "bytes": 7184,
+          "sha256": "a3b215e8f03c7a1626ede00d330a2723b0d5d0b27eec14da1e0b65464378956d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scaphoid_mirror.obj",
+          "bytes": 182653,
+          "sha256": "b55e453cbc8abb584ab6b9b21dcf129dfaa0ccc890a2c912a3e21846058d1736"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scaphoid_rvs.stl",
+          "bytes": 7184,
+          "sha256": "1fc6f6dc2bf3566e6c9a29ac48583a166b7f3850985e01ddd4e6e636b63ebb83"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scapula.stl",
+          "bytes": 77584,
+          "sha256": "0c72877eaebe080fc44ee488734954e5a5f844c04334ef3864f2ea2a8945c642"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/scapula_mirror.stl",
+          "bytes": 77434,
+          "sha256": "c1ce30700307322ecc4402c32fc6778fb844ac1fa09cd372e7c55fa3e68a2fc8"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastPISIFORMw.stl",
+          "bytes": 352884,
+          "sha256": "fafbff2b451629a697c2513fa54af61c881be808d451592016c3bd21697bd0f4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastPISIFORMw_mirror.stl",
+          "bytes": 352884,
+          "sha256": "4f6a46c8b136cef970bf69eb9e28fea3d9eb1c2b8d2b1e5e5054d6df79cfd8dd"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastSCAPHOIDw.stl",
+          "bytes": 182784,
+          "sha256": "02a9e3522776d965b43030e39d72d63db12c3782c10a8015ab38c70e2a0f5184"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastSCAPHOIDw_mirror.stl",
+          "bytes": 182784,
+          "sha256": "ec106a27f2b552865ce5ee1b9614ef1f68fc5952548cfdeb3d1474e6176e954f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastTRIQUETRALw.stl",
+          "bytes": 158684,
+          "sha256": "fae5aaf6b57e31fb767cab689bcf5a7967064381f463f527db975f2bb161e231"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfastTRIQUETRALw_mirror.stl",
+          "bytes": 158684,
+          "sha256": "2556dcdf900f85fd12c7baaa82353744fc2fa896085d2cbae5198e10ce5e503d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_2mc.stl",
+          "bytes": 418084,
+          "sha256": "46759d9c560bfaa57123c060a95f48284e2ce7f3e0a55aa1ea29224c12081e55"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_2mc_mirror.stl",
+          "bytes": 418084,
+          "sha256": "8c7723a75ad633ed51547287addd1ac1bf5b416e2b554d8a2f17fe5671d5bb05"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_3mc.stl",
+          "bytes": 404384,
+          "sha256": "2b07255350c65562f186578d4647868d6bb9890627085f8a525c6ecc3170db2d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_3mc_mirror.stl",
+          "bytes": 404384,
+          "sha256": "56744b9f26ff01341d8850efe8575cffb85fe99560b3dbf488a80a3e9331c090"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_4mc.stl",
+          "bytes": 324384,
+          "sha256": "0a7b4f336dcb6c8e81635864013070ccca5e7638127a1ea3484d7c027d90bce4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_4mc_mirror.stl",
+          "bytes": 324384,
+          "sha256": "d37adc6f9c9c994d57fa081c3ce58f3e40329fd0879e7a94e3d59d29f871bd7b"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_5mc.stl",
+          "bytes": 250884,
+          "sha256": "8fb0deda3c70bc640c6cfc90143126aad9f7502522f99a018afabba334358ada"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_5mc_mirror.stl",
+          "bytes": 250884,
+          "sha256": "d9d55cfdb53f3d6809a81e1e5e24c4ff2cbbe1e2abdcea1eeac8587a0bf5fb14"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_hamate.stl",
+          "bytes": 258384,
+          "sha256": "722e3021dc5abeea2a6f951e1acd556eda08386c2e4724976ae0b8be963e75b2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_hamate_mirror.stl",
+          "bytes": 258384,
+          "sha256": "a7b38ff906c59c6c339cb5f95b83845ef89e2c576fb3da2b4c488aec7471bbd4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_trapezium.stl",
+          "bytes": 224684,
+          "sha256": "9ea5acba7d83f0f59661f66cbd516427283e80712f70a6346abc82ae3a30298c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_trapezium_mirror.stl",
+          "bytes": 224684,
+          "sha256": "adcc2b4741244a34d18ddd8b7fe84ce0a8356edc2828ea3bcc708c7df26b7f17"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_trapezoid.stl",
+          "bytes": 141684,
+          "sha256": "e1f5f01b7c0dc2795bf26ed57ee6e8b765ee51a43694551f330f1cf66ddd6914"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/sdfast_1seg_hand_fr_c_trapezoid_mirror.stl",
+          "bytes": 141684,
+          "sha256": "2917e154bb3e81e3fc26140885f3bb0eb84e4da9a2e5e5ea2292339995fe41c9"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/skull.stl",
+          "bytes": 330134,
+          "sha256": "05318d349a5d41538a8f4d7e2a756e80671417be4d350bcd9e2bce393fcb835c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic1.stl",
+          "bytes": 21284,
+          "sha256": "f1c84257600265e04d473bc0fd8cf54ac292e29ba753a70840b26c6d1eef111d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic10.stl",
+          "bytes": 21284,
+          "sha256": "12dd380564a495609e702043ad11f158a8fd620735256680b12dce52350464a4"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic11.stl",
+          "bytes": 21284,
+          "sha256": "1a4fb6bc6462ccda3c7880593c7b48b9c5b1f9481dbb324db5fecbf11839bdb9"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic12.stl",
+          "bytes": 21284,
+          "sha256": "5f626c11af43d4ffe53eff1f0f434802b6ffb1dae02e244e13cb992e508d154f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic2.stl",
+          "bytes": 21284,
+          "sha256": "e57e53aefa344a6d1a00efbd2220b35ffb0e9208762c18f36f2aa8cd99717a0a"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic3.stl",
+          "bytes": 21284,
+          "sha256": "67b6d6a93b891d486d860ecbcb8d2e958b52483d70522aaa3232d0bd2c0f7b82"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic4.stl",
+          "bytes": 21284,
+          "sha256": "e85b927193b5aeceb00ca4c4614f8eeab149b3011695523f138c867998ad9f3c"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic5.stl",
+          "bytes": 21284,
+          "sha256": "de6568dc687ab332da82bbfb82ddc03133b4ef7b13f17e5fc4d962557226fb12"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic6.stl",
+          "bytes": 21284,
+          "sha256": "f80561bab04c40d12eb765c899135e02e22bd5aa22aaeac48e56683bcabb7724"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic7.stl",
+          "bytes": 21284,
+          "sha256": "2aabbfe6834fbb2d85594a413cf0c696d88f5823447e64efc91d0824b18dfc2d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic8.stl",
+          "bytes": 21284,
+          "sha256": "9c422dd904851cee74687518bcf97bef51426184dd68c0ef334265911eb3f062"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thoracic9.stl",
+          "bytes": 21284,
+          "sha256": "79fcd68a2a83a93567d3d05b1e5437e8a2de3e142c9bb70f6eb459f389c7e609"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thumbdist.stl",
+          "bytes": 176784,
+          "sha256": "4a65bdf702b450080e6d8a5852114b0d0db69117d835d03a86438e9e35e6c963"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thumbdist_mirror.obj",
+          "bytes": 174901,
+          "sha256": "10c565a8f465b984d39ff5c6183b27913c9be49d91ec30fec7837623b30ba718"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thumbprox.stl",
+          "bytes": 199584,
+          "sha256": "e622077a4a0dbd4de16a9802ae93e36f969d7440d32bc6b2855c8c31516c815f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/thumbprox_mirror.obj",
+          "bytes": 197689,
+          "sha256": "3889027561d21310642fa11ca0abec1cbce0517c35978eb3f670f6100e073381"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/trapezium.stl",
+          "bytes": 224684,
+          "sha256": "f130696c1dfec4d05214c6f779573043fc42206d7628ea269ccf8b536712b103"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/trapezium_mirror.obj",
+          "bytes": 228638,
+          "sha256": "23292522a5ba398210f456204003851f117b6d399e73bebb73ffe814a3ee08d0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/trapezoid.stl",
+          "bytes": 141684,
+          "sha256": "3a68fabd59a87208030c5b3c5c66e1400f46274163265378668fcc3ee58f1b45"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/trapezoid_mirror.obj",
+          "bytes": 141964,
+          "sha256": "d5d3c4ef3a8e65c731e9bf21b66616dd90aea91a3cb2af661ac96b95d97cde21"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/triquetral.stl",
+          "bytes": 158684,
+          "sha256": "fae5aaf6b57e31fb767cab689bcf5a7967064381f463f527db975f2bb161e231"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/triquetral_mirror.obj",
+          "bytes": 159631,
+          "sha256": "c9c8f12c090443c8c00e56bebf285cf8588d75a586c101f4d7efd5f22a1affb2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ulna.stl",
+          "bytes": 19984,
+          "sha256": "f0e31028e991a5e87f39932eaa02db902f43c9e576bb6bcfb9f9887d56ed3f00"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/ulna_mirror.stl",
+          "bytes": 19784,
+          "sha256": "989ff6e12d8640c209b2355b55551ea84f82d910292b74c73c61335a7a93ab93"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/waterbottle/waterbottle.stl",
+          "bytes": 415784,
+          "sha256": "a652e6a0966ec3d93421be39d386d86723cfad921709dfe3bf0dc02962f1bc2d"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/waterbottle/waterbottle_contact0.stl",
+          "bytes": 4684,
+          "sha256": "eeffffe1b27907a34a44399f0ecac2fd3a8305b9f397ebddaa96238578c18d54"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/geometry/waterbottle/waterbottle_contact1.stl",
+          "bytes": 6284,
+          "sha256": "7764a94d703d707cdbf3d82fd66fa269c49fdf179cf460fbd6717941396b72d2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Arm_Hand_r.xml",
+          "bytes": 12646,
+          "sha256": "713ac309e6a270f0f315c775696bada2f543795f4f4c959b1f389850d1ba3675"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Arm_l.xml",
+          "bytes": 9675,
+          "sha256": "ee0b99be2c73bd3a230cf6e60f0e15bc35ee322bea7184598c69a052f5923f60"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Arm_r.xml",
+          "bytes": 9674,
+          "sha256": "39ec94464be60314947ad9092894bc3d1d8acfb0a4ca7ae8c7eb669bc2899001"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Leg_l.xml",
+          "bytes": 8350,
+          "sha256": "82121308d28e82bdbacd58c95b5ebef953e2e6d321008116acbe1af04945b4f5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Leg_r.xml",
+          "bytes": 8350,
+          "sha256": "55c9d5ebc56825bc466297de8eac6ec7104ebf3eab70fad15c19b7add99eac88"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/muscle/Muscle_Torso.xml",
+          "bytes": 82713,
+          "sha256": "7d8174127e202ac9c58d10d4cc1a1df2ad5827db9f2376dc55cd3ac06cb76512"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Arm_Hand_l.xml",
+          "bytes": 20268,
+          "sha256": "3ede70edfcde7c6c39fb1248f2721706428f2cecfd7b3caca910a3858891cdb5"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Arm_Hand_r.xml",
+          "bytes": 19666,
+          "sha256": "6d5d31382713677e8e5641c67f6bbe751331b3faafe9ca024d52d80d441125fd"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Arm_l.xml",
+          "bytes": 18298,
+          "sha256": "ddb5613a7660cba573ca3de0d53bd66bd2e1f46fe8a47aa2cfcddb31f7baf4cd"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Arm_r.xml",
+          "bytes": 18298,
+          "sha256": "ae25a911ef40e76e8a32595de400f71744d1ede8a34b873c314a71bf5fe96f86"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Leg_l.xml",
+          "bytes": 11289,
+          "sha256": "9bf37a1615a3451350cbd43b8daa64d8f401894264419c1bdb63a5eb44c137ec"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Leg_r.xml",
+          "bytes": 11289,
+          "sha256": "bf6726076859bff787ddca4993688657fccd10180ac0449cbc1b936de768a1e2"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/assets/tendon/Tendon_Torso.xml",
+          "bytes": 87412,
+          "sha256": "d5de93cba6e9487d0971ed75da192316b1af1cd53d30816012af9b9b174296a0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/ms_human_700.png",
+          "bytes": 564766,
+          "sha256": "6dbbb2f43f5a81455d1b503c4ef3d5d07998c5b5374febe6f57124e402d3f8eb"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/ms_human_700_locomotion.png",
+          "bytes": 509853,
+          "sha256": "29ee029b42b8955ee9d6caab164f7811722223ad7e1a91cb5f3a3278cd984109"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/ms_human_700_manipulation.png",
+          "bytes": 522319,
+          "sha256": "829db6fe5df5b6ddde8c0c3ac7312ea87783558a65249749517e3a3cf9a1d9b0"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/ms_human_render_front.png",
+          "bytes": 867326,
+          "sha256": "89534907baa08dd80bfb9287b6956eb1973346cd46f43a54f1bf2aa1f20e8947"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/scene.xml",
+          "bytes": 1112,
+          "sha256": "b91df0280446bd26ab54f8395986111a62149662a15a0af9f2ef4970fdf39862"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/scene_locomotion.xml",
+          "bytes": 1127,
+          "sha256": "a87de07bf2b985203ad4ac748d8b5fa3f7ec24f7f58087a17135188799fb918f"
+        },
+        {
+          "path": "experiments/body-lab/candidates/ms-human-700/scene_manipulation.xml",
+          "bytes": 1131,
+          "sha256": "89b1f6e223eca4f9b1ec1f4c54eb9edba2cb2bfdeb22af13d5123091fcdf50dd"
+        }
+      ],
+      "bytes": 27962255,
+      "sha256": "1d55fa0a8d93616fb152563ea49ce7287de73d940e5b39b27009c7e3394e0a7d",
+      "url": "https://github.com/FreedomIntelligence/BodyVista/releases/download/v1.1.0/bodyvista-ms-human-700-98a70c569c4c.zip"
+    },
+    {
+      "role": "motion-cache",
+      "name": "bodyvista-motion-cache-v1.1.0.zip",
+      "format": "zip",
+      "files": [
+        {
+          "path": "experiments/body-lab/motion-cache/2b98d314d60febff88a75758b55306df0c9524c8a981a3076d2a906a4cacd732.json.gz",
+          "bytes": 7411349,
+          "sha256": "b0a19ab4ac7d5dbd56c3cdd3d9d36766747e2c9a808b3bc8f498a73219e7d910"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/3aa8966493e0681d3f7beba8646204883a589ced0c2566aba7c9e66020b5e3dc.json.gz",
+          "bytes": 5977581,
+          "sha256": "5cc41c2ff4c3b61c5963c17128fc621928d28beb3f955e86d4b8bca9eb3d2688"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/4bad90734347b5cf6fe3e59ae9f499f3f26144ece0e8540d2cc2674b8e24e01d.json.gz",
+          "bytes": 5051472,
+          "sha256": "f753ad938f1d2895cdb004126289d5034762464d595c51086b524133ae7b2f84"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/547f05051c5214601450cd80382876ca5fb072a1575dbfc446b309322da2ecd0.json.gz",
+          "bytes": 7408931,
+          "sha256": "f47b3f6c9b97ae0ac1407d85505b0a85cb668ed6a2dac72949872fd22d6249d8"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/5b76ac54bb229c2f9a4e12d5d62a3985d66723a3d14b77dba51bc7f6d17bad3e.json.gz",
+          "bytes": 5008079,
+          "sha256": "df2f6917b58691fd09eaaff6abab1a4da198b657a9d6744ab7b9d20d862a5e93"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/668557db5cb93034020ea6ee1e6541222fb0d7fa113ef0539f400a17c3ecbcec.json.gz",
+          "bytes": 4929823,
+          "sha256": "21e91cc6b9959704075a18d9aa11b5380b2d30d8f516dea1cd500b10be2364cf"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/6ca065b5fe6c58f3b88f29a1299e2f5968165a83795fe1d9195362048e6a6e5b.json.gz",
+          "bytes": 5922496,
+          "sha256": "b59aae5c2db63c7ce40917441a4ac966e0b5bf85d3498b333e8d18a2e5feac25"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/ae1a4363d82635464069fdfb9e8094e4b601e9e72a988cd6f4b0c72f79923526.json.gz",
+          "bytes": 4983656,
+          "sha256": "c59ab985fd882a1a8eeff61ececcaf8e8fa4d2fd422c9215e803b34de2f4cd1d"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/b20fcf90752e83235fef2d859592e9fe05b79602dc1d0b36a3a02e9ef8b8049b.json.gz",
+          "bytes": 7417778,
+          "sha256": "4989ed856b5a09972c1c08640ecf356312d09a78c38b7da734ec30903b98667b"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/catalog.json",
+          "bytes": 333193,
+          "sha256": "d4a2dcda5c698c12e79edcb3c61c86b8c582f973b8cbf53adeae8516c802ec1f"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/d3b2cdda55ae58a1ad93c271ca932987aaaf9fbad6ec08471f697369a0ff75e0.json.gz",
+          "bytes": 5990672,
+          "sha256": "d0784e4223d13aa9d969774cf34a1ad6259ac4527da0583a761ca17646a1210f"
+        },
+        {
+          "path": "experiments/body-lab/motion-cache/f61b98689fda4cec912075a77b2bcd2f1b6d330033bcc63ef83ad990fa6b1622.json.gz",
+          "bytes": 7501480,
+          "sha256": "3856bbd37069fbb3209aa7c7176ff9eec173e4b80241bd5e73dcea4eda0c6993"
+        }
+      ],
+      "bytes": 67939868,
+      "sha256": "f9a40a02ab63706b9930116e4009c05ebbdfa4ca8126f875dc2a0449163fba97",
+      "url": "https://github.com/FreedomIntelligence/BodyVista/releases/download/v1.1.0/bodyvista-motion-cache-v1.1.0.zip"
+    }
+  ]
+}

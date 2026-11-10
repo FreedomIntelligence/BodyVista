@@ -1,5 +1,5 @@
 import * as THREE from "../../src/vendor/three.js";
-import { loadBoneVolumes, readSurfaceBinary } from "./bone-volumes.js";
+import { loadBoneVolumes, readAtlasAsset } from "./bone-volumes.js";
 import { createCrossSections, poseCrossSections, deformCrossSection } from "./muscle-path-shape.js";
 
 const clamp = THREE.MathUtils.clamp;
@@ -107,13 +107,6 @@ function regionMatches(region, part) {
   return false;
 }
 
-async function loadBinary(url, onProgress, declaredSize, signal) {
-  const response = await fetch(url, {signal});
-  if (!response.ok) throw Error("原图谱肌肉网格资源未找到。");
-  return readSurfaceBinary(response, declaredSize, signal, loaded =>
-    onProgress({loaded, total: declaredSize, message: "正在载入原图谱肌肉表面"}));
-}
-
 /** Original atlas surfaces with declared source-derived refinement, registered
  * to the simulation skeleton. These display deformations and optional bone
  * contacts do not create individual muscle mechanics or a soft-tissue solver.
@@ -166,16 +159,13 @@ async function buildAnatomicalMuscles(onProgress, signal, own) {
       nextYield = performance.now() + 12;
     }
   }
-  const reply = await fetch(new URL("./atlas-muscles.json", import.meta.url), {signal});
+  const manifestUrl = new URL("./atlas-muscles.json", import.meta.url);
+  const reply = await fetch(manifestUrl, {signal});
   if (!reply.ok) throw Error("原图谱肌肉绑定清单未找到。");
   const manifest = await reply.json();
   signal?.throwIfAborted();
-  const buffer = await loadBinary(
-    new URL("./atlas-muscles.bin", import.meta.url),
-    onProgress,
-    manifest.byteLength,
-    signal,
-  );
+  const buffer = await readAtlasAsset(manifest, manifestUrl, "./atlas-muscles.bin", signal, loaded =>
+    onProgress({loaded, total: manifest.byteLength, message: "正在载入原图谱肌肉表面"}));
   if (buffer.byteLength !== manifest.byteLength)
     throw Error("原图谱肌肉资源不完整。");
   const atlasDigest = await crypto.subtle.digest("SHA-256", buffer);
@@ -240,7 +230,7 @@ async function buildAnatomicalMuscles(onProgress, signal, own) {
   if (manifest.boneVolumes && !/^[a-f0-9]{64}$/.test(manifest.boneVolumeBinarySha256 || ""))
     throw Error("肌肉清单缺少所用骨体积的版本标识。");
   const boneVolumes = manifest.boneVolumes
-    ? own(await loadBoneVolumes(new URL(manifest.boneVolumes, import.meta.url), parts.length, manifest.boneVolumeBinarySha256, signal))
+    ? own(await loadBoneVolumes(new URL(manifest.boneVolumes, import.meta.url), parts.length, manifest.boneVolumeBinarySha256, signal, onProgress))
     : null;
   let currentBoneRecords = manifest.bones.map(bone => ({name: bone.name, matrix: bone.restMatrix}));
   const sheetParts = parts.filter(part => part.sheetDeformation);

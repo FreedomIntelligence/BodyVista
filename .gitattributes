@@ -1,2 +1,4 @@
 # Experiment identities, models and test inputs use SHA-256 of the exact bytes.
 experiments/** -text
+LICENSE text eol=lf
+THIRD_PARTY_NOTICES.md text eol=lf

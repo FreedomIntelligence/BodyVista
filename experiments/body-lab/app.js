@@ -113,6 +113,7 @@ let appliedHand = "right";
 let lastNonFootSupport = "free";
 let verifiedLoading = false;
 let beforeVerified = null;
+let editorMotionId = null;
 const MUSCLE_CHANGE_EPSILON_N = 0.01;
 let muscleVariations = new Map();
 let displayedFrame = null;
@@ -136,7 +137,8 @@ function wrapFrame(value, lazy = false) {
 }
 
 const view = createBodyView($("bodyView"), {
-  pathsOnlyView: Boolean(replay),
+  readOnly: Boolean(replay),
+  progressiveSurface: Boolean(replay),
   initialSurfaceQuality: "detail",
   maxPixelRatio: 1,
   maxRenderPixels: 1_000_000,
@@ -172,6 +174,7 @@ const view = createBodyView($("bodyView"), {
   coordinateLabel: (name) => coordLabel(name),
   onJointRotate: (data) => handleJointRotate(data),
   onAnatomyStatus: (value) => {
+    if (replay) replay.showSurfaceStatus(value, view.state);
     if (value.ready && view.state.surfaceQuality === "preview") {
       $("surfaceContactScope").textContent = "轻量表面沿骨骼运动。受力来自原动作的肌腱计算，播放时不重新求肌肉接触。";
     } else if (value.ready && value.boneContact) {
@@ -451,6 +454,12 @@ function pause() {
   updateButtons();
 }
 function invalidate(message = "姿势或条件已改变，请重新计算。", fast = false) {
+  if (editorMotionId) {
+    editorMotionId = null;
+    for (const button of $("verifiedMotionList").querySelectorAll('[aria-pressed="true"]'))
+      button.setAttribute("aria-pressed", "false");
+    if (window.parent !== window) window.parent.postMessage({type: "bodyvista:muscle-case", id: null}, location.origin);
+  }
   revision += 1;
   if (/本次实际计算|已打开固定案例/.test($("verifiedSelection").textContent))
     $("verifiedSelection").textContent =
@@ -2157,6 +2166,61 @@ async function loadEvidence() {
     $("validation").textContent =
       "当前模型的验证报告尚未就绪；旧版通过状态不用于本版。";
 }
+// Older installed libraries predate category labels.
+function motionCategory(motion) {
+  if (motion.category) return motion.category;
+  if (motion.scene?.equipment?.type === "dumbbell") return "哑铃";
+  if (motion.region?.startsWith("hand")) return "手指";
+  if (motion.region?.startsWith("leg")) return "髋膝踝";
+  if (motion.region?.startsWith("arm")) return "肩肘";
+  return "颈与躯干";
+}
+
+function renderMotionLibrary(motions) {
+  const list = $("verifiedMotionList"), filter = $("motionCategory");
+  const groups = new Map();
+  for (const motion of motions) {
+    const category = motionCategory(motion);
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(motion);
+  }
+  const order = ["肩肘", "前臂与腕", "手指", "颈与躯干", "髋膝踝", "协调动作", "哑铃"];
+  const categories = [...new Set([...order, ...groups.keys()])].filter(name => groups.has(name));
+  list.replaceChildren();
+  filter.replaceChildren(new Option(`全部分类（${motions.length}）`, ""));
+  for (const category of categories) {
+    const items = groups.get(category);
+    filter.add(new Option(`${category}（${items.length}）`, category));
+    const section = document.createElement("section"), heading = document.createElement("h3");
+    section.className = "motion-category-group";
+    section.dataset.category = category;
+    heading.textContent = category;
+    section.append(heading);
+    for (const motion of items) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.dataset.motion = motion.id;
+      const name = document.createElement("b"), detail = document.createElement("span"), evidence = document.createElement("small");
+      name.textContent = motion.label;
+      detail.textContent = motion.description;
+      evidence.textContent = `${motion.verification.durationSeconds} 秒 · ${motion.verification.frames} 帧均已验证`;
+      button.append(name, detail, evidence);
+      button.onclick = () => useVerifiedMotion(motion);
+      section.append(button);
+    }
+    list.append(section);
+  }
+  const updateFilter = () => {
+    for (const section of list.children) section.hidden = Boolean(filter.value && section.dataset.category !== filter.value);
+    $("verifiedNote").textContent = filter.value
+      ? `${filter.value} · ${groups.get(filter.value).length} 个动作`
+      : `${motions.length} 个动作 · ${categories.length} 个分类`;
+  };
+  $("motionCategoryField").hidden = !motions.length;
+  filter.onchange = updateFilter;
+  updateFilter();
+}
+
 async function loadVerifiedMotions() {
   try {
     if (!replay) {
@@ -2182,29 +2246,11 @@ async function loadVerifiedMotions() {
     const motions = catalog.motions.filter(
       (m) => m.verification?.verified === true,
     );
-    $("verifiedMotionList").replaceChildren();
-    for (const motion of motions) {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.dataset.motion = motion.id;
-      const name = document.createElement("b"),
-        detail = document.createElement("span"),
-        evidence = document.createElement("small");
-      name.textContent = motion.label;
-      detail.textContent = motion.description;
-      evidence.textContent = `${motion.verification.frames}/${motion.verification.frames} 帧通过 · ${motion.verification.durationSeconds} 秒 · 点击载入`;
-      button.append(name, detail, evidence);
-      button.onclick = () => useVerifiedMotion(motion);
-      $("verifiedMotionList").append(button);
-    }
-    $("verifiedNote").textContent =
-      `${motions.length} 个动作 · 已保存受力结果`;
+    renderMotionLibrary(motions);
     updateButtons();
-    if (replay && motions.length) {
-      const caseId = new URLSearchParams(location.search).get("case");
-      const initial = motions.find(motion => motion.id === caseId) ?? motions[0];
-      await useVerifiedMotion(initial);
-    }
+    const requested = new URLSearchParams(location.search).get("case");
+    const initial = motions.find(motion => motion.id === requested) ?? (replay ? motions[0] : null);
+    if (initial) await useVerifiedMotion(initial);
   } catch (error) {
     $("verifiedNote").textContent = error.message;
   }
@@ -2254,11 +2300,12 @@ async function useVerifiedMotion(motion) {
     $("draftState").textContent =
       `已载入：${motion.label}。当前停在首帧，按播放查看完整受力结果。`;
     $("verifiedSelection").textContent = `已载入：${motion.label}`;
+    if (!replay) editorMotionId = motion.id;
+    if (window.parent !== window)
+      window.parent.postMessage({type: "bodyvista:muscle-case", id: motion.id}, location.origin);
+    for (const button of $("verifiedMotionList").querySelectorAll("button"))
+      button.setAttribute("aria-pressed", String(button.dataset.motion === motion.id));
     if (replay) {
-      if (window.parent !== window)
-        window.parent.postMessage({type: "bodyvista:muscle-case", id: motion.id}, location.origin);
-      for (const button of $("verifiedMotionList").querySelectorAll("button"))
-        button.setAttribute("aria-pressed", String(button.dataset.motion === motion.id));
       if (matchMedia("(max-width: 760px)").matches) {
         document.body.dataset.workspaceCollapsed = "true";
         document.body.dataset.inspectorCollapsed = "true";
@@ -2522,12 +2569,19 @@ $("muscleDisplay").onchange = () => {
   pause();
   movieCache = null;
   const mode = $("muscleDisplay").value;
-  view.setSurfaceQuality("detail");
+  if (mode === "anatomy") view.setSurfaceQuality("detail");
   view.setMuscleDisplay(mode === "paths" ? "paths" : "anatomy");
+  if (replay) replay.showSurfaceStatus({ready: view.state.anatomicalMuscles?.ready}, view.state);
   $("renderNote").textContent =
     $("muscleDisplay").value === "paths"
       ? "计算肌腱路径示意，非真实肌肉体积。张力：灰绿 0 → 橙 300 → 红 ≥1200 N。"
       : "原始精细解剖表面随骨架运动；可点击查看肌肉名称和已计算的力值。";
+};
+if (replay) $("retryPublicSurface").onclick = () => {
+  pause();
+  movieCache = null;
+  view.setSurfaceQuality("detail");
+  replay.showSurfaceStatus({}, view.state);
 };
 $("resetPose").onclick = async () => {
   if (!info || solving || poseBusy || dragBusy || gripBusy || verifiedLoading || rotationGesture)
@@ -2772,7 +2826,10 @@ setupGear();
 setupWorkspace();
 setupHelp();
 document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
-window.addEventListener("pagehide", pause);
+window.addEventListener("pagehide", event => {
+  pause();
+  if (replay && !event.persisted) view.dispose();
+});
 clearResults();
 
 function setupHelp() {

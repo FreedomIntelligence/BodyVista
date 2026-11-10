@@ -8,24 +8,6 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <header class="app-header">
-    <a class="atlas-brand" href="http://127.0.0.1:4186/" title="返回 BodyVista 人体解剖"><b>Body</b>Vista</a>
-    <nav class="workspace-nav" aria-label="工作区">
-      <a href="http://127.0.0.1:4186/">人体解剖</a>
-      <a class="active" href="./" aria-current="page">肌肉运动</a>
-    </nav>
-    <div class="header-status"><span id="connection" class="badge">连接模型…</span><span id="workspaceStatus">动作自动保存到本机</span></div>
-    <details class="file-menu">
-      <summary>动作文件 <span aria-hidden="true">⌄</span></summary>
-      <div class="file-menu-content">
-        <button id="newSequence">新建动作</button>
-        <button id="export">导出动作</button>
-        <label class="file-button" for="import">导入动作<input type="file" id="import" accept="application/json,.json" hidden /></label>
-        <a href="../elbow-lab/">打开右臂实验</a>
-      </div>
-    </details>
-  </header>
-
   <main class="motion-workspace" aria-label="全身动作编辑">
     <aside class="workspace-sidebar" aria-label="动作工具">
       <div class="sidebar-head"><h1>动作工具</h1><button id="toggleWorkspace" class="icon-button" aria-label="收起动作工具" aria-expanded="true">‹</button></div>
@@ -67,13 +49,14 @@
       </section>
 
       <section id="panel-motions" class="workspace-panel" data-workspace-panel="motions" role="tabpanel" aria-labelledby="tab-motions" hidden>
-        <div class="panel-heading"><h2 id="verifiedHeading">选择一个动作</h2><button type="button" class="help-button" aria-label="动作库说明" data-help="载入后停在首帧，按播放查看已保存的受力结果。修改姿势、时长、负重或支撑后，需重新计算。固定案例由外部支架支撑骨盆、无地面。">?</button></div>
+        <div class="panel-heading"><h2 id="verifiedHeading">选择一个动作</h2><button type="button" class="help-button" aria-label="动作库说明" data-help="按分类选择动作，再播放或拖动时间线查看受力。离线编辑器可以修改姿势、时长、负重或支撑后重新计算。">?</button></div>
+        <label id="motionCategoryField" class="motion-category-field" hidden>动作分类<select id="motionCategory"><option value="">全部分类</option></select></label>
         <p class="hint" id="verifiedNote">正在读取已保存的案例目录…</p>
         <div id="verifiedMotionList" class="verified-motion-list" role="group" aria-label="已验证动作"></div>
         <p id="verifiedSelection" class="hint" aria-live="polite"></p>
         <button id="restoreBeforeVerified" class="wide" hidden>恢复选择前的动作</button>
         <details class="example-library"><summary>用腕、前臂和手指一起设计动作</summary>
-          <p class="hint">下载一个动作，从右上方“动作文件”中选择“导入动作”，再点“计算受力”。这两个文件只保存姿势和时长，力值由当前模型重新计算。你也可以先改关键帧。</p>
+          <p class="hint">下载一个动作，在时间线旁打开“动作文件”，选择“导入动作”。你可以先改关键帧，再点“计算受力”。文件只保存姿势和时长，力值由当前模型计算。</p>
           <div class="source-links"><a href="./examples/custom_right_rotate_bend_make_fist.json" download>右手：转前臂、弯腕并握拳</a><a href="./examples/custom_left_open_while_rotating.json" download>左手：旋转时逐渐张开手指</a></div>
         </details>
         <details class="example-library"><summary>探索示例与反例</summary><p class="hint">用于尝试编辑；这些示例不保证整段受力可行。</p><div class="example-buttons"><button id="exampleKnee">坐姿伸膝</button><button id="exampleLift">支撑抬物</button><button id="exampleHand">拇指屈伸</button><button id="exampleSpread">四指外展</button><button id="exampleGrip">握拳反例</button><button id="exampleNeck">头颈转动</button><button id="exampleTrunk">分段弯腰</button><button id="exampleSquat">蹲起反例</button></div></details>
@@ -85,7 +68,7 @@
       <div class="scene-top"><div class="scene-title"><b>全身肌肉</b><button type="button" class="help-button" aria-label="模型操作说明" data-help="拖动空白处旋转视角，滚轮缩放。鼠标靠近关节显示控制点；选择关节后，拖同色圆环旋转。点击肌肉可查看名称。">?</button><span id="poseLabel">正在载入模型</span></div><div class="view-buttons" role="group" aria-label="观察方向"><button data-view="perspective">立体</button><button data-view="front" class="selected">正面</button><button data-view="right">右侧</button><button data-view="left">左侧</button></div></div>
       <div id="bodyView" class="body-view"><div id="viewLoading">正在准备精细解剖模型…</div></div>
       <p id="surfaceStage" class="surface-stage" role="status" hidden></p>
-      <div class="scene-caption"><label for="muscleDisplay">显示<select id="muscleDisplay" aria-label="肌肉显示方式"><option value="anatomy">真实解剖表面</option><option value="paths">计算肌腱路径</option></select></label><details class="render-info"><summary>模型状态</summary><p id="renderNote">正在载入 BodyVista 解剖肌肉；关节编辑可先使用。</p></details></div>
+      <div class="scene-caption"><label for="muscleDisplay">显示<select id="muscleDisplay" aria-label="肌肉显示方式"><option value="anatomy">真实解剖表面</option><option value="paths">计算肌腱路径</option></select></label><span id="publicSurfaceStatus" role="status" hidden>正在载入肌肉表面…</span><button id="retryPublicSurface" type="button" hidden>重试</button><details class="render-info"><summary>模型状态</summary><p id="renderNote">正在载入 BodyVista 解剖肌肉；关节编辑可先使用。</p></details></div>
     </section>
 
     <aside class="inspector" aria-label="当前选择与受力">
@@ -116,17 +99,32 @@
       <div class="sequence-title"><h2>动作时间线</h2><span id="keyframeCount" class="small-label">0 个关键帧</span><button type="button" class="help-button" aria-label="关键帧与播放说明" data-help="摆好姿势后添加关键帧，再摆下一个姿势并设置间隔。点击关键帧可修改；预览只播放动作，计算受力后可查看肌力。空格播放或暂停。">?</button></div>
       <button id="confirm" class="primary" disabled>＋ 添加关键帧</button>
       <details id="publicDesign" class="file-menu" hidden>
-        <summary>设计动作 <span aria-hidden="true">⌄</span></summary>
+        <summary>自定义动作 · 离线版开发中 <span aria-hidden="true">⌄</span></summary>
         <div class="file-menu-content">
-          <p class="hint">自定义动作由本机服务计算。已启动服务时，可以直接打开实验台。</p>
-          <a href="http://127.0.0.1:4192/experiments/body-lab/" target="_blank" rel="noopener">打开本机实验台 ↗</a>
-          <a href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.1.0/README.zh-CN.md#本地肌骨实验" target="_blank" rel="noopener">安装和启动说明 ↗</a>
+          <p class="hint">安装离线版可以自定义动作并计算受力。此功能仍在开发中。</p>
+          <a href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.0/docs/OFFLINE_MOTION.md" target="_blank" rel="noopener">离线版安装和启动说明 ↗</a>
+          <a href="http://127.0.0.1:4192/?workspace=muscle-motion" target="_blank" rel="noopener">打开已启动的本机实验台 ↗</a>
         </div>
       </details>
     </div>
     <div id="timingBox" class="timing-box" hidden><label for="segmentTime">与上一帧间隔</label><div><input id="segmentTime" type="number" min="0.25" max="10" step="0.25" value="2" /><span>秒</span><button id="addTimed" class="primary">添加</button><button id="cancelTimed">取消</button></div></div>
     <ol id="keyframes" class="keyframes"><li class="empty">暂无关键帧</li></ol>
-    <div class="playback-row"><div class="transport"><button id="previousFrame" class="icon-button" aria-label="上一关键帧" title="上一关键帧" disabled>⏮</button><button id="play" class="play-button" disabled>播放</button><button id="nextFrame" class="icon-button" aria-label="下一关键帧" title="下一关键帧" disabled>⏭</button><input type="range" id="timeline" min="0" max="1" value="0" step="1" aria-label="动作时间轴" disabled /><output id="clock">0.00 / 0.00 s</output><label class="speed-label"><span class="sr-only">播放速度</span><select id="playbackSpeed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label><label class="loop-label"><input type="checkbox" id="loop" /> 循环</label></div><div class="actions"><button id="preview" disabled>预览动作</button><button id="solve" class="primary" disabled>计算受力</button></div></div>
+    <div class="playback-row"><div class="transport"><button id="previousFrame" class="icon-button" aria-label="上一关键帧" title="上一关键帧" disabled>⏮</button><button id="play" class="play-button" disabled>播放</button><button id="nextFrame" class="icon-button" aria-label="下一关键帧" title="下一关键帧" disabled>⏭</button><input type="range" id="timeline" min="0" max="1" value="0" step="1" aria-label="动作时间轴" disabled /><output id="clock">0.00 / 0.00 s</output><label class="speed-label"><span class="sr-only">播放速度</span><select id="playbackSpeed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label><label class="loop-label"><input type="checkbox" id="loop" /> 循环</label></div>
+      <div class="actions">
+        <details id="motionFiles" class="file-menu">
+          <summary>动作文件 <span aria-hidden="true">⌄</span></summary>
+          <div class="file-menu-content">
+            <span id="connection" class="badge">连接模型…</span>
+            <span id="workspaceStatus">动作自动保存到本机</span>
+            <button id="newSequence">新建动作</button>
+            <button id="export">导出动作</button>
+            <label class="file-button" for="import">导入动作<input type="file" id="import" class="sr-only" accept="application/json,.json" /></label>
+            <a href="../elbow-lab/" target="_blank" rel="noopener">打开右臂实验 ↗</a>
+          </div>
+        </details>
+        <button id="preview" disabled>预览动作</button><button id="solve" class="primary" disabled>计算受力</button>
+      </div>
+    </div>
     <div id="statusNotice" class="status-notice" hidden><p id="statusDetail"></p><button id="closeStatus" class="icon-button" aria-label="收起完整消息">×</button></div>
     <div class="status-bar"><span id="status" role="status" aria-live="polite" tabindex="0" title="点击展开完整消息">连接中…</span><span id="playbackHealth" role="status"></span></div>
   </section>

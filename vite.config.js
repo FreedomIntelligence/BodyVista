@@ -69,7 +69,8 @@ export default defineConfig({
         const player = pathname.endsWith('/experiments/body-lab/player.html');
         if (!legacy && !player) return next();
         try {
-          const installed = player && existsSync(`${root}${labPath}/motion-cache/catalog.json`);
+          const installed = player && ['motion-cache/catalog.json', 'atlas-muscles.bin', 'geometry/bone-volumes.bin']
+            .every(file => existsSync(`${root}${labPath}/${file}`));
           const html = installed
             ? (await readFile(`${root}${labPath}/index.html`, 'utf8')).replace('<head>', '<head><meta name="bodyvista-mode" content="replay">')
             : workspaceEntry(player);

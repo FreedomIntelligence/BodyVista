@@ -230,7 +230,8 @@ export function createBodyView(
     metadata = {},
     showRegionSelector = true,
     initialSurfaceQuality = "detail",
-    pathsOnlyView = false,
+    readOnly = false,
+    progressiveSurface = false,
     maxPixelRatio = 2,
     maxRenderPixels = Infinity,
     maxSurfaceCacheBytes = 128 * 1024 * 1024,
@@ -458,14 +459,14 @@ export function createBodyView(
     disposed = false,
     pendingCompilation = null,
     readyGeometry = false,
-    editing = !pathsOnlyView,
-    handlesVisible = !pathsOnlyView;
+    editing = !readOnly,
+    handlesVisible = !readOnly;
   let renderFrame = 0, lastRenderedFrame = null, lastRenderedRefined = false;
   let gpuFence = null, fenceTimer = 0, renderRequested = false;
   let lastRenderTiming = { cpuMs: 0, elapsedMs: 0, busy: false, stalled: false };
   let previewing = false, onlyPaths = false, frameEpoch = 0;
-  let surfaceQuality = initialSurfaceQuality, surfaceGeneration = 0;
-  let surfaceRequest = null, playbackActive = false;
+  let surfaceQuality = initialSurfaceQuality, requestedQuality = initialSurfaceQuality, surfaceGeneration = 0;
+  let surfaceRequest = null, surfaceLoadError = null, playbackActive = false;
   const renderWaiters = [];
   const preparationQueue = createSerialPreparationQueue();
   const frameQueue = createLatestFrameQueue(
@@ -474,8 +475,9 @@ export function createBodyView(
     error => onAnatomyStatus({ error: true, message: `肌肉动画计算失败：${error.message}；保留上一完整画面。` }),
   );
   let musclesVisible = true,
-    muscleDisplay = pathsOnlyView ? "paths" : "anatomy",
+    muscleDisplay = "anatomy",
     anatomicalMuscles = null,
+    transitionPreview = null,
     hasAnatomicalFrame = false,
     bonesVisible = true,
     view = "perspective",
@@ -2088,6 +2090,7 @@ export function createBodyView(
     onlyPaths = pathsOnly;
     boneRoot.visible = bonesVisible || fast;
     if (fast || pathsOnly) {
+      transitionPreview?.setVisible(false);
       anatomicalMuscles?.setVisible(false);
       muscleCard.hidden = true;
     }
@@ -2120,7 +2123,10 @@ export function createBodyView(
       }
       updateMuscleColors(records);
     }
-    if (!fast && !pathsOnly && muscleDisplay === "anatomy") anatomicalMuscles?.update(frame, prepared);
+    if (!fast && !pathsOnly && muscleDisplay === "anatomy") {
+      anatomicalMuscles?.update(frame, prepared);
+      disposeTransitionPreview();
+    }
     if (!fast && !pathsOnly && anatomicalMuscles) anatomicalMuscles.setVisible(musclesVisible && muscleDisplay === "anatomy");
     if (!fast && !pathsOnly && anatomicalMuscles && !hasAnatomicalFrame) {
       hasAnatomicalFrame = true;
@@ -2148,6 +2154,7 @@ export function createBodyView(
     if (addedMetadata) updateRegionOptions();
     updateGear(frame);
     invalidatePicking();
+    if (readOnly && !fitted) fit();
     render();
   }
   function setView(name) {
@@ -2236,6 +2243,7 @@ export function createBodyView(
     region = name || "all";
     regionSelect.value = region;
     anatomicalMuscles?.setRegion(region);
+    transitionPreview?.setRegion(region);
     updateRegionVisibility();
     if (latest)
       updateMuscleColors(
@@ -2477,27 +2485,24 @@ export function createBodyView(
   setMetadata(metadata);
   resize();
   let anatomyReady = Promise.resolve();
-  function loadSurface(quality) {
+  function disposeTransitionPreview() {
+    if (!transitionPreview) return;
+    scene.remove(transitionPreview.object);
+    transitionPreview.dispose();
+    transitionPreview = null;
+  }
+  function loadSurface(quality, previewFirst = false) {
     const generation = ++surfaceGeneration;
     surfaceRequest?.abort();
     const controller = new AbortController();
     surfaceRequest = controller;
+    surfaceLoadError = null;
     ++frameEpoch;
     frameQueue.invalidate();
-    const previous = anatomicalMuscles;
-    anatomicalMuscles = null;
-    hasAnatomicalFrame = false;
-    surfaceQuality = quality;
-    if (previous) {
-      scene.remove(previous.object);
-      previous.dispose();
-      invalidatePicking();
-      render();
-    }
-    // Serialize loads so rapid mode switches cannot stage multiple atlases at once.
-    anatomyReady = anatomyReady.then(async () => {
+    requestedQuality = quality;
+    async function install(kind) {
       if (disposed || generation !== surfaceGeneration) return;
-      const factory = quality === "preview"
+      const factory = kind === "preview"
         ? (await import("./preview-muscles.js")).createPreviewMuscles
         : (await import("./anatomical-muscles.js")).createAnatomicalMuscles;
       if (disposed || generation !== surfaceGeneration) return;
@@ -2513,7 +2518,7 @@ export function createBodyView(
       }
       // Keep the editable skeleton responsive while the driver compiles the
       // muscle/contact shader. This scene is never rendered or user-visible.
-      onAnatomyStatus({ message: "正在准备肌肉动画；骨骼和关节可以先操作。" });
+      onAnatomyStatus({ message: kind === "detail" ? "正在准备精细肌肉动画。" : "正在准备肌肉表面预览。" });
       const staging = new THREE.Scene();
       staging.add(muscles.object);
       try {
@@ -2530,6 +2535,21 @@ export function createBodyView(
         muscles.dispose();
         return;
       }
+      // Keep the current mesh available while its replacement is downloading and compiling.
+      const previous = anatomicalMuscles;
+      disposeTransitionPreview();
+      if (previous && surfaceQuality === "preview" && kind === "detail" && hasAnatomicalFrame &&
+          !previewing && !onlyPaths && musclesVisible && muscleDisplay === "anatomy") {
+        // Keep the preview on screen until the first detailed pose is ready.
+        transitionPreview = previous;
+      } else if (previous) {
+        scene.remove(previous.object);
+        previous.dispose();
+      }
+      frameEpoch++;
+      frameQueue.invalidate();
+      surfaceQuality = kind;
+      hasAnatomicalFrame = false;
       anatomicalMuscles = muscles;
       scene.add(muscles.object);
       muscles.setRegion(region);
@@ -2544,29 +2564,42 @@ export function createBodyView(
         ...muscles.status,
         ready: hasAnatomicalFrame,
         message: hasAnatomicalFrame
-          ? (quality === "preview" ? "轻量解剖表面已就绪，可播放或点击肌肉查看名称。" : "精细解剖表面已就绪，可点击肌肉查看名称。")
+          ? (kind === "preview" ? "轻量解剖表面已就绪，可点击肌肉查看名称。" : "精细解剖表面已就绪，可点击肌肉查看名称。")
           : "肌肉资源已载入，正在准备当前姿势；骨骼和关节可以先操作。",
       });
       return muscles.status;
+    }
+    // Serialize loads so rapid switches cannot stage two full atlases at once.
+    anatomyReady = anatomyReady.then(async () => {
+      if (previewFirst) {
+        try { await install("preview"); } catch (error) {
+          if (controller.signal.aborted) return;
+          onAnatomyStatus({message: `预览未能载入，正在读取精细表面：${error.message}`});
+        }
+      }
+      return install(quality);
     })
     .catch((error) => {
-      if (!disposed && generation === surfaceGeneration)
+      if (!disposed && generation === surfaceGeneration) {
+        surfaceLoadError = error.message;
         onAnatomyStatus({
           error: true,
-          message: `解剖肌肉载入失败：${error.message}；关节仍可编辑。`,
+          message: `解剖肌肉载入失败：${error.message}`,
         });
+      }
     }).finally(() => {
       if (surfaceRequest === controller) surfaceRequest = null;
     });
     return anatomyReady;
   }
-  if (!pathsOnlyView) loadSurface(initialSurfaceQuality);
+  loadSurface(initialSurfaceQuality, progressiveSurface && initialSurfaceQuality === "detail");
   return {
     ready,
     get anatomyReady() { return anatomyReady; },
     setSurfaceQuality(quality) {
       if (quality !== "detail" && quality !== "preview") throw Error("未知的肌肉显示精度。");
-      return quality === surfaceQuality && (surfaceRequest || anatomicalMuscles) ? anatomyReady : loadSurface(quality);
+      return quality === requestedQuality && (surfaceRequest || (anatomicalMuscles && quality === surfaceQuality))
+        ? anatomyReady : loadSurface(quality);
     },
     update,
     previewPose(frame) {
@@ -2663,16 +2696,17 @@ export function createBodyView(
     },
     regions: availableRegions,
     setEditing(value) {
-      editing = !pathsOnlyView && Boolean(value);
+      editing = !readOnly && Boolean(value);
       labelPosition();
     },
     setHandlesVisible(value) {
-      handlesVisible = Boolean(value);
+      handlesVisible = !readOnly && Boolean(value);
       labelPosition();
     },
     setMusclesVisible(value) {
       invalidatePicking();
       musclesVisible = Boolean(value);
+      transitionPreview?.setVisible(musclesVisible && muscleDisplay === "anatomy");
       if (muscleMesh)
         muscleMesh.visible = !previewing && musclesVisible && muscleDisplay === "paths";
       updateBranchVisibility();
@@ -2685,6 +2719,7 @@ export function createBodyView(
       if (!["anatomy", "paths"].includes(value)) return;
       muscleCard.hidden = true;
       muscleDisplay = value;
+      transitionPreview?.setVisible(musclesVisible && value === "anatomy");
       if (muscleMesh) muscleMesh.visible = !previewing && musclesVisible && value === "paths";
       updateBranchVisibility();
       anatomicalMuscles?.setVisible(!previewing && !onlyPaths && hasAnatomicalFrame && musclesVisible && value === "anatomy");
@@ -2728,6 +2763,8 @@ export function createBodyView(
         muscleCount: latest?.muscles?.length || muscleNames.length,
         muscleDisplay,
         surfaceQuality,
+        surfaceLoadError,
+        showPreview: Boolean(transitionPreview || (surfaceQuality === "preview" && hasAnatomicalFrame)),
         anatomicalMuscles: anatomicalMuscles?.status || null,
         selectedJoint,
         drawCalls: renderer.info.render.calls,
@@ -2738,6 +2775,7 @@ export function createBodyView(
     dispose() {
       if (disposed) return;
       disposed = true;
+      disposeTransitionPreview();
       surfaceRequest?.abort();
       frameQueue.dispose();
       preparationQueue.dispose();

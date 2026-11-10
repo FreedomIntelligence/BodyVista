@@ -226,6 +226,28 @@ class CacheHttpTests(unittest.TestCase):
         for path in ("../server.py", "%2e%2e/server.py", "anything.json", self.digest + ".json.gz", "c" * 64 + ".json"):
             self.assertEqual(self.request("GET", "/experiments/body-lab/motion-cache/" + path)[0], 404)
 
+    def test_offline_workbench_and_scoped_site_files(self):
+        site = self.root / "dist"
+        with patch.object(server_module, "SITE", site):
+            status, _, message = self.request("GET", "/?workspace=muscle-motion")
+            self.assertEqual(status, 503)
+            self.assertIn(b"npm run build", message)
+            (site / "app").mkdir(parents=True)
+            (site / "index.html").write_bytes(b"atlas")
+            (site / "app/main-ABCDEFGH.js").write_bytes(b"bundle")
+            (site / "app/private.py").write_bytes(b"private")
+            (site / "app/private-ABCDEFGH.js").write_bytes(b"private")
+            (self.root / "index.html").write_bytes(b"editor")
+            self.assertEqual(self.request("GET", "/?workspace=muscle-motion")[2], b"atlas")
+            self.assertEqual(self.request("GET", "/app/main-ABCDEFGH.js")[2], b"bundle")
+            self.assertEqual(self.request("GET", server_module.BODY_PREFIX + "player.html")[2], b"editor")
+            for name in ("", "index.html"):
+                status, headers, _ = self.request("GET", server_module.BODY_PREFIX + name + "?demo=knee")
+                self.assertEqual((status, headers["Location"]), (302, "/?workspace=muscle-motion&demo=knee"))
+            for path in ("/app/private.py", "/app/private-ABCDEFGH.js", "/app/../index.html", "/dental/vendor/src/state/store.ts",
+                         "/.git/config", "/experiments/body-lab/candidates/source.json"):
+                self.assertEqual(self.request("GET", path)[0], 404, path)
+
     def test_rejected_encodings_get_and_head(self):
         for encoding in ("gzip;q=0, identity;q=0", "gzip;q=0, identity;q=0, *;q=1", "*;q=0"):
             for method in ("GET", "HEAD"):

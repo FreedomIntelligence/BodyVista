@@ -2,14 +2,7 @@
 
 全身页使用 MS-Human-700 派生的 v5 肌骨模型。每个采样帧由 740 个肌腱单元共同配力，同时报告关节力矩、显式外部支撑和适用的哑铃接触力。左右小指各三个屈曲轴采用指深屈肌实测力臂，八个指浅屈肌单元使用被动串联弹性，中指沿用原路径几何。手部的 24 个被动参考坐标用于核对参考力矩。模型配置、动作使用方法及局限见[全身实验台说明](FULLBODY.md)。
 
-`v1.1.0` 使用同版 `release-assets.json` 安装四份资源。[发行资源说明](RELEASE_ASSETS.md)在仓库根目录用 Python 3.13 建立 `.venv-fullbody`，安装[锁定依赖](candidates/runtime/requirements-lock.txt)，再启动本机服务。Windows PowerShell 命令如下。
-
-```powershell
-python -m venv .venv-fullbody
-& ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
-& ./.venv-fullbody/Scripts/python.exe -B -X utf8 experiments/body-lab/setup_release_assets.py --manifest experiments/body-lab/release-assets.json --download
-& ./.venv-fullbody/Scripts/python.exe -X utf8 experiments/elbow-lab/server.py --port 4192
-```
+在线版提供分类回放。安装 v1.2.0 离线版后，可以在同一主站界面设计动作、调整关键帧和计算受力。自定义功能目前仍在开发。[安装和启动说明](../../docs/OFFLINE_MOTION.md) · [本机动作编辑器](http://127.0.0.1:4192/?workspace=muscle-motion)
 
 打开[全身实验台](http://127.0.0.1:4192/experiments/body-lab/)，从“动作库”载入固定案例并播放。要编辑动作，可转动关节，确认关键帧，再设定时长、支撑和哑铃负重，点击“计算受力”。一帧不通过就停用整段定量结果并定位首个失败时间。GitHub Pages 只部署静态图谱，实时求解由本机服务提供。[右臂实验台](../elbow-lab/README.md)使用独立的六肌 Arm26 肘部模型。
 

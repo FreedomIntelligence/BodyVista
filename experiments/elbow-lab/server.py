@@ -1,4 +1,4 @@
-"""Start the local BodyVista elbow experiment; serve only the resources used by the lab."""
+"""Serve the built BodyVista site and its editable muscle lab on one local origin."""
 
 import argparse
 import gzip
@@ -18,7 +18,7 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from time import perf_counter
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit
 
 from engine import model_info
 from solver import ScenarioError, solve
@@ -28,10 +28,27 @@ REPO = LAB.parents[1]
 PREFIX = "/experiments/elbow-lab/"
 BODY = REPO / "experiments" / "body-lab"
 BODY_PREFIX = "/experiments/body-lab/"
+SITE = REPO / "dist"
+WORKSPACE_URL = "/?workspace=muscle-motion"
+# Vite's public entry points and generated assets. The build also contains
+# vendor sources and research exports that are outside the offline site.
+SITE_FILES = {
+    "/index.html", "/dental/index.html", "/dental/models/manifest.json",
+    "/dental/vendor/CREDITS.md", "/dental/vendor/LICENSE",
+    *(f"/assets/{system}.glb" for system in (
+        "cardiovascular", "digestive", "endocrine", "lymphatic", "muscular", "nervous",
+        "reproductive", "respiratory", "sensory", "skeletal", "skin", "urinary",
+    )),
+}
+SITE_ASSET = re.compile(
+    r"/(?:app/(?:(?:main|dental|three|chatgpt-link|catalog)-[A-Za-z0-9_-]{8}\.(?:js|css)"
+    r"|bodyvista-[A-Za-z0-9_-]{8}\.png|favicon-[A-Za-z0-9_-]{8}\.svg)"
+    r"|thumbs/[a-z0-9-]+\.png|assets/detail/z_[a-f0-9]{16}\.glb"
+    r"|dental/models/(?:core|context|neurovascular|teeth/tooth-[1-8][1-8])\.glb)"
+)
 BODY_STATIC = {
     "examples/custom_right_rotate_bend_make_fist.json",
     "examples/custom_left_open_while_rotating.json",
-    "index.html",
     "muscle-review.html",
     "review-media/manifest.json",
     *(f"review-media/{muscle}-{side}.{extension}"
@@ -53,6 +70,7 @@ BODY_STATIC = {
     "muscle-shape-worker.js",
     "muscle-path-shape.js",
     "bone-volumes.js",
+    "surface-binary.js",
     "atlas-muscles.json",
     "atlas-muscles.bin",
     "geometry/fullbody-bones.json",
@@ -91,6 +109,9 @@ MIME = {
     ".html": "text/html; charset=utf-8",
     ".js": "text/javascript; charset=utf-8",
     ".css": "text/css; charset=utf-8",
+    ".png": "image/png",
+    ".svg": "image/svg+xml",
+    "": "text/plain; charset=utf-8",
     ".json": "application/json; charset=utf-8",
     ".glb": "model/gltf-binary",
     ".mp4": "video/mp4",
@@ -279,8 +300,25 @@ class LabHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.serve_get(head=False)
 
+    def redirect(self, location):
+        self.send_response(HTTPStatus.FOUND)
+        self.send_header("Location", location)
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def serve_get(self, *, head):
-        path = urlsplit(self.path).path
+        url = urlsplit(self.path)
+        path = url.path
+        player = BODY_PREFIX + "player.html"
+        if path in {BODY_PREFIX[:-1], BODY_PREFIX, BODY_PREFIX + "index.html"} or (
+            path == player and self.headers.get("Sec-Fetch-Dest") == "document"
+        ):
+            options = [(k, v) for k, v in parse_qsl(url.query) if k in {"case", "demo"}]
+            return self.redirect(WORKSPACE_URL + ("&" + urlencode(options) if options else ""))
+        if path == PREFIX[:-1]:
+            return self.redirect(PREFIX)
+        if path == "/":
+            path = "/index.html"
         if match := MOTION_CACHE.fullmatch(path):
             target = BODY / "motion-cache" / (match.group(1) + ".json.gz")
             if not target.is_file():
@@ -299,11 +337,6 @@ class LabHandler(BaseHTTPRequestHandler):
                 content_encoding="gzip" if use_gzip else None,
                 etag=f'W/"{match.group(1)}"',
             )
-        if path in ("/", PREFIX[:-1]):
-            self.send_response(HTTPStatus.FOUND)
-            self.send_header("Location", PREFIX)
-            self.end_headers()
-            return
         if path == "/api/model":
             return self.json_response(200, model_info(), head=head)
         if path == "/api/fullbody/model":
@@ -338,14 +371,24 @@ class LabHandler(BaseHTTPRequestHandler):
                     {"error": "全身模型尚不可用，请使用已有 OpenSim 环境启动服务。"},
                     head=head,
                 )
-        if path == BODY_PREFIX[:-1]:
-            self.send_response(HTTPStatus.FOUND)
-            self.send_header("Location", BODY_PREFIX)
-            self.end_headers()
-            return
-        if (
+        if path in SITE_FILES or SITE_ASSET.fullmatch(path):
+            # Resolve the trusted parent separately so junctions inside the
+            # build (including dist itself) cannot serve other project files.
+            target = SITE.parent.resolve() / SITE.name / path.lstrip("/")
+            if target.resolve() != target:
+                return self.json_response(404, {"error": "此路径不属于本机网站。"}, head=head)
+            if path == "/index.html" and not target.is_file():
+                return self.payload(
+                    503, "主站尚未构建。请在 BodyVista 目录运行 npm ci 和 npm run build，然后刷新。".encode(),
+                    "text/plain; charset=utf-8", head=head,
+                )
+        elif path == player:
+            # The public host puts the replay here; on this origin the very
+            # same atlas iframe opens the editor backed by the local APIs.
+            target = BODY / "index.html"
+        elif (
             path.startswith(BODY_PREFIX)
-            and (name := path[len(BODY_PREFIX) :] or "index.html") in BODY_STATIC
+            and (name := path[len(BODY_PREFIX) :]) in BODY_STATIC
         ):
             target = BODY / name
         elif path == "/api/demo":
@@ -366,11 +409,11 @@ class LabHandler(BaseHTTPRequestHandler):
             target = REPO / path.lstrip("/")
         else:
             return self.json_response(
-                404, {"error": "此路径不属于屈肘实验。"}, head=head
+                404, {"error": "此路径不属于本机网站。"}, head=head
             )
         if not target.is_file():
             return self.json_response(404, {"error": "该资源尚未生成。"}, head=head)
-        if target.suffix in {".webm", ".mp4", ".bin"}:
+        if target.suffix in {".webm", ".mp4", ".bin", ".glb"}:
             return self.file_response(target, head=head)
         self.payload(
             200,
@@ -497,5 +540,5 @@ if __name__ == "__main__":
     port = parser.parse_args().port
     body_module("runtime_performance").configure_process_qos(interactive=True)
     with ThreadingHTTPServer(("127.0.0.1", port), LabHandler) as server:
-        print(f"BodyVista · http://127.0.0.1:{port}{PREFIX}", flush=True)
+        print(f"BodyVista · http://127.0.0.1:{port}{WORKSPACE_URL}", flush=True)
         server.serve_forever()
