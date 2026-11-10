@@ -271,4 +271,4 @@ body[data-workspace-collapsed="true"] #toggleWorkspace, body[data-inspector-coll
 .public-replay #publicSurfaceStatus[data-phase="error"] { color: #985031; }
 .public-replay .file-menu-content { width: min(240px, 85vw); }
 .public-replay .file-menu-content > p { padding: 6px 8px; }
-.public-replay #viewLoading:not([hidden]) { background: #eef3f5db; }
+.public-replay #viewLoading:not([hidden]) { z-index: 3; padding: 16px; background: #eef3f5; text-align: center; }

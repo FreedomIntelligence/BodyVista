@@ -7,4 +7,4 @@
 - **验证入口**：[独立力学核验](experiments/body-lab/fullbody-validation.json)、[网页验收](experiments/body-lab/fullbody-ui-validation.json)及[模型与动作库的匹配记录](experiments/body-lab/candidates/model-repair-20261106/model-ready-for-library.json)。`verify_suites.py` 分批检验烟雾用例、腕指联合、全身、站立和自定义动作；`refresh_library.py` 逐个更新固定案例。Windows 上使用一个计算核心、低于正常优先级及内存上限，批量程序还预留系统可用内存。
 - **右臂实验台**：`/experiments/elbow-lab/` 单独使用六条肌束的模型。“观察肌束”只允许选择本动作中张力变化超过 0.01 N 的肌束；未列为可选不表示该肌束没有参与计算。
 
-动作库的场景、构建程序和逐案验证结果在 `experiments/body-lab/showcase/`。新版本安装见[离线说明](docs/OFFLINE_MOTION.md)。GitHub Pages 的肌肉回放默认显示正式图谱的解剖表面。播放器从同域分块读取肌肉网格和骨接触体积，动作力值来自同版固定案例。选择「计算肌腱路径」可以查看模型用于配力的线条。部署时按固定 GitHub Release 校验模型和动作资源，完整动力学求解在本机运行。
+动作库的场景、构建程序和逐案验证结果在 `experiments/body-lab/showcase/`。新版本安装见[离线说明](docs/OFFLINE_MOTION.md)。GitHub Pages 的肌肉回放在选中动作的首帧绘制完成后显示解剖预览，随后换成精细表面。播放器脚本与主站按同一构建版本载入，模型和动作缓存使用各自原有的地址。播放器从同域分块读取肌肉网格和骨接触体积，动作力值来自同版固定案例。选择「计算肌腱路径」可以查看模型用于配力的线条。部署时按固定 GitHub Release 校验模型和动作资源，完整动力学求解在本机运行。

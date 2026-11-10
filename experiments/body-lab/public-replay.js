@@ -5,7 +5,7 @@ import { sourceAttribute, sourceText } from "./motion-locale.js";
 // validates the decompressed byte count, SHA-256, scene and every force frame.
 export async function fetchPublicMotion(url) {
   const response = await fetch(url + ".gz");
-  if (!response.ok) return response;
+  if (!response.ok) throw Error(`HTTP ${response.status}`);
   const bytes = await response.arrayBuffer();
   const signature = new Uint8Array(bytes, 0, Math.min(2, bytes.byteLength));
   if (signature[0] !== 0x1f || signature[1] !== 0x8b) return new Response(bytes);

@@ -7,8 +7,8 @@ The online player lets you rotate the anatomical model and drag the timeline to 
 Install Git, Python 3.13 and Node.js 22.x (22.12 or later). Run the following commands in PowerShell. The first installation needs an internet connection to download the dependencies, anatomical model and motion library.
 
 ```powershell
-git clone --config core.autocrlf=false --branch v1.2.2 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.2.2
-cd BodyVista-v1.2.2
+git clone --config core.autocrlf=false --branch v1.2.3 https://github.com/FreedomIntelligence/BodyVista.git BodyVista-v1.2.3
+cd BodyVista-v1.2.3
 py -3.13 -m venv .venv-fullbody
 & ./.venv-fullbody/Scripts/python.exe -m pip install -r experiments/body-lab/candidates/runtime/requirements-lock.txt
 & ./.venv-fullbody/Scripts/python.exe -X utf8 tools/install-motion-lab.py --download

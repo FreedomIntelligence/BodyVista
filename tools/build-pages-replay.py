@@ -4,6 +4,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -34,6 +35,22 @@ PLAYER_FILES = (
     "examples/custom_right_rotate_bend_make_fist.json", "examples/custom_left_open_while_rotating.json",
 )
 VENDOR_FILES = ("three.js", "OrbitControls.js", "GLTFLoader.js", "buffer-utils.js")
+PLAYER_BUILD_META = re.compile(r'<meta name="bodyvista-player-build" content="([a-f0-9]{20})">')
+FRONTEND_REFERENCE = re.compile(r"""(["'])([.]{1,2}/[\w./-]+\.(?:js|css))\1""")
+FRONTEND_FILES = {LAB / name for name in PLAYER_FILES if name.endswith((".js", ".css"))} | {
+    Path("src/vendor") / name for name in VENDOR_FILES
+}
+
+
+def version_player_references(source, path, build):
+    """Pin entry, module imports and worker URLs without changing data or model URLs."""
+    def replace(match):
+        quote, url = match.groups()
+        target = (ROOT / path.parent / url).resolve().relative_to(ROOT)
+        if target not in FRONTEND_FILES:
+            raise ValueError(f"播放器引用了未打包的前端文件：{path} -> {url}")
+        return f"{quote}{url}?ui={build}{quote}"
+    return FRONTEND_REFERENCE.sub(replace, source)
 
 
 def write_surface_chunks(binary, asset, target):
@@ -96,6 +113,11 @@ def publish_surfaces(stage, bundle_dir, release_manifest):
 def assemble(bundle_dir, dist, showcase_dir=None):
     if not (dist / "index.html").is_file():
         raise ValueError("先运行 npm run build 生成主站。")
+    entry = dist / LAB / "player.html"
+    marker = PLAYER_BUILD_META.search(entry.read_text(encoding="utf-8"))
+    if marker is None:
+        raise ValueError("主站缺少播放器版本，请先重新运行 npm run build。")
+    build = marker.group(1)
     manifest_path = bundle_dir / "release-assets.json"
     if hashlib.sha256(manifest_path.read_bytes()).hexdigest() != MANIFEST_SHA256:
         raise ValueError(f"清单不是 GitHub {TAG} 的已发布版本。")
@@ -135,14 +157,17 @@ def assemble(bundle_dir, dist, showcase_dir=None):
         for name in PLAYER_FILES:
             target = player / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ROOT / LAB / name, target)
+            if name.endswith(".js"):
+                source = (ROOT / LAB / name).read_text(encoding="utf-8")
+                target.write_text(version_player_references(source, LAB / name, build), encoding="utf-8")
+            else:
+                shutil.copyfile(ROOT / LAB / name, target)
         surfaces = publish_surfaces(stage, bundle_dir, manifest)
         html = (ROOT / LAB / "index.html").read_text(encoding="utf-8")
         if html.count("<head>") != 1 or 'name="bodyvista-mode"' in html:
             raise ValueError("实验台页面缺少唯一的静态模式注入位置。")
-        (player / "player.html").write_text(html.replace(
-            "<head>", '<head>\n  <meta name="bodyvista-mode" content="replay" />', 1
-        ), encoding="utf-8")
+        html = html.replace("<head>", '<head>\n  <meta name="bodyvista-mode" content="replay" />\n  ' + marker.group(), 1)
+        (player / "player.html").write_text(version_player_references(html, LAB / "player.html", build), encoding="utf-8")
         license_path = "experiments/body-lab/candidates/ms-human-700/LICENSE"
         license_record = next(item for source in manifest["assets"] if source["role"] == "ms-human-source"
                               for item in source["files"] if item["path"] == license_path)
@@ -154,7 +179,8 @@ def assemble(bundle_dir, dist, showcase_dir=None):
         for name in VENDOR_FILES:
             target = stage / "src/vendor" / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ROOT / "src/vendor" / name, target)
+            path = Path("src/vendor") / name
+            target.write_text(version_player_references((ROOT / path).read_text(encoding="utf-8"), path, build), encoding="utf-8")
         for name in ("THIRD_PARTY_NOTICES.md", "LICENSE"):
             shutil.copyfile(ROOT / name, stage / name)
         shutil.copytree(stage, dist, dirs_exist_ok=True)

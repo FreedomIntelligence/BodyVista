@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { cp, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 // Keep original model URLs and directory layout in development and production.
@@ -8,10 +9,25 @@ const root = fileURLToPath(new URL('.', import.meta.url));
 const labPath = 'experiments/body-lab';
 const publishedPlayer = 'https://freedomintelligence.github.io/BodyVista/experiments/body-lab/player.html';
 
+// The atlas bundle and Pages packager use the same key for the player and
+// its entire module graph. Large anatomical assets have independent identities.
+const playerHash = createHash('sha256');
+for (const directory of [labPath, 'src/vendor']) {
+  const files = readdirSync(root + directory).filter(name =>
+    name.endsWith('.js') || name === 'index.html' || name === 'style.css').sort();
+  for (const name of files) {
+    playerHash.update(directory + '/' + name + '\0');
+    playerHash.update(readFileSync(root + directory + '/' + name));
+    playerHash.update('\0');
+  }
+}
+const playerBuild = playerHash.digest('hex').slice(0, 20);
+
 // The bookmarked lab URL opens the atlas tab. An ordinary build without local
 // release assets can load the published player in that same tab's iframe.
 function workspaceEntry(usePublishedPlayer = false) {
   return `<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="bodyvista-player-build" content="${playerBuild}">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>肌肉运动 · BodyVista</title>
 <a href="../../?workspace=muscle-motion" target="_top">打开肌肉运动</a>
 <script>
@@ -21,6 +37,7 @@ function workspaceEntry(usePublishedPlayer = false) {
   const destination = ${usePublishedPlayer ? `window.parent === window ? target : new URL('${publishedPlayer}')` : 'target'};
   if (chosen) destination.searchParams.set('case', chosen);
   if (['zh-CN', 'en', 'ja'].includes(params.get('lang'))) destination.searchParams.set('lang', params.get('lang'));
+  if (destination.origin !== target.origin) destination.searchParams.set('ui', '${playerBuild}');
   if (location.href !== destination.href) location.replace(destination.href);
 </script></html>`;
 }
@@ -44,6 +61,7 @@ async function convertModelScripts(sourceDir, outputDir) {
 
 export default defineConfig({
   base: './',
+  define: { __BODYVISTA_PLAYER_BUILD__: JSON.stringify(playerBuild) },
   publicDir: false,
   server: {
     watch: { ignored: ['**/.runtime-cache/**', '**/.venv*/**', '**/.playwright-cli/**'] },

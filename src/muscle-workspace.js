@@ -31,6 +31,7 @@ export function setupMuscleWorkspace({onChange, closeNavigation}) {
     document.body.toggleAttribute('data-muscle-workspace', open);
     if (open) {
       const src = new URL('./experiments/body-lab/player.html', location.href);
+      src.searchParams.set('ui', __BODYVISTA_PLAYER_BUILD__);
       src.searchParams.set('lang', getLanguage());
       if (requestedCase) src.searchParams.set('case', requestedCase);
       const demo = url.searchParams.get('demo');

@@ -105,7 +105,7 @@ export function startMotionLocale() {
       const url = new URL(local.href); url.searchParams.set("lang", language); local.href = url.href;
     }
     const guide = document.getElementById("motionSetupGuide");
-    if (guide) guide.href = "https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.2/docs/" +
+    if (guide) guide.href = "https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.3/docs/" +
       (language === "zh-CN" ? "OFFLINE_MOTION.md" : `OFFLINE_MOTION.${language}.md`);
     if (language !== "zh-CN") observer.observe(document.documentElement, {
       subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:attrs

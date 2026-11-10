@@ -160,7 +160,7 @@ const view = createBodyView($("bodyView"), {
     if (playbackInterval > 85)
       setPlaybackHealth(`播放中 · ${Math.max(1, Math.floor(1000 / playbackInterval))} 帧/秒`);
   },
-  onFrameDisplayed(value, {refined}) {
+  onFrameDisplayed(value, {refined, display}) {
     paintedSurface = refined ? value : null;
     updateCaptureButtons();
     displayedFrame = displayedSources.get(value) || null;
@@ -169,6 +169,8 @@ const view = createBodyView($("bodyView"), {
       ? `动作 ${fmt(displayedFrame.t || 0, 2)} s`
       : "";
     if (frames.includes(displayedFrame)) {
+      // The result, posed muscles and GPU submission can finish independently.
+      if (replay && display === $("muscleDisplay").value) $("viewLoading").hidden = true;
       $("clock").textContent = `${fmt(displayedFrame.t, 2)} / ${fmt(frames.at(-1).t, 2)} s`;
       if (result) drawResults();
     }
@@ -176,7 +178,10 @@ const view = createBodyView($("bodyView"), {
   coordinateLabel: (name) => coordLabel(name),
   onJointRotate: (data) => handleJointRotate(data),
   onAnatomyStatus: (value) => {
-    if (replay) replay.showSurfaceStatus(value, view.state);
+    if (replay) {
+      replay.showSurfaceStatus(value, view.state);
+      if (value.error && frames.length && !$("viewLoading").hidden) $("viewLoading").textContent = value.message;
+    }
     if (value.ready && view.state.surfaceQuality === "preview") {
       $("surfaceContactScope").textContent = "轻量表面沿骨骼运动。受力来自原动作的肌腱计算，播放时不重新求肌肉接触。";
     } else if (value.ready && value.boneContact) {
@@ -2255,8 +2260,10 @@ async function loadVerifiedMotions() {
     const requested = new URLSearchParams(location.search).get("case");
     const initial = motions.find(motion => motion.id === requested) ?? (replay ? motions[0] : null);
     if (initial) await useVerifiedMotion(initial);
+    else if (replay) throw Error("动作验证记录暂时不可用。");
   } catch (error) {
     $("verifiedNote").textContent = error.message;
+    if (replay) $("viewLoading").textContent = error.message;
   }
 }
 async function useVerifiedMotion(motion) {
@@ -2298,9 +2305,13 @@ async function useVerifiedMotion(motion) {
     $("muscleRegion").value = motion.region;
     $("muscleSearch").value = "";
     populateCoordinates();
-    view.setRegion(motion.region, { fit: true });
+    // Frame this case using its first pose, rather than the previous case's pose.
+    view.setRegion(motion.region, { fit: "next-frame" });
     view.setView(motion.view);
     presentResult(value, { cached: true, preferredMuscle: motion.muscle });
+    if (replay && $("muscleDisplay").value === "anatomy") {
+      $("viewLoading").textContent = view.state.surfaceLoadError ? "肌肉表面未载入" : "正在载入肌肉表面…";
+    }
     $("draftState").textContent =
       `已载入：${motion.label}。当前停在首帧，按播放查看完整受力结果。`;
     $("verifiedSelection").textContent = `已载入：${motion.label}`;
@@ -2318,11 +2329,13 @@ async function useVerifiedMotion(motion) {
     }
     save();
   } catch (error) {
-    if (replay) $("verifiedSelection").textContent = `${motion.label}未载入，可以再次选择。`;
+    if (replay) {
+      $("verifiedSelection").textContent = `${motion.label}未载入，可以再次选择。`;
+      $("viewLoading").textContent = `${motion.label}未载入，可以再次选择。`;
+    }
     status(`动作未载入：${error.message}`, true);
     return;
   } finally {
-    if (replay) $("viewLoading").hidden = true;
     verifiedLoading = false;
     updateButtons();
   }
@@ -2570,9 +2583,13 @@ $("muscleDisplay").onchange = () => {
   pause();
   movieCache = null;
   const mode = $("muscleDisplay").value;
+  if (replay && mode === "anatomy" && frames.length) {
+    $("viewLoading").textContent = "正在载入肌肉表面…";
+    $("viewLoading").hidden = false;
+  }
   if (mode === "anatomy") view.setSurfaceQuality("detail");
   view.setMuscleDisplay(mode === "paths" ? "paths" : "anatomy");
-  if (replay) replay.showSurfaceStatus({ready: view.state.anatomicalMuscles?.ready}, view.state);
+  if (replay) replay.showSurfaceStatus({}, view.state);
   $("renderNote").textContent =
     $("muscleDisplay").value === "paths"
       ? "计算肌腱路径示意，非真实肌肉体积。张力：灰绿 0 → 橙 300 → 红 ≥1200 N。"
@@ -2581,6 +2598,7 @@ $("muscleDisplay").onchange = () => {
 if (replay) $("retryPublicSurface").onclick = () => {
   pause();
   movieCache = null;
+  if (frames.length && !$("viewLoading").hidden) $("viewLoading").textContent = "正在载入肌肉表面…";
   view.setSurfaceQuality("detail");
   replay.showSurfaceStatus({}, view.state);
 };
@@ -3036,7 +3054,6 @@ async function boot() {
       showWorkspace("motions");
       $("connection").textContent = `${info.muscles.length} 个肌腱单元`;
       $("resultKind").textContent = "等待回放";
-      $("viewLoading").hidden = true;
       await loadVerifiedMotions();
       return;
     }

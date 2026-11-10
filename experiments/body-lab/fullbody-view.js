@@ -286,6 +286,8 @@ export function createBodyView(
   scene.add(grid);
   const boneRoot = new THREE.Group(),
     accessoryRoot = new THREE.Group();
+  // Geometry arrives in model coordinates. Show it only after applying a pose.
+  boneRoot.visible = false;
   scene.add(boneRoot, accessoryRoot);
   const bodyGroups = new Map(),
     handleMeta = new Map(),
@@ -461,7 +463,7 @@ export function createBodyView(
     readyGeometry = false,
     editing = !readOnly,
     handlesVisible = !readOnly;
-  let renderFrame = 0, lastRenderedFrame = null, lastRenderedRefined = false;
+  let renderFrame = 0, lastRenderedFrame = null, lastRenderedDisplay = null, lastRenderedRefined = false;
   let gpuFence = null, fenceTimer = 0, renderRequested = false;
   let lastRenderTiming = { cpuMs: 0, elapsedMs: 0, busy: false, stalled: false };
   let previewing = false, onlyPaths = false, frameEpoch = 0;
@@ -472,7 +474,10 @@ export function createBodyView(
   const frameQueue = createLatestFrameQueue(
     frame => preparationQueue.run(() => anatomicalMuscles?.prepareFrame(frame)),
     (frame, prepared) => applyFrame(frame, prepared),
-    error => onAnatomyStatus({ error: true, message: `肌肉动画计算失败：${error.message}；保留上一完整画面。` }),
+    error => {
+      surfaceLoadError = error.message;
+      onAnatomyStatus({ error: true, message: `肌肉动画计算失败：${error.message}；保留上一完整画面。` });
+    },
   );
   let musclesVisible = true,
     muscleDisplay = "anatomy",
@@ -818,7 +823,11 @@ export function createBodyView(
       const started = performance.now();
       const gl = renderer.getContext();
       const renderedFrame = latest;
-      const renderedRefined = hasAnatomicalFrame && !previewing && !onlyPaths;
+      const renderedDisplay = muscleDisplay === "anatomy" && !previewing && !onlyPaths &&
+        (anatomicalMuscles?.object.visible || transitionPreview?.object.visible) ? "anatomy" :
+        muscleDisplay === "paths" && muscleMesh?.visible ? "paths" : "bones";
+      const renderedRefined = !previewing && !onlyPaths &&
+        (hasAnatomicalFrame || (renderedDisplay === "paths" && Boolean(anatomicalMuscles)));
       let cpuMs = 0, stalledReported = false;
       const finish = (completed) => {
         if (gpuFence) gl.deleteSync(gpuFence);
@@ -830,10 +839,11 @@ export function createBodyView(
           // Use the submitted frame, not latest: editing can request another
           // pose while this GPU frame is still completing.
           if (completed && renderedFrame &&
-              (renderedFrame !== lastRenderedFrame || renderedRefined !== lastRenderedRefined)) {
+              (renderedFrame !== lastRenderedFrame || renderedDisplay !== lastRenderedDisplay || renderedRefined !== lastRenderedRefined)) {
             lastRenderedFrame = renderedFrame;
+            lastRenderedDisplay = renderedDisplay;
             lastRenderedRefined = renderedRefined;
-            onFrameDisplayed(renderedFrame, { refined: renderedRefined });
+            onFrameDisplayed(renderedFrame, { refined: renderedRefined, display: renderedDisplay });
           }
           if (!completed)
             onAnatomyStatus({ error: true, message: "模型画面未能完成绘制，播放已暂停；请重新加载页面。" });
@@ -2128,7 +2138,7 @@ export function createBodyView(
       disposeTransitionPreview();
     }
     if (!fast && !pathsOnly && anatomicalMuscles) anatomicalMuscles.setVisible(musclesVisible && muscleDisplay === "anatomy");
-    if (!fast && !pathsOnly && anatomicalMuscles && !hasAnatomicalFrame) {
+    if (!fast && !pathsOnly && muscleDisplay === "anatomy" && anatomicalMuscles && !hasAnatomicalFrame) {
       hasAnatomicalFrame = true;
       anatomicalMuscles.setVisible(musclesVisible && muscleDisplay === "anatomy");
       onAnatomyStatus({
@@ -2154,7 +2164,7 @@ export function createBodyView(
     if (addedMetadata) updateRegionOptions();
     updateGear(frame);
     invalidatePicking();
-    if (readOnly && !fitted) fit();
+    if (!fitted) fit();
     render();
   }
   function setView(name) {
@@ -2236,6 +2246,10 @@ export function createBodyView(
     render();
   }
   function setRegion(name, { fit: shouldFit = true, orient = true } = {}) {
+    if (shouldFit === "next-frame") {
+      frameQueue.invalidate();
+      fitted = false;
+    }
     selectJoint(null);
     muscleCard.hidden = true;
     selectedMuscle = null;
@@ -2253,7 +2267,7 @@ export function createBodyView(
       );
     if (orient && /^hand_[rl]$/.test(region))
       setView(region === "hand_r" ? "right" : "left");
-    if (shouldFit) fit();
+    if (shouldFit === true) fit();
     else render();
     onRegionChange(region);
   }
@@ -2598,7 +2612,7 @@ export function createBodyView(
     get anatomyReady() { return anatomyReady; },
     setSurfaceQuality(quality) {
       if (quality !== "detail" && quality !== "preview") throw Error("未知的肌肉显示精度。");
-      return quality === requestedQuality && (surfaceRequest || (anatomicalMuscles && quality === surfaceQuality))
+      return !surfaceLoadError && quality === requestedQuality && (surfaceRequest || (anatomicalMuscles && quality === surfaceQuality))
         ? anatomyReady : loadSurface(quality);
     },
     update,
@@ -2716,21 +2730,24 @@ export function createBodyView(
       render();
     },
     setMuscleDisplay(value) {
-      if (!["anatomy", "paths"].includes(value)) return;
+      if (!["anatomy", "paths"].includes(value) || value === muscleDisplay) return;
+      frameQueue.invalidate();
+      lastRenderedFrame = null;
       muscleCard.hidden = true;
       muscleDisplay = value;
-      transitionPreview?.setVisible(musclesVisible && value === "anatomy");
+      disposeTransitionPreview();
       if (muscleMesh) muscleMesh.visible = !previewing && musclesVisible && value === "paths";
       updateBranchVisibility();
-      anatomicalMuscles?.setVisible(!previewing && !onlyPaths && hasAnatomicalFrame && musclesVisible && value === "anatomy");
+      anatomicalMuscles?.setVisible(false);
+      if (value === "anatomy") hasAnatomicalFrame = false;
       if (latest && value === "anatomy" && !previewing) update(latest);
-      else if (latest && (!anatomicalMuscles || hasAnatomicalFrame)) applyFrame(latest, null, previewing, onlyPaths);
+      else if (latest) applyFrame(latest, null, previewing, onlyPaths);
       else render();
     },
     setBonesVisible(value) {
       invalidatePicking();
       bonesVisible = Boolean(value);
-      boneRoot.visible = bonesVisible || previewing;
+      boneRoot.visible = Boolean(latest) && (bonesVisible || previewing);
       render();
     },
     setGroundEnabled(value) {

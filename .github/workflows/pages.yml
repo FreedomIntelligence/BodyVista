@@ -27,7 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run tests
-        run: npm test
+        run: |
+          npm test
+          python3 tools/test_pages_player.py
       - name: Build website and copy models
         run: npm run build
       - name: Add the verified motion library and browser player

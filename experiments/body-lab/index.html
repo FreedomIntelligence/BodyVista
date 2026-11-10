@@ -66,7 +66,7 @@
 
     <section class="scene-column" aria-label="三维人体">
       <div class="scene-top"><div class="scene-title"><b>全身肌肉</b><button type="button" class="help-button" aria-label="模型操作说明" data-help="拖动空白处旋转视角，滚轮缩放。鼠标靠近关节显示控制点；选择关节后，拖同色圆环旋转。点击肌肉可查看名称。">?</button><span id="poseLabel">正在载入模型</span></div><div class="view-buttons" role="group" aria-label="观察方向"><button data-view="perspective">立体</button><button data-view="front" class="selected">正面</button><button data-view="right">右侧</button><button data-view="left">左侧</button></div></div>
-      <div id="bodyView" class="body-view"><div id="viewLoading">正在准备精细解剖模型…</div></div>
+      <div id="bodyView" class="body-view"><div id="viewLoading" role="status">正在准备精细解剖模型…</div></div>
       <p id="surfaceStage" class="surface-stage" role="status" hidden></p>
       <div class="scene-caption"><label for="muscleDisplay">显示<select id="muscleDisplay" aria-label="肌肉显示方式"><option value="anatomy">真实解剖表面</option><option value="paths">计算肌腱路径</option></select></label><span id="publicSurfaceStatus" role="status" hidden>正在载入肌肉表面…</span><button id="retryPublicSurface" type="button" hidden>重试</button><details class="render-info"><summary>模型状态</summary><p id="renderNote">正在载入 BodyVista 解剖肌肉；关节编辑可先使用。</p></details></div>
     </section>
@@ -102,7 +102,7 @@
         <summary>自定义动作 · 离线版开发中 <span aria-hidden="true">⌄</span></summary>
         <div class="file-menu-content">
           <p class="hint">安装离线版可以自定义动作并计算受力。此功能仍在开发中。</p>
-          <a id="motionSetupGuide" href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.2/docs/OFFLINE_MOTION.md" target="_blank" rel="noopener">离线版安装和启动说明 ↗</a>
+          <a id="motionSetupGuide" href="https://github.com/FreedomIntelligence/BodyVista/blob/v1.2.3/docs/OFFLINE_MOTION.md" target="_blank" rel="noopener">离线版安装和启动说明 ↗</a>
           <a href="http://127.0.0.1:4192/?workspace=muscle-motion" target="_blank" rel="noopener">打开已启动的本机实验台 ↗</a>
         </div>
       </details>
