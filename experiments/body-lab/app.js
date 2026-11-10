@@ -2187,7 +2187,7 @@ function renderMotionLibrary(motions) {
   const order = ["肩肘", "前臂与腕", "手指", "颈与躯干", "髋膝踝", "协调动作", "哑铃"];
   const categories = [...new Set([...order, ...groups.keys()])].filter(name => groups.has(name));
   list.replaceChildren();
-  filter.replaceChildren(new Option(`全部分类（${motions.length}）`, ""));
+  filter.replaceChildren(new Option("全部分类", ""));
   for (const category of categories) {
     const items = groups.get(category);
     filter.add(new Option(`${category}（${items.length}）`, category));
@@ -2211,10 +2211,12 @@ function renderMotionLibrary(motions) {
     list.append(section);
   }
   const updateFilter = () => {
-    for (const section of list.children) section.hidden = Boolean(filter.value && section.dataset.category !== filter.value);
-    $("verifiedNote").textContent = filter.value
-      ? `${filter.value} · ${groups.get(filter.value).length} 个动作`
-      : `${motions.length} 个动作 · ${categories.length} 个分类`;
+    for (const section of list.children) {
+      section.hidden = Boolean(filter.value && section.dataset.category !== filter.value);
+      section.querySelector("h3").hidden = Boolean(filter.value);
+    }
+    $("verifiedNote").textContent = `${motions.length} 个动作 · ${categories.length} 个分类`;
+    $("verifiedNote").hidden = Boolean(filter.value);
   };
   $("motionCategoryField").hidden = !motions.length;
   filter.onchange = updateFilter;
